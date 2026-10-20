@@ -15,5 +15,6 @@
     "navigationBarTitleText": "遇石记AR幻境",
     "navigationBarBackgroundColor": "#ffffff"
   },
-  "style": "v2"
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
 }
