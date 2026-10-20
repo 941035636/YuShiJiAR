@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "xr-demo-viewer": "../xr-demo-viewer/index"
+  },
+  "renderer": "xr-frame"
+}

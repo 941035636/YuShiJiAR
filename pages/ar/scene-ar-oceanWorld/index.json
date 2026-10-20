@@ -1,0 +1,6 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "xr-ar-oceanWorld": "/AR/components/xr-ar-oceanWorld/index"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "xr-ar-ZiZai": "/AR/components/xr-ar-ZiZai/index"
+  }
+}

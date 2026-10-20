@@ -1,0 +1,11 @@
+<view>
+  <view bindtap="goPage">
+    <image class="card" mode="aspectFit" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&amp;t=1717380830" />
+  </view>
+  <view bind:tap="offPage">
+    <image class="card" mode="aspectFit" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&amp;t=1717380841" />
+  </view>
+  <view bind:tap="offPage">
+    <image class="card" mode="aspectFit" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&amp;t=1717380852" />
+  </view>
+</view>

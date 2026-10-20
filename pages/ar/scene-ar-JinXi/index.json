@@ -1,0 +1,6 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "xr-ar-JinXi": "/AR/components/xr-ar-JinXi/index"
+  }
+}

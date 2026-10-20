@@ -1,0 +1,6 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "xr-ar-ZhaoCai": "/AR/components/xr-ar-ZhaoCai/index"
+  }
+}

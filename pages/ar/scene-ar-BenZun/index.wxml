@@ -1,0 +1,27 @@
+<xr-ar-BenZun isShowDolphin="{{isShowDolphin}}" bindchangeDolphin="changeDolphin" disable-scroll="{{true}}" id="main-frame" width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{width * 2}}rpx; height:{{height * 2 + 60}}rpx;" bind:arTrackerState="handleARTrackerState" isModel="{{isModel}}" />
+<xr-scene ar-system="modes:Marker;planeMode: 3" id="xr-scene" bind:ready="handleReady" bind:ar-ready="handleARReady" bind:log="handleLog" />
+<view class="EndBox">
+  <image src="/images/bk.png" style="width: 100%; height:100% ;" />
+</view>
+<view style="display:flex;flex-direction: row;justify-content: space-around; ">
+  <image style="width:750rpx; height: 142rpx;" src="/pages/image/按键底.png">
+    <view style=" display:flex;margin-top: -50px;">
+      <view>
+        <button style="background-image: url('https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png');background-size: cover;background-position: center;width: 196rpx;height: 60rpx;left: 90rpx;z-index: 9999;" bindtap="switchToModelOne" />
+      </view>
+      <view>
+        <button style="background-image: url('https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png');background-size: cover;z-index: 9999;background-position: center;width: 196rpx;height: 60rpx;right: -270rpx;" bindtap="switchToModelTwo" />
+      </view>
+    </view>
+  </image>
+</view>
+<view class="faceMask" style="width: 700rpx; height: 700rpx;margin-top: 300rpx;  left: 40rpx;    background-image: url(https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif);background-repeat: no-repeat;background-size: cover;background-position:center;z-index: auto;" wx:if="{{smShow}}" />
+<view class="faceMask" style="width: 100vw; height: 100vh;background-image: url(https://cyvideo.i-oranges.com/ar/2023jcc/fed19f8544fd3b660a9d38b7245c3cc.png);background-repeat: no-repeat;background-size: cover;background-position:center;z-index: auto;" wx:if="{{show}}">
+  <view class="head1">
+    <view style="display: flex;align-items: center;justify-content: center;height: 100vh;box-sizing: border-box;padding-bottom: 18vh;">
+      <view style="width: 400rpx;">
+        <progress percent="100" color="#3787BC" stroke-width="18" active="{{true}}" duration="10" />
+      </view>
+    </view>
+  </view>
+</view>

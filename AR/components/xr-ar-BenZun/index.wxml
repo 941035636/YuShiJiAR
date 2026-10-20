@@ -1,0 +1,33 @@
+<xr-scene ar-system="modes:Marker; planeMode:3" id="xr-scene" bind:ready="handleReady" bind:ar-ready="handleARReady" bind:log="handleLog">
+  <xr-assets bind:progress="handleAssetsProgress" bind:loaded="handleAssetsLoaded">
+    <xr-asset-load type="gltf" asset-id="miku" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb" />
+    <xr-asset-load type="gltf" asset-id="jinbi" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&amp;t=1717376673" />
+    <xr-asset-load type="gltf" asset-id="dun" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb" />
+    <xr-asset-load type="gltf" asset-id="fz" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&amp;t=1717376736" />
+    <xr-asset-load type="gltf" asset-id="shan" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&amp;t=1717376750" />
+    <xr-asset-load type="gltf" asset-id="ziti" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb" />
+  </xr-assets>
+  <xr-node>
+    <xr-ar-tracker id="ar-tracker" mode="Marker" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg" bind:ar-tracker-state="handleARTrackerState1">
+      <block wx:if="{{isShow}}">
+        <xr-gltf id="wxball-1" position="0 -0.5 0.5" scale="0.054 0.054 0.054" rotation="-90 0 0" model="miku" />
+        <xr-gltf id="wxball-1" position="0 -0.5 0.5" scale="0.5 0.5 0.5" rotation="-90 0 0" model="fz" anim-autoplay="{{true}}" />
+        <xr-gltf id="wxball-1" position="0 -2 1" scale="1 1 0.7" rotation="-90 0 0" model="shan" anim-autoplay="{{true}}" />
+        <xr-gltf id="wxball-1" position="0 -0.5 0.5" scale="0.4 0.4 0.4" rotation="-90 0 0" model="dun" anim-autoplay="{{true}}" />
+        <xr-gltf id="wxball-1" position="0 -0.5 -0.5" scale="3.2 3.2 3.2" rotation="-90 0 0" model="ziti" anim-autoplay="{{true}}" />
+      </block>
+      <block wx:if="{{isShowB}}">
+        <xr-gltf id="wxball-1" position="0 -0.5 0.5" scale="0.054 0.054 0.054" rotation="-90 0 0" model="jinbi" />
+        <xr-gltf id="wxball-1" position="0 -0.5 0.5" scale="0.5 0.5 0.5" rotation="-90 0 0" model="fz" anim-autoplay="{{true}}" />
+        <xr-gltf id="wxball-1" position="0 -2 1" scale="1 1 0.7" rotation="-90 0 0" model="shan" anim-autoplay="{{true}}" />
+        <xr-gltf id="wxball-1" position="0 -0.5 0.5" scale="0.4 0.4 0.4" rotation="-90 0 0" model="dun" anim-autoplay="{{true}}" />
+        <xr-gltf id="wxball-1" position="0 -0.5 -0.5" scale="3.2 3.2 3.2" rotation="-90 0 0" model="ziti" anim-autoplay="{{true}}" />
+      </block>
+    </xr-ar-tracker>
+    <xr-camera id="camera" node-id="camera" position="1 1 1" clear-color="0.925 0.925 0.925 1" far="5000" background="ar" is-ar-camera="{{true}}" />
+  </xr-node>
+  <xr-node node-id="lights">
+    <xr-light type="ambient" color="1 1 1" intensity="2" />
+    <xr-light type="directional" rotation="90 60 0" color="1 1 1" intensity="3" />
+  </xr-node>
+</xr-scene>

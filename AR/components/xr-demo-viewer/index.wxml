@@ -1,0 +1,5 @@
+<view class="demo-wrap">
+  <scroll-view class="demo-viewer" scroll-y="{{true}}">
+    <slot />
+  </scroll-view>
+</view>

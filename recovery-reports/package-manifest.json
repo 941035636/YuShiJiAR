@@ -1,0 +1,359 @@
+{
+  "source": "D:\\ARRecovery\\wx8d8d557b77c8ad75\\recovery-1.0.6\\original\\__APP__.wxapkg",
+  "appid": "wx8d8d557b77c8ad75",
+  "encryptedSize": 512411,
+  "decryptedSize": 512404,
+  "decryptedSha256": "a2756da03e9ce6a42f60c35c25a2a68884f23a9bfd72a9b0fff332cf15f1e252",
+  "firstMarker": "0xbe",
+  "indexMarker": "0xed",
+  "indexLength": 3312,
+  "bodyLength": 509078,
+  "fileCount": 69,
+  "files": [
+    {
+      "name": "/images/bk.png",
+      "offset": 3326,
+      "size": 108029
+    },
+    {
+      "name": "/pages/image/按键底.png",
+      "offset": 111355,
+      "size": 48060
+    },
+    {
+      "name": "/pages/image/收藏版.png",
+      "offset": 159415,
+      "size": 4429
+    },
+    {
+      "name": "/pages/image/盲盒版.png",
+      "offset": 163844,
+      "size": 3454
+    },
+    {
+      "name": "/app-config.json",
+      "offset": 167298,
+      "size": 1969
+    },
+    {
+      "name": "/AR/components/xr-ar-oceanWorld/index.json",
+      "offset": 169267,
+      "size": 103
+    },
+    {
+      "name": "/AR/components/xr-demo-viewer/index.json",
+      "offset": 169370,
+      "size": 39
+    },
+    {
+      "name": "/appservice.app.js",
+      "offset": 228602,
+      "size": 15655
+    },
+    {
+      "name": "/AR/components/xr-ar-BenZun/index.appservice.js",
+      "offset": 244257,
+      "size": 8248
+    },
+    {
+      "name": "/AR/components/xr-ar-JinXi/index.appservice.js",
+      "offset": 252505,
+      "size": 8159
+    },
+    {
+      "name": "/AR/components/xr-ar-NaFu/index.appservice.js",
+      "offset": 260664,
+      "size": 8266
+    },
+    {
+      "name": "/AR/components/xr-ar-ZhaoCai/index.appservice.js",
+      "offset": 268930,
+      "size": 7626
+    },
+    {
+      "name": "/AR/components/xr-ar-ZiZai/index.appservice.js",
+      "offset": 276556,
+      "size": 7531
+    },
+    {
+      "name": "/AR/components/xr-ar-oceanWorld/index.appservice.js",
+      "offset": 284087,
+      "size": 7724
+    },
+    {
+      "name": "/AR/components/xr-demo-viewer/index.appservice.js",
+      "offset": 291811,
+      "size": 1761
+    },
+    {
+      "name": "/pages/ar/scene-ar-BenZun/index.appservice.js",
+      "offset": 293572,
+      "size": 7459
+    },
+    {
+      "name": "/pages/ar/scene-ar-JinXi/index.appservice.js",
+      "offset": 301031,
+      "size": 7916
+    },
+    {
+      "name": "/pages/ar/scene-ar-NaFu/index.appservice.js",
+      "offset": 308947,
+      "size": 7931
+    },
+    {
+      "name": "/pages/ar/scene-ar-ZhaoCai/index.appservice.js",
+      "offset": 316878,
+      "size": 7373
+    },
+    {
+      "name": "/pages/ar/scene-ar-ZiZai/index.appservice.js",
+      "offset": 324251,
+      "size": 7479
+    },
+    {
+      "name": "/pages/ar/scene-ar-oceanWorld/index.appservice.js",
+      "offset": 331730,
+      "size": 7514
+    },
+    {
+      "name": "/pages/index/index.appservice.js",
+      "offset": 339244,
+      "size": 2811
+    },
+    {
+      "name": "/pages/logs/logs.appservice.js",
+      "offset": 342055,
+      "size": 1394
+    },
+    {
+      "name": "/pages/selectModel/index.appservice.js",
+      "offset": 343449,
+      "size": 3976
+    },
+    {
+      "name": "/AR/components/xr-ar-BenZun/index.html",
+      "offset": 347425,
+      "size": 482
+    },
+    {
+      "name": "/AR/components/xr-ar-JinXi/index.html",
+      "offset": 347907,
+      "size": 480
+    },
+    {
+      "name": "/AR/components/xr-ar-NaFu/index.html",
+      "offset": 348387,
+      "size": 478
+    },
+    {
+      "name": "/AR/components/xr-ar-ZhaoCai/index.html",
+      "offset": 348865,
+      "size": 484
+    },
+    {
+      "name": "/AR/components/xr-ar-ZiZai/index.html",
+      "offset": 349349,
+      "size": 480
+    },
+    {
+      "name": "/AR/components/xr-ar-oceanWorld/index.html",
+      "offset": 349829,
+      "size": 490
+    },
+    {
+      "name": "/AR/components/xr-demo-viewer/index.html",
+      "offset": 350319,
+      "size": 486
+    },
+    {
+      "name": "/pages/ar/scene-ar-BenZun/index.html",
+      "offset": 350805,
+      "size": 478
+    },
+    {
+      "name": "/pages/ar/scene-ar-JinXi/index.html",
+      "offset": 351283,
+      "size": 476
+    },
+    {
+      "name": "/pages/ar/scene-ar-NaFu/index.html",
+      "offset": 351759,
+      "size": 474
+    },
+    {
+      "name": "/pages/ar/scene-ar-ZhaoCai/index.html",
+      "offset": 352233,
+      "size": 480
+    },
+    {
+      "name": "/pages/ar/scene-ar-ZiZai/index.html",
+      "offset": 352713,
+      "size": 476
+    },
+    {
+      "name": "/pages/ar/scene-ar-oceanWorld/index.html",
+      "offset": 353189,
+      "size": 486
+    },
+    {
+      "name": "/pages/index/index.html",
+      "offset": 353675,
+      "size": 452
+    },
+    {
+      "name": "/pages/logs/logs.html",
+      "offset": 354127,
+      "size": 448
+    },
+    {
+      "name": "/pages/selectModel/index.html",
+      "offset": 354575,
+      "size": 464
+    },
+    {
+      "name": "AR/components/xr-ar-BenZun/index.fpcssb",
+      "offset": 355039,
+      "size": 66
+    },
+    {
+      "name": "AR/components/xr-ar-JinXi/index.fpcssb",
+      "offset": 355105,
+      "size": 22
+    },
+    {
+      "name": "AR/components/xr-ar-NaFu/index.fpcssb",
+      "offset": 355127,
+      "size": 22
+    },
+    {
+      "name": "AR/components/xr-ar-ZhaoCai/index.fpcssb",
+      "offset": 355149,
+      "size": 22
+    },
+    {
+      "name": "AR/components/xr-ar-ZiZai/index.fpcssb",
+      "offset": 355171,
+      "size": 22
+    },
+    {
+      "name": "AR/components/xr-ar-oceanWorld/index.fpcssb",
+      "offset": 355193,
+      "size": 22
+    },
+    {
+      "name": "AR/components/xr-demo-viewer/index.fpcssb",
+      "offset": 355215,
+      "size": 1856
+    },
+    {
+      "name": "app.fpcssb",
+      "offset": 357071,
+      "size": 117
+    },
+    {
+      "name": "app.fpiib",
+      "offset": 357188,
+      "size": 269
+    },
+    {
+      "name": "/common.app.js",
+      "offset": 357815,
+      "size": 59193
+    },
+    {
+      "name": "/webview.app.js",
+      "offset": 417008,
+      "size": 4098
+    },
+    {
+      "name": "/AR/components/xr-ar-BenZun/index.webview.js",
+      "offset": 421106,
+      "size": 6233
+    },
+    {
+      "name": "/AR/components/xr-ar-JinXi/index.webview.js",
+      "offset": 427339,
+      "size": 5969
+    },
+    {
+      "name": "/AR/components/xr-ar-NaFu/index.webview.js",
+      "offset": 433308,
+      "size": 6080
+    },
+    {
+      "name": "/AR/components/xr-ar-ZhaoCai/index.webview.js",
+      "offset": 439388,
+      "size": 5431
+    },
+    {
+      "name": "/AR/components/xr-ar-ZiZai/index.webview.js",
+      "offset": 444819,
+      "size": 5342
+    },
+    {
+      "name": "/AR/components/xr-ar-oceanWorld/index.webview.js",
+      "offset": 450161,
+      "size": 5519
+    },
+    {
+      "name": "/AR/components/xr-demo-viewer/index.webview.js",
+      "offset": 455680,
+      "size": 3116
+    },
+    {
+      "name": "/pages/ar/scene-ar-BenZun/index.webview.js",
+      "offset": 458796,
+      "size": 7769
+    },
+    {
+      "name": "/pages/ar/scene-ar-JinXi/index.webview.js",
+      "offset": 466565,
+      "size": 7839
+    },
+    {
+      "name": "/pages/ar/scene-ar-NaFu/index.webview.js",
+      "offset": 474404,
+      "size": 7835
+    },
+    {
+      "name": "/pages/ar/scene-ar-ZhaoCai/index.webview.js",
+      "offset": 482239,
+      "size": 7850
+    },
+    {
+      "name": "/pages/ar/scene-ar-ZiZai/index.webview.js",
+      "offset": 490089,
+      "size": 7839
+    },
+    {
+      "name": "/pages/ar/scene-ar-oceanWorld/index.webview.js",
+      "offset": 497928,
+      "size": 7864
+    },
+    {
+      "name": "/pages/index/index.webview.js",
+      "offset": 505792,
+      "size": 1965
+    },
+    {
+      "name": "/pages/logs/logs.webview.js",
+      "offset": 507757,
+      "size": 1405
+    },
+    {
+      "name": "/pages/selectModel/index.webview.js",
+      "offset": 509162,
+      "size": 3195
+    },
+    {
+      "name": "/app-service.js",
+      "offset": 169409,
+      "size": 178016
+    },
+    {
+      "name": "/page-frame.html",
+      "offset": 357457,
+      "size": 154947
+    }
+  ]
+}

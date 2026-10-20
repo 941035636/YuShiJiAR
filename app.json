@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/selectModel/index",
+    "pages/ar/scene-ar-oceanWorld/index",
+    "pages/ar/scene-ar-BenZun/index",
+    "pages/ar/scene-ar-ZhaoCai/index",
+    "pages/ar/scene-ar-ZiZai/index",
+    "pages/ar/scene-ar-JinXi/index",
+    "pages/ar/scene-ar-NaFu/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "遇石记AR幻境",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2"
+}

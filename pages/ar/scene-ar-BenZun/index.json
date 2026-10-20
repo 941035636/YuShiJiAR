@@ -1,0 +1,6 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "xr-ar-BenZun": "/AR/components/xr-ar-BenZun/index"
+  }
+}

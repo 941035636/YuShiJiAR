@@ -1,0 +1,18 @@
+{
+  "description": "遇石记AR幻境 1.0.6 recovered project",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": false,
+    "urlCheck": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "trial",
+  "appid": "wx8d8d557b77c8ad75",
+  "projectname": "遇石记AR幻境-recovered",
+  "condition": {}
+}

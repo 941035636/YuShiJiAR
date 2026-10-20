@@ -1,0 +1,2053 @@
+{
+  "generatedAt": "2026-10-20T07:48:04.832Z",
+  "imageCount": 292,
+  "uiImageCount": 18,
+  "trackingImageCount": 6,
+  "extractedGlbTextureCount": 267,
+  "entries": [
+    {
+      "path": "textures/Card/dcdy.jpg",
+      "size": 865076,
+      "width": 3648,
+      "height": 5472,
+      "sha256": "b26cf86583638ab32e201c0deab423a89fae463f52e840dedb5b297b574c65da"
+    },
+    {
+      "path": "textures/Card/qkds.jpg",
+      "size": 884277,
+      "width": 3648,
+      "height": 5472,
+      "sha256": "9999b6b7f358120d391e2ae99f05dc364f03d7290ac22a3e2e7ba688f8d9bdf3"
+    },
+    {
+      "path": "textures/Card/syjd.jpg",
+      "size": 848257,
+      "width": 3648,
+      "height": 5472,
+      "sha256": "40d4492f71fcc4822674ecc93e319e207bd4676c5f31ee7f1c774fff642845e6"
+    },
+    {
+      "path": "textures/Card/tssgd.jpg",
+      "size": 874708,
+      "width": 3648,
+      "height": 5472,
+      "sha256": "4df7fb12ae1b127e912de9d60b6edae4ca4fda63c83f8b53b82255b6145c3dc8"
+    },
+    {
+      "path": "textures/Card/wszz.jpg",
+      "size": 863518,
+      "width": 3648,
+      "height": 5472,
+      "sha256": "92f5bf699953bea1bf8beabf55da13d81b935701f355c5b0759da73cfeb79520"
+    },
+    {
+      "path": "textures/Card/xctj.jpg",
+      "size": 882089,
+      "width": 3648,
+      "height": 5472,
+      "sha256": "def030c68c42f5f35b1cb1450d454bf5f4deaa399c2681ce12dfca131bd3b3ec"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (1)/00-image-0.png",
+      "size": 232380,
+      "width": 800,
+      "height": 800,
+      "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (1)/01-image-1.png",
+      "size": 90660,
+      "width": 800,
+      "height": 800,
+      "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (1)/02-image-2.png",
+      "size": 205300,
+      "width": 800,
+      "height": 800,
+      "sha256": "57b27b141c1169fc798a902106d8a47847b961844bb2069fcc8ca0d8bee87eaf"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (1)/03-image-3.png",
+      "size": 595872,
+      "width": 800,
+      "height": 800,
+      "sha256": "ff6d2d5514e330ed4a300602112aa20b126ff54d3799fa0233ce091ad8342c04"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (2)/00-image-0.png",
+      "size": 232380,
+      "width": 800,
+      "height": 800,
+      "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (2)/01-image-1.png",
+      "size": 90660,
+      "width": 800,
+      "height": 800,
+      "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (2)/02-image-2.png",
+      "size": 205300,
+      "width": 800,
+      "height": 800,
+      "sha256": "57b27b141c1169fc798a902106d8a47847b961844bb2069fcc8ca0d8bee87eaf"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02 (2)/03-image-3.png",
+      "size": 595872,
+      "width": 800,
+      "height": 800,
+      "sha256": "ff6d2d5514e330ed4a300602112aa20b126ff54d3799fa0233ce091ad8342c04"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02/00-image-0.png",
+      "size": 232380,
+      "width": 800,
+      "height": 800,
+      "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02/01-image-1.png",
+      "size": 90660,
+      "width": 800,
+      "height": 800,
+      "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02/02-image-2.png",
+      "size": 205300,
+      "width": 800,
+      "height": 800,
+      "sha256": "57b27b141c1169fc798a902106d8a47847b961844bb2069fcc8ca0d8bee87eaf"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdy02/03-image-3.png",
+      "size": 595872,
+      "width": 800,
+      "height": 800,
+      "sha256": "ff6d2d5514e330ed4a300602112aa20b126ff54d3799fa0233ce091ad8342c04"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdyhr/00-image-0.png",
+      "size": 669836,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "88fee5280e811f8a867630f1cee1fbcda811960acca8f8b06ec5f2ce92bb01bc"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdyhr/01-image-1.png",
+      "size": 688848,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "7c3ce630ccf791a3306f6da1e5e5b3afa2f5a7cb781ae1534b45847d935a7eb7"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dcdyhr/02-image-2.png",
+      "size": 658492,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "0dbcb611b390770e7b409c2a68211c933c5ccd89444c2e3ef8d7d38692c7ab7f"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/dun/00-image-0.png",
+      "size": 657388,
+      "width": 1300,
+      "height": 1300,
+      "sha256": "f7d88ecbdc31b30a40ba6f70c2f793a527d4ac60598a275a44de045448c36b12"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/gui/00-image-0.png",
+      "size": 1917132,
+      "width": 2000,
+      "height": 2000,
+      "sha256": "3d1748d6394a455f8ab3286f236109a669cfaa35878037c66489954bd3b78032"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/gui/01-image-1.png",
+      "size": 2317760,
+      "width": 2000,
+      "height": 2000,
+      "sha256": "9f7ca3dc05cd4edd6a2dac079cab8617c65126e85b8a91b21368341d55992fe9"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/long(1)/00-image-0.png",
+      "size": 1954652,
+      "width": 2000,
+      "height": 2000,
+      "sha256": "3f19bcf57497e0d77a5adf011a80d789ac48b4c763905bd95f794c5cfa5486da"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/long(1)/01-image-1.png",
+      "size": 2534868,
+      "width": 2000,
+      "height": 2000,
+      "sha256": "b3b52ca9c81a703d3921ffdb02a51e16b583acc14ac4869a86b168f98511a3bc"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkds01/00-image-0.png",
+      "size": 232380,
+      "width": 800,
+      "height": 800,
+      "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkds01/01-image-1.png",
+      "size": 90660,
+      "width": 800,
+      "height": 800,
+      "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkds01/02-image-2.png",
+      "size": 81768,
+      "width": 500,
+      "height": 500,
+      "sha256": "b167d6b8e2d6a4eb4ddb6e2c13c393630e3d14a76aa99b9877fdbfe360c14e8f"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkds01/03-image-3.png",
+      "size": 214404,
+      "width": 500,
+      "height": 500,
+      "sha256": "fcda5333de50165d9378388728b69a36b42a1fa9e57bccb43388227abf404921"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkdshr/00-image-0.png",
+      "size": 636408,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "2eb5d1850880f07b04cd88fa701ac24a9ed27850389d3119f7db927667ee1192"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkdshr/01-image-1.png",
+      "size": 597720,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "25f926df138f1bd8ac5766e62503518043e884f6c8a91691bc9ed55c564bbb24"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkdshr/02-image-2.png",
+      "size": 633400,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "f2031ec936768cc3d118d4967777e342b26e5eeb0f11aacf8390b0efbfb976b3"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/qkdshr/03-image-3.png",
+      "size": 622648,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "95191a3a7e646bbc3a795d07f080e734cd4ab1dadd958c54755128ba075405cf"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/scene/00-image-0.png",
+      "size": 440776,
+      "width": 1300,
+      "height": 1300,
+      "sha256": "38a8434f4f8080ae00297b8abb10003d31ad20db806d32dfd562b8f5ea80813c"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/scene/01-image-1.png",
+      "size": 988932,
+      "width": 1300,
+      "height": 1300,
+      "sha256": "2ba641f184505df64a4bb4ebfce261044e554ecff26eccab4a8ced6105a48b3e"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/shan/00-image-0.png",
+      "size": 366188,
+      "width": 800,
+      "height": 800,
+      "sha256": "e4e9e869df015b97d36b4d8409d8ed2f05bb9f3fe01e09a4e7abccab8ae9232d"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjd/00-image-0.png",
+      "size": 232380,
+      "width": 800,
+      "height": 800,
+      "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjd/01-image-1.png",
+      "size": 90660,
+      "width": 800,
+      "height": 800,
+      "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjd/02-image-2.png",
+      "size": 192936,
+      "width": 800,
+      "height": 800,
+      "sha256": "9b96a758880287206bdbe9510e65b547b8791cb8706be9f1a8865bf95bab8795"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjd/03-image-3.png",
+      "size": 601988,
+      "width": 800,
+      "height": 800,
+      "sha256": "b361a5f824c57aee63f370d3b5326707f1bea64111c375c053bf38202d7a7124"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjdhr/00-image-0.png",
+      "size": 800912,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "f9be944f93ce396cdc3741265ccd32331d35e1ade3172c727f6caa1cbefba91d"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjdhr/01-image-1.png",
+      "size": 804156,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "8a91a2fd56a4c1c52db1b1058a07424a0ed1fbf6ebaffb624d581ac1d27e2cb7"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjdhr/02-image-2.png",
+      "size": 796432,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "81eb8d069c428741135f954322ab9cba47414d4a524f0e6c0244513e54515fd2"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/syjdhr/03-image-3.png",
+      "size": 805160,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "b84408148d71c4f43980d24dcb6c5024012a266dc42d7b76717cb65c33b99c66"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/wszzhr/00-image-0.png",
+      "size": 626624,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "8b61f041ec7d116a9b799d5526c1ec8f13549deabb33b21b47ac0338ea9dcaa8"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/wszzhr/01-image-1.png",
+      "size": 622092,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "8728325f10effe2379a71d69eca7e773091a845e3ec9e510b10d69dcd71d21d2"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/wszzhr/02-image-2.png",
+      "size": 600600,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "351f54267588e58033e8c9e76a060710936c677dc08123279a687e29ce4abd37"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/wszzhr/03-image-3.png",
+      "size": 622504,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "21abfd2d279bc98f03c728469a279b29ef23f337b528568dea023e287642702e"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctj/00-image-0.png",
+      "size": 232380,
+      "width": 800,
+      "height": 800,
+      "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctj/01-image-1.png",
+      "size": 90660,
+      "width": 800,
+      "height": 800,
+      "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctj/02-image-2.png",
+      "size": 245900,
+      "width": 800,
+      "height": 800,
+      "sha256": "0f21075790888af405c39008c60cceaadae2149157aded5e437f83ac897528c5"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctj/03-image-3.png",
+      "size": 499336,
+      "width": 800,
+      "height": 800,
+      "sha256": "adaafa1348a93ad31677b71eaa481f4a7c0c5730a16cefc0845bc38316b5eec5"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctjhr/00-image-0.png",
+      "size": 700960,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "b7e2b9ec4ea024a8599b23142ae1b0bd67ed65b9565aee29a7ae73ef9f10e54a"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctjhr/01-image-1.png",
+      "size": 690596,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "9855e6d07dcac6a0ba01248e62189f83fdd94bcea65ae1ddcebaf555f9cd5525"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctjhr/02-image-2.png",
+      "size": 679900,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "b0e85bb525044edfdbc1ca47aaf44aba6b39d06c119fad7e5af1ae46a4f90502"
+    },
+    {
+      "path": "textures/extracted-from-glb/FrameAnimation/xctjhr/03-image-3.png",
+      "size": 713352,
+      "width": 1000,
+      "height": 1000,
+      "sha256": "6f5c443a4b966c453e168fa7751b4ba9b9b1c69b009de510690e488e347b1407"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/00-image-0.png",
+      "size": 703986,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "b2763b7d1ab7f5c9880b024946e2e6b7a70bdf74bb9705a2e583a30fce13beb2"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/01-image-1.png",
+      "size": 774525,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "473bf390767f004fa5a79fd4e0ee99cbc3a50060ce4be3420b374b6dc5b3b145"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/02-image-2.png",
+      "size": 1169824,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "37ee513793c53215a7d824e2c12c2e9c78771af7c236a59350adc678ef6f3f3f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/03-image-3.png",
+      "size": 8104,
+      "width": 128,
+      "height": 128,
+      "sha256": "7f2e7f3fb1c97999b0448a2fbca255922c5a5db8519b670fc369471d32b5335f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/04-image-4.png",
+      "size": 15256,
+      "width": 128,
+      "height": 128,
+      "sha256": "aeba2bb1051214bab649d099ca267f990f197f278e415507a3b4dc268c9e76d1"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/05-image-5.png",
+      "size": 11976,
+      "width": 128,
+      "height": 128,
+      "sha256": "ad5fe650531d3789de56248bb791144f23a6ad502d197c017b9a991203e3ee71"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/06-image-6.png",
+      "size": 502864,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "080f3deb831f648bba1bbfa3c9978677501a6da1e39286481289afac40b1b64f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/07-image-7.png",
+      "size": 1159803,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "9b8c3cae6faa045dadae10ff516819756e476435340b5b5b3ac0c1e4d4b0874e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/08-image-8.png",
+      "size": 1080658,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "d02573983e6bbf0f7f3f610b1617971dd6b66489dc1b057c3d69292a3e6f9a4b"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/09-image-9.png",
+      "size": 31870,
+      "width": 128,
+      "height": 128,
+      "sha256": "4d4f3669220f79689f790848d1d1ce1fc36adaa8727412e258698607a7976433"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/10-image-10.png",
+      "size": 15287,
+      "width": 128,
+      "height": 128,
+      "sha256": "614d517b2613635a2ba97eeb66f76a181b4167243d02afd1bbd5ab9e2f67908f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/dcdy_jinbi/11-image-11.png",
+      "size": 9311,
+      "width": 128,
+      "height": 128,
+      "sha256": "43c4f6a1965a44b987fc4617fb0ddd5e7162e1ca4662c57ea9a85e984faf07fc"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/00-image-0.png",
+      "size": 13302,
+      "width": 128,
+      "height": 128,
+      "sha256": "84ede362f041408da6b832b3ce60f0b8fe806157d5674b321e2bee2376669d1a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/01-image-1.png",
+      "size": 12149,
+      "width": 128,
+      "height": 128,
+      "sha256": "dbac46d9da3899945a237c7dfac232927fc2e7cab7e652094c257590bcaf6ad3"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/02-image-2.png",
+      "size": 9382,
+      "width": 128,
+      "height": 128,
+      "sha256": "c6134372d8a208d1ab89918ef58501306349a9334f0b93d3449135e712cdd8a9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/03-image-3.png",
+      "size": 383,
+      "width": 128,
+      "height": 128,
+      "sha256": "64d726ffb47af9dfd1a79ef2ff7226257192075b416eaf87ba66daca266bd1a4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/04-image-4.png",
+      "size": 15061,
+      "width": 128,
+      "height": 128,
+      "sha256": "1ce9b0debe2202db16c46430efa522717c5fa5dac4cdfe32f7e64283ba58bf66"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/05-image-5.png",
+      "size": 9396,
+      "width": 128,
+      "height": 128,
+      "sha256": "3c3fa7c4fe2adbe855e4091715d6b7714c0e575ab4407b5bb127704f1d531716"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/06-image-6.png",
+      "size": 20984,
+      "width": 128,
+      "height": 128,
+      "sha256": "124849cf0da3cf28fdc6bbb04d177a966751947e79ee91fd26f65aa996ecc9c4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/07-image-7.png",
+      "size": 18042,
+      "width": 128,
+      "height": 128,
+      "sha256": "5ad8d7238e7ab8d2e370a175d782a15b7bd1a37ef713034ca332056ec7595ac8"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/08-image-8.png",
+      "size": 10712,
+      "width": 128,
+      "height": 128,
+      "sha256": "e096c81b3093555eee22f7970f110383bf571cee6e5c1bd0e496d70ba10add85"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/09-image-9.png",
+      "size": 10867,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a61eec57114ffc7929ecae1c9d8dafda9f354443919d8857c88b7b2e76b0f2f5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/10-image-10.png",
+      "size": 196872,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "c14c917142fe33c464d1c5bf79ee1ce1ce391bcc86772acbc96b39d21be61fe8"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/11-image-11.png",
+      "size": 579592,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "68a71983c2d10858e5737e3be9c518a256f775e03a13668df006e7609a74a436"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/12-image-12.png",
+      "size": 382,
+      "width": 128,
+      "height": 128,
+      "sha256": "4571e6321efd168a33baf1a710fb13eb0306f6f0eabd8781f1143bd3435ebd9c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/13-image-13.png",
+      "size": 6121,
+      "width": 128,
+      "height": 128,
+      "sha256": "978bd602d54eeeb727201eebe1ce9f12a49dec70b5e112b8c34fe574c47cd97f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/14-image-14.png",
+      "size": 9278,
+      "width": 128,
+      "height": 128,
+      "sha256": "24a7029c43660b5ce1d47288c9be7b88fac53556c1adf99d8d7b9d42d545f98d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/15-image-15.png",
+      "size": 146,
+      "width": 128,
+      "height": 128,
+      "sha256": "6fe6e5cfb1978289cd162361bb3bcb7dac0cd475957855a46f825901b77b6d32"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/16-image-16.png",
+      "size": 9850,
+      "width": 128,
+      "height": 128,
+      "sha256": "839af24a2a67d056e39a4a7816b18fa6b45644ef5ad7dbc2f571652f5c6dde9b"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/17-image-17.png",
+      "size": 9605,
+      "width": 128,
+      "height": 128,
+      "sha256": "e88e80f5fe6bd30f11b8ee8b5488a1583fbeeec262352d81e11e37fdb5d6a7df"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/18-image-18.png",
+      "size": 382,
+      "width": 128,
+      "height": 128,
+      "sha256": "39c874e160c76a8d96dff890b79199ac6a1e79cf6a5b0a23ccd59a271506b5c5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/19-image-19.png",
+      "size": 8517,
+      "width": 128,
+      "height": 128,
+      "sha256": "a5c27916538316de3de1f75b49a71e2e75155d0f6dcc69be74b216ece86c129e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/20-image-20.png",
+      "size": 9251,
+      "width": 128,
+      "height": 128,
+      "sha256": "8c61851588ee96c3a420bd756a68285fad71d7a9dfbfb9b6f781bedd99310940"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/21-image-21.png",
+      "size": 8698,
+      "width": 128,
+      "height": 128,
+      "sha256": "10ef5a0d0088e29a91920205b293e121dcd377a5868c1da779a2897600ec8d22"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/22-image-22.png",
+      "size": 6889,
+      "width": 128,
+      "height": 128,
+      "sha256": "37d90b30df6f0da2974093cdae7e77227d79bf97f932165e1850678b511ab75c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/23-image-23.png",
+      "size": 9221,
+      "width": 128,
+      "height": 128,
+      "sha256": "b99820908f69fc54c88df5db8df12de8492f020e0a41ab2528a152c89e0fb1d0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/24-image-24.png",
+      "size": 769345,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "c04bcb8efcf9ece652bfc2f3f3cb63ddf48bcc28576003385b59377a067a5751"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/25-image-25.png",
+      "size": 875119,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "500d77935ff57b6b1086ad7c57fd91b45e8ba30a3cf257ebb7eec3cbd32f24f0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/26-image-26.png",
+      "size": 766366,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "299031a145eeed4fc7c75260c981f94194d438115dc292b0b98ff0ddd29e4828"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/27-image-27.png",
+      "size": 6674,
+      "width": 128,
+      "height": 128,
+      "sha256": "a76a7a7c64910cdf3434960627fdaa7d612cb28a8b15c90865dfc8882db5c173"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/28-image-28.png",
+      "size": 5414,
+      "width": 128,
+      "height": 128,
+      "sha256": "acdcc98e67c5dec65aba839daf12f7d18afb8ae44b2387ec12344679cffecc66"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/qikaidesheng_jinbi/29-image-29.png",
+      "size": 9245,
+      "width": 128,
+      "height": 128,
+      "sha256": "1eb7021b1cb2d3dfcc314c62c8fbe63510b92e76539414d04f36b71f85bdfcd9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/00-image-0.png",
+      "size": 602504,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "0193a5ee9f084e53dc79da152385eb4cf928fcfb1b5ebad1dbd7ca0dd701be59"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/01-image-1.png",
+      "size": 735356,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "c689d1e8dfe6942b52d75af7a350576737db7b4f2379d06cce09b674e6ec926f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/02-image-2.png",
+      "size": 1268042,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "36f16457917c2a2f43e7f05bbcfc57c6e6fc1c0b5de20cb43f1a93fd07a6038b"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/03-image-3.png",
+      "size": 19487,
+      "width": 128,
+      "height": 128,
+      "sha256": "5ef7756a32f0ec81e2e295ab40c0a6810bb8c057a2572ee75a6faf4702369a1d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/04-image-4.png",
+      "size": 15666,
+      "width": 128,
+      "height": 128,
+      "sha256": "e8c3bf1cecbe04e1563563ff09f151c4d192f0d9101e47bf8a158142321da726"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/05-image-5.png",
+      "size": 11390,
+      "width": 128,
+      "height": 128,
+      "sha256": "a5356d11582a8540e539f0fe7e3041783472a0fa3750d38ac9315e18fa306b8c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/06-image-6.png",
+      "size": 608647,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a342c0c1b68225e8f709fec80b433453ad00d55e99e41e509465fd5b4eb9b970"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/07-image-7.png",
+      "size": 577526,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "8dae1c75a6f8d404e72d8f04315ca1f1a1ea15ebcea763a70d7f0c9d1bffeb9f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/08-image-8.png",
+      "size": 961809,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "b7e4fd7af01a6276b30379f4a6cc838404ba36253d4897c38faf9e42f5c2d775"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/09-image-9.png",
+      "size": 547315,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "15ae5df2fb9acb32a23a851d0131561a242067a61de8707b872e7875fbd8c92e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/10-image-10.png",
+      "size": 578590,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "813cd17b1c3068e8fcd23a2eb1ab6fcb691a28e6ab6be93816d3128cce997e56"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/SYJD/11-image-11.png",
+      "size": 573022,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "0eb9bcf47754fdc9602cde6801821c34ff8716709e5c2f0f3c13ed5a48cfa657"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/00-image-0.png",
+      "size": 33603,
+      "width": 128,
+      "height": 128,
+      "sha256": "4e29ed542485fbb8a24a9e171823f977aebb705fd2854d2041faa81e11107414"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/01-image-1.png",
+      "size": 18244,
+      "width": 128,
+      "height": 128,
+      "sha256": "ddc39ff963e894887c15ca650f7980b122c44360ba947a94bbea7985b4d4ddaa"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/02-image-2.png",
+      "size": 10962,
+      "width": 128,
+      "height": 128,
+      "sha256": "2cf0d563e96b6a5ce0d1370836d9d1860e8a776a7a405afa4e8f4e0cb487479d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/03-image-3.png",
+      "size": 22863,
+      "width": 128,
+      "height": 128,
+      "sha256": "a262fe551e86831ba13065e3f1a26773827567fb137d6cf98e509ec78e40aad1"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/04-image-4.png",
+      "size": 14177,
+      "width": 128,
+      "height": 128,
+      "sha256": "f5b0e21456a22a0057a444456a1b26dcdb14090b0a6f9f71e1754985f712d18d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/05-image-5.png",
+      "size": 9430,
+      "width": 128,
+      "height": 128,
+      "sha256": "192024d36ad17c7580b46c61b4de2575d58ce7e0090c64c97708c0e3d7da2056"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/06-image-6.png",
+      "size": 1840525,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a93bff7d07f187abf080bba8e0600bbcd52eb2643d61317064deb1788d4106dc"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/07-image-7.png",
+      "size": 1032894,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "4b9b58428a36930ea4b99aed460f5e0d4c9d6be6ba12e71a69e9778d7ed95c1c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/08-image-8.png",
+      "size": 936881,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "1e863a3d1bf45c7a6d6ee3480fc479bf76d44dbf30fad316a5564e271fc818df"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/09-image-9.png",
+      "size": 101525,
+      "width": 256,
+      "height": 256,
+      "sha256": "939a79ce59f7aabd1ecff60c215026be2bb2d1563086572cd68bc41ba9b6c1b9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/10-image-10.png",
+      "size": 61861,
+      "width": 256,
+      "height": 256,
+      "sha256": "6bee076a862a8849f2d012d3e56e4257b74558f79ae7eaa99b35544ec74c6215"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/taishanshigandang/11-image-11.png",
+      "size": 59686,
+      "width": 256,
+      "height": 256,
+      "sha256": "5acbd40386848a5f40c30e0efbf8897c3ad59a77c9108dd3f82081e9495064d9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/00-image-0.png",
+      "size": 300848,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a577443c0ab4975bd59e8c42907d2e06da3b0c78ba4556a1b25e8d2e3444a161"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/01-image-1.png",
+      "size": 716835,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a20ac8bf20af760116050e3250f2b322be59cc60835a127b9535c191ca493430"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/02-image-2.png",
+      "size": 1235918,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "81b1bb099a735a0d883d3bb4862b65878d8b8179eaf55c9289ad954760bc3761"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/03-image-3.png",
+      "size": 9480,
+      "width": 128,
+      "height": 128,
+      "sha256": "d7edf3e118ffc4bb9fad89bc352d1961890a47c3c26991cb7f38e247d1075115"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/04-image-4.png",
+      "size": 17197,
+      "width": 128,
+      "height": 128,
+      "sha256": "be604d89c42c8cc73f11e9d4789459015de4b247b0474b410d72d8cc9f2c2def"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/05-image-5.png",
+      "size": 11240,
+      "width": 128,
+      "height": 128,
+      "sha256": "f0a005aab59536a6a2725d64d8fd8df4b27ae60a1e4100dae73a990634db9cd0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/06-image-6.png",
+      "size": 627098,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "bf157b5beac2190f12cc69f9af460c48f1cc18586b5dc10c1d985fc5703dd306"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/07-image-7.png",
+      "size": 429467,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "85ed58b57c2bc56c6052bc462f08ef2775e6906deb1505ab1cbfa326b16a602e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/08-image-8.png",
+      "size": 893820,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "465a7ff14c676f328c6934e25222e37c1cf551590a6e993ef6b5f95253fdc448"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/09-image-9.png",
+      "size": 40125,
+      "width": 256,
+      "height": 256,
+      "sha256": "f503a6df5b31d273adce3ca948678523ee5ede48a6401e664bcb51add8fac517"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/10-image-10.png",
+      "size": 46240,
+      "width": 256,
+      "height": 256,
+      "sha256": "e25735ddfbad43ccc79630ae948aa10684af9f5d06763f3ee235efb9ba3ce85e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/wszz/11-image-11.png",
+      "size": 36524,
+      "width": 256,
+      "height": 256,
+      "sha256": "ba3ba6544a24926e9ed255c8e9882a3961318b80d61bee34a6cb7452741c88c1"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/00-image-0.png",
+      "size": 20430,
+      "width": 128,
+      "height": 128,
+      "sha256": "5d25e50e1ae0659493fd903c5a2a70c10b4a744f8deda0fa456b5a69ab8346b7"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/01-image-1.png",
+      "size": 21488,
+      "width": 128,
+      "height": 128,
+      "sha256": "9576ace4e3c47c55f637ac495af68100e711bf72ee81f6cfcaf4b91905a80a24"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/02-image-2.png",
+      "size": 11352,
+      "width": 128,
+      "height": 128,
+      "sha256": "0e5e14f7f7974ca09f0a1659c324f5d4f5df1a1981620cfd9425aa036389e477"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/03-image-3.png",
+      "size": 9835,
+      "width": 128,
+      "height": 128,
+      "sha256": "145654a1af240973d9a306f81211bf78bfab3e9a480c1e6b35c2857d20f5334d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/04-image-4.png",
+      "size": 12778,
+      "width": 128,
+      "height": 128,
+      "sha256": "11d5eba16ccd588961d7c0c2e5b9e9fa6abe75dc106b49fd2259d578c75c9aa9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/05-image-5.png",
+      "size": 9305,
+      "width": 128,
+      "height": 128,
+      "sha256": "63ca4bdfbcdc0a755bf8eb494a4363ba7af140ab9bf47c1c785af944bf84dc41"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/06-image-6.png",
+      "size": 11305,
+      "width": 128,
+      "height": 128,
+      "sha256": "f5ea0453a17015db6b9f548597d5609fbc4f4d7c8be83e5d5f11b896f1cca296"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/07-image-7.png",
+      "size": 15169,
+      "width": 128,
+      "height": 128,
+      "sha256": "6a1afbf62753f980f8d0cf21d0f86eb3e195315c66b1671434a8f22ad653a81d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/08-image-8.png",
+      "size": 9474,
+      "width": 128,
+      "height": 128,
+      "sha256": "f0a9df29ef601b952b8f9fee5cd8f024625d5cd5a4860abddcf119a7d14c8d8d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/09-image-9.png",
+      "size": 454,
+      "width": 128,
+      "height": 128,
+      "sha256": "180b514318660b90a5e7bae85ef33da96f6c242051baa4dc3092252daea8ce09"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/10-image-10.png",
+      "size": 17501,
+      "width": 128,
+      "height": 128,
+      "sha256": "043b7df341095dec285feed704626de59f37069dee0c0fbb586981a3725454b3"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/11-image-11.png",
+      "size": 11755,
+      "width": 128,
+      "height": 128,
+      "sha256": "434361166ad0de6395db30bc31ef15360ffee6d7d8469cefd1b45431522f71c9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/12-image-12.png",
+      "size": 30324,
+      "width": 128,
+      "height": 128,
+      "sha256": "b3b44341aed06833c4dfd3a8d7a3280684bff46bdf82550be2f5d63ca82e132d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/13-image-13.png",
+      "size": 26168,
+      "width": 128,
+      "height": 128,
+      "sha256": "01ac1a2669be7d954571c6efc29b0c87d9a1f3f09a6edae114f10a936080c79a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/GoldModel/xicongtianjiang/14-image-14.png",
+      "size": 12853,
+      "width": 128,
+      "height": 128,
+      "sha256": "4b737c6638c78acb9aabb09fb33dce04e73f2d1e89309bc2aa900cef50bdb300"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/00-image-0.png",
+      "size": 703986,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "b2763b7d1ab7f5c9880b024946e2e6b7a70bdf74bb9705a2e583a30fce13beb2"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/01-image-1.png",
+      "size": 774532,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "888514ab5759835cbed8ae1bd85b782eb1febd7ee5ec2c8ad457c2b9a376f168"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/02-image-2.png",
+      "size": 1169875,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "8f766d7d158f5e426472bb0e770986e1f0ff3dbdddcd152556db08db546c5378"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/03-image-3.png",
+      "size": 8104,
+      "width": 128,
+      "height": 128,
+      "sha256": "7f2e7f3fb1c97999b0448a2fbca255922c5a5db8519b670fc369471d32b5335f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/04-image-4.png",
+      "size": 15259,
+      "width": 128,
+      "height": 128,
+      "sha256": "a7e2533b2691d3c21776fac3b6280e0686ba712e3f577be0a61fe87eb24a4e29"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/05-image-5.png",
+      "size": 11957,
+      "width": 128,
+      "height": 128,
+      "sha256": "06e52e53f3f3459b6b1ba0ace4923e73752295171a1a35d9e6bdaafe32271e10"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/06-image-6.png",
+      "size": 502883,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "7573577f59860683a131f2b574afd3d30621d8488c4b1d9561b415959edbefe6"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/07-image-7.png",
+      "size": 1159818,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "7509c980ab2cef86222feb135d898fae457ead2d865bd0a867cc4dbbe4dfeaa5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/08-image-8.png",
+      "size": 1080561,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "1c21c9b17d8a36e29ed256bb14e56c46a6e2365f9b3b95f27c44985f4c5566ec"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/09-image-9.png",
+      "size": 381,
+      "width": 128,
+      "height": 128,
+      "sha256": "c88ea10936d57fdcd6dd4bcb493fddc0ea2bce9b66b1d417b941562185d87ff6"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/10-image-10.png",
+      "size": 381,
+      "width": 128,
+      "height": 128,
+      "sha256": "5b56c6ce66fdc0b48646443a8fe120720e45d34ebbfa1924b87632ebe6deb05f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/11-image-11.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/12-image-12.png",
+      "size": 28730,
+      "width": 128,
+      "height": 128,
+      "sha256": "96685dee6e3e6c5fc7e06ba13b86e6534a49c7598f0b58f71435df4fe097389b"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/13-image-13.png",
+      "size": 15371,
+      "width": 128,
+      "height": 128,
+      "sha256": "718cc399651bcc266c9836e60cd441ee07610ab3f9c36e40a6502c59c3aa29f7"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/dcdy_moyu/14-image-14.png",
+      "size": 9311,
+      "width": 128,
+      "height": 128,
+      "sha256": "43c4f6a1965a44b987fc4617fb0ddd5e7162e1ca4662c57ea9a85e984faf07fc"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/00-image-0.png",
+      "size": 31832,
+      "width": 128,
+      "height": 128,
+      "sha256": "cc0c8a2c5bedbe2cc34c759550c88285d8df64cd1a1e0d412c0139cb0ae39051"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/01-image-1.png",
+      "size": 12149,
+      "width": 128,
+      "height": 128,
+      "sha256": "dbac46d9da3899945a237c7dfac232927fc2e7cab7e652094c257590bcaf6ad3"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/02-image-2.png",
+      "size": 9382,
+      "width": 128,
+      "height": 128,
+      "sha256": "c6134372d8a208d1ab89918ef58501306349a9334f0b93d3449135e712cdd8a9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/03-image-3.png",
+      "size": 454,
+      "width": 128,
+      "height": 128,
+      "sha256": "fa3190f024301ef468b526e2a713a5da769c4124984bf3f3f4aaa3006bd09163"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/04-image-4.png",
+      "size": 15061,
+      "width": 128,
+      "height": 128,
+      "sha256": "1ce9b0debe2202db16c46430efa522717c5fa5dac4cdfe32f7e64283ba58bf66"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/05-image-5.png",
+      "size": 9396,
+      "width": 128,
+      "height": 128,
+      "sha256": "3c3fa7c4fe2adbe855e4091715d6b7714c0e575ab4407b5bb127704f1d531716"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/06-image-6.png",
+      "size": 58647,
+      "width": 128,
+      "height": 128,
+      "sha256": "238c1f65a12081974cb9667d304af7a8b66284b9e2fed5869b2bfdcd3076fcb4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/07-image-7.png",
+      "size": 18039,
+      "width": 128,
+      "height": 128,
+      "sha256": "b048ed81079b45c6d38e8407736fa822311d5b6a0bd1c46d4389bc42865bb5f6"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/08-image-8.png",
+      "size": 10711,
+      "width": 128,
+      "height": 128,
+      "sha256": "c5c2d95336d29cecd9aa3306afa2f1cb4059fe86eb203f046251cedb3bea6f56"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/09-image-9.png",
+      "size": 17318,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "540d042c172ab419ccf34f5cf8b835777ccd92c11741b3089f8cb0b5bad976ef"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/10-image-10.png",
+      "size": 196872,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "c14c917142fe33c464d1c5bf79ee1ce1ce391bcc86772acbc96b39d21be61fe8"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/11-image-11.png",
+      "size": 579592,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "68a71983c2d10858e5737e3be9c518a256f775e03a13668df006e7609a74a436"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/12-image-12.png",
+      "size": 453,
+      "width": 128,
+      "height": 128,
+      "sha256": "1c3044f2b3eae1851278ac2987a9f6e1880d927083accbd5b8b631f1a9d21ac7"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/13-image-13.png",
+      "size": 6121,
+      "width": 128,
+      "height": 128,
+      "sha256": "978bd602d54eeeb727201eebe1ce9f12a49dec70b5e112b8c34fe574c47cd97f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/14-image-14.png",
+      "size": 9278,
+      "width": 128,
+      "height": 128,
+      "sha256": "24a7029c43660b5ce1d47288c9be7b88fac53556c1adf99d8d7b9d42d545f98d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/15-image-15.png",
+      "size": 453,
+      "width": 128,
+      "height": 128,
+      "sha256": "db26ce2daecd80f1091bf1f126164b94aa8b4226db49bbbeac39db50915abe1a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/16-image-16.png",
+      "size": 8517,
+      "width": 128,
+      "height": 128,
+      "sha256": "a5c27916538316de3de1f75b49a71e2e75155d0f6dcc69be74b216ece86c129e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/17-image-17.png",
+      "size": 9251,
+      "width": 128,
+      "height": 128,
+      "sha256": "8c61851588ee96c3a420bd756a68285fad71d7a9dfbfb9b6f781bedd99310940"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/18-image-18.png",
+      "size": 20831,
+      "width": 128,
+      "height": 128,
+      "sha256": "b874ac4c57d2e5bb81ed58dd8302cc2a747e053da15312840dbc39d19f7612b5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/19-image-19.png",
+      "size": 6889,
+      "width": 128,
+      "height": 128,
+      "sha256": "37d90b30df6f0da2974093cdae7e77227d79bf97f932165e1850678b511ab75c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/20-image-20.png",
+      "size": 9221,
+      "width": 128,
+      "height": 128,
+      "sha256": "b99820908f69fc54c88df5db8df12de8492f020e0a41ab2528a152c89e0fb1d0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/21-image-21.png",
+      "size": 450,
+      "width": 128,
+      "height": 128,
+      "sha256": "f454c469a0e17ffe892791bc5e9dffc57e1b8eed0b0f600065fccee811dbb695"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/22-image-22.png",
+      "size": 11287,
+      "width": 128,
+      "height": 128,
+      "sha256": "d29eb2fbcdf891d2e17dc33d49ae6e373517d5ead9378049f84116691dcb1a89"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/23-image-23.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/24-image-24.png",
+      "size": 1930603,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "be724603df45d47438294f8e1b9bb1a02a8efabdd50897b9dbbd910ee502df92"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/25-image-25.png",
+      "size": 874782,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "f63a9672ed28f60c44787919c55f4c6741bc677a6add666c13753431c7e8beaa"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/26-image-26.png",
+      "size": 766335,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "0b061ecfa162806d8cf5c62ac8ddbc9f980141333799a2c30539c2c79efe14b4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/27-image-27.png",
+      "size": 14315,
+      "width": 128,
+      "height": 128,
+      "sha256": "f2c2e50224eebbd88d07660831ea9630a6b8b38788e62218df0b21cef9715db6"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/28-image-28.png",
+      "size": 5414,
+      "width": 128,
+      "height": 128,
+      "sha256": "acdcc98e67c5dec65aba839daf12f7d18afb8ae44b2387ec12344679cffecc66"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/29-image-29.png",
+      "size": 9245,
+      "width": 128,
+      "height": 128,
+      "sha256": "1eb7021b1cb2d3dfcc314c62c8fbe63510b92e76539414d04f36b71f85bdfcd9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/30-image-30.png",
+      "size": 449,
+      "width": 128,
+      "height": 128,
+      "sha256": "718a925a14ba9ee8ff280afad4884a36a5e47f6db00e51438a166221111521d2"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/31-image-31.png",
+      "size": 381,
+      "width": 128,
+      "height": 128,
+      "sha256": "d1345c22b84ac2b5f8f8f936660bf2c46abbb3ef7d8b66e65da380f1362b1065"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/qikaidesheng_moyu/32-image-32.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/00-image-0.png",
+      "size": 604793,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "405f8d5338c96ca2b388fc1e43b70277027e9dab8a4cb964505efd16e8d02fa4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/01-image-1.png",
+      "size": 669391,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "16ce7ecd7a4ff0529b88f3f0e3e3040d2ddbd5b5a4393faade53ff660db7132e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/02-image-2.png",
+      "size": 1398444,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "470f5c93fb3dbd7ffd7e22523e16bc0d8e0615ccb073fd47e009c74d12cdd776"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/03-image-3.png",
+      "size": 49708,
+      "width": 256,
+      "height": 256,
+      "sha256": "47563304ba523a81667696716ad523809f13761eba0384617209ad0e876806a0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/04-image-4.png",
+      "size": 48625,
+      "width": 256,
+      "height": 256,
+      "sha256": "cdee597447db797c9c3801661860a27765532a63dca1fba91903226d3cf8e7d5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/05-image-5.png",
+      "size": 36081,
+      "width": 256,
+      "height": 256,
+      "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/06-image-6.png",
+      "size": 609899,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "084e9b7ebdbb1f0449745470490fd2e3c88492faabc021e89aa2eed80381f098"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/07-image-7.png",
+      "size": 558092,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "bf46aca92b4b9c79666a2fe6469cdb8e43e9b309991e69d099cef88edd63229a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/08-image-8.png",
+      "size": 568971,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "3b029cc952c53262bdb085fa2d9ee40deb91d2f673e665d04b1fde9e0ffaa56a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/09-image-9.png",
+      "size": 1010,
+      "width": 256,
+      "height": 256,
+      "sha256": "882d6be57d4bdd5297065efa1c5d92a491da070003eef3a4f30e27130a7f00be"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/10-image-10.png",
+      "size": 46454,
+      "width": 256,
+      "height": 256,
+      "sha256": "d0312497c6b28c9e2c6fef72b24f0fadcfc971c302658c1f299fcf660a282c44"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/11-image-11.png",
+      "size": 36081,
+      "width": 256,
+      "height": 256,
+      "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/12-image-12.png",
+      "size": 557684,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "c0ba3feb031244d987d8f33e16e22289c9c23fe83fe09b23d2bf6649703a2bd5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/13-image-13.png",
+      "size": 447435,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "a371bbdfd53fd6424d1c11c142c0b626b713f01bdeb0d0970d4a578c84631f44"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/14-image-14.png",
+      "size": 568971,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "3b029cc952c53262bdb085fa2d9ee40deb91d2f673e665d04b1fde9e0ffaa56a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/15-image-15.png",
+      "size": 1010,
+      "width": 256,
+      "height": 256,
+      "sha256": "882d6be57d4bdd5297065efa1c5d92a491da070003eef3a4f30e27130a7f00be"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/16-image-16.png",
+      "size": 783,
+      "width": 256,
+      "height": 256,
+      "sha256": "68dc0007952987b50c072852581e4552f6ee9f481e67c688de3c275fa34f4f04"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/SYJD_moyu/17-image-17.png",
+      "size": 36081,
+      "width": 256,
+      "height": 256,
+      "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/00-image-0.png",
+      "size": 20333,
+      "width": 128,
+      "height": 128,
+      "sha256": "e312d371754a78954ef03d399d9d75a89c446014f8545ef1de6a12c9afa6263c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/01-image-1.png",
+      "size": 21566,
+      "width": 128,
+      "height": 128,
+      "sha256": "503027bc29431cd706e58de8e7a6198860728d212e3a89a666a77204cc121027"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/02-image-2.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/03-image-3.png",
+      "size": 9835,
+      "width": 128,
+      "height": 128,
+      "sha256": "145654a1af240973d9a306f81211bf78bfab3e9a480c1e6b35c2857d20f5334d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/04-image-4.png",
+      "size": 14117,
+      "width": 128,
+      "height": 128,
+      "sha256": "a32c1e3e60b713b40cd96ddaadd88e5b578a5140d67adb8fda39c4f292c69281"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/05-image-5.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/06-image-6.png",
+      "size": 455,
+      "width": 128,
+      "height": 128,
+      "sha256": "9917963b006a7178c117f47f0170a7898960fbbd941b0f0f612d7fa353db5af5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/07-image-7.png",
+      "size": 12096,
+      "width": 128,
+      "height": 128,
+      "sha256": "f2b3433290d395fcdaef8510af1f9f71ea243007436c3c1ffb9df42cc87cb795"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/08-image-8.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/09-image-9.png",
+      "size": 454,
+      "width": 128,
+      "height": 128,
+      "sha256": "180b514318660b90a5e7bae85ef33da96f6c242051baa4dc3092252daea8ce09"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/10-image-10.png",
+      "size": 17790,
+      "width": 128,
+      "height": 128,
+      "sha256": "426641286af6c8ee1bd4053728dccd89996a5be2335607011df4ceec660a8f22"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/11-image-11.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/12-image-12.png",
+      "size": 30338,
+      "width": 128,
+      "height": 128,
+      "sha256": "f34c550434a43fec64e386829530ff55648571005ec1303c163ffa939fd7dc72"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/13-image-13.png",
+      "size": 27050,
+      "width": 128,
+      "height": 128,
+      "sha256": "8ee5c1d5f27493e7892000f5417831a1b03ab157c9854927353ec5f049c3a547"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/14-image-14.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/15-image-15.png",
+      "size": 450,
+      "width": 128,
+      "height": 128,
+      "sha256": "f454c469a0e17ffe892791bc5e9dffc57e1b8eed0b0f600065fccee811dbb695"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/16-image-16.png",
+      "size": 14341,
+      "width": 128,
+      "height": 128,
+      "sha256": "113b1160dfeb70297bc56f1f313b5df292c62102ce3b87af1a01b0dc8b444699"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/17-image-17.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/18-image-18.png",
+      "size": 450,
+      "width": 128,
+      "height": 128,
+      "sha256": "f454c469a0e17ffe892791bc5e9dffc57e1b8eed0b0f600065fccee811dbb695"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/19-image-19.png",
+      "size": 381,
+      "width": 128,
+      "height": 128,
+      "sha256": "72ed5bfe61706608639d4563690738fbbb13ab6da174992f67d1bbbdc1c3accd"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/MoyuModel/xicongtianjiang_moyu/20-image-20.png",
+      "size": 9232,
+      "width": 128,
+      "height": 128,
+      "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/otherModel/long/00-image-0.jpg",
+      "size": 1011608,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "7f1fd45f482c89edc1f05057b6c05d6eb128747e249c596f74490b927207aeaa"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/otherModel/xctj_z(3)/00-image-0.png",
+      "size": 2553228,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "357652159942e4285b5ad260f1a2c853eb166b97f98f63c5c7480a5d31a8f092"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/otherModel/zhuque/00-image-0.png",
+      "size": 394736,
+      "width": 512,
+      "height": 512,
+      "sha256": "e6ee1a5002356604e0faeb73bcfa368bf1231df1b727498cdb5c2514c730081e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/00-image-0.png",
+      "size": 33603,
+      "width": 128,
+      "height": 128,
+      "sha256": "4e29ed542485fbb8a24a9e171823f977aebb705fd2854d2041faa81e11107414"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/01-image-1.png",
+      "size": 18244,
+      "width": 128,
+      "height": 128,
+      "sha256": "ddc39ff963e894887c15ca650f7980b122c44360ba947a94bbea7985b4d4ddaa"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/02-image-2.png",
+      "size": 10961,
+      "width": 128,
+      "height": 128,
+      "sha256": "bcc361bb630adfa6178260663cc9668292efa68bc862ce9e2e022ab66e381b8a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/03-image-3.png",
+      "size": 19828,
+      "width": 128,
+      "height": 128,
+      "sha256": "77edd5aedcee4ba132bbb82f1f77725886b58aba7ff6383c8e3c1aa25044da4a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/04-image-4.png",
+      "size": 14177,
+      "width": 128,
+      "height": 128,
+      "sha256": "f5b0e21456a22a0057a444456a1b26dcdb14090b0a6f9f71e1754985f712d18d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/05-image-5.png",
+      "size": 9430,
+      "width": 128,
+      "height": 128,
+      "sha256": "192024d36ad17c7580b46c61b4de2575d58ce7e0090c64c97708c0e3d7da2056"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/06-image-6.png",
+      "size": 1840475,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "424e729b9df62c6a3f9bcb1214d7c60dc8bc0eb812aba3cd39468916cde63fae"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/07-image-7.png",
+      "size": 1032894,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "3db91a94565060767c02f906bbbf0aafe2ac46da056f157e1d2a68d04e5979f6"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/08-image-8.png",
+      "size": 936824,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "7e3c0adfca0a4e0096b885c4e2efc1ad256e97aafd6a65fafde765ff5ff79478"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/09-image-9.png",
+      "size": 90195,
+      "width": 256,
+      "height": 256,
+      "sha256": "54ddf776e1122ed8af494a9432ba21c1d66439edf898286b167ce91bd5bdc20a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/10-image-10.png",
+      "size": 72676,
+      "width": 256,
+      "height": 256,
+      "sha256": "08cc88a63a35aaaf9a4e7c32f8b1c477caafcc661f19a4ace373ef15497b170a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/11-image-11.png",
+      "size": 36081,
+      "width": 256,
+      "height": 256,
+      "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/12-image-12.png",
+      "size": 101058,
+      "width": 256,
+      "height": 256,
+      "sha256": "5b3e02ac4fa7a02953a392f1767072bde0b770185519f22cf695ec9bf27867c4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/13-image-13.png",
+      "size": 61838,
+      "width": 256,
+      "height": 256,
+      "sha256": "d1900c64e917652aef4e7e285397e3fed2e38b41474e3fba9b33e42530d37153"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/taishanshigandang_yu/14-image-14.png",
+      "size": 59732,
+      "width": 256,
+      "height": 256,
+      "sha256": "d64d6e5124a5f34ae12b55b3c6fda35b061a382fc130e62def0a0bab6cc31091"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/00-image-0.png",
+      "size": 675348,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "fdd390ec106f5bbc14d3a942f2b221f6cedf6aaa3f0495db9bc6e2d18b740bc1"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/01-image-1.png",
+      "size": 703004,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "1f0f27096f83133f576fbaa68b82edb22a1f4f982991d067c53c702d24fc97c9"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/02-image-2.png",
+      "size": 1784922,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "c97fbaf81af507adb57c6464ee9ca4af7701cb2da8580b9d25ebea24793d4dd6"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/03-image-3.png",
+      "size": 57566,
+      "width": 256,
+      "height": 256,
+      "sha256": "e01381d5afb7505d922a0977bb9648085bedc2f2b1d35b4732cacd310ff5651d"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/04-image-4.png",
+      "size": 52765,
+      "width": 256,
+      "height": 256,
+      "sha256": "dafda7bf38094db5213b6c34ef0930876f10d07ab7123f71801f0d4db0a3680e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/05-image-5.png",
+      "size": 60305,
+      "width": 256,
+      "height": 256,
+      "sha256": "a97460e5c325fb4af148915441d33b44cdff09ad68b8afc606acce11354aa70f"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/06-image-6.png",
+      "size": 1666188,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "28c3e4119838bf039370b721ca3e3e3b5f2da87113a7db77c75a92d7efe44d0e"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/07-image-7.png",
+      "size": 433945,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "8e3489258066d86901f8bdd4cd515c85b5fafe81d2c39a239f1e492f060aa686"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/08-image-8.png",
+      "size": 568971,
+      "width": 1024,
+      "height": 1024,
+      "sha256": "3b029cc952c53262bdb085fa2d9ee40deb91d2f673e665d04b1fde9e0ffaa56a"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/09-image-9.png",
+      "size": 85475,
+      "width": 256,
+      "height": 256,
+      "sha256": "94d20a1ecf5de2901e9712ca4d47ab057ef71d603ab31f77afc6f147f2d14fe4"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/10-image-10.png",
+      "size": 75371,
+      "width": 256,
+      "height": 256,
+      "sha256": "2403d84773e6e0eedaa6460fd3f06e3448e8e9cd094f5622e0a8417cad8f22a5"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/11-image-11.png",
+      "size": 36081,
+      "width": 256,
+      "height": 256,
+      "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/12-image-12.png",
+      "size": 87490,
+      "width": 256,
+      "height": 256,
+      "sha256": "a279700a25d286240782b4bea2a0c46730dbfab3751bbda03c64c8b5acacb73b"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/13-image-13.png",
+      "size": 46713,
+      "width": 256,
+      "height": 256,
+      "sha256": "fcfb769192303a177769686fbcb747ef4d00b1cd0f62832456cd896ecd4b3231"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/14-image-14.png",
+      "size": 36081,
+      "width": 256,
+      "height": 256,
+      "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/15-image-15.png",
+      "size": 782,
+      "width": 256,
+      "height": 256,
+      "sha256": "7ffb79636c08b8a94a43fbddb70b1df5c563da30aa6c01a1c1c006b0a16c094c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/16-image-16.png",
+      "size": 783,
+      "width": 256,
+      "height": 256,
+      "sha256": "298e90edfab3925dc8424ff6ff5c3c0d25debd93db7f4b8d355d8654b11cc57c"
+    },
+    {
+      "path": "textures/extracted-from-glb/Model/wszz_yu/17-image-17.png",
+      "size": 36081,
+      "width": 256,
+      "height": 256,
+      "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+    },
+    {
+      "path": "textures/Model/saomiao.gif",
+      "size": 1803313,
+      "width": 594,
+      "height": 594,
+      "sha256": "7f0cb4fdd9e35d2e9b714b5b5ba67a254be230c44b2bc960c515191d62bdaedd"
+    },
+    {
+      "path": "ui/cache/app-icon.png",
+      "size": 7405,
+      "width": 140,
+      "height": 140,
+      "sha256": "7d85a5ab2d1020a4549f8ed944a7daa443433373178daaa6398d6e6d1d1b1e68"
+    },
+    {
+      "path": "ui/package/images/bk.png",
+      "size": 108029,
+      "width": 1440,
+      "height": 3200,
+      "sha256": "753a67bbab908353bfd99ee811849a99c9f3365c76ffb29a158362385d11a0fa"
+    },
+    {
+      "path": "ui/package/pages-image/按键底.png",
+      "size": 48060,
+      "width": 750,
+      "height": 142,
+      "sha256": "9ee167a68fa3e73758a953c39632ec3b1e177ac25a7613d3bcc491d7c1ff7c4b"
+    },
+    {
+      "path": "ui/package/pages-image/盲盒版.png",
+      "size": 3454,
+      "width": 196,
+      "height": 60,
+      "sha256": "4bcf99dc65d39c41eadefed1e62691b2af902bfcbd435f419ae89b466eec7792"
+    },
+    {
+      "path": "ui/package/pages-image/收藏版.png",
+      "size": 4429,
+      "width": 196,
+      "height": 60,
+      "sha256": "d0ad9e58a7bfc575afebfe086a92038d139870cf9d3077a44b8d5a8a9f0fa86e"
+    },
+    {
+      "path": "ui/UI/02.png",
+      "size": 337774,
+      "width": 684,
+      "height": 348,
+      "sha256": "0f0e9774bf5dbc2bbe9226ae68cb7ea73d08e3895d42bb1ec7f103516e49bcad"
+    },
+    {
+      "path": "ui/UI/03.png",
+      "size": 136135,
+      "width": 684,
+      "height": 348,
+      "sha256": "e9ea67f280369b3ed46a3b4f963aa4feb7f522d5e424ab20f94a6f913dfc8ac9"
+    },
+    {
+      "path": "ui/UI/1.png",
+      "size": 349137,
+      "width": 684,
+      "height": 348,
+      "sha256": "359c7eb3f7186168ad5b3f40d30f55554027f8f358830a207d2abcc9d53ca1cb"
+    },
+    {
+      "path": "ui/UI/背景.png",
+      "size": 1158030,
+      "width": 750,
+      "height": 1502,
+      "sha256": "966d92465113c2436c72c2491add47c506b1dbf8688591ff7b19114933d5ff96"
+    },
+    {
+      "path": "ui/UI/本尊.png",
+      "size": 116290,
+      "width": 707,
+      "height": 304,
+      "sha256": "526c0376210433a7ea37f87ea22271e0c7959e48230204d0a8af61a279252407"
+    },
+    {
+      "path": "ui/UI/常胜.png",
+      "size": 124179,
+      "width": 707,
+      "height": 304,
+      "sha256": "efa82e638d65912ddaba2f472cc2dd54cf42281b7e65bfb155ce335ee7226663"
+    },
+    {
+      "path": "ui/UI/进喜.png",
+      "size": 119910,
+      "width": 707,
+      "height": 304,
+      "sha256": "06143cf1879a124d481002f57ad7818c0f5f012ec77d921ea81c95acea222ee7"
+    },
+    {
+      "path": "ui/UI/盲盒版.png",
+      "size": 3454,
+      "width": 196,
+      "height": 60,
+      "sha256": "4bcf99dc65d39c41eadefed1e62691b2af902bfcbd435f419ae89b466eec7792"
+    },
+    {
+      "path": "ui/UI/纳福.png",
+      "size": 121381,
+      "width": 707,
+      "height": 304,
+      "sha256": "cb6d050276ab372cacd749529931f0d235f6b9ea11eff086395f95f06d26eaa7"
+    },
+    {
+      "path": "ui/UI/收藏版.png",
+      "size": 4429,
+      "width": 196,
+      "height": 60,
+      "sha256": "d0ad9e58a7bfc575afebfe086a92038d139870cf9d3077a44b8d5a8a9f0fa86e"
+    },
+    {
+      "path": "ui/UI/招财.png",
+      "size": 113145,
+      "width": 707,
+      "height": 304,
+      "sha256": "b94e2bdc3c4d33dd1f7c4ffd90a90475ff79d89df04ee44c04274592a69c8792"
+    },
+    {
+      "path": "ui/UI/自在.png",
+      "size": 114016,
+      "width": 707,
+      "height": 304,
+      "sha256": "3c6d52c0020db53605f67125b5797fafd89da92daf82b64afb38afd631f51f50"
+    },
+    {
+      "path": "ui/UI/top.png",
+      "size": 111056,
+      "width": 750,
+      "height": 318,
+      "sha256": "d84fe0a7d343e85feab72a84eb6d22ee7d69b277e38c0ac3a87c4aae6ab5a680"
+    }
+  ]
+}

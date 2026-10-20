@@ -1,0 +1,3179 @@
+{
+  "generatedAt": "2026-10-20T07:42:00.168Z",
+  "modelCount": 33,
+  "totalBytes": 138770572,
+  "totalMeshes": 132,
+  "totalMaterials": 129,
+  "totalEmbeddedImages": 267,
+  "modelsWithAnimations": 20,
+  "totalAnimations": 20,
+  "models": [
+    {
+      "path": "FrameAnimation/dcdy02 (1).glb",
+      "size": 1263900,
+      "sha256": "67d84fab4d8bf91c57f5b2fc54256f73e70b47897d0fd52e58df01ee449906a4",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 5,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (1)/00-image-0.png",
+          "size": 232380,
+          "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (1)/01-image-1.png",
+          "size": 90660,
+          "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (1)/02-image-2.png",
+          "size": 205300,
+          "sha256": "57b27b141c1169fc798a902106d8a47847b961844bb2069fcc8ca0d8bee87eaf"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (1)/03-image-3.png",
+          "size": 595872,
+          "sha256": "ff6d2d5514e330ed4a300602112aa20b126ff54d3799fa0233ce091ad8342c04"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/dcdy02 (2).glb",
+      "size": 1263900,
+      "sha256": "67d84fab4d8bf91c57f5b2fc54256f73e70b47897d0fd52e58df01ee449906a4",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 5,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (2)/00-image-0.png",
+          "size": 232380,
+          "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (2)/01-image-1.png",
+          "size": 90660,
+          "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (2)/02-image-2.png",
+          "size": 205300,
+          "sha256": "57b27b141c1169fc798a902106d8a47847b961844bb2069fcc8ca0d8bee87eaf"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02 (2)/03-image-3.png",
+          "size": 595872,
+          "sha256": "ff6d2d5514e330ed4a300602112aa20b126ff54d3799fa0233ce091ad8342c04"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/dcdy02.glb",
+      "size": 1263900,
+      "sha256": "67d84fab4d8bf91c57f5b2fc54256f73e70b47897d0fd52e58df01ee449906a4",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 5,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02/00-image-0.png",
+          "size": 232380,
+          "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02/01-image-1.png",
+          "size": 90660,
+          "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02/02-image-2.png",
+          "size": 205300,
+          "sha256": "57b27b141c1169fc798a902106d8a47847b961844bb2069fcc8ca0d8bee87eaf"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdy02/03-image-3.png",
+          "size": 595872,
+          "sha256": "ff6d2d5514e330ed4a300602112aa20b126ff54d3799fa0233ce091ad8342c04"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/dcdyhr.glb",
+      "size": 2029940,
+      "sha256": "48041906756fefb431d7370d09af2489c80d54249c704a821f9a12505641d339",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 3,
+      "imageCount": 3,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdyhr/00-image-0.png",
+          "size": 669836,
+          "sha256": "88fee5280e811f8a867630f1cee1fbcda811960acca8f8b06ec5f2ce92bb01bc"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdyhr/01-image-1.png",
+          "size": 688848,
+          "sha256": "7c3ce630ccf791a3306f6da1e5e5b3afa2f5a7cb781ae1534b45847d935a7eb7"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dcdyhr/02-image-2.png",
+          "size": 658492,
+          "sha256": "0dbcb611b390770e7b409c2a68211c933c5ccd89444c2e3ef8d7d38692c7ab7f"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/dun.glb",
+      "size": 666188,
+      "sha256": "c85a5e10877cbee7293ac9c556be1b405a71960c6120ee2d131b7e3b24f0f244",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 2,
+      "meshCount": 1,
+      "primitiveCount": 1,
+      "materialCount": 1,
+      "textureCount": 1,
+      "imageCount": 1,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/dun/00-image-0.png",
+          "size": 657388,
+          "sha256": "f7d88ecbdc31b30a40ba6f70c2f793a527d4ac60598a275a44de045448c36b12"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/gui.glb",
+      "size": 4279392,
+      "sha256": "81baf5ade081b6e29e8338f7b81530a5f9919bb6151fde7bfdf53d35df640fdd",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 3,
+      "meshCount": 2,
+      "primitiveCount": 2,
+      "materialCount": 2,
+      "textureCount": 2,
+      "imageCount": 2,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/gui/00-image-0.png",
+          "size": 1917132,
+          "sha256": "3d1748d6394a455f8ab3286f236109a669cfaa35878037c66489954bd3b78032"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/gui/01-image-1.png",
+          "size": 2317760,
+          "sha256": "9f7ca3dc05cd4edd6a2dac079cab8617c65126e85b8a91b21368341d55992fe9"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/long(1).glb",
+      "size": 4532968,
+      "sha256": "c17aca54457aa63bc89ecbd70093b8155efe5567f08e51fcfd8f9a6af5fcab3a",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 3,
+      "meshCount": 2,
+      "primitiveCount": 2,
+      "materialCount": 2,
+      "textureCount": 2,
+      "imageCount": 2,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/long(1)/00-image-0.png",
+          "size": 1954652,
+          "sha256": "3f19bcf57497e0d77a5adf011a80d789ac48b4c763905bd95f794c5cfa5486da"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/long(1)/01-image-1.png",
+          "size": 2534868,
+          "sha256": "b3b52ca9c81a703d3921ffdb02a51e16b583acc14ac4869a86b168f98511a3bc"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/qkds01.glb",
+      "size": 758820,
+      "sha256": "4d09a5868dfd93000042d4e8e6fe16b31c9061f30cd54c2c41dcf1d4d9d95d86",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 5,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkds01/00-image-0.png",
+          "size": 232380,
+          "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkds01/01-image-1.png",
+          "size": 90660,
+          "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkds01/02-image-2.png",
+          "size": 81768,
+          "sha256": "b167d6b8e2d6a4eb4ddb6e2c13c393630e3d14a76aa99b9877fdbfe360c14e8f"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkds01/03-image-3.png",
+          "size": 214404,
+          "sha256": "fcda5333de50165d9378388728b69a36b42a1fa9e57bccb43388227abf404921"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/qkdshr.glb",
+      "size": 2503148,
+      "sha256": "1d5136814e7bf1142580b081673d195a3029e0cf0904af8237ec8384c1237752",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkdshr/00-image-0.png",
+          "size": 636408,
+          "sha256": "2eb5d1850880f07b04cd88fa701ac24a9ed27850389d3119f7db927667ee1192"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkdshr/01-image-1.png",
+          "size": 597720,
+          "sha256": "25f926df138f1bd8ac5766e62503518043e884f6c8a91691bc9ed55c564bbb24"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkdshr/02-image-2.png",
+          "size": 633400,
+          "sha256": "f2031ec936768cc3d118d4967777e342b26e5eeb0f11aacf8390b0efbfb976b3"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/qkdshr/03-image-3.png",
+          "size": 622648,
+          "sha256": "95191a3a7e646bbc3a795d07f080e734cd4ab1dadd958c54755128ba075405cf"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/scene.glb",
+      "size": 1473548,
+      "sha256": "56f1a360ebb73e8556a9d3599f49f64c71acb20a7b512d4f3f50c0944f2b4c2e",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 3,
+      "meshCount": 2,
+      "primitiveCount": 2,
+      "materialCount": 2,
+      "textureCount": 2,
+      "imageCount": 2,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/scene/00-image-0.png",
+          "size": 440776,
+          "sha256": "38a8434f4f8080ae00297b8abb10003d31ad20db806d32dfd562b8f5ea80813c"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/scene/01-image-1.png",
+          "size": 988932,
+          "sha256": "2ba641f184505df64a4bb4ebfce261044e554ecff26eccab4a8ced6105a48b3e"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/shan.glb",
+      "size": 371184,
+      "sha256": "6b033b9ac6a1c08ea2ff63479184defc94f0168c6e8802a0c11e75140e4122ac",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 2,
+      "meshCount": 1,
+      "primitiveCount": 1,
+      "materialCount": 1,
+      "textureCount": 1,
+      "imageCount": 1,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/shan/00-image-0.png",
+          "size": 366188,
+          "sha256": "e4e9e869df015b97d36b4d8409d8ed2f05bb9f3fe01e09a4e7abccab8ae9232d"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/syjd.glb",
+      "size": 1257648,
+      "sha256": "9c4386306cb0c6b83ac0ea81ca07018d83804e3f6d72a865dc20a58a0411af87",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 5,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjd/00-image-0.png",
+          "size": 232380,
+          "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjd/01-image-1.png",
+          "size": 90660,
+          "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjd/02-image-2.png",
+          "size": 192936,
+          "sha256": "9b96a758880287206bdbe9510e65b547b8791cb8706be9f1a8865bf95bab8795"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjd/03-image-3.png",
+          "size": 601988,
+          "sha256": "b361a5f824c57aee63f370d3b5326707f1bea64111c375c053bf38202d7a7124"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/syjdhr.glb",
+      "size": 3219572,
+      "sha256": "7819abd2a4498d67eaab34238c45f6f0985ff6e1ad80ed09fe85277727f5b702",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjdhr/00-image-0.png",
+          "size": 800912,
+          "sha256": "f9be944f93ce396cdc3741265ccd32331d35e1ade3172c727f6caa1cbefba91d"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjdhr/01-image-1.png",
+          "size": 804156,
+          "sha256": "8a91a2fd56a4c1c52db1b1058a07424a0ed1fbf6ebaffb624d581ac1d27e2cb7"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjdhr/02-image-2.png",
+          "size": 796432,
+          "sha256": "81eb8d069c428741135f954322ab9cba47414d4a524f0e6c0244513e54515fd2"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/syjdhr/03-image-3.png",
+          "size": 805160,
+          "sha256": "b84408148d71c4f43980d24dcb6c5024012a266dc42d7b76717cb65c33b99c66"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/wszzhr.glb",
+      "size": 2484736,
+      "sha256": "75b846fbc84df4957bc485854de8e5db38831355e00fd173933c2f3b1320bfea",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/wszzhr/00-image-0.png",
+          "size": 626624,
+          "sha256": "8b61f041ec7d116a9b799d5526c1ec8f13549deabb33b21b47ac0338ea9dcaa8"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/wszzhr/01-image-1.png",
+          "size": 622092,
+          "sha256": "8728325f10effe2379a71d69eca7e773091a845e3ec9e510b10d69dcd71d21d2"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/wszzhr/02-image-2.png",
+          "size": 600600,
+          "sha256": "351f54267588e58033e8c9e76a060710936c677dc08123279a687e29ce4abd37"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/wszzhr/03-image-3.png",
+          "size": 622504,
+          "sha256": "21abfd2d279bc98f03c728469a279b29ef23f337b528568dea023e287642702e"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/xctj.glb",
+      "size": 1208412,
+      "sha256": "cd35f0a6be98dc2bd7d882799dafd231e723aa09fe0f7586884bffaed341ac60",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r164",
+      "sceneCount": 1,
+      "nodeCount": 5,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctj/00-image-0.png",
+          "size": 232380,
+          "sha256": "ae711564dc93d8c6792d7e5103964d4d6b891f96f55f1ae1b0d93f0f2ba8e897"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctj/01-image-1.png",
+          "size": 90660,
+          "sha256": "8a9717d57ae06d7054fae89528cf0a90d04b3fbfcf97cc3fce26532b78f3d7d3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctj/02-image-2.png",
+          "size": 245900,
+          "sha256": "0f21075790888af405c39008c60cceaadae2149157aded5e437f83ac897528c5"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctj/03-image-3.png",
+          "size": 499336,
+          "sha256": "adaafa1348a93ad31677b71eaa481f4a7c0c5730a16cefc0845bc38316b5eec5"
+        }
+      ]
+    },
+    {
+      "path": "FrameAnimation/xctjhr.glb",
+      "size": 2797780,
+      "sha256": "27df0237b714025036f97c2051a4ba8e6570c7126d23f7009558d63b09eb4b28",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 4,
+      "imageCount": 4,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctjhr/00-image-0.png",
+          "size": 700960,
+          "sha256": "b7e2b9ec4ea024a8599b23142ae1b0bd67ed65b9565aee29a7ae73ef9f10e54a"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctjhr/01-image-1.png",
+          "size": 690596,
+          "sha256": "9855e6d07dcac6a0ba01248e62189f83fdd94bcea65ae1ddcebaf555f9cd5525"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctjhr/02-image-2.png",
+          "size": 679900,
+          "sha256": "b0e85bb525044edfdbc1ca47aaf44aba6b39d06c119fad7e5af1ae46a4f90502"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "FrameAnimation/xctjhr/03-image-3.png",
+          "size": 713352,
+          "sha256": "6f5c443a4b966c453e168fa7751b4ba9b9b1c69b009de510690e488e347b1407"
+        }
+      ]
+    },
+    {
+      "path": "Model/GoldModel/SYJD.glb",
+      "size": 10290336,
+      "sha256": "04c7f9b9a733613b64a489ab16e7ee0d64c447cb7e3f58d379dc9a8b5e5d719a",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 12,
+      "imageCount": 12,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/00-image-0.png",
+          "size": 602504,
+          "sha256": "0193a5ee9f084e53dc79da152385eb4cf928fcfb1b5ebad1dbd7ca0dd701be59"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/01-image-1.png",
+          "size": 735356,
+          "sha256": "c689d1e8dfe6942b52d75af7a350576737db7b4f2379d06cce09b674e6ec926f"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/02-image-2.png",
+          "size": 1268042,
+          "sha256": "36f16457917c2a2f43e7f05bbcfc57c6e6fc1c0b5de20cb43f1a93fd07a6038b"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/03-image-3.png",
+          "size": 19487,
+          "sha256": "5ef7756a32f0ec81e2e295ab40c0a6810bb8c057a2572ee75a6faf4702369a1d"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/04-image-4.png",
+          "size": 15666,
+          "sha256": "e8c3bf1cecbe04e1563563ff09f151c4d192f0d9101e47bf8a158142321da726"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/05-image-5.png",
+          "size": 11390,
+          "sha256": "a5356d11582a8540e539f0fe7e3041783472a0fa3750d38ac9315e18fa306b8c"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/06-image-6.png",
+          "size": 608647,
+          "sha256": "a342c0c1b68225e8f709fec80b433453ad00d55e99e41e509465fd5b4eb9b970"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/07-image-7.png",
+          "size": 577526,
+          "sha256": "8dae1c75a6f8d404e72d8f04315ca1f1a1ea15ebcea763a70d7f0c9d1bffeb9f"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/08-image-8.png",
+          "size": 961809,
+          "sha256": "b7e4fd7af01a6276b30379f4a6cc838404ba36253d4897c38faf9e42f5c2d775"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/09-image-9.png",
+          "size": 547315,
+          "sha256": "15ae5df2fb9acb32a23a851d0131561a242067a61de8707b872e7875fbd8c92e"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/10-image-10.png",
+          "size": 578590,
+          "sha256": "813cd17b1c3068e8fcd23a2eb1ab6fcb691a28e6ab6be93816d3128cce997e56"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/SYJD/11-image-11.png",
+          "size": 573022,
+          "sha256": "0eb9bcf47754fdc9602cde6801821c34ff8716709e5c2f0f3c13ed5a48cfa657"
+        }
+      ]
+    },
+    {
+      "path": "Model/GoldModel/dcdy_jinbi.glb",
+      "size": 9196600,
+      "sha256": "58c3580ef76d607a4fd93f63674271972ec0206ccb6d94963884ebbeccbb3636",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 12,
+      "imageCount": 12,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/00-image-0.png",
+          "size": 703986,
+          "sha256": "b2763b7d1ab7f5c9880b024946e2e6b7a70bdf74bb9705a2e583a30fce13beb2"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/01-image-1.png",
+          "size": 774525,
+          "sha256": "473bf390767f004fa5a79fd4e0ee99cbc3a50060ce4be3420b374b6dc5b3b145"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/02-image-2.png",
+          "size": 1169824,
+          "sha256": "37ee513793c53215a7d824e2c12c2e9c78771af7c236a59350adc678ef6f3f3f"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/03-image-3.png",
+          "size": 8104,
+          "sha256": "7f2e7f3fb1c97999b0448a2fbca255922c5a5db8519b670fc369471d32b5335f"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/04-image-4.png",
+          "size": 15256,
+          "sha256": "aeba2bb1051214bab649d099ca267f990f197f278e415507a3b4dc268c9e76d1"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/05-image-5.png",
+          "size": 11976,
+          "sha256": "ad5fe650531d3789de56248bb791144f23a6ad502d197c017b9a991203e3ee71"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/06-image-6.png",
+          "size": 502864,
+          "sha256": "080f3deb831f648bba1bbfa3c9978677501a6da1e39286481289afac40b1b64f"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/07-image-7.png",
+          "size": 1159803,
+          "sha256": "9b8c3cae6faa045dadae10ff516819756e476435340b5b5b3ac0c1e4d4b0874e"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/08-image-8.png",
+          "size": 1080658,
+          "sha256": "d02573983e6bbf0f7f3f610b1617971dd6b66489dc1b057c3d69292a3e6f9a4b"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/09-image-9.png",
+          "size": 31870,
+          "sha256": "4d4f3669220f79689f790848d1d1ce1fc36adaa8727412e258698607a7976433"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/10-image-10.png",
+          "size": 15287,
+          "sha256": "614d517b2613635a2ba97eeb66f76a181b4167243d02afd1bbd5ab9e2f67908f"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/dcdy_jinbi/11-image-11.png",
+          "size": 9311,
+          "sha256": "43c4f6a1965a44b987fc4617fb0ddd5e7162e1ca4662c57ea9a85e984faf07fc"
+        }
+      ]
+    },
+    {
+      "path": "Model/GoldModel/qikaidesheng_jinbi.glb",
+      "size": 7301888,
+      "sha256": "3b9f331845d055687ef153a69b73f924d396106a440ca6f44297db6a692aea57",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 12,
+      "meshCount": 10,
+      "primitiveCount": 10,
+      "materialCount": 10,
+      "textureCount": 30,
+      "imageCount": 30,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/00-image-0.png",
+          "size": 13302,
+          "sha256": "84ede362f041408da6b832b3ce60f0b8fe806157d5674b321e2bee2376669d1a"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/01-image-1.png",
+          "size": 12149,
+          "sha256": "dbac46d9da3899945a237c7dfac232927fc2e7cab7e652094c257590bcaf6ad3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/02-image-2.png",
+          "size": 9382,
+          "sha256": "c6134372d8a208d1ab89918ef58501306349a9334f0b93d3449135e712cdd8a9"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/03-image-3.png",
+          "size": 383,
+          "sha256": "64d726ffb47af9dfd1a79ef2ff7226257192075b416eaf87ba66daca266bd1a4"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/04-image-4.png",
+          "size": 15061,
+          "sha256": "1ce9b0debe2202db16c46430efa522717c5fa5dac4cdfe32f7e64283ba58bf66"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/05-image-5.png",
+          "size": 9396,
+          "sha256": "3c3fa7c4fe2adbe855e4091715d6b7714c0e575ab4407b5bb127704f1d531716"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/06-image-6.png",
+          "size": 20984,
+          "sha256": "124849cf0da3cf28fdc6bbb04d177a966751947e79ee91fd26f65aa996ecc9c4"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/07-image-7.png",
+          "size": 18042,
+          "sha256": "5ad8d7238e7ab8d2e370a175d782a15b7bd1a37ef713034ca332056ec7595ac8"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/08-image-8.png",
+          "size": 10712,
+          "sha256": "e096c81b3093555eee22f7970f110383bf571cee6e5c1bd0e496d70ba10add85"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/09-image-9.png",
+          "size": 10867,
+          "sha256": "a61eec57114ffc7929ecae1c9d8dafda9f354443919d8857c88b7b2e76b0f2f5"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/10-image-10.png",
+          "size": 196872,
+          "sha256": "c14c917142fe33c464d1c5bf79ee1ce1ce391bcc86772acbc96b39d21be61fe8"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/11-image-11.png",
+          "size": 579592,
+          "sha256": "68a71983c2d10858e5737e3be9c518a256f775e03a13668df006e7609a74a436"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/12-image-12.png",
+          "size": 382,
+          "sha256": "4571e6321efd168a33baf1a710fb13eb0306f6f0eabd8781f1143bd3435ebd9c"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/13-image-13.png",
+          "size": 6121,
+          "sha256": "978bd602d54eeeb727201eebe1ce9f12a49dec70b5e112b8c34fe574c47cd97f"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/14-image-14.png",
+          "size": 9278,
+          "sha256": "24a7029c43660b5ce1d47288c9be7b88fac53556c1adf99d8d7b9d42d545f98d"
+        },
+        {
+          "index": 15,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/15-image-15.png",
+          "size": 146,
+          "sha256": "6fe6e5cfb1978289cd162361bb3bcb7dac0cd475957855a46f825901b77b6d32"
+        },
+        {
+          "index": 16,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/16-image-16.png",
+          "size": 9850,
+          "sha256": "839af24a2a67d056e39a4a7816b18fa6b45644ef5ad7dbc2f571652f5c6dde9b"
+        },
+        {
+          "index": 17,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/17-image-17.png",
+          "size": 9605,
+          "sha256": "e88e80f5fe6bd30f11b8ee8b5488a1583fbeeec262352d81e11e37fdb5d6a7df"
+        },
+        {
+          "index": 18,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/18-image-18.png",
+          "size": 382,
+          "sha256": "39c874e160c76a8d96dff890b79199ac6a1e79cf6a5b0a23ccd59a271506b5c5"
+        },
+        {
+          "index": 19,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/19-image-19.png",
+          "size": 8517,
+          "sha256": "a5c27916538316de3de1f75b49a71e2e75155d0f6dcc69be74b216ece86c129e"
+        },
+        {
+          "index": 20,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/20-image-20.png",
+          "size": 9251,
+          "sha256": "8c61851588ee96c3a420bd756a68285fad71d7a9dfbfb9b6f781bedd99310940"
+        },
+        {
+          "index": 21,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/21-image-21.png",
+          "size": 8698,
+          "sha256": "10ef5a0d0088e29a91920205b293e121dcd377a5868c1da779a2897600ec8d22"
+        },
+        {
+          "index": 22,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/22-image-22.png",
+          "size": 6889,
+          "sha256": "37d90b30df6f0da2974093cdae7e77227d79bf97f932165e1850678b511ab75c"
+        },
+        {
+          "index": 23,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/23-image-23.png",
+          "size": 9221,
+          "sha256": "b99820908f69fc54c88df5db8df12de8492f020e0a41ab2528a152c89e0fb1d0"
+        },
+        {
+          "index": 24,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/24-image-24.png",
+          "size": 769345,
+          "sha256": "c04bcb8efcf9ece652bfc2f3f3cb63ddf48bcc28576003385b59377a067a5751"
+        },
+        {
+          "index": 25,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/25-image-25.png",
+          "size": 875119,
+          "sha256": "500d77935ff57b6b1086ad7c57fd91b45e8ba30a3cf257ebb7eec3cbd32f24f0"
+        },
+        {
+          "index": 26,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/26-image-26.png",
+          "size": 766366,
+          "sha256": "299031a145eeed4fc7c75260c981f94194d438115dc292b0b98ff0ddd29e4828"
+        },
+        {
+          "index": 27,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/27-image-27.png",
+          "size": 6674,
+          "sha256": "a76a7a7c64910cdf3434960627fdaa7d612cb28a8b15c90865dfc8882db5c173"
+        },
+        {
+          "index": 28,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/28-image-28.png",
+          "size": 5414,
+          "sha256": "acdcc98e67c5dec65aba839daf12f7d18afb8ae44b2387ec12344679cffecc66"
+        },
+        {
+          "index": 29,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/qikaidesheng_jinbi/29-image-29.png",
+          "size": 9245,
+          "sha256": "1eb7021b1cb2d3dfcc314c62c8fbe63510b92e76539414d04f36b71f85bdfcd9"
+        }
+      ]
+    },
+    {
+      "path": "Model/GoldModel/taishanshigandang.glb",
+      "size": 8483976,
+      "sha256": "dea7097d5cab33fb70f75fe2584516d51b1d0257d2ac9778481c5363430275aa",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 12,
+      "imageCount": 12,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/00-image-0.png",
+          "size": 33603,
+          "sha256": "4e29ed542485fbb8a24a9e171823f977aebb705fd2854d2041faa81e11107414"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/01-image-1.png",
+          "size": 18244,
+          "sha256": "ddc39ff963e894887c15ca650f7980b122c44360ba947a94bbea7985b4d4ddaa"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/02-image-2.png",
+          "size": 10962,
+          "sha256": "2cf0d563e96b6a5ce0d1370836d9d1860e8a776a7a405afa4e8f4e0cb487479d"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/03-image-3.png",
+          "size": 22863,
+          "sha256": "a262fe551e86831ba13065e3f1a26773827567fb137d6cf98e509ec78e40aad1"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/04-image-4.png",
+          "size": 14177,
+          "sha256": "f5b0e21456a22a0057a444456a1b26dcdb14090b0a6f9f71e1754985f712d18d"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/05-image-5.png",
+          "size": 9430,
+          "sha256": "192024d36ad17c7580b46c61b4de2575d58ce7e0090c64c97708c0e3d7da2056"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/06-image-6.png",
+          "size": 1840525,
+          "sha256": "a93bff7d07f187abf080bba8e0600bbcd52eb2643d61317064deb1788d4106dc"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/07-image-7.png",
+          "size": 1032894,
+          "sha256": "4b9b58428a36930ea4b99aed460f5e0d4c9d6be6ba12e71a69e9778d7ed95c1c"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/08-image-8.png",
+          "size": 936881,
+          "sha256": "1e863a3d1bf45c7a6d6ee3480fc479bf76d44dbf30fad316a5564e271fc818df"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/09-image-9.png",
+          "size": 101525,
+          "sha256": "939a79ce59f7aabd1ecff60c215026be2bb2d1563086572cd68bc41ba9b6c1b9"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/10-image-10.png",
+          "size": 61861,
+          "sha256": "6bee076a862a8849f2d012d3e56e4257b74558f79ae7eaa99b35544ec74c6215"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/taishanshigandang/11-image-11.png",
+          "size": 59686,
+          "sha256": "5acbd40386848a5f40c30e0efbf8897c3ad59a77c9108dd3f82081e9495064d9"
+        }
+      ]
+    },
+    {
+      "path": "Model/GoldModel/wszz.glb",
+      "size": 8289232,
+      "sha256": "28308a146fd15ae31c0570b4b842cde43f86ffe1b88912e872aa139a0f8d0814",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 6,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 4,
+      "textureCount": 12,
+      "imageCount": 12,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/00-image-0.png",
+          "size": 300848,
+          "sha256": "a577443c0ab4975bd59e8c42907d2e06da3b0c78ba4556a1b25e8d2e3444a161"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/01-image-1.png",
+          "size": 716835,
+          "sha256": "a20ac8bf20af760116050e3250f2b322be59cc60835a127b9535c191ca493430"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/02-image-2.png",
+          "size": 1235918,
+          "sha256": "81b1bb099a735a0d883d3bb4862b65878d8b8179eaf55c9289ad954760bc3761"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/03-image-3.png",
+          "size": 9480,
+          "sha256": "d7edf3e118ffc4bb9fad89bc352d1961890a47c3c26991cb7f38e247d1075115"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/04-image-4.png",
+          "size": 17197,
+          "sha256": "be604d89c42c8cc73f11e9d4789459015de4b247b0474b410d72d8cc9f2c2def"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/05-image-5.png",
+          "size": 11240,
+          "sha256": "f0a005aab59536a6a2725d64d8fd8df4b27ae60a1e4100dae73a990634db9cd0"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/06-image-6.png",
+          "size": 627098,
+          "sha256": "bf157b5beac2190f12cc69f9af460c48f1cc18586b5dc10c1d985fc5703dd306"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/07-image-7.png",
+          "size": 429467,
+          "sha256": "85ed58b57c2bc56c6052bc462f08ef2775e6906deb1505ab1cbfa326b16a602e"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/08-image-8.png",
+          "size": 893820,
+          "sha256": "465a7ff14c676f328c6934e25222e37c1cf551590a6e993ef6b5f95253fdc448"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/09-image-9.png",
+          "size": 40125,
+          "sha256": "f503a6df5b31d273adce3ca948678523ee5ede48a6401e664bcb51add8fac517"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/10-image-10.png",
+          "size": 46240,
+          "sha256": "e25735ddfbad43ccc79630ae948aa10684af9f5d06763f3ee235efb9ba3ce85e"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/wszz/11-image-11.png",
+          "size": 36524,
+          "sha256": "ba3ba6544a24926e9ed255c8e9882a3961318b80d61bee34a6cb7452741c88c1"
+        }
+      ]
+    },
+    {
+      "path": "Model/GoldModel/xicongtianjiang.glb",
+      "size": 5187060,
+      "sha256": "ae597d86f68ef5aa966b3c542f790dff5853728cfd2451deec95c1581d4d54fa",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 7,
+      "meshCount": 5,
+      "primitiveCount": 5,
+      "materialCount": 5,
+      "textureCount": 15,
+      "imageCount": 15,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/00-image-0.png",
+          "size": 20430,
+          "sha256": "5d25e50e1ae0659493fd903c5a2a70c10b4a744f8deda0fa456b5a69ab8346b7"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/01-image-1.png",
+          "size": 21488,
+          "sha256": "9576ace4e3c47c55f637ac495af68100e711bf72ee81f6cfcaf4b91905a80a24"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/02-image-2.png",
+          "size": 11352,
+          "sha256": "0e5e14f7f7974ca09f0a1659c324f5d4f5df1a1981620cfd9425aa036389e477"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/03-image-3.png",
+          "size": 9835,
+          "sha256": "145654a1af240973d9a306f81211bf78bfab3e9a480c1e6b35c2857d20f5334d"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/04-image-4.png",
+          "size": 12778,
+          "sha256": "11d5eba16ccd588961d7c0c2e5b9e9fa6abe75dc106b49fd2259d578c75c9aa9"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/05-image-5.png",
+          "size": 9305,
+          "sha256": "63ca4bdfbcdc0a755bf8eb494a4363ba7af140ab9bf47c1c785af944bf84dc41"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/06-image-6.png",
+          "size": 11305,
+          "sha256": "f5ea0453a17015db6b9f548597d5609fbc4f4d7c8be83e5d5f11b896f1cca296"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/07-image-7.png",
+          "size": 15169,
+          "sha256": "6a1afbf62753f980f8d0cf21d0f86eb3e195315c66b1671434a8f22ad653a81d"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/08-image-8.png",
+          "size": 9474,
+          "sha256": "f0a9df29ef601b952b8f9fee5cd8f024625d5cd5a4860abddcf119a7d14c8d8d"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/09-image-9.png",
+          "size": 454,
+          "sha256": "180b514318660b90a5e7bae85ef33da96f6c242051baa4dc3092252daea8ce09"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/10-image-10.png",
+          "size": 17501,
+          "sha256": "043b7df341095dec285feed704626de59f37069dee0c0fbb586981a3725454b3"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/11-image-11.png",
+          "size": 11755,
+          "sha256": "434361166ad0de6395db30bc31ef15360ffee6d7d8469cefd1b45431522f71c9"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/12-image-12.png",
+          "size": 30324,
+          "sha256": "b3b44341aed06833c4dfd3a8d7a3280684bff46bdf82550be2f5d63ca82e132d"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/13-image-13.png",
+          "size": 26168,
+          "sha256": "01ac1a2669be7d954571c6efc29b0c87d9a1f3f09a6edae114f10a936080c79a"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/GoldModel/xicongtianjiang/14-image-14.png",
+          "size": 12853,
+          "sha256": "4b737c6638c78acb9aabb09fb33dce04e73f2d1e89309bc2aa900cef50bdb300"
+        }
+      ]
+    },
+    {
+      "path": "Model/MoyuModel/SYJD_moyu.glb",
+      "size": 10173452,
+      "sha256": "ab78695a80a35ff59e3d1cc3260ccc8b3ca641f346d13169f89d2a0027adf7ff",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 11,
+      "meshCount": 6,
+      "primitiveCount": 6,
+      "materialCount": 6,
+      "textureCount": 18,
+      "imageCount": 18,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/00-image-0.png",
+          "size": 604793,
+          "sha256": "405f8d5338c96ca2b388fc1e43b70277027e9dab8a4cb964505efd16e8d02fa4"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/01-image-1.png",
+          "size": 669391,
+          "sha256": "16ce7ecd7a4ff0529b88f3f0e3e3040d2ddbd5b5a4393faade53ff660db7132e"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/02-image-2.png",
+          "size": 1398444,
+          "sha256": "470f5c93fb3dbd7ffd7e22523e16bc0d8e0615ccb073fd47e009c74d12cdd776"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/03-image-3.png",
+          "size": 49708,
+          "sha256": "47563304ba523a81667696716ad523809f13761eba0384617209ad0e876806a0"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/04-image-4.png",
+          "size": 48625,
+          "sha256": "cdee597447db797c9c3801661860a27765532a63dca1fba91903226d3cf8e7d5"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/05-image-5.png",
+          "size": 36081,
+          "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/06-image-6.png",
+          "size": 609899,
+          "sha256": "084e9b7ebdbb1f0449745470490fd2e3c88492faabc021e89aa2eed80381f098"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/07-image-7.png",
+          "size": 558092,
+          "sha256": "bf46aca92b4b9c79666a2fe6469cdb8e43e9b309991e69d099cef88edd63229a"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/08-image-8.png",
+          "size": 568971,
+          "sha256": "3b029cc952c53262bdb085fa2d9ee40deb91d2f673e665d04b1fde9e0ffaa56a"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/09-image-9.png",
+          "size": 1010,
+          "sha256": "882d6be57d4bdd5297065efa1c5d92a491da070003eef3a4f30e27130a7f00be"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/10-image-10.png",
+          "size": 46454,
+          "sha256": "d0312497c6b28c9e2c6fef72b24f0fadcfc971c302658c1f299fcf660a282c44"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/11-image-11.png",
+          "size": 36081,
+          "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/12-image-12.png",
+          "size": 557684,
+          "sha256": "c0ba3feb031244d987d8f33e16e22289c9c23fe83fe09b23d2bf6649703a2bd5"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/13-image-13.png",
+          "size": 447435,
+          "sha256": "a371bbdfd53fd6424d1c11c142c0b626b713f01bdeb0d0970d4a578c84631f44"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/14-image-14.png",
+          "size": 568971,
+          "sha256": "3b029cc952c53262bdb085fa2d9ee40deb91d2f673e665d04b1fde9e0ffaa56a"
+        },
+        {
+          "index": 15,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/15-image-15.png",
+          "size": 1010,
+          "sha256": "882d6be57d4bdd5297065efa1c5d92a491da070003eef3a4f30e27130a7f00be"
+        },
+        {
+          "index": 16,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/16-image-16.png",
+          "size": 783,
+          "sha256": "68dc0007952987b50c072852581e4552f6ee9f481e67c688de3c275fa34f4f04"
+        },
+        {
+          "index": 17,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/SYJD_moyu/17-image-17.png",
+          "size": 36081,
+          "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+        }
+      ]
+    },
+    {
+      "path": "Model/MoyuModel/dcdy_moyu.glb",
+      "size": 9223604,
+      "sha256": "d03fb1453b2d66a145ffc07b92dd90b946e853d829a9ef0cbf1a86b6b94211c9",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 7,
+      "meshCount": 5,
+      "primitiveCount": 5,
+      "materialCount": 5,
+      "textureCount": 15,
+      "imageCount": 15,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/00-image-0.png",
+          "size": 703986,
+          "sha256": "b2763b7d1ab7f5c9880b024946e2e6b7a70bdf74bb9705a2e583a30fce13beb2"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/01-image-1.png",
+          "size": 774532,
+          "sha256": "888514ab5759835cbed8ae1bd85b782eb1febd7ee5ec2c8ad457c2b9a376f168"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/02-image-2.png",
+          "size": 1169875,
+          "sha256": "8f766d7d158f5e426472bb0e770986e1f0ff3dbdddcd152556db08db546c5378"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/03-image-3.png",
+          "size": 8104,
+          "sha256": "7f2e7f3fb1c97999b0448a2fbca255922c5a5db8519b670fc369471d32b5335f"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/04-image-4.png",
+          "size": 15259,
+          "sha256": "a7e2533b2691d3c21776fac3b6280e0686ba712e3f577be0a61fe87eb24a4e29"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/05-image-5.png",
+          "size": 11957,
+          "sha256": "06e52e53f3f3459b6b1ba0ace4923e73752295171a1a35d9e6bdaafe32271e10"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/06-image-6.png",
+          "size": 502883,
+          "sha256": "7573577f59860683a131f2b574afd3d30621d8488c4b1d9561b415959edbefe6"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/07-image-7.png",
+          "size": 1159818,
+          "sha256": "7509c980ab2cef86222feb135d898fae457ead2d865bd0a867cc4dbbe4dfeaa5"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/08-image-8.png",
+          "size": 1080561,
+          "sha256": "1c21c9b17d8a36e29ed256bb14e56c46a6e2365f9b3b95f27c44985f4c5566ec"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/09-image-9.png",
+          "size": 381,
+          "sha256": "c88ea10936d57fdcd6dd4bcb493fddc0ea2bce9b66b1d417b941562185d87ff6"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/10-image-10.png",
+          "size": 381,
+          "sha256": "5b56c6ce66fdc0b48646443a8fe120720e45d34ebbfa1924b87632ebe6deb05f"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/11-image-11.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/12-image-12.png",
+          "size": 28730,
+          "sha256": "96685dee6e3e6c5fc7e06ba13b86e6534a49c7598f0b58f71435df4fe097389b"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/13-image-13.png",
+          "size": 15371,
+          "sha256": "718cc399651bcc266c9836e60cd441ee07610ab3f9c36e40a6502c59c3aa29f7"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/dcdy_moyu/14-image-14.png",
+          "size": 9311,
+          "sha256": "43c4f6a1965a44b987fc4617fb0ddd5e7162e1ca4662c57ea9a85e984faf07fc"
+        }
+      ]
+    },
+    {
+      "path": "Model/MoyuModel/qikaidesheng_moyu.glb",
+      "size": 8614680,
+      "sha256": "83a3f80238b4ef733ade1b600b3fd7584b5b4fa5f7642feae66bc2e1ad5b9604",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 16,
+      "meshCount": 11,
+      "primitiveCount": 11,
+      "materialCount": 11,
+      "textureCount": 33,
+      "imageCount": 33,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/00-image-0.png",
+          "size": 31832,
+          "sha256": "cc0c8a2c5bedbe2cc34c759550c88285d8df64cd1a1e0d412c0139cb0ae39051"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/01-image-1.png",
+          "size": 12149,
+          "sha256": "dbac46d9da3899945a237c7dfac232927fc2e7cab7e652094c257590bcaf6ad3"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/02-image-2.png",
+          "size": 9382,
+          "sha256": "c6134372d8a208d1ab89918ef58501306349a9334f0b93d3449135e712cdd8a9"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/03-image-3.png",
+          "size": 454,
+          "sha256": "fa3190f024301ef468b526e2a713a5da769c4124984bf3f3f4aaa3006bd09163"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/04-image-4.png",
+          "size": 15061,
+          "sha256": "1ce9b0debe2202db16c46430efa522717c5fa5dac4cdfe32f7e64283ba58bf66"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/05-image-5.png",
+          "size": 9396,
+          "sha256": "3c3fa7c4fe2adbe855e4091715d6b7714c0e575ab4407b5bb127704f1d531716"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/06-image-6.png",
+          "size": 58647,
+          "sha256": "238c1f65a12081974cb9667d304af7a8b66284b9e2fed5869b2bfdcd3076fcb4"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/07-image-7.png",
+          "size": 18039,
+          "sha256": "b048ed81079b45c6d38e8407736fa822311d5b6a0bd1c46d4389bc42865bb5f6"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/08-image-8.png",
+          "size": 10711,
+          "sha256": "c5c2d95336d29cecd9aa3306afa2f1cb4059fe86eb203f046251cedb3bea6f56"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/09-image-9.png",
+          "size": 17318,
+          "sha256": "540d042c172ab419ccf34f5cf8b835777ccd92c11741b3089f8cb0b5bad976ef"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/10-image-10.png",
+          "size": 196872,
+          "sha256": "c14c917142fe33c464d1c5bf79ee1ce1ce391bcc86772acbc96b39d21be61fe8"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/11-image-11.png",
+          "size": 579592,
+          "sha256": "68a71983c2d10858e5737e3be9c518a256f775e03a13668df006e7609a74a436"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/12-image-12.png",
+          "size": 453,
+          "sha256": "1c3044f2b3eae1851278ac2987a9f6e1880d927083accbd5b8b631f1a9d21ac7"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/13-image-13.png",
+          "size": 6121,
+          "sha256": "978bd602d54eeeb727201eebe1ce9f12a49dec70b5e112b8c34fe574c47cd97f"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/14-image-14.png",
+          "size": 9278,
+          "sha256": "24a7029c43660b5ce1d47288c9be7b88fac53556c1adf99d8d7b9d42d545f98d"
+        },
+        {
+          "index": 15,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/15-image-15.png",
+          "size": 453,
+          "sha256": "db26ce2daecd80f1091bf1f126164b94aa8b4226db49bbbeac39db50915abe1a"
+        },
+        {
+          "index": 16,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/16-image-16.png",
+          "size": 8517,
+          "sha256": "a5c27916538316de3de1f75b49a71e2e75155d0f6dcc69be74b216ece86c129e"
+        },
+        {
+          "index": 17,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/17-image-17.png",
+          "size": 9251,
+          "sha256": "8c61851588ee96c3a420bd756a68285fad71d7a9dfbfb9b6f781bedd99310940"
+        },
+        {
+          "index": 18,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/18-image-18.png",
+          "size": 20831,
+          "sha256": "b874ac4c57d2e5bb81ed58dd8302cc2a747e053da15312840dbc39d19f7612b5"
+        },
+        {
+          "index": 19,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/19-image-19.png",
+          "size": 6889,
+          "sha256": "37d90b30df6f0da2974093cdae7e77227d79bf97f932165e1850678b511ab75c"
+        },
+        {
+          "index": 20,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/20-image-20.png",
+          "size": 9221,
+          "sha256": "b99820908f69fc54c88df5db8df12de8492f020e0a41ab2528a152c89e0fb1d0"
+        },
+        {
+          "index": 21,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/21-image-21.png",
+          "size": 450,
+          "sha256": "f454c469a0e17ffe892791bc5e9dffc57e1b8eed0b0f600065fccee811dbb695"
+        },
+        {
+          "index": 22,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/22-image-22.png",
+          "size": 11287,
+          "sha256": "d29eb2fbcdf891d2e17dc33d49ae6e373517d5ead9378049f84116691dcb1a89"
+        },
+        {
+          "index": 23,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/23-image-23.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 24,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/24-image-24.png",
+          "size": 1930603,
+          "sha256": "be724603df45d47438294f8e1b9bb1a02a8efabdd50897b9dbbd910ee502df92"
+        },
+        {
+          "index": 25,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/25-image-25.png",
+          "size": 874782,
+          "sha256": "f63a9672ed28f60c44787919c55f4c6741bc677a6add666c13753431c7e8beaa"
+        },
+        {
+          "index": 26,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/26-image-26.png",
+          "size": 766335,
+          "sha256": "0b061ecfa162806d8cf5c62ac8ddbc9f980141333799a2c30539c2c79efe14b4"
+        },
+        {
+          "index": 27,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/27-image-27.png",
+          "size": 14315,
+          "sha256": "f2c2e50224eebbd88d07660831ea9630a6b8b38788e62218df0b21cef9715db6"
+        },
+        {
+          "index": 28,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/28-image-28.png",
+          "size": 5414,
+          "sha256": "acdcc98e67c5dec65aba839daf12f7d18afb8ae44b2387ec12344679cffecc66"
+        },
+        {
+          "index": 29,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/29-image-29.png",
+          "size": 9245,
+          "sha256": "1eb7021b1cb2d3dfcc314c62c8fbe63510b92e76539414d04f36b71f85bdfcd9"
+        },
+        {
+          "index": 30,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/30-image-30.png",
+          "size": 449,
+          "sha256": "718a925a14ba9ee8ff280afad4884a36a5e47f6db00e51438a166221111521d2"
+        },
+        {
+          "index": 31,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/31-image-31.png",
+          "size": 381,
+          "sha256": "d1345c22b84ac2b5f8f8f936660bf2c46abbb3ef7d8b66e65da380f1362b1065"
+        },
+        {
+          "index": 32,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/qikaidesheng_moyu/32-image-32.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        }
+      ]
+    },
+    {
+      "path": "Model/MoyuModel/xicongtianjiang_moyu.glb",
+      "size": 5210964,
+      "sha256": "a468bd0c453c508c83afbf83d4629dc7e7fe170c9742483f5fb8d5ee68021e12",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 12,
+      "meshCount": 7,
+      "primitiveCount": 7,
+      "materialCount": 7,
+      "textureCount": 21,
+      "imageCount": 21,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/00-image-0.png",
+          "size": 20333,
+          "sha256": "e312d371754a78954ef03d399d9d75a89c446014f8545ef1de6a12c9afa6263c"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/01-image-1.png",
+          "size": 21566,
+          "sha256": "503027bc29431cd706e58de8e7a6198860728d212e3a89a666a77204cc121027"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/02-image-2.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/03-image-3.png",
+          "size": 9835,
+          "sha256": "145654a1af240973d9a306f81211bf78bfab3e9a480c1e6b35c2857d20f5334d"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/04-image-4.png",
+          "size": 14117,
+          "sha256": "a32c1e3e60b713b40cd96ddaadd88e5b578a5140d67adb8fda39c4f292c69281"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/05-image-5.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/06-image-6.png",
+          "size": 455,
+          "sha256": "9917963b006a7178c117f47f0170a7898960fbbd941b0f0f612d7fa353db5af5"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/07-image-7.png",
+          "size": 12096,
+          "sha256": "f2b3433290d395fcdaef8510af1f9f71ea243007436c3c1ffb9df42cc87cb795"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/08-image-8.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/09-image-9.png",
+          "size": 454,
+          "sha256": "180b514318660b90a5e7bae85ef33da96f6c242051baa4dc3092252daea8ce09"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/10-image-10.png",
+          "size": 17790,
+          "sha256": "426641286af6c8ee1bd4053728dccd89996a5be2335607011df4ceec660a8f22"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/11-image-11.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/12-image-12.png",
+          "size": 30338,
+          "sha256": "f34c550434a43fec64e386829530ff55648571005ec1303c163ffa939fd7dc72"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/13-image-13.png",
+          "size": 27050,
+          "sha256": "8ee5c1d5f27493e7892000f5417831a1b03ab157c9854927353ec5f049c3a547"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/14-image-14.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 15,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/15-image-15.png",
+          "size": 450,
+          "sha256": "f454c469a0e17ffe892791bc5e9dffc57e1b8eed0b0f600065fccee811dbb695"
+        },
+        {
+          "index": 16,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/16-image-16.png",
+          "size": 14341,
+          "sha256": "113b1160dfeb70297bc56f1f313b5df292c62102ce3b87af1a01b0dc8b444699"
+        },
+        {
+          "index": 17,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/17-image-17.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        },
+        {
+          "index": 18,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/18-image-18.png",
+          "size": 450,
+          "sha256": "f454c469a0e17ffe892791bc5e9dffc57e1b8eed0b0f600065fccee811dbb695"
+        },
+        {
+          "index": 19,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/19-image-19.png",
+          "size": 381,
+          "sha256": "72ed5bfe61706608639d4563690738fbbb13ab6da174992f67d1bbbdc1c3accd"
+        },
+        {
+          "index": 20,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/MoyuModel/xicongtianjiang_moyu/20-image-20.png",
+          "size": 9232,
+          "sha256": "08b8ce53ee01901a767aec27a85fdcc80e237634ff0fedc51d32a11d461593e4"
+        }
+      ]
+    },
+    {
+      "path": "Model/otherModel/long.glb",
+      "size": 2411376,
+      "sha256": "b6daa53f6dc27802241d6bf7773d3084e0c729dc8fb2c74332e6e564051758d1",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 54,
+      "meshCount": 1,
+      "primitiveCount": 1,
+      "materialCount": 1,
+      "textureCount": 1,
+      "imageCount": 1,
+      "skinCount": 1,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/jpeg",
+          "embedded": true,
+          "output": "Model/otherModel/long/00-image-0.jpg",
+          "size": 1011608,
+          "sha256": "7f1fd45f482c89edc1f05057b6c05d6eb128747e249c596f74490b927207aeaa"
+        }
+      ]
+    },
+    {
+      "path": "Model/otherModel/sgd.glb",
+      "size": 420280,
+      "sha256": "a5152f2c3780d127c68b5e51dc9c147dbbf65b7022de50b03950d47a56c2107f",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 2,
+      "meshCount": 1,
+      "primitiveCount": 1,
+      "materialCount": 1,
+      "textureCount": 0,
+      "imageCount": 0,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": []
+    },
+    {
+      "path": "Model/otherModel/syjd.glb",
+      "size": 102928,
+      "sha256": "3a571dc9d03f2708f532b53ecafd1e2cd6d8a766f291c398a5a5a6db06b23217",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 2,
+      "meshCount": 1,
+      "primitiveCount": 1,
+      "materialCount": 1,
+      "textureCount": 0,
+      "imageCount": 0,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": []
+    },
+    {
+      "path": "Model/otherModel/xctj_z(3).glb",
+      "size": 2652664,
+      "sha256": "e5e9181d8f8ba8c03a030ef0ebe05d57b3741b51cd842dcec9bf579b87dbf989",
+      "gltfVersion": 2,
+      "generator": "babylon.js glTF exporter for 3dsmax 2022 v20220628.14",
+      "sceneCount": 1,
+      "nodeCount": 4,
+      "meshCount": 4,
+      "primitiveCount": 4,
+      "materialCount": 1,
+      "textureCount": 1,
+      "imageCount": 1,
+      "skinCount": 0,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/otherModel/xctj_z(3)/00-image-0.png",
+          "size": 2553228,
+          "sha256": "357652159942e4285b5ad260f1a2c853eb166b97f98f63c5c7480a5d31a8f092"
+        }
+      ]
+    },
+    {
+      "path": "Model/otherModel/zhuque.glb",
+      "size": 887168,
+      "sha256": "bd04233110e2c39aedafe620fdf658918d6f5c2fdfa39aa48cf44b89dee3f7a2",
+      "gltfVersion": 2,
+      "generator": "THREE.GLTFExporter r165",
+      "sceneCount": 1,
+      "nodeCount": 78,
+      "meshCount": 2,
+      "primitiveCount": 2,
+      "materialCount": 2,
+      "textureCount": 1,
+      "imageCount": 1,
+      "skinCount": 2,
+      "animationCount": 1,
+      "animationNames": [
+        "All Animations"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/otherModel/zhuque/00-image-0.png",
+          "size": 394736,
+          "sha256": "e6ee1a5002356604e0faeb73bcfa368bf1231df1b727498cdb5c2514c730081e"
+        }
+      ]
+    },
+    {
+      "path": "Model/taishanshigandang_yu.glb",
+      "size": 8688904,
+      "sha256": "0447af962f10b2fc8fda7787de1d5ad830b10b645dc0be30c46b23c3196d6320",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 10,
+      "meshCount": 5,
+      "primitiveCount": 5,
+      "materialCount": 5,
+      "textureCount": 15,
+      "imageCount": 15,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/00-image-0.png",
+          "size": 33603,
+          "sha256": "4e29ed542485fbb8a24a9e171823f977aebb705fd2854d2041faa81e11107414"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/01-image-1.png",
+          "size": 18244,
+          "sha256": "ddc39ff963e894887c15ca650f7980b122c44360ba947a94bbea7985b4d4ddaa"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/02-image-2.png",
+          "size": 10961,
+          "sha256": "bcc361bb630adfa6178260663cc9668292efa68bc862ce9e2e022ab66e381b8a"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/03-image-3.png",
+          "size": 19828,
+          "sha256": "77edd5aedcee4ba132bbb82f1f77725886b58aba7ff6383c8e3c1aa25044da4a"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/04-image-4.png",
+          "size": 14177,
+          "sha256": "f5b0e21456a22a0057a444456a1b26dcdb14090b0a6f9f71e1754985f712d18d"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/05-image-5.png",
+          "size": 9430,
+          "sha256": "192024d36ad17c7580b46c61b4de2575d58ce7e0090c64c97708c0e3d7da2056"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/06-image-6.png",
+          "size": 1840475,
+          "sha256": "424e729b9df62c6a3f9bcb1214d7c60dc8bc0eb812aba3cd39468916cde63fae"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/07-image-7.png",
+          "size": 1032894,
+          "sha256": "3db91a94565060767c02f906bbbf0aafe2ac46da056f157e1d2a68d04e5979f6"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/08-image-8.png",
+          "size": 936824,
+          "sha256": "7e3c0adfca0a4e0096b885c4e2efc1ad256e97aafd6a65fafde765ff5ff79478"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/09-image-9.png",
+          "size": 90195,
+          "sha256": "54ddf776e1122ed8af494a9432ba21c1d66439edf898286b167ce91bd5bdc20a"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/10-image-10.png",
+          "size": 72676,
+          "sha256": "08cc88a63a35aaaf9a4e7c32f8b1c477caafcc661f19a4ace373ef15497b170a"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/11-image-11.png",
+          "size": 36081,
+          "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/12-image-12.png",
+          "size": 101058,
+          "sha256": "5b3e02ac4fa7a02953a392f1767072bde0b770185519f22cf695ec9bf27867c4"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/13-image-13.png",
+          "size": 61838,
+          "sha256": "d1900c64e917652aef4e7e285397e3fed2e38b41474e3fba9b33e42530d37153"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/taishanshigandang_yu/14-image-14.png",
+          "size": 59732,
+          "sha256": "d64d6e5124a5f34ae12b55b3c6fda35b061a382fc130e62def0a0bab6cc31091"
+        }
+      ]
+    },
+    {
+      "path": "Model/wszz_yu.glb",
+      "size": 10260424,
+      "sha256": "331cddfa2a3553aff74a3ae833f7a03f3dbfd4844603655837a18f649c979795",
+      "gltfVersion": 2,
+      "generator": "Adobe Substance 3D Painter 8.3.0",
+      "sceneCount": 1,
+      "nodeCount": 11,
+      "meshCount": 6,
+      "primitiveCount": 6,
+      "materialCount": 6,
+      "textureCount": 18,
+      "imageCount": 18,
+      "skinCount": 0,
+      "animationCount": 0,
+      "animationNames": [],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "externalBufferUris": [],
+      "extractedImages": [
+        {
+          "index": 0,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/00-image-0.png",
+          "size": 675348,
+          "sha256": "fdd390ec106f5bbc14d3a942f2b221f6cedf6aaa3f0495db9bc6e2d18b740bc1"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/01-image-1.png",
+          "size": 703004,
+          "sha256": "1f0f27096f83133f576fbaa68b82edb22a1f4f982991d067c53c702d24fc97c9"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/02-image-2.png",
+          "size": 1784922,
+          "sha256": "c97fbaf81af507adb57c6464ee9ca4af7701cb2da8580b9d25ebea24793d4dd6"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/03-image-3.png",
+          "size": 57566,
+          "sha256": "e01381d5afb7505d922a0977bb9648085bedc2f2b1d35b4732cacd310ff5651d"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/04-image-4.png",
+          "size": 52765,
+          "sha256": "dafda7bf38094db5213b6c34ef0930876f10d07ab7123f71801f0d4db0a3680e"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/05-image-5.png",
+          "size": 60305,
+          "sha256": "a97460e5c325fb4af148915441d33b44cdff09ad68b8afc606acce11354aa70f"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/06-image-6.png",
+          "size": 1666188,
+          "sha256": "28c3e4119838bf039370b721ca3e3e3b5f2da87113a7db77c75a92d7efe44d0e"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/07-image-7.png",
+          "size": 433945,
+          "sha256": "8e3489258066d86901f8bdd4cd515c85b5fafe81d2c39a239f1e492f060aa686"
+        },
+        {
+          "index": 8,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/08-image-8.png",
+          "size": 568971,
+          "sha256": "3b029cc952c53262bdb085fa2d9ee40deb91d2f673e665d04b1fde9e0ffaa56a"
+        },
+        {
+          "index": 9,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/09-image-9.png",
+          "size": 85475,
+          "sha256": "94d20a1ecf5de2901e9712ca4d47ab057ef71d603ab31f77afc6f147f2d14fe4"
+        },
+        {
+          "index": 10,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/10-image-10.png",
+          "size": 75371,
+          "sha256": "2403d84773e6e0eedaa6460fd3f06e3448e8e9cd094f5622e0a8417cad8f22a5"
+        },
+        {
+          "index": 11,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/11-image-11.png",
+          "size": 36081,
+          "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+        },
+        {
+          "index": 12,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/12-image-12.png",
+          "size": 87490,
+          "sha256": "a279700a25d286240782b4bea2a0c46730dbfab3751bbda03c64c8b5acacb73b"
+        },
+        {
+          "index": 13,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/13-image-13.png",
+          "size": 46713,
+          "sha256": "fcfb769192303a177769686fbcb747ef4d00b1cd0f62832456cd896ecd4b3231"
+        },
+        {
+          "index": 14,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/14-image-14.png",
+          "size": 36081,
+          "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+        },
+        {
+          "index": 15,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/15-image-15.png",
+          "size": 782,
+          "sha256": "7ffb79636c08b8a94a43fbddb70b1df5c563da30aa6c01a1c1c006b0a16c094c"
+        },
+        {
+          "index": 16,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/16-image-16.png",
+          "size": 783,
+          "sha256": "298e90edfab3925dc8424ff6ff5c3c0d25debd93db7f4b8d355d8654b11cc57c"
+        },
+        {
+          "index": 17,
+          "name": null,
+          "mimeType": "image/png",
+          "embedded": true,
+          "output": "Model/wszz_yu/17-image-17.png",
+          "size": 36081,
+          "sha256": "6f5ce3b81e6e38709c0bc5322f2d8e96cd5865e2f00387b1ef6d1fb2f5d478c0"
+        }
+      ]
+    }
+  ]
+}

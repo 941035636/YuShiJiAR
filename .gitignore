@@ -1,0 +1,12 @@
+project.private.config.json
+node_modules/
+*.part
+*.log
+.DS_Store
+Thumbs.db
+recovered-project.zip
+original/
+decrypted/
+extracted/
+cache-snapshot/
+

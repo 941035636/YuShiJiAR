@@ -1,0 +1,1225 @@
+{
+  "generatedAt": "2026-10-20T07:39:15.126Z",
+  "inputRoot": "D:\\ARRecovery\\wx8d8d557b77c8ad75\\recovery-1.0.6\\extracted",
+  "fileCount": 69,
+  "urls": {
+    "total": 70,
+    "byCategory": {
+      "audio": 13,
+      "image": 17,
+      "model": 33,
+      "other": 1,
+      "tracking-image": 6
+    },
+    "entries": [
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628",
+        "decodedPath": "/AR-YSJ/Audio/凤凰.mp3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-JinXi/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187",
+        "decodedPath": "/AR-YSJ/Audio/喜从天降.mp3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-JinXi/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3",
+        "decodedPath": "/AR-YSJ/Audio/多财多亿.mp3",
+        "category": "audio",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-ZhaoCai/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214",
+        "decodedPath": "/AR-YSJ/Audio/所愿皆得.mp3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252",
+        "decodedPath": "/AR-YSJ/Audio/旗开得胜.mp3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-oceanWorld/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333",
+        "decodedPath": "/AR-YSJ/Audio/无事自在.mp3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-ZiZai/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+        "decodedPath": "/AR-YSJ/Audio/环境音.MP3",
+        "category": "audio",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-ZhaoCai/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=30354a86a1d964d374bee8b57b55f6d0&t=1717399588",
+        "decodedPath": "/AR-YSJ/Audio/环境音.MP3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-ZiZai/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=64677f3736ab731ae4d7b75b8655562a&t=1717396765",
+        "decodedPath": "/AR-YSJ/Audio/环境音.MP3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=6caa421b421f43291ad7353cb6729ac3&t=1717399495",
+        "decodedPath": "/AR-YSJ/Audio/环境音.MP3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-oceanWorld/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=907cec37ec4d0e412cd225230ec520ff&t=1717397714",
+        "decodedPath": "/AR-YSJ/Audio/环境音.MP3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-BenZun/index.appservice.js",
+          "pages/ar/scene-ar-JinXi/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988",
+        "decodedPath": "/AR-YSJ/Audio/石敢当本当.mp3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-BenZun/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059",
+        "decodedPath": "/AR-YSJ/Audio/龙的音效.MP3",
+        "category": "audio",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+        "decodedPath": "/AR-YSJ/Card/dcdy.jpg",
+        "category": "tracking-image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZhaoCai/index.appservice.js",
+          "AR/components/xr-ar-ZhaoCai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+        "decodedPath": "/AR-YSJ/Card/qkds.jpg",
+        "category": "tracking-image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-oceanWorld/index.appservice.js",
+          "AR/components/xr-ar-oceanWorld/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+        "decodedPath": "/AR-YSJ/Card/syjd.jpg",
+        "category": "tracking-image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-NaFu/index.appservice.js",
+          "AR/components/xr-ar-NaFu/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+        "decodedPath": "/AR-YSJ/Card/tssgd.jpg",
+        "category": "tracking-image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-BenZun/index.appservice.js",
+          "AR/components/xr-ar-BenZun/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+        "decodedPath": "/AR-YSJ/Card/wszz.jpg",
+        "category": "tracking-image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZiZai/index.appservice.js",
+          "AR/components/xr-ar-ZiZai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+        "decodedPath": "/AR-YSJ/Card/xctj.jpg",
+        "category": "tracking-image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-JinXi/index.appservice.js",
+          "AR/components/xr-ar-JinXi/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&t=1717376736",
+        "decodedPath": "/AR-YSJ/FrameAnimation/dcdy02.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-BenZun/index.appservice.js",
+          "AR/components/xr-ar-BenZun/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&t=1717378353",
+        "decodedPath": "/AR-YSJ/FrameAnimation/dcdy02 (1).glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZhaoCai/index.appservice.js",
+          "AR/components/xr-ar-ZhaoCai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&t=1717378837",
+        "decodedPath": "/AR-YSJ/FrameAnimation/dcdy02 (2).glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZiZai/index.appservice.js",
+          "AR/components/xr-ar-ZiZai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb",
+        "decodedPath": "/AR-YSJ/FrameAnimation/dcdyhr.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZhaoCai/index.appservice.js",
+          "AR/components/xr-ar-ZhaoCai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb",
+        "decodedPath": "/AR-YSJ/FrameAnimation/dun.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-BenZun/index.appservice.js",
+          "AR/components/xr-ar-BenZun/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&t=1717378900",
+        "decodedPath": "/AR-YSJ/FrameAnimation/gui.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZiZai/index.appservice.js",
+          "AR/components/xr-ar-ZiZai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&t=1717378434",
+        "decodedPath": "/AR-YSJ/FrameAnimation/long(1).glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZhaoCai/index.appservice.js",
+          "AR/components/xr-ar-ZhaoCai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&t=1717378135",
+        "decodedPath": "/AR-YSJ/FrameAnimation/qkds01.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-oceanWorld/index.appservice.js",
+          "AR/components/xr-ar-oceanWorld/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb",
+        "decodedPath": "/AR-YSJ/FrameAnimation/qkdshr.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-oceanWorld/index.appservice.js",
+          "AR/components/xr-ar-oceanWorld/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&t=1717378176",
+        "decodedPath": "/AR-YSJ/FrameAnimation/scene.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-oceanWorld/index.appservice.js",
+          "AR/components/xr-ar-oceanWorld/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&t=1717376750",
+        "decodedPath": "/AR-YSJ/FrameAnimation/shan.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-BenZun/index.appservice.js",
+          "AR/components/xr-ar-BenZun/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&t=1717377978",
+        "decodedPath": "/AR-YSJ/FrameAnimation/syjd.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-NaFu/index.appservice.js",
+          "AR/components/xr-ar-NaFu/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb",
+        "decodedPath": "/AR-YSJ/FrameAnimation/syjdhr.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-NaFu/index.appservice.js",
+          "AR/components/xr-ar-NaFu/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb",
+        "decodedPath": "/AR-YSJ/FrameAnimation/wszzhr.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZiZai/index.appservice.js",
+          "AR/components/xr-ar-ZiZai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb",
+        "decodedPath": "/AR-YSJ/FrameAnimation/xctj.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-JinXi/index.appservice.js",
+          "AR/components/xr-ar-JinXi/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb",
+        "decodedPath": "/AR-YSJ/FrameAnimation/xctjhr.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-JinXi/index.appservice.js",
+          "AR/components/xr-ar-JinXi/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&t=1717378276",
+        "decodedPath": "/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZhaoCai/index.appservice.js",
+          "AR/components/xr-ar-ZhaoCai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&t=1717378082",
+        "decodedPath": "/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-oceanWorld/index.appservice.js",
+          "AR/components/xr-ar-oceanWorld/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&t=1717377852",
+        "decodedPath": "/AR-YSJ/Model/GoldModel/SYJD.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-NaFu/index.appservice.js",
+          "AR/components/xr-ar-NaFu/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&t=1717376673",
+        "decodedPath": "/AR-YSJ/Model/GoldModel/taishanshigandang.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-BenZun/index.appservice.js",
+          "AR/components/xr-ar-BenZun/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&t=1717378537",
+        "decodedPath": "/AR-YSJ/Model/GoldModel/wszz.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZiZai/index.appservice.js",
+          "AR/components/xr-ar-ZiZai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+        "decodedPath": "/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-JinXi/index.appservice.js",
+          "AR/components/xr-ar-JinXi/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&t=1717378258",
+        "decodedPath": "/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZhaoCai/index.appservice.js",
+          "AR/components/xr-ar-ZhaoCai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&t=1717378061",
+        "decodedPath": "/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb",
+        "category": "model",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "AR/components/xr-ar-oceanWorld/index.appservice.js",
+          "AR/components/xr-ar-oceanWorld/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+        "decodedPath": "/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-NaFu/index.appservice.js",
+          "AR/components/xr-ar-NaFu/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+        "decodedPath": "/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-JinXi/index.appservice.js",
+          "AR/components/xr-ar-JinXi/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb",
+        "decodedPath": "/AR-YSJ/Model/otherModel/long.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-NaFu/index.appservice.js",
+          "AR/components/xr-ar-NaFu/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb",
+        "decodedPath": "/AR-YSJ/Model/otherModel/sgd.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-BenZun/index.appservice.js",
+          "AR/components/xr-ar-BenZun/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb",
+        "decodedPath": "/AR-YSJ/Model/otherModel/syjd.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-NaFu/index.appservice.js",
+          "AR/components/xr-ar-NaFu/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+        "decodedPath": "/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-JinXi/index.appservice.js",
+          "AR/components/xr-ar-JinXi/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb",
+        "decodedPath": "/AR-YSJ/Model/otherModel/zhuque.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-JinXi/index.appservice.js",
+          "AR/components/xr-ar-JinXi/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif",
+        "decodedPath": "/AR-YSJ/Model/saomiao.gif",
+        "category": "image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/ar/scene-ar-BenZun/index.appservice.js",
+          "pages/ar/scene-ar-BenZun/index.webview.js",
+          "pages/ar/scene-ar-JinXi/index.appservice.js",
+          "pages/ar/scene-ar-JinXi/index.webview.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js",
+          "pages/ar/scene-ar-NaFu/index.webview.js",
+          "pages/ar/scene-ar-ZhaoCai/index.appservice.js",
+          "pages/ar/scene-ar-ZhaoCai/index.webview.js",
+          "pages/ar/scene-ar-ZiZai/index.appservice.js",
+          "pages/ar/scene-ar-ZiZai/index.webview.js",
+          "pages/ar/scene-ar-oceanWorld/index.appservice.js",
+          "pages/ar/scene-ar-oceanWorld/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb",
+        "decodedPath": "/AR-YSJ/Model/taishanshigandang_yu.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-BenZun/index.appservice.js",
+          "AR/components/xr-ar-BenZun/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb",
+        "decodedPath": "/AR-YSJ/Model/wszz_yu.glb",
+        "category": "model",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "AR/components/xr-ar-ZiZai/index.appservice.js",
+          "AR/components/xr-ar-ZiZai/index.webview.js",
+          "app-service.js",
+          "page-frame.html"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png?sign=a7fcb9d694fe68d2e19afd860144d269&t=1717381487",
+        "decodedPath": "/AR-YSJ/UI/常胜.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/selectModel/index.appservice.js",
+          "pages/selectModel/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png?sign=23f2a8d94940a27036505ee9d3e82300&t=1717381533",
+        "decodedPath": "/AR-YSJ/UI/招财.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/selectModel/index.appservice.js",
+          "pages/selectModel/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png",
+        "decodedPath": "/AR-YSJ/UI/收藏版.png",
+        "category": "image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/ar/scene-ar-BenZun/index.appservice.js",
+          "pages/ar/scene-ar-BenZun/index.webview.js",
+          "pages/ar/scene-ar-JinXi/index.appservice.js",
+          "pages/ar/scene-ar-JinXi/index.webview.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js",
+          "pages/ar/scene-ar-NaFu/index.webview.js",
+          "pages/ar/scene-ar-ZhaoCai/index.appservice.js",
+          "pages/ar/scene-ar-ZhaoCai/index.webview.js",
+          "pages/ar/scene-ar-ZiZai/index.appservice.js",
+          "pages/ar/scene-ar-ZiZai/index.webview.js",
+          "pages/ar/scene-ar-oceanWorld/index.appservice.js",
+          "pages/ar/scene-ar-oceanWorld/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&t=1717381471",
+        "decodedPath": "/AR-YSJ/UI/本尊.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/selectModel/index.appservice.js",
+          "pages/selectModel/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png",
+        "decodedPath": "/AR-YSJ/UI/盲盒版.png",
+        "category": "image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/ar/scene-ar-BenZun/index.appservice.js",
+          "pages/ar/scene-ar-BenZun/index.webview.js",
+          "pages/ar/scene-ar-JinXi/index.appservice.js",
+          "pages/ar/scene-ar-JinXi/index.webview.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js",
+          "pages/ar/scene-ar-NaFu/index.webview.js",
+          "pages/ar/scene-ar-ZhaoCai/index.appservice.js",
+          "pages/ar/scene-ar-ZhaoCai/index.webview.js",
+          "pages/ar/scene-ar-ZiZai/index.appservice.js",
+          "pages/ar/scene-ar-ZiZai/index.webview.js",
+          "pages/ar/scene-ar-oceanWorld/index.appservice.js",
+          "pages/ar/scene-ar-oceanWorld/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png?sign=fb9a25aba59701d689f33a8e650e2930&t=1717381593",
+        "decodedPath": "/AR-YSJ/UI/纳福.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/selectModel/index.appservice.js",
+          "pages/selectModel/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png?sign=24a0c9d57140ad0f2527fc6967560f36&t=1719797165",
+        "decodedPath": "/AR-YSJ/UI/背景.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "page-frame.html",
+          "pages/index/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png?sign=c3cd72c8047f252d99b2280211419e9a&t=1717381563",
+        "decodedPath": "/AR-YSJ/UI/自在.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/selectModel/index.appservice.js",
+          "pages/selectModel/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png?sign=fc09c0be35cd7df9158db8eab1b468e4&t=1717381579",
+        "decodedPath": "/AR-YSJ/UI/进喜.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/selectModel/index.appservice.js",
+          "pages/selectModel/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&t=1717380841",
+        "decodedPath": "/AR-YSJ/UI/02.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/index/index.appservice.js",
+          "pages/index/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&t=1717380852",
+        "decodedPath": "/AR-YSJ/UI/03.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/index/index.appservice.js",
+          "pages/index/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&t=1717380830",
+        "decodedPath": "/AR-YSJ/UI/1.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/index/index.appservice.js",
+          "pages/index/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&t=1717381436",
+        "decodedPath": "/AR-YSJ/UI/top.png",
+        "category": "image",
+        "hasSignedQuery": true,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/selectModel/index.appservice.js",
+          "pages/selectModel/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://cyvideo.i-oranges.com/ar/2023jcc/_2.gif",
+        "decodedPath": "/ar/2023jcc/_2.gif",
+        "category": "image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/ar/scene-ar-JinXi/index.appservice.js",
+          "pages/ar/scene-ar-JinXi/index.webview.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js",
+          "pages/ar/scene-ar-NaFu/index.webview.js",
+          "pages/ar/scene-ar-ZhaoCai/index.appservice.js",
+          "pages/ar/scene-ar-ZhaoCai/index.webview.js",
+          "pages/ar/scene-ar-ZiZai/index.appservice.js",
+          "pages/ar/scene-ar-ZiZai/index.webview.js",
+          "pages/ar/scene-ar-oceanWorld/index.appservice.js",
+          "pages/ar/scene-ar-oceanWorld/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://cyvideo.i-oranges.com/ar/2023jcc/fed19f8544fd3b660a9d38b7245c3cc.png",
+        "decodedPath": "/ar/2023jcc/fed19f8544fd3b660a9d38b7245c3cc.png",
+        "category": "image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "page-frame.html",
+          "pages/ar/scene-ar-BenZun/index.appservice.js",
+          "pages/ar/scene-ar-BenZun/index.webview.js",
+          "pages/ar/scene-ar-JinXi/index.appservice.js",
+          "pages/ar/scene-ar-JinXi/index.webview.js",
+          "pages/ar/scene-ar-NaFu/index.appservice.js",
+          "pages/ar/scene-ar-NaFu/index.webview.js",
+          "pages/ar/scene-ar-ZhaoCai/index.appservice.js",
+          "pages/ar/scene-ar-ZhaoCai/index.webview.js",
+          "pages/ar/scene-ar-ZiZai/index.appservice.js",
+          "pages/ar/scene-ar-ZiZai/index.webview.js",
+          "pages/ar/scene-ar-oceanWorld/index.appservice.js",
+          "pages/ar/scene-ar-oceanWorld/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://cyvideo.i-oranges.com/ar/cdxg/index/ai1.gif",
+        "decodedPath": "/ar/cdxg/index/ai1.gif",
+        "category": "image",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "page-frame.html",
+          "pages/ar/scene-ar-JinXi/index.webview.js",
+          "pages/ar/scene-ar-NaFu/index.webview.js",
+          "pages/ar/scene-ar-ZhaoCai/index.webview.js",
+          "pages/ar/scene-ar-ZiZai/index.webview.js",
+          "pages/ar/scene-ar-oceanWorld/index.webview.js"
+        ]
+      },
+      {
+        "url": "https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0",
+        "decodedPath": "/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0",
+        "category": "other",
+        "hasSignedQuery": false,
+        "sourceFiles": [
+          "app-service.js",
+          "pages/index/index.appservice.js"
+        ]
+      }
+    ]
+  },
+  "localFiles": [
+    {
+      "path": "app-config.json",
+      "size": 1969,
+      "sha256": "3cdccb6ab4de069cb68d2d263d1886d2b61baf64d2837c6fbee1f707c330ec12"
+    },
+    {
+      "path": "app-service.js",
+      "size": 178016,
+      "sha256": "8897fc7b829a5537c6ca75f1bed01465b6c256bc1aaa6e8393cb865990143201"
+    },
+    {
+      "path": "app.fpcssb",
+      "size": 117,
+      "sha256": "b6537ed39320f029e37afdc685835e13d4bc373236bc6109f1e171b413bcd001"
+    },
+    {
+      "path": "app.fpiib",
+      "size": 269,
+      "sha256": "8e1061d907d172c6c64a468e2afb7137d77828c4459085fec8735260e38ab55a"
+    },
+    {
+      "path": "appservice.app.js",
+      "size": 15655,
+      "sha256": "8b49954a762a8d4564e9dacf35d6a1edf4ab3d3268a32b46402ceb5fa8187720"
+    },
+    {
+      "path": "AR/components/xr-ar-BenZun/index.appservice.js",
+      "size": 8248,
+      "sha256": "db9b17e32b539f5573039466b56ca73cd75dbcc3b345dc139f8b2d278f9ee18d"
+    },
+    {
+      "path": "AR/components/xr-ar-BenZun/index.fpcssb",
+      "size": 66,
+      "sha256": "41fefec901f5b265ba3b0434718290c275634ec1415eafd26e3d3f1dc5bdb76e"
+    },
+    {
+      "path": "AR/components/xr-ar-BenZun/index.html",
+      "size": 482,
+      "sha256": "b155b08461feb6fb0cae2d05232fc503346abd8507b01c00025229b7eb556f29"
+    },
+    {
+      "path": "AR/components/xr-ar-BenZun/index.webview.js",
+      "size": 6233,
+      "sha256": "ae12d4b1c3c3c0edea9edcb2cd44849662fcdebde174b42c016bfd58d7827020"
+    },
+    {
+      "path": "AR/components/xr-ar-JinXi/index.appservice.js",
+      "size": 8159,
+      "sha256": "705100e49cb0f091134c47842293b11d57ccc7765492ee494467f3633227116c"
+    },
+    {
+      "path": "AR/components/xr-ar-JinXi/index.fpcssb",
+      "size": 22,
+      "sha256": "c23de4579f223b46d1bb88d8b985ae91b5f4ba240f1cb63c89dc507da4024b24"
+    },
+    {
+      "path": "AR/components/xr-ar-JinXi/index.html",
+      "size": 480,
+      "sha256": "61200860462cc9c2d4a54888d92575fce8fad2950385ce85e93fd423b5db71b9"
+    },
+    {
+      "path": "AR/components/xr-ar-JinXi/index.webview.js",
+      "size": 5969,
+      "sha256": "a0de0c80c4926d8830362385ed3ebbcdc34c9120eb38da37aa0030751e0f05e0"
+    },
+    {
+      "path": "AR/components/xr-ar-NaFu/index.appservice.js",
+      "size": 8266,
+      "sha256": "0f6cd9cdb2ef0c2b6e26bb05d4774f4f2f3b00898096d7cb687238971ae6f523"
+    },
+    {
+      "path": "AR/components/xr-ar-NaFu/index.fpcssb",
+      "size": 22,
+      "sha256": "c23de4579f223b46d1bb88d8b985ae91b5f4ba240f1cb63c89dc507da4024b24"
+    },
+    {
+      "path": "AR/components/xr-ar-NaFu/index.html",
+      "size": 478,
+      "sha256": "d2257264b9807f255fd7638b3c1056b3635e64989025e4b011b58e138d59df4c"
+    },
+    {
+      "path": "AR/components/xr-ar-NaFu/index.webview.js",
+      "size": 6080,
+      "sha256": "792496a04ca1853aa0a217035ec79a0b4e9a55052ceed172283d020970fa0d12"
+    },
+    {
+      "path": "AR/components/xr-ar-oceanWorld/index.appservice.js",
+      "size": 7724,
+      "sha256": "fcadb7b16676a9fc7427a4856fb8e2ca0234060f7a45048ddc01c2d39bf497fb"
+    },
+    {
+      "path": "AR/components/xr-ar-oceanWorld/index.fpcssb",
+      "size": 22,
+      "sha256": "c23de4579f223b46d1bb88d8b985ae91b5f4ba240f1cb63c89dc507da4024b24"
+    },
+    {
+      "path": "AR/components/xr-ar-oceanWorld/index.html",
+      "size": 490,
+      "sha256": "3df11f45d2aa7d8d391da8b817d15e07dd566275659288f95e634564ac6ff502"
+    },
+    {
+      "path": "AR/components/xr-ar-oceanWorld/index.json",
+      "size": 103,
+      "sha256": "cae30cc08cfb2929c2849e320e2682566a3996fedfd3c10a2b83e885b7473a67"
+    },
+    {
+      "path": "AR/components/xr-ar-oceanWorld/index.webview.js",
+      "size": 5519,
+      "sha256": "4ae96471e0855cadc465dc6dca73b8ec13cb5fbb23847f4ee39bcb2e0d56d05d"
+    },
+    {
+      "path": "AR/components/xr-ar-ZhaoCai/index.appservice.js",
+      "size": 7626,
+      "sha256": "550815fdab178ab1f6334118bba5e4590c0d03458e35217c48182ae25b51c742"
+    },
+    {
+      "path": "AR/components/xr-ar-ZhaoCai/index.fpcssb",
+      "size": 22,
+      "sha256": "c23de4579f223b46d1bb88d8b985ae91b5f4ba240f1cb63c89dc507da4024b24"
+    },
+    {
+      "path": "AR/components/xr-ar-ZhaoCai/index.html",
+      "size": 484,
+      "sha256": "57d8eb49a48e71254d08150dd0e8dbc7de8849923fd6d06f5277ef3317eb2ff6"
+    },
+    {
+      "path": "AR/components/xr-ar-ZhaoCai/index.webview.js",
+      "size": 5431,
+      "sha256": "2eefb9dc98ca48095e0576aea84f7eeab7266921aab46c328af010050126debd"
+    },
+    {
+      "path": "AR/components/xr-ar-ZiZai/index.appservice.js",
+      "size": 7531,
+      "sha256": "c494fa6af8f044c3601e733a756646e20b1880fba8fb48ee6d27eff44edf6e93"
+    },
+    {
+      "path": "AR/components/xr-ar-ZiZai/index.fpcssb",
+      "size": 22,
+      "sha256": "c23de4579f223b46d1bb88d8b985ae91b5f4ba240f1cb63c89dc507da4024b24"
+    },
+    {
+      "path": "AR/components/xr-ar-ZiZai/index.html",
+      "size": 480,
+      "sha256": "39669677159dcbc2035f734a25062fb9608daca5121f3a15da98da30982e08dc"
+    },
+    {
+      "path": "AR/components/xr-ar-ZiZai/index.webview.js",
+      "size": 5342,
+      "sha256": "b128f921e431281b9d0d010553fb14878d58118460fedcff635ad02dc49b574c"
+    },
+    {
+      "path": "AR/components/xr-demo-viewer/index.appservice.js",
+      "size": 1761,
+      "sha256": "244d86cc32af514e4ab9c1f9fef5b7927fb59ca36ee6fede1dd206766fded7ed"
+    },
+    {
+      "path": "AR/components/xr-demo-viewer/index.fpcssb",
+      "size": 1856,
+      "sha256": "8ae592e6107ffcf2f730f2bb066f4ba6eb2adf6711db86b02c2ae452810b8672"
+    },
+    {
+      "path": "AR/components/xr-demo-viewer/index.html",
+      "size": 486,
+      "sha256": "e1cd64bd5c4182fb73a232369cf5609fe34b67147f9e10f54790648811af3906"
+    },
+    {
+      "path": "AR/components/xr-demo-viewer/index.json",
+      "size": 39,
+      "sha256": "f4794f58524bbba1e57041da3acc4f21b8746ed5fbbe02bcfd7f16cc279b8185"
+    },
+    {
+      "path": "AR/components/xr-demo-viewer/index.webview.js",
+      "size": 3116,
+      "sha256": "5f4a3945b92338d0286959b727e8ead29f86947007b2ea69cceec398dba01c5f"
+    },
+    {
+      "path": "common.app.js",
+      "size": 59193,
+      "sha256": "d34398b793068c42dadcacdb455a0d16a26e9b36fe6aff2288c30acb98ba7114"
+    },
+    {
+      "path": "images/bk.png",
+      "size": 108029,
+      "sha256": "753a67bbab908353bfd99ee811849a99c9f3365c76ffb29a158362385d11a0fa"
+    },
+    {
+      "path": "page-frame.html",
+      "size": 154947,
+      "sha256": "2fb413932e30f9a6d1f6647d270f8bb48e23109f015d0fbca8d7c342410fd67e"
+    },
+    {
+      "path": "pages/ar/scene-ar-BenZun/index.appservice.js",
+      "size": 7459,
+      "sha256": "21ef41f17b2ac977071e040ae14d7c592d9b915675aaa612e680b28f984c3b8c"
+    },
+    {
+      "path": "pages/ar/scene-ar-BenZun/index.html",
+      "size": 478,
+      "sha256": "e1031bc70fbd933de2730f114a0e616a7194f6bf33ccfd36126b23c129dadc7b"
+    },
+    {
+      "path": "pages/ar/scene-ar-BenZun/index.webview.js",
+      "size": 7769,
+      "sha256": "2d6136ef7c925db67b6017cea3c00085908af9f4268844ff38e417b4808d28db"
+    },
+    {
+      "path": "pages/ar/scene-ar-JinXi/index.appservice.js",
+      "size": 7916,
+      "sha256": "c7a6b1db9e485d0abd059527568f0f1d1748e8cdf592145c526c4f87c015927e"
+    },
+    {
+      "path": "pages/ar/scene-ar-JinXi/index.html",
+      "size": 476,
+      "sha256": "17b81dc6f09ad1ecf724bff202d1a3c6b9c8eafb5e519c44801193c8fd7691cb"
+    },
+    {
+      "path": "pages/ar/scene-ar-JinXi/index.webview.js",
+      "size": 7839,
+      "sha256": "047056ef48717e6c2e4baa54c4448951f2e7a49001ea5d5a0f8568e613548a63"
+    },
+    {
+      "path": "pages/ar/scene-ar-NaFu/index.appservice.js",
+      "size": 7931,
+      "sha256": "02a1f9696a9b0080e678069e216d9f1001b42a196126c98e9ae120d3944c3be7"
+    },
+    {
+      "path": "pages/ar/scene-ar-NaFu/index.html",
+      "size": 474,
+      "sha256": "8ee0a48f57cf76c8eef29896657dd29ff8d8a7495445997a693b19da76fd8429"
+    },
+    {
+      "path": "pages/ar/scene-ar-NaFu/index.webview.js",
+      "size": 7835,
+      "sha256": "df845471b59caa32e255806ad6739870b503e86bca35111b5a649e364c30d21e"
+    },
+    {
+      "path": "pages/ar/scene-ar-oceanWorld/index.appservice.js",
+      "size": 7514,
+      "sha256": "cbb7bda39ac45146682a74dd60ddfc21c5ceee50680079b5b5bdd8b4254e0356"
+    },
+    {
+      "path": "pages/ar/scene-ar-oceanWorld/index.html",
+      "size": 486,
+      "sha256": "f13b04296e2010cafc64c86fe14b9ab89d0e188245728f0a61b2416d06f1c400"
+    },
+    {
+      "path": "pages/ar/scene-ar-oceanWorld/index.webview.js",
+      "size": 7864,
+      "sha256": "207d8e03d0932610f3799e1be31962d4d1c822ba1c3b1033dc2dbf6a890d1f82"
+    },
+    {
+      "path": "pages/ar/scene-ar-ZhaoCai/index.appservice.js",
+      "size": 7373,
+      "sha256": "b0008ea08f84c07c05db286086d412560e3276121295d8273a99f1e993ab486b"
+    },
+    {
+      "path": "pages/ar/scene-ar-ZhaoCai/index.html",
+      "size": 480,
+      "sha256": "f1374f06519f6c3732c81c4e21d90aa47683f54afedc9072b092100c0ef7442b"
+    },
+    {
+      "path": "pages/ar/scene-ar-ZhaoCai/index.webview.js",
+      "size": 7850,
+      "sha256": "24eb93aaf689efc2430aa57b09531ed47d753429d65ef814dadea791ab6afba7"
+    },
+    {
+      "path": "pages/ar/scene-ar-ZiZai/index.appservice.js",
+      "size": 7479,
+      "sha256": "f4c78389b14730657128dc30d92eeb4126841fa4a558dc9d59f83c8804e42d0e"
+    },
+    {
+      "path": "pages/ar/scene-ar-ZiZai/index.html",
+      "size": 476,
+      "sha256": "1535f42d95aada0c432519af9a7dc8c9d956607df9b286ca14baac48923fd5c3"
+    },
+    {
+      "path": "pages/ar/scene-ar-ZiZai/index.webview.js",
+      "size": 7839,
+      "sha256": "6628cdff19cf3da3090e5437f3d514a4ee38503cee98136c99e0598dff27a775"
+    },
+    {
+      "path": "pages/image/按键底.png",
+      "size": 48060,
+      "sha256": "9ee167a68fa3e73758a953c39632ec3b1e177ac25a7613d3bcc491d7c1ff7c4b"
+    },
+    {
+      "path": "pages/image/盲盒版.png",
+      "size": 3454,
+      "sha256": "4bcf99dc65d39c41eadefed1e62691b2af902bfcbd435f419ae89b466eec7792"
+    },
+    {
+      "path": "pages/image/收藏版.png",
+      "size": 4429,
+      "sha256": "d0ad9e58a7bfc575afebfe086a92038d139870cf9d3077a44b8d5a8a9f0fa86e"
+    },
+    {
+      "path": "pages/index/index.appservice.js",
+      "size": 2811,
+      "sha256": "165c01c4efbd69ce7c843b00eddb6c663c9d83e253d8d6d5430234fa88af1169"
+    },
+    {
+      "path": "pages/index/index.html",
+      "size": 452,
+      "sha256": "249524d3e73a6cd6b814cc20dd0bd2b96dc01576c535ec3113afb771f5679115"
+    },
+    {
+      "path": "pages/index/index.webview.js",
+      "size": 1965,
+      "sha256": "19e8ecdc1fcac1a29cb86db47205cbbc7e17ae02bff14c88c8582282c9407840"
+    },
+    {
+      "path": "pages/logs/logs.appservice.js",
+      "size": 1394,
+      "sha256": "e9b981ef2a91d6ac166a4444a6f76f670d5a25d54ae5701b725ecdc522f3172f"
+    },
+    {
+      "path": "pages/logs/logs.html",
+      "size": 448,
+      "sha256": "e6b830bd65a6fe7afd8d012e8eb5de5a220eb54d6336247514901ad8e4d7c3f6"
+    },
+    {
+      "path": "pages/logs/logs.webview.js",
+      "size": 1405,
+      "sha256": "4d68573638f068932b61d099a532dd612534df3c61293200e65d9699d6637db1"
+    },
+    {
+      "path": "pages/selectModel/index.appservice.js",
+      "size": 3976,
+      "sha256": "b9dcef14adda9b7f576ec537739710137675a689f6f7ac861fdae2263451f6ae"
+    },
+    {
+      "path": "pages/selectModel/index.html",
+      "size": 464,
+      "sha256": "363a20d38abb61232e9dc7be08560e32c6fb1f44c698383c983808cf39735b3a"
+    },
+    {
+      "path": "pages/selectModel/index.webview.js",
+      "size": 3195,
+      "sha256": "796af61af6791ebfd618999331485e29e14a6663edad9aa1ea8f89fd084f3570"
+    },
+    {
+      "path": "webview.app.js",
+      "size": 4098,
+      "sha256": "8908c3182c53dc4ba017e8b1c9056f82305dc5c03ffb16f684d506162d866e59"
+    }
+  ]
+}

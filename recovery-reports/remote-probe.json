@@ -1,0 +1,1750 @@
+{
+  "generatedAt": "2026-10-20T07:39:15.826Z",
+  "allowedHost": "7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la",
+  "canonicalResourceCount": 62,
+  "accessibleCount": 62,
+  "inaccessibleCount": 0,
+  "declaredAccessibleBytes": 152489032,
+  "results": [
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3",
+      "decodedPath": "/AR-YSJ/Audio/多财多亿.mp3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3",
+      "contentType": "audio/mpeg",
+      "contentLength": 361184,
+      "etag": "\"f88bf453bff36c8f7b8e22f3467718c2-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3",
+          "contentType": "audio/mpeg",
+          "contentLength": 361184,
+          "etag": "\"f88bf453bff36c8f7b8e22f3467718c2-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3",
+      "decodedPath": "/AR-YSJ/Audio/凤凰.mp3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628",
+      "contentType": "audio/mpeg",
+      "contentLength": 183737,
+      "etag": "\"9d60c17a5aac03987956ec208ff6ba8b-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628",
+          "contentType": "audio/mpeg",
+          "contentLength": 183737,
+          "etag": "\"9d60c17a5aac03987956ec208ff6ba8b-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+      "decodedPath": "/AR-YSJ/Audio/环境音.MP3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=30354a86a1d964d374bee8b57b55f6d0&t=1717399588",
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=64677f3736ab731ae4d7b75b8655562a&t=1717396765",
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=6caa421b421f43291ad7353cb6729ac3&t=1717399495",
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=907cec37ec4d0e412cd225230ec520ff&t=1717397714"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+      "contentType": "audio/mpeg",
+      "contentLength": 874420,
+      "etag": "\"0933203dee6b699fc6c6d2e0e24a6b41-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+          "contentType": "audio/mpeg",
+          "contentLength": 874420,
+          "etag": "\"0933203dee6b699fc6c6d2e0e24a6b41-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3",
+      "decodedPath": "/AR-YSJ/Audio/龙的音效.MP3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059",
+      "contentType": "audio/mpeg",
+      "contentLength": 43517,
+      "etag": "\"5bcb549e4a964ff81b58c067c0abc33c-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059",
+          "contentType": "audio/mpeg",
+          "contentLength": 43517,
+          "etag": "\"5bcb549e4a964ff81b58c067c0abc33c-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3",
+      "decodedPath": "/AR-YSJ/Audio/旗开得胜.mp3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252",
+      "contentType": "audio/mpeg",
+      "contentLength": 543583,
+      "etag": "\"367138897d2b5360045ce7d60c9223e5-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252",
+          "contentType": "audio/mpeg",
+          "contentLength": 543583,
+          "etag": "\"367138897d2b5360045ce7d60c9223e5-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3",
+      "decodedPath": "/AR-YSJ/Audio/石敢当本当.mp3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988",
+      "contentType": "audio/mpeg",
+      "contentLength": 363102,
+      "etag": "\"67e3ec2761a79d859d233d1f025091f7-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988",
+          "contentType": "audio/mpeg",
+          "contentLength": 363102,
+          "etag": "\"67e3ec2761a79d859d233d1f025091f7-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3",
+      "decodedPath": "/AR-YSJ/Audio/所愿皆得.mp3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214",
+      "contentType": "audio/mpeg",
+      "contentLength": 555873,
+      "etag": "\"fd8a8134ef9db67e90be2063cec772bf-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214",
+          "contentType": "audio/mpeg",
+          "contentLength": 555873,
+          "etag": "\"fd8a8134ef9db67e90be2063cec772bf-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3",
+      "decodedPath": "/AR-YSJ/Audio/无事自在.mp3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333",
+      "contentType": "audio/mpeg",
+      "contentLength": 495968,
+      "etag": "\"aae727573b35c04945fc6148443e6181-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333",
+          "contentType": "audio/mpeg",
+          "contentLength": 495968,
+          "etag": "\"aae727573b35c04945fc6148443e6181-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3",
+      "decodedPath": "/AR-YSJ/Audio/喜从天降.mp3",
+      "category": "audio",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187",
+      "contentType": "audio/mpeg",
+      "contentLength": 466902,
+      "etag": "\"8f83f3ff93b132783c11418b24f51d2d-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187",
+          "contentType": "audio/mpeg",
+          "contentLength": 466902,
+          "etag": "\"8f83f3ff93b132783c11418b24f51d2d-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+      "decodedPath": "/AR-YSJ/Card/dcdy.jpg",
+      "category": "tracking-image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+      "contentType": "image/jpeg",
+      "contentLength": 865076,
+      "etag": "\"af57fa9d5aeba7d6b1b15e27ad7dacbd-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+          "contentType": "image/jpeg",
+          "contentLength": 865076,
+          "etag": "\"af57fa9d5aeba7d6b1b15e27ad7dacbd-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+      "decodedPath": "/AR-YSJ/Card/qkds.jpg",
+      "category": "tracking-image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+      "contentType": "image/jpeg",
+      "contentLength": 884277,
+      "etag": "\"ffdbc9ba4ad4c9c1ceced4607eb49abd-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+          "contentType": "image/jpeg",
+          "contentLength": 884277,
+          "etag": "\"ffdbc9ba4ad4c9c1ceced4607eb49abd-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+      "decodedPath": "/AR-YSJ/Card/syjd.jpg",
+      "category": "tracking-image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+      "contentType": "image/jpeg",
+      "contentLength": 848257,
+      "etag": "\"76312cfe8b0fe43b13d82e2c5d0fe887-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+          "contentType": "image/jpeg",
+          "contentLength": 848257,
+          "etag": "\"76312cfe8b0fe43b13d82e2c5d0fe887-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+      "decodedPath": "/AR-YSJ/Card/tssgd.jpg",
+      "category": "tracking-image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+      "contentType": "image/jpeg",
+      "contentLength": 874708,
+      "etag": "\"a2375c4004f0e95b7b89ff6c1042815f-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+          "contentType": "image/jpeg",
+          "contentLength": 874708,
+          "etag": "\"a2375c4004f0e95b7b89ff6c1042815f-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+      "decodedPath": "/AR-YSJ/Card/wszz.jpg",
+      "category": "tracking-image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+      "contentType": "image/jpeg",
+      "contentLength": 863518,
+      "etag": "\"7d3bc5e9d893d25ff825b3c08a5258b5-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+          "contentType": "image/jpeg",
+          "contentLength": 863518,
+          "etag": "\"7d3bc5e9d893d25ff825b3c08a5258b5-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+      "decodedPath": "/AR-YSJ/Card/xctj.jpg",
+      "category": "tracking-image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+      "contentType": "image/jpeg",
+      "contentLength": 882089,
+      "etag": "\"071b20f062741f725fdddc039e9336d8-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+          "contentType": "image/jpeg",
+          "contentLength": 882089,
+          "etag": "\"071b20f062741f725fdddc039e9336d8-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/dcdy02 (1).glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&t=1717378353"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&t=1717378353",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&t=1717378353",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&t=1717378353",
+      "contentType": "application/octet-stream",
+      "contentLength": 1263900,
+      "etag": "\"5688060f78088f4943764e92a2914fc0-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&t=1717378353",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&t=1717378353",
+          "contentType": "application/octet-stream",
+          "contentLength": 1263900,
+          "etag": "\"5688060f78088f4943764e92a2914fc0-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/dcdy02 (2).glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&t=1717378837"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&t=1717378837",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&t=1717378837",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&t=1717378837",
+      "contentType": "application/octet-stream",
+      "contentLength": 1263900,
+      "etag": "\"d2c20f8edc315f9af9d7b85642a04d53-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&t=1717378837",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&t=1717378837",
+          "contentType": "application/octet-stream",
+          "contentLength": 1263900,
+          "etag": "\"d2c20f8edc315f9af9d7b85642a04d53-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/dcdy02.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&t=1717376736"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&t=1717376736",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&t=1717376736",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&t=1717376736",
+      "contentType": "application/octet-stream",
+      "contentLength": 1263900,
+      "etag": "\"db7ef429061c2b23792e16cd7206ce35-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&t=1717376736",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&t=1717376736",
+          "contentType": "application/octet-stream",
+          "contentLength": 1263900,
+          "etag": "\"db7ef429061c2b23792e16cd7206ce35-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/dcdyhr.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 2029940,
+      "etag": "\"b3e5b4eb2ba0acf5706d160f23e361e2-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 2029940,
+          "etag": "\"b3e5b4eb2ba0acf5706d160f23e361e2-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/dun.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 666188,
+      "etag": "\"edd49b7c7810f9eb7d48a7e91c185194-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 666188,
+          "etag": "\"edd49b7c7810f9eb7d48a7e91c185194-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/gui.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&t=1717378900"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&t=1717378900",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&t=1717378900",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&t=1717378900",
+      "contentType": "application/octet-stream",
+      "contentLength": 4279392,
+      "etag": "\"6f393685c2acac51f2fa76763222c3d2-5\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&t=1717378900",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&t=1717378900",
+          "contentType": "application/octet-stream",
+          "contentLength": 4279392,
+          "etag": "\"6f393685c2acac51f2fa76763222c3d2-5\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/long(1).glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&t=1717378434"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&t=1717378434",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&t=1717378434",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&t=1717378434",
+      "contentType": "application/octet-stream",
+      "contentLength": 4532968,
+      "etag": "\"aae8c3d4621b49df4c299eecbf65acda-5\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&t=1717378434",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&t=1717378434",
+          "contentType": "application/octet-stream",
+          "contentLength": 4532968,
+          "etag": "\"aae8c3d4621b49df4c299eecbf65acda-5\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/qkds01.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&t=1717378135"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&t=1717378135",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&t=1717378135",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&t=1717378135",
+      "contentType": "application/octet-stream",
+      "contentLength": 758820,
+      "etag": "\"68ef9db90e7af3a8b0eb764cafa8a98b-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&t=1717378135",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&t=1717378135",
+          "contentType": "application/octet-stream",
+          "contentLength": 758820,
+          "etag": "\"68ef9db90e7af3a8b0eb764cafa8a98b-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/qkdshr.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 2503148,
+      "etag": "\"0ac9d4a392863e8f85ffd2c30342ce7a-3\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 2503148,
+          "etag": "\"0ac9d4a392863e8f85ffd2c30342ce7a-3\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/scene.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&t=1717378176"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&t=1717378176",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&t=1717378176",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&t=1717378176",
+      "contentType": "application/octet-stream",
+      "contentLength": 1473548,
+      "etag": "\"e661c95bdad475112f558d8930403a6a-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&t=1717378176",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&t=1717378176",
+          "contentType": "application/octet-stream",
+          "contentLength": 1473548,
+          "etag": "\"e661c95bdad475112f558d8930403a6a-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/shan.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&t=1717376750"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&t=1717376750",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&t=1717376750",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&t=1717376750",
+      "contentType": "application/octet-stream",
+      "contentLength": 371184,
+      "etag": "\"60986a5d5f15c2ad72753159c12d102a-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&t=1717376750",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&t=1717376750",
+          "contentType": "application/octet-stream",
+          "contentLength": 371184,
+          "etag": "\"60986a5d5f15c2ad72753159c12d102a-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/syjd.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&t=1717377978"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&t=1717377978",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&t=1717377978",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&t=1717377978",
+      "contentType": "application/octet-stream",
+      "contentLength": 1257648,
+      "etag": "\"23f5c91a3015eb77b8ba7fb627a2c096-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&t=1717377978",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&t=1717377978",
+          "contentType": "application/octet-stream",
+          "contentLength": 1257648,
+          "etag": "\"23f5c91a3015eb77b8ba7fb627a2c096-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/syjdhr.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 3219572,
+      "etag": "\"baf140cbb02a946f2e59653d1fe2ee17-4\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 3219572,
+          "etag": "\"baf140cbb02a946f2e59653d1fe2ee17-4\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/wszzhr.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 2484736,
+      "etag": "\"56599c3b394bf704d92c76e23b908e2c-3\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 2484736,
+          "etag": "\"56599c3b394bf704d92c76e23b908e2c-3\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/xctj.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 1208412,
+      "etag": "\"c2c632f6af39529b6372ce633c489169-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 1208412,
+          "etag": "\"c2c632f6af39529b6372ce633c489169-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb",
+      "decodedPath": "/AR-YSJ/FrameAnimation/xctjhr.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 2797780,
+      "etag": "\"09f7669162a2316447c060e4a62d58e2-3\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 2797780,
+          "etag": "\"09f7669162a2316447c060e4a62d58e2-3\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb",
+      "decodedPath": "/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&t=1717378276"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&t=1717378276",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&t=1717378276",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&t=1717378276",
+      "contentType": "application/octet-stream",
+      "contentLength": 9196600,
+      "etag": "\"5ea5e10c2c3a5890a6d996bd2d1709d6-9\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&t=1717378276",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&t=1717378276",
+          "contentType": "application/octet-stream",
+          "contentLength": 9196600,
+          "etag": "\"5ea5e10c2c3a5890a6d996bd2d1709d6-9\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb",
+      "decodedPath": "/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&t=1717378082"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&t=1717378082",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&t=1717378082",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&t=1717378082",
+      "contentType": "application/octet-stream",
+      "contentLength": 7301888,
+      "etag": "\"881d47671b5668aab23000aba12ca18e-7\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&t=1717378082",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&t=1717378082",
+          "contentType": "application/octet-stream",
+          "contentLength": 7301888,
+          "etag": "\"881d47671b5668aab23000aba12ca18e-7\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb",
+      "decodedPath": "/AR-YSJ/Model/GoldModel/SYJD.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&t=1717377852"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&t=1717377852",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&t=1717377852",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&t=1717377852",
+      "contentType": "application/octet-stream",
+      "contentLength": 10290336,
+      "etag": "\"413f772820ad6578aa16cc07695cbfb0-10\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&t=1717377852",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&t=1717377852",
+          "contentType": "application/octet-stream",
+          "contentLength": 10290336,
+          "etag": "\"413f772820ad6578aa16cc07695cbfb0-10\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb",
+      "decodedPath": "/AR-YSJ/Model/GoldModel/taishanshigandang.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&t=1717376673"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&t=1717376673",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&t=1717376673",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&t=1717376673",
+      "contentType": "application/octet-stream",
+      "contentLength": 8483976,
+      "etag": "\"8ff79248c9c1cc04278e071dd417872c-9\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&t=1717376673",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&t=1717376673",
+          "contentType": "application/octet-stream",
+          "contentLength": 8483976,
+          "etag": "\"8ff79248c9c1cc04278e071dd417872c-9\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb",
+      "decodedPath": "/AR-YSJ/Model/GoldModel/wszz.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&t=1717378537"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&t=1717378537",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&t=1717378537",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&t=1717378537",
+      "contentType": "application/octet-stream",
+      "contentLength": 8289232,
+      "etag": "\"9a63482778137a7d14537055ce53047d-8\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&t=1717378537",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&t=1717378537",
+          "contentType": "application/octet-stream",
+          "contentLength": 8289232,
+          "etag": "\"9a63482778137a7d14537055ce53047d-8\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+      "decodedPath": "/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 5187060,
+      "etag": "\"9310834c592c4b95b94a9cf687d27a6d-5\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 5187060,
+          "etag": "\"9310834c592c4b95b94a9cf687d27a6d-5\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb",
+      "decodedPath": "/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&t=1717378258"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&t=1717378258",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&t=1717378258",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&t=1717378258",
+      "contentType": "application/octet-stream",
+      "contentLength": 9223604,
+      "etag": "\"457a82c8a880d7a14914af053d69f486-9\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&t=1717378258",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&t=1717378258",
+          "contentType": "application/octet-stream",
+          "contentLength": 9223604,
+          "etag": "\"457a82c8a880d7a14914af053d69f486-9\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb",
+      "decodedPath": "/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&t=1717378061"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&t=1717378061",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&t=1717378061",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&t=1717378061",
+      "contentType": "application/octet-stream",
+      "contentLength": 8614680,
+      "etag": "\"0ec5d67c8facfd027a85fd4ed6765f7f-9\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&t=1717378061",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&t=1717378061",
+          "contentType": "application/octet-stream",
+          "contentLength": 8614680,
+          "etag": "\"0ec5d67c8facfd027a85fd4ed6765f7f-9\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+      "decodedPath": "/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 10173452,
+      "etag": "\"d74a0403534f95e9622fc39a30e4a854-10\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 10173452,
+          "etag": "\"d74a0403534f95e9622fc39a30e4a854-10\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+      "decodedPath": "/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 5210964,
+      "etag": "\"4c04d562394a2e17c456ff4bf444effc-5\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 5210964,
+          "etag": "\"4c04d562394a2e17c456ff4bf444effc-5\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb",
+      "decodedPath": "/AR-YSJ/Model/otherModel/long.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 2411376,
+      "etag": "\"af3d7997a33a697c3ce6cdcd5039f061-3\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 2411376,
+          "etag": "\"af3d7997a33a697c3ce6cdcd5039f061-3\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb",
+      "decodedPath": "/AR-YSJ/Model/otherModel/sgd.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 420280,
+      "etag": "\"d53a001622ac63ac5f12905aa13385bd-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 420280,
+          "etag": "\"d53a001622ac63ac5f12905aa13385bd-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb",
+      "decodedPath": "/AR-YSJ/Model/otherModel/syjd.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 102928,
+      "etag": "\"2b5d3aacd309ef9a2b3de0192e5577c6-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 102928,
+          "etag": "\"2b5d3aacd309ef9a2b3de0192e5577c6-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+      "decodedPath": "/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 2652664,
+      "etag": "\"33a9740c400a8b43dec4d43c23d9ea39-3\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 2652664,
+          "etag": "\"33a9740c400a8b43dec4d43c23d9ea39-3\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb",
+      "decodedPath": "/AR-YSJ/Model/otherModel/zhuque.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 887168,
+      "etag": "\"546d97b972d89685f42e16ccc33d2d04-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 887168,
+          "etag": "\"546d97b972d89685f42e16ccc33d2d04-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif",
+      "decodedPath": "/AR-YSJ/Model/saomiao.gif",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif",
+      "contentType": "image/gif",
+      "contentLength": 1803313,
+      "etag": "\"3ef159ce52ef85b1b924dc62061dbd10-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/saomiao.gif",
+          "contentType": "image/gif",
+          "contentLength": 1803313,
+          "etag": "\"3ef159ce52ef85b1b924dc62061dbd10-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb",
+      "decodedPath": "/AR-YSJ/Model/taishanshigandang_yu.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 8688904,
+      "etag": "\"c73185677adc29de574b0a12bfedd36c-9\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 8688904,
+          "etag": "\"c73185677adc29de574b0a12bfedd36c-9\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb",
+      "decodedPath": "/AR-YSJ/Model/wszz_yu.glb",
+      "category": "model",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb",
+      "contentType": "application/octet-stream",
+      "contentLength": 10260424,
+      "etag": "\"df6d5a7a2396c8ce55c8086d704e731d-10\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb",
+          "contentType": "application/octet-stream",
+          "contentLength": 10260424,
+          "etag": "\"df6d5a7a2396c8ce55c8086d704e731d-10\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png",
+      "decodedPath": "/AR-YSJ/UI/02.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&t=1717380841"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&t=1717380841",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&t=1717380841",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&t=1717380841",
+      "contentType": "image/png",
+      "contentLength": 337774,
+      "etag": "\"219789780639a2c50bc76e9b15da4b37-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&t=1717380841",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/02.png?sign=a1a6981cc344c014a63ecee93c0a90c3&t=1717380841",
+          "contentType": "image/png",
+          "contentLength": 337774,
+          "etag": "\"219789780639a2c50bc76e9b15da4b37-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png",
+      "decodedPath": "/AR-YSJ/UI/03.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&t=1717380852"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&t=1717380852",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&t=1717380852",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&t=1717380852",
+      "contentType": "image/png",
+      "contentLength": 136135,
+      "etag": "\"1421e658a04af497750f6b4b85fbc6b4-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&t=1717380852",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/03.png?sign=bdd1843689ff6e5345a1d6d4caa31a7b&t=1717380852",
+          "contentType": "image/png",
+          "contentLength": 136135,
+          "etag": "\"1421e658a04af497750f6b4b85fbc6b4-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png",
+      "decodedPath": "/AR-YSJ/UI/1.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&t=1717380830"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&t=1717380830",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&t=1717380830",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&t=1717380830",
+      "contentType": "image/png",
+      "contentLength": 349137,
+      "etag": "\"801f244e94cd09d731a62f19c4e0bf54-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&t=1717380830",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/1.png?sign=4d03f05d05c38090260de22fa51a78a0&t=1717380830",
+          "contentType": "image/png",
+          "contentLength": 349137,
+          "etag": "\"801f244e94cd09d731a62f19c4e0bf54-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png",
+      "decodedPath": "/AR-YSJ/UI/背景.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png?sign=24a0c9d57140ad0f2527fc6967560f36&t=1719797165"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png?sign=24a0c9d57140ad0f2527fc6967560f36&t=1719797165",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png?sign=24a0c9d57140ad0f2527fc6967560f36&t=1719797165",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png?sign=24a0c9d57140ad0f2527fc6967560f36&t=1719797165",
+      "contentType": "image/png",
+      "contentLength": 1158030,
+      "etag": "\"e9deaf2aac8c0bcc74fd2138f120df8f-2\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png?sign=24a0c9d57140ad0f2527fc6967560f36&t=1719797165",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%83%8C%E6%99%AF.png?sign=24a0c9d57140ad0f2527fc6967560f36&t=1719797165",
+          "contentType": "image/png",
+          "contentLength": 1158030,
+          "etag": "\"e9deaf2aac8c0bcc74fd2138f120df8f-2\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png",
+      "decodedPath": "/AR-YSJ/UI/本尊.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&t=1717381471"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&t=1717381471",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&t=1717381471",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&t=1717381471",
+      "contentType": "image/png",
+      "contentLength": 116290,
+      "etag": "\"1c30066068df3b371130cac5b28ed197-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&t=1717381471",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&t=1717381471",
+          "contentType": "image/png",
+          "contentLength": 116290,
+          "etag": "\"1c30066068df3b371130cac5b28ed197-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png",
+      "decodedPath": "/AR-YSJ/UI/常胜.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png?sign=a7fcb9d694fe68d2e19afd860144d269&t=1717381487"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png?sign=a7fcb9d694fe68d2e19afd860144d269&t=1717381487",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png?sign=a7fcb9d694fe68d2e19afd860144d269&t=1717381487",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png?sign=a7fcb9d694fe68d2e19afd860144d269&t=1717381487",
+      "contentType": "image/png",
+      "contentLength": 124179,
+      "etag": "\"76c4638334b17452804fdac20f7a74fa-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png?sign=a7fcb9d694fe68d2e19afd860144d269&t=1717381487",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E5%B8%B8%E8%83%9C.png?sign=a7fcb9d694fe68d2e19afd860144d269&t=1717381487",
+          "contentType": "image/png",
+          "contentLength": 124179,
+          "etag": "\"76c4638334b17452804fdac20f7a74fa-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png",
+      "decodedPath": "/AR-YSJ/UI/进喜.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png?sign=fc09c0be35cd7df9158db8eab1b468e4&t=1717381579"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png?sign=fc09c0be35cd7df9158db8eab1b468e4&t=1717381579",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png?sign=fc09c0be35cd7df9158db8eab1b468e4&t=1717381579",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png?sign=fc09c0be35cd7df9158db8eab1b468e4&t=1717381579",
+      "contentType": "image/png",
+      "contentLength": 119910,
+      "etag": "\"6204cf36fa029292f384a4ff3ae2b56c-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png?sign=fc09c0be35cd7df9158db8eab1b468e4&t=1717381579",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%BF%9B%E5%96%9C.png?sign=fc09c0be35cd7df9158db8eab1b468e4&t=1717381579",
+          "contentType": "image/png",
+          "contentLength": 119910,
+          "etag": "\"6204cf36fa029292f384a4ff3ae2b56c-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png",
+      "decodedPath": "/AR-YSJ/UI/盲盒版.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png",
+      "contentType": "image/png",
+      "contentLength": 3454,
+      "etag": "\"6e6fae5419b8daac38f4c788e5726c1e-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%9B%B2%E7%9B%92%E7%89%88.png",
+          "contentType": "image/png",
+          "contentLength": 3454,
+          "etag": "\"6e6fae5419b8daac38f4c788e5726c1e-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png",
+      "decodedPath": "/AR-YSJ/UI/纳福.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png?sign=fb9a25aba59701d689f33a8e650e2930&t=1717381593"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png?sign=fb9a25aba59701d689f33a8e650e2930&t=1717381593",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png?sign=fb9a25aba59701d689f33a8e650e2930&t=1717381593",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png?sign=fb9a25aba59701d689f33a8e650e2930&t=1717381593",
+      "contentType": "image/png",
+      "contentLength": 121381,
+      "etag": "\"0d357a3d59d7ad3a3ebbf40ddcc92202-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png?sign=fb9a25aba59701d689f33a8e650e2930&t=1717381593",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E7%BA%B3%E7%A6%8F.png?sign=fb9a25aba59701d689f33a8e650e2930&t=1717381593",
+          "contentType": "image/png",
+          "contentLength": 121381,
+          "etag": "\"0d357a3d59d7ad3a3ebbf40ddcc92202-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png",
+      "decodedPath": "/AR-YSJ/UI/收藏版.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png",
+      "contentType": "image/png",
+      "contentLength": 4429,
+      "etag": "\"d339df401b4d30b5f302254c50ffb024-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%94%B6%E8%97%8F%E7%89%88.png",
+          "contentType": "image/png",
+          "contentLength": 4429,
+          "etag": "\"d339df401b4d30b5f302254c50ffb024-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png",
+      "decodedPath": "/AR-YSJ/UI/招财.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png?sign=23f2a8d94940a27036505ee9d3e82300&t=1717381533"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png?sign=23f2a8d94940a27036505ee9d3e82300&t=1717381533",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png?sign=23f2a8d94940a27036505ee9d3e82300&t=1717381533",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png?sign=23f2a8d94940a27036505ee9d3e82300&t=1717381533",
+      "contentType": "image/png",
+      "contentLength": 113145,
+      "etag": "\"e52abfca50610fca01631b17a20bbb20-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png?sign=23f2a8d94940a27036505ee9d3e82300&t=1717381533",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%8B%9B%E8%B4%A2.png?sign=23f2a8d94940a27036505ee9d3e82300&t=1717381533",
+          "contentType": "image/png",
+          "contentLength": 113145,
+          "etag": "\"e52abfca50610fca01631b17a20bbb20-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png",
+      "decodedPath": "/AR-YSJ/UI/自在.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png?sign=c3cd72c8047f252d99b2280211419e9a&t=1717381563"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png?sign=c3cd72c8047f252d99b2280211419e9a&t=1717381563",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png?sign=c3cd72c8047f252d99b2280211419e9a&t=1717381563",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png?sign=c3cd72c8047f252d99b2280211419e9a&t=1717381563",
+      "contentType": "image/png",
+      "contentLength": 114016,
+      "etag": "\"b6a9170deed0bac3223c4532e28846c6-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png?sign=c3cd72c8047f252d99b2280211419e9a&t=1717381563",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E8%87%AA%E5%9C%A8.png?sign=c3cd72c8047f252d99b2280211419e9a&t=1717381563",
+          "contentType": "image/png",
+          "contentLength": 114016,
+          "etag": "\"b6a9170deed0bac3223c4532e28846c6-1\""
+        }
+      ]
+    },
+    {
+      "canonicalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png",
+      "decodedPath": "/AR-YSJ/UI/top.png",
+      "category": "image",
+      "candidates": [
+        "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&t=1717381436"
+      ],
+      "accessible": true,
+      "selectedUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&t=1717381436",
+      "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&t=1717381436",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&t=1717381436",
+      "contentType": "image/png",
+      "contentLength": 111056,
+      "etag": "\"f1a2bd8dc96f290e03cb8bfb6697f50b-1\"",
+      "attempts": [
+        {
+          "url": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&t=1717381436",
+          "status": 200,
+          "ok": true,
+          "finalUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&t=1717381436",
+          "contentType": "image/png",
+          "contentLength": 111056,
+          "etag": "\"f1a2bd8dc96f290e03cb8bfb6697f50b-1\""
+        }
+      ]
+    }
+  ]
+}
