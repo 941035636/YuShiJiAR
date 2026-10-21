@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/selectModel/index",
+    "pages/ar-harmony/index",
     "pages/ar/scene-ar-oceanWorld/index",
     "pages/ar/scene-ar-BenZun/index",
     "pages/ar/scene-ar-ZhaoCai/index",
@@ -14,6 +15,12 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "遇石记AR幻境",
     "navigationBarBackgroundColor": "#ffffff"
+  },
+  "plugins": {
+    "kivicube": {
+      "version": "2.16.2",
+      "provider": "wx3bbab3920eabccb2"
+    }
   },
   "style": "v2",
   "lazyCodeLoading": "requiredComponents"

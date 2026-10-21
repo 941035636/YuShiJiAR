@@ -1,7 +1,28 @@
 {
   "description": "遇石记AR幻境 1.0.6 recovered project",
   "packOptions": {
-    "ignore": []
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "docs"
+      },
+      {
+        "type": "folder",
+        "value": "recovery-assets"
+      },
+      {
+        "type": "folder",
+        "value": "recovery-reports"
+      },
+      {
+        "type": "folder",
+        "value": "recovery-tools"
+      },
+      {
+        "type": "file",
+        "value": "RECOVERY-NOTES.md"
+      }
+    ]
   },
   "setting": {
     "es6": true,

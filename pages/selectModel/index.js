@@ -1,1 +1,34 @@
-"use strict";Page({btnBenZun:function(){console.log("跳转至本尊"),wx.navigateTo({url:"/pages/ar/scene-ar-BenZun/index"})},selectbtn:function(){console.log("跳转"),wx.navigateTo({url:"/pages/ar/scene-ar-oceanWorld/index"})},selectZaoCai:function(){console.log("跳转多才多艺"),wx.navigateTo({url:"/pages/ar/scene-ar-ZhaoCai/index"})},selectZiZai:function(){console.log("跳转自在"),wx.navigateTo({url:"/pages/ar/scene-ar-ZiZai/index"})},selectJinXi:function(){console.log("跳转进喜"),wx.navigateTo({url:"/pages/ar/scene-ar-JinXi/index"})},selectNaFu:function(){console.log("跳转纳福"),wx.navigateTo({url:"/pages/ar/scene-ar-NaFu/index"})},data:{pageList:{}},onLoad:function(n){},onReady:function(){},onShow:function(){},onHide:function(){},onUnload:function(){},onPullDownRefresh:function(){},onReachBottom:function(){},onShareAppMessage:function(){},onShareTimeline:function(){}});
+"use strict";
+
+var arNavigation = require("../../utils/ar-navigation.js");
+
+Page({
+  btnBenZun: function () {
+    arNavigation.openArScene("ben-zun", "/pages/ar/scene-ar-BenZun/index");
+  },
+  selectbtn: function () {
+    arNavigation.openArScene("chang-sheng", "/pages/ar/scene-ar-oceanWorld/index");
+  },
+  selectZaoCai: function () {
+    arNavigation.openArScene("zhao-cai", "/pages/ar/scene-ar-ZhaoCai/index");
+  },
+  selectZiZai: function () {
+    arNavigation.openArScene("zi-zai", "/pages/ar/scene-ar-ZiZai/index");
+  },
+  selectJinXi: function () {
+    arNavigation.openArScene("jin-xi", "/pages/ar/scene-ar-JinXi/index");
+  },
+  selectNaFu: function () {
+    arNavigation.openArScene("na-fu", "/pages/ar/scene-ar-NaFu/index");
+  },
+  data: { pageList: {} },
+  onLoad: function () {},
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {},
+  onShareTimeline: function () {}
+});

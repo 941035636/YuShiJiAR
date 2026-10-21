@@ -67,6 +67,8 @@ for (const page of appJson?.pages || []) {
   if (fs.existsSync(configPath)) {
     const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
     for (const [name, target] of Object.entries(config.usingComponents || {})) {
+      // plugin:// components are supplied by WeChat at runtime, not by local files.
+      if (target.startsWith('plugin://')) continue;
       const targetBase = path.join(projectRoot, ...target.replace(/^\//, '').split('/'));
       if (!fs.existsSync(targetBase + '.js') || !fs.existsSync(targetBase + '.wxml') || !fs.existsSync(targetBase + '.json')) {
         errors.push({ file: path.relative(projectRoot, configPath).replaceAll('\\', '/'), type: 'missing-component', message: `${name}: ${target}` });

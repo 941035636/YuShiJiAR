@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "遇石记AR幻境",
+  "disableScroll": true,
+  "usingComponents": {
+    "kivicube-scene": "plugin://kivicube/kivicube-scene"
+  }
+}
