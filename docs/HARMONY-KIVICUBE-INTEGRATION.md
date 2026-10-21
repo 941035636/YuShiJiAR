@@ -8,7 +8,20 @@
 - 页面退出时调用 `clearSceneCache()`，避免多次进入 AR 后插件资源未释放。
 - 六个业务入口共用一个鸿蒙页面，通过 `config/kivicube-scenes.js` 映射 Kivicube 场景 ID。
 
-## 上线前必须完成的外部配置
+## 免费基础版 POC
+
+工程内置了 Kivicube 官方公开的图像 AR 示例场景，仅用于验证纯血鸿蒙版微信兼容性：
+
+- 场景 key：`kivicube-poc`
+- 官方示例 sceneId：`DubKHBcADQ4sH4sfHR4N5s50LSarG9cI`
+- 官方识别图：<https://github.com/kivisense/wechat-kivicube-plugin-quickstart/blob/master/assets/scene/image-ar/image.png>
+- 官方来源：<https://github.com/kivisense/wechat-kivicube-plugin-quickstart>
+
+纯血鸿蒙端进入模型选择页后，会显示“鸿蒙 AR 兼容测试”入口。打开入口后，需要用电脑或另一台设备显示上述官方识别图，再用鸿蒙手机扫描。这个 POC 不使用、不上传“遇石记”的模型、识别图或音频，也不能代表项目六套正式场景已经迁移完成。
+
+基础版测试允许出现 Kivicube 水印。POC 验收重点是：摄像头画面可见、能触发图像跟踪、3D内容可见、移开识别图能触发丢失并可再次恢复。
+
+## 正式场景上线前必须完成的外部配置
 
 1. 在微信公众平台为 AppID `wx8d8d557b77c8ad75` 申请 Kivicube 插件：
    - 插件 AppID：`wx3bbab3920eabccb2`

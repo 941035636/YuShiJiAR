@@ -21,8 +21,14 @@ Page({
   selectNaFu: function () {
     arNavigation.openArScene("na-fu", "/pages/ar/scene-ar-NaFu/index");
   },
-  data: { pageList: {} },
-  onLoad: function () {},
+  openHarmonyPoc: function () {
+    wx.navigateTo({ url: "/pages/ar-harmony/index?scene=kivicube-poc" });
+  },
+  data: { pageList: {}, showHarmonyPoc: false },
+  onLoad: function () {
+    var platform = arNavigation.getPlatform();
+    this.setData({ showHarmonyPoc: arNavigation.isHarmonyPlatform(platform) });
+  },
   onReady: function () {},
   onShow: function () {},
   onHide: function () {},

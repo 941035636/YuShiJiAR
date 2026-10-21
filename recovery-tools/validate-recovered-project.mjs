@@ -6,11 +6,15 @@ import path from 'node:path';
 const [projectRoot, outputPath] = process.argv.slice(2);
 if (!projectRoot || !outputPath) throw new Error('Usage: node validate-recovered-project.mjs PROJECT_DIR OUTPUT_JSON');
 const files = [];
+const ignoredDirectories = new Set(['.git', 'node_modules']);
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) walk(full);
-    else files.push(full);
+    if (entry.isDirectory()) {
+      if (!ignoredDirectories.has(entry.name)) walk(full);
+    } else {
+      files.push(full);
+    }
   }
 }
 walk(projectRoot);

@@ -3,6 +3,11 @@
 // 在 Kivicube 平台创建六个“图像 AR”场景后，仅需填写 sceneId。
 // 空 sceneId 会显示配置提示，不会把无效值传给插件。
 var scenes = {
+  "kivicube-poc": {
+    title: "Kivicube官方图像AR测试",
+    marker: "官方示例识别图 image.png",
+    sceneId: "DubKHBcADQ4sH4sfHR4N5s50LSarG9cI"
+  },
   "ben-zun": {
     title: "本尊",
     marker: "tssgd.jpg",

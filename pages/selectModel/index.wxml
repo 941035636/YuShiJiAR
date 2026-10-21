@@ -2,6 +2,10 @@
   <view>
     <image class="cardimage" mode="widthFix" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&amp;t=1717381436" />
   </view>
+  <view wx:if="{{showHarmonyPoc}}" class="harmony-poc" bindtap="openHarmonyPoc">
+    <view class="harmony-poc-title">鸿蒙 AR 兼容测试</view>
+    <view class="harmony-poc-desc">使用 Kivicube 官方免费示例验证摄像头与图像跟踪</view>
+  </view>
   <view bind:tap="btnBenZun">
     <image class="cardimage" mode="widthFix" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&amp;t=1717381471" />
   </view>
