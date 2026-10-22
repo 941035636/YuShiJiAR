@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/selectModel/index",
-    "pages/ar-harmony/index",
     "pages/ar/scene-ar-oceanWorld/index",
     "pages/ar/scene-ar-BenZun/index",
     "pages/ar/scene-ar-ZhaoCai/index",
@@ -16,12 +15,32 @@
     "navigationBarTitleText": "遇石记AR幻境",
     "navigationBarBackgroundColor": "#ffffff"
   },
-  "plugins": {
-    "kivicube": {
-      "version": "2.16.2",
-      "provider": "wx3bbab3920eabccb2"
+  "subpackages": [
+    {
+      "root": "pages/ar-harmony",
+      "pages": [
+        "index"
+      ],
+      "plugins": {
+        "kivicube": {
+          "version": "2.16.2",
+          "provider": "wx3bbab3920eabccb2"
+        }
+      }
+    },
+    {
+      "root": "pages/ar-coar",
+      "pages": [
+        "index"
+      ],
+      "plugins": {
+        "coar": {
+          "version": "11.1.1",
+          "provider": "wx5024d89e4b208ce6"
+        }
+      }
     }
-  },
+  ],
   "style": "v2",
   "lazyCodeLoading": "requiredComponents"
 }

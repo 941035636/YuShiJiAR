@@ -24,10 +24,29 @@ Page({
   openHarmonyPoc: function () {
     wx.navigateTo({ url: "/pages/ar-harmony/index?scene=kivicube-poc" });
   },
+  openCoarPoc: function () {
+    wx.navigateTo({
+      url: "/pages/ar-coar/index",
+      fail: function (error) {
+        console.error("打开共创 AR 测试页失败", error);
+        wx.showToast({ title: "共创 AR 测试页打开失败", icon: "none" });
+      }
+    });
+  },
   data: { pageList: {}, showHarmonyPoc: false },
   onLoad: function () {
     var platform = arNavigation.getPlatform();
-    this.setData({ showHarmonyPoc: arNavigation.isHarmonyPlatform(platform) });
+    var envVersion = "release";
+
+    try {
+      envVersion = wx.getAccountInfoSync().miniProgram.envVersion || "release";
+    } catch (error) {
+      console.warn("读取小程序版本类型失败", error);
+    }
+
+    this.setData({
+      showHarmonyPoc: arNavigation.isHarmonyPlatform(platform) || envVersion !== "release"
+    });
   },
   onReady: function () {},
   onShow: function () {},
