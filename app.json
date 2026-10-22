@@ -17,18 +17,6 @@
   },
   "subpackages": [
     {
-      "root": "pages/ar-harmony",
-      "pages": [
-        "index"
-      ],
-      "plugins": {
-        "kivicube": {
-          "version": "2.16.2",
-          "provider": "wx3bbab3920eabccb2"
-        }
-      }
-    },
-    {
       "root": "pages/ar-coar",
       "pages": [
         "index"

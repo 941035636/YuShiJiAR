@@ -1,12 +1,18 @@
 <view class="page">
   <view class="card">
-    <view class="title">共创 AR 图片识别测试</view>
+    <view class="title">{{isBusiness ? sceneTitle + " AR" : "共创 AR 图片识别测试"}}</view>
     <view class="description">先在另一台设备或电脑上打开识别图，再点击开始测试并将摄像头对准识别图。</view>
 
-    <button class="primary-button" bindtap="startImageAr">开始图片 AR 测试</button>
-    <button class="secondary-button" bindtap="previewMarker">查看官方识别图</button>
+    <view wx:if="{{isBusiness}}">
+      <view wx:if="{{availableVariants.length === 1}}" class="meta">{{availableVariants[0].label}}</view>
+      <block wx:if="{{availableVariants.length > 1}}">
+        <button wx:for="{{availableVariants}}" wx:key="key" data-variant="{{item.key}}" bindtap="chooseVariant" type="{{variant === item.key ? 'primary' : 'default'}}">{{item.label}}</button>
+      </block>
+    </view>
+    <button class="primary-button" bindtap="startImageAr">{{isBusiness ? "开始 AR" : "开始图片 AR 测试"}}</button>
+    <button class="secondary-button" bindtap="previewMarker">查看识别图</button>
 
-    <view class="meta">测试场景：官方青蛙图片 AR 示例</view>
-    <view class="notice">当前页面仅用于技术兼容性验证。正式商用前仍需取得插件方对免费商用及纯血鸿蒙支持的书面确认。</view>
+    <view class="meta">{{sceneTitle}}</view>
+    <view wx:if="{{!isBusiness}}" class="notice">当前页面仅用于技术兼容性验证。正式商用前仍需取得插件方对免费商用及纯血鸿蒙支持的书面确认。</view>
   </view>
 </view>

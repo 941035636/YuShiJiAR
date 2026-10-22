@@ -19,7 +19,7 @@ function isHarmonyPlatform(platform) {
 function openArScene(sceneKey, xrFramePage) {
   var platform = getPlatform();
   var url = isHarmonyPlatform(platform)
-    ? "/pages/ar-harmony/index?scene=" + encodeURIComponent(sceneKey)
+    ? "/pages/ar-coar/index?scene=" + encodeURIComponent(sceneKey)
     : xrFramePage;
 
   wx.navigateTo({

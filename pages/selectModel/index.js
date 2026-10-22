@@ -21,19 +21,16 @@ Page({
   selectNaFu: function () {
     arNavigation.openArScene("na-fu", "/pages/ar/scene-ar-NaFu/index");
   },
-  openHarmonyPoc: function () {
-    wx.navigateTo({ url: "/pages/ar-harmony/index?scene=kivicube-poc" });
-  },
   openCoarPoc: function () {
     wx.navigateTo({
-      url: "/pages/ar-coar/index",
+      url: "/pages/ar-coar/index?scene=ben-zun",
       fail: function (error) {
         console.error("打开共创 AR 测试页失败", error);
         wx.showToast({ title: "共创 AR 测试页打开失败", icon: "none" });
       }
     });
   },
-  data: { pageList: {}, showHarmonyPoc: false },
+  data: { pageList: {}, showCoarPoc: false },
   onLoad: function () {
     var platform = arNavigation.getPlatform();
     var envVersion = "release";
@@ -45,7 +42,7 @@ Page({
     }
 
     this.setData({
-      showHarmonyPoc: arNavigation.isHarmonyPlatform(platform) || envVersion !== "release"
+      showCoarPoc: arNavigation.isHarmonyPlatform(platform) || envVersion !== "release"
     });
   },
   onReady: function () {},

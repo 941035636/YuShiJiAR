@@ -1,0 +1,693 @@
+[
+  {
+    "key": "ben-zun",
+    "title": "本尊",
+    "markerUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/tssgd.jpg",
+    "assets": [
+      {
+        "type": "gltf",
+        "asset-id": "miku",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/taishanshigandang_yu.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "jinbi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/taishanshigandang.glb?sign=7afeb0a19ada58b167a8c632afe5a470&amp;t=1717376673"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "dun",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dun.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "fz",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02.glb?sign=292f3f75863545db0080b0a5d2069e5c&amp;t=1717376736"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "shan",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/shan.glb?sign=ece420bd128f0ad2b4ffbbc8ec6aea8a&amp;t=1717376750"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "ziti",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/sgd.glb"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "miku"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -2 1",
+        "scale": "1 1 0.7",
+        "rotation": "-90 0 0",
+        "model": "shan",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "dun",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 -0.5",
+        "scale": "3.2 3.2 3.2",
+        "rotation": "-90 0 0",
+        "model": "ziti",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "jinbi"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -2 1",
+        "scale": "1 1 0.7",
+        "rotation": "-90 0 0",
+        "model": "shan",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "dun",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 -0.5",
+        "scale": "3.2 3.2 3.2",
+        "rotation": "-90 0 0",
+        "model": "ziti",
+        "anim-autoplay": "{{true}}"
+      }
+    ],
+    "audioUrls": [
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=907cec37ec4d0e412cd225230ec520ff&t=1717397714",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%9F%B3%E6%95%A2%E5%BD%93%E6%9C%AC%E5%BD%93.mp3?sign=4dad2dd7d216c4a5f13cf01c7108c27c&t=1717381988"
+    ],
+    "sourceComponent": "AR/components/xr-ar-BenZun/index.wxml",
+    "sourcePage": "pages/ar/scene-ar-BenZun/index.js",
+    "status": "待创建平台场景并验证动画、音频、版本切换"
+  },
+  {
+    "key": "chang-sheng",
+    "title": "常胜",
+    "markerUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/qkds.jpg",
+    "assets": [
+      {
+        "type": "gltf",
+        "asset-id": "miku",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/qikaidesheng_moyu.glb?sign=438143d6823c0453039e0cf9f7130b61&amp;t=1717378061"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "jinbi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/qikaidesheng_jinbi.glb?sign=52f2cec6d3152ca96475c93a289d2197&amp;t=1717378082"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "fz",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkds01.glb?sign=8bd25dcb1e57d5e2cae4adc4d63a55b8&amp;t=1717378135"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "bei",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/scene.glb?sign=f5cff6382cdd75f3b7e215cd51bd130d&amp;t=1717378176"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "hr",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/qkdshr.glb"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "miku",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5 ",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 -0.5",
+        "scale": "0.7 0.7 0.7",
+        "rotation": "-90 0 0",
+        "model": "bei",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5 ",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "jinbi",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5 ",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 -0.5",
+        "scale": "0.7 0.7 0.7",
+        "rotation": "-90 0 0",
+        "model": "bei",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5 ",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      }
+    ],
+    "audioUrls": [
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=6caa421b421f43291ad7353cb6729ac3&t=1717399495",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%97%E5%BC%80%E5%BE%97%E8%83%9C.mp3?sign=04b4a0c8e7538e881749f98a4468d080&t=1717382252"
+    ],
+    "sourceComponent": "AR/components/xr-ar-oceanWorld/index.wxml",
+    "sourcePage": "pages/ar/scene-ar-oceanWorld/index.js",
+    "status": "待创建平台场景并验证动画、音频、版本切换"
+  },
+  {
+    "key": "zhao-cai",
+    "title": "招财",
+    "markerUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/dcdy.jpg",
+    "assets": [
+      {
+        "type": "gltf",
+        "asset-id": "miku",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/dcdy_moyu.glb?sign=8db0bd70dc5c08c512a21bc043830b16&amp;t=1717378258"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "jinbi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/dcdy_jinbi.glb?sign=b01ec4edd9361903045c96d317acc837&amp;t=1717378276"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "fz",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(1).glb?sign=0dbf2b5deb6a0e27abadcab906cde8df&amp;t=1717378353"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "tuteng",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/long(1).glb?sign=f1ea0a710b74f86417f60c89b4e83416&amp;t=1717378434"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "hr",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdyhr.glb"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "miku",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 -0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "tuteng",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "jinbi",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 -0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "tuteng",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      }
+    ],
+    "audioUrls": [
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%A4%9A%E8%B4%A2%E5%A4%9A%E4%BA%BF.mp3"
+    ],
+    "sourceComponent": "AR/components/xr-ar-ZhaoCai/index.wxml",
+    "sourcePage": "pages/ar/scene-ar-ZhaoCai/index.js",
+    "status": "待创建平台场景并验证动画、音频、版本切换"
+  },
+  {
+    "key": "zi-zai",
+    "title": "自在",
+    "markerUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/wszz.jpg",
+    "assets": [
+      {
+        "type": "gltf",
+        "asset-id": "miku",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/wszz_yu.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "jinbi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/wszz.glb?sign=3efe56dc0b9312d315e903f67144d47f&amp;t=1717378537"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "fz",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/dcdy02%20(2).glb?sign=dcca10468f22cbc18308602fb2697aab&amp;t=1717378837"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "bei",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/gui.glb?sign=86627baf7a0cac930a6f8d432c21e4bb&amp;t=1717378900"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "hr",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/wszzhr.glb"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.116 0.116 0.116",
+        "rotation": "-90 0 0",
+        "model": "miku",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 -0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "bei",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.4",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.052 0.052 0.052",
+        "rotation": "-90 0 0",
+        "model": "jinbi",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 -0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "bei",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.4",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      }
+    ],
+    "audioUrls": [
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=30354a86a1d964d374bee8b57b55f6d0&t=1717399588",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%97%A0%E4%BA%8B%E8%87%AA%E5%9C%A8.mp3?sign=471f031adc3e2fd0128595726e0a9b92&t=1717382333"
+    ],
+    "sourceComponent": "AR/components/xr-ar-ZiZai/index.wxml",
+    "sourcePage": "pages/ar/scene-ar-ZiZai/index.js",
+    "status": "待创建平台场景并验证动画、音频、版本切换"
+  },
+  {
+    "key": "jin-xi",
+    "title": "进喜",
+    "markerUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/xctj.jpg",
+    "assets": [
+      {
+        "type": "gltf",
+        "asset-id": "moyu",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/xicongtianjiang_moyu.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "jinbi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/xicongtianjiang.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "fz",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctj.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "zhuque",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/zhuque.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "zt",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/xctj_z(3).glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "hr",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/xctjhr.glb"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "moyu"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 1",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "zhuque",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "8 8 8",
+        "rotation": "-90 0 0",
+        "model": "zt",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "jinbi"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 1",
+        "scale": "1 1 1",
+        "rotation": "-90 0 0",
+        "model": "zhuque",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "8 8 8",
+        "rotation": "-90 0 0",
+        "model": "zt",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "hr",
+        "anim-autoplay": "{{true}}"
+      }
+    ],
+    "audioUrls": [
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%87%A4%E5%87%B0.mp3?sign=99be3d1169f084e33ea863ee01f3b90b&t=1717398628",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=907cec37ec4d0e412cd225230ec520ff&t=1717397714",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E5%96%9C%E4%BB%8E%E5%A4%A9%E9%99%8D.mp3?sign=32e36255dcc7821fedb14b225898ea81&t=1717382187"
+    ],
+    "sourceComponent": "AR/components/xr-ar-JinXi/index.wxml",
+    "sourcePage": "pages/ar/scene-ar-JinXi/index.js",
+    "status": "待创建平台场景并验证动画、音频、版本切换"
+  },
+  {
+    "key": "na-fu",
+    "title": "纳福",
+    "markerUrl": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Card/syjd.jpg",
+    "assets": [
+      {
+        "type": "gltf",
+        "asset-id": "miku",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/MoyuModel/SYJD_moyu.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "jinbi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/GoldModel/SYJD.glb?sign=7bc470a37a75c5dbba4f3899225f87a8&amp;t=1717377852"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "long",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/long.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "fz",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjd.glb?sign=25dc0ad7827737400afe44f963c3e3ac&amp;t=1717377978"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "wenzi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/FrameAnimation/syjdhr.glb"
+      },
+      {
+        "type": "gltf",
+        "asset-id": "Topwenzi",
+        "src": "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Model/otherModel/syjd.glb"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "miku",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 5",
+        "scale": "3 3 3",
+        "rotation": "-90 0 0",
+        "model": "long",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "wenzi",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 -0.3",
+        "scale": "0.1 0.1 0.1",
+        "rotation": "-90 0 0",
+        "model": "Topwenzi",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.054 0.054 0.054",
+        "rotation": "-90 0 0",
+        "model": "jinbi",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -1 5",
+        "scale": "3 3 3",
+        "rotation": "-90 0 0",
+        "model": "long",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.5 0.5 0.5",
+        "rotation": "-90 0 0",
+        "model": "fz",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 0.5",
+        "scale": "0.4 0.4 0.4",
+        "rotation": "-90 0 0",
+        "model": "wenzi",
+        "anim-autoplay": "{{true}}"
+      },
+      {
+        "id": "wxball-1",
+        "position": "0 -0.5 -0.3",
+        "scale": "0.1 0.1 0.1",
+        "rotation": "-90 0 0",
+        "model": "Topwenzi",
+        "anim-autoplay": "{{true}}"
+      }
+    ],
+    "audioUrls": [
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E9%BE%99%E7%9A%84%E9%9F%B3%E6%95%88.MP3?sign=6863b2e9e9b6fa0a7bcebd75d1d07e71&t=1717397059",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E7%8E%AF%E5%A2%83%E9%9F%B3.MP3?sign=64677f3736ab731ae4d7b75b8655562a&t=1717396765",
+      "https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/Audio/%E6%89%80%E6%84%BF%E7%9A%86%E5%BE%97.mp3?sign=19cdde82854f16a37e0982e6cf653a6d&t=1717382214"
+    ],
+    "sourceComponent": "AR/components/xr-ar-NaFu/index.wxml",
+    "sourcePage": "pages/ar/scene-ar-NaFu/index.js",
+    "status": "待创建平台场景并验证动画、音频、版本切换"
+  }
+]
