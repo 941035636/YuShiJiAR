@@ -1,7 +1,18 @@
-<view class="page">
+<view wx:if="{{arStarted && sceneId}}" class="ar-stage">
+  <coar-scene-component
+    class="coar-viewer"
+    sceneId="{{sceneId}}"
+    showFeedback="{{true}}"
+    screenIndicate="{{screenIndicate}}"
+    toolbar="{{toolbar}}"
+  ></coar-scene-component>
+</view>
+
+<view wx:else class="page">
   <view class="card">
-    <view class="title">{{isBusiness ? sceneTitle + " AR" : "共创 AR 图片识别测试"}}</view>
-    <view class="description">先在另一台设备或电脑上打开识别图，再点击开始测试并将摄像头对准识别图。</view>
+    <view class="title">{{isBusiness ? sceneTitle + " AR" : (isWebArFallback ? sceneTitle : "鸿蒙 AR 图片识别测试")}}</view>
+    <view wx:if="{{isWebArFallback}}" class="description">点击开始后进入共创 AR 插件。纯血鸿蒙不支持原生 AR 时，由插件显示官方 WebAR 访问引导。</view>
+    <view wx:else class="description">先在另一台设备或电脑上打开识别图，再点击开始测试并将摄像头对准识别图。</view>
 
     <view wx:if="{{isBusiness}}">
       <view wx:if="{{availableVariants.length === 1}}" class="meta">{{availableVariants[0].label}}</view>
@@ -9,10 +20,10 @@
         <button wx:for="{{availableVariants}}" wx:key="key" data-variant="{{item.key}}" bindtap="chooseVariant" type="{{variant === item.key ? 'primary' : 'default'}}">{{item.label}}</button>
       </block>
     </view>
-    <button class="primary-button" bindtap="startImageAr">{{isBusiness ? "开始 AR" : "开始图片 AR 测试"}}</button>
-    <button class="secondary-button" bindtap="previewMarker">查看识别图</button>
+    <button class="primary-button" bindtap="startImageAr">{{isBusiness ? "开始 AR" : (isWebArFallback ? "进入 WebAR 兼容测试" : "开始图片 AR 测试")}}</button>
+    <button wx:if="{{!isWebArFallback}}" class="secondary-button" bindtap="previewMarker">查看识别图</button>
 
-    <view class="meta">{{sceneTitle}}</view>
-    <view wx:if="{{!isBusiness}}" class="notice">当前页面仅用于技术兼容性验证。正式商用前仍需取得插件方对免费商用及纯血鸿蒙支持的书面确认。</view>
+    <view wx:if="{{!isWebArFallback}}" class="meta">{{sceneTitle}}</view>
+    <view wx:if="{{!isBusiness}}" class="notice">{{isWebArFallback ? "该入口使用共创 AR 官方手掌示例，仅验证鸿蒙 WebAR 兜底流程，不代表遇石记业务场景已经迁移。" : "当前页面仅用于技术兼容性验证。"}}</view>
   </view>
 </view>

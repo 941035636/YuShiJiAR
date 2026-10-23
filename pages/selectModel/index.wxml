@@ -3,8 +3,12 @@
     <image class="cardimage" mode="widthFix" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/top.png?sign=5b9b038c6ea3c08ab22c63a1502d8978&amp;t=1717381436" />
   </view>
   <view wx:if="{{showCoarPoc}}" class="harmony-poc" bindtap="openCoarPoc">
-    <view class="harmony-poc-title">共创 AR 免费方案测试</view>
+    <view class="harmony-poc-title">鸿蒙 AR 方案测试</view>
     <view class="harmony-poc-desc">验证图片识别、摄像头与纯血鸿蒙兼容性</view>
+  </view>
+  <view wx:if="{{showCoarPoc}}" class="harmony-poc webar-poc" bindtap="openCoarWebAr">
+    <view class="harmony-poc-title">鸿蒙 WebAR 兼容测试</view>
+    <view class="harmony-poc-desc">由共创 AR 插件检测，并引导进入官方手掌 WebAR 示例</view>
   </view>
   <view bind:tap="btnBenZun">
     <image class="cardimage" mode="widthFix" src="https://7973-ysj-2gufe9z9f9118b4f-1326910532.tcb.qcloud.la/AR-YSJ/UI/%E6%9C%AC%E5%B0%8A.png?sign=ce490b0c0d42f5db850db0fc05e709da&amp;t=1717381471" />

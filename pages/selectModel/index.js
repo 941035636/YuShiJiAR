@@ -30,6 +30,19 @@ Page({
       }
     });
   },
+  openCoarWebAr: function () {
+    wx.navigateTo({
+      url: "/pages/ar-coar/index?demo=palm",
+      fail: function (error) {
+        console.error("打开共创 AR WebAR 兼容测试失败", error);
+        wx.showModal({
+          title: "WebAR 兼容测试打开失败",
+          content: error.errMsg || "请确认共创 AR 插件已添加且版本已通过。",
+          showCancel: false
+        });
+      }
+    });
+  },
   data: { pageList: {}, showCoarPoc: false },
   onLoad: function () {
     var platform = arNavigation.getPlatform();
