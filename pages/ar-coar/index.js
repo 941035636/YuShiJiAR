@@ -40,25 +40,29 @@ Page({
 
     if (!options.scene) return;
     var scene = scenes[options.scene];
+    var isWebArFallback = options.mode === "webar";
+    var idField = isWebArFallback ? "webArSceneId" : "sceneId";
     this.sceneConfig = scene || null;
-    this.setData({ isBusiness: true, sceneTitle: scene ? scene.title : "未知场景",
-      sceneId: scene ? scene.variants.collection.sceneId : "",
+    this.setData({ isBusiness: true, isWebArFallback: isWebArFallback,
+      sceneTitle: scene ? scene.title : "未知场景",
+      sceneId: scene ? scene.variants.collection[idField] || "" : "",
       markerUrl: scene ? scene.markerUrl : "",
       availableVariants: scene ? Object.keys(scene.variants).filter(function (key) {
-        return !!scene.variants[key].sceneId;
+        return !!scene.variants[key][idField];
       }).map(function (key) {
         return { key: key, label: scene.variants[key].label || (key === "collection" ? "收藏版" : "盲盒版") };
       }) : [] });
 
     if (scene) {
-      wx.setNavigationBarTitle({ title: scene.title + " AR" });
+      wx.setNavigationBarTitle({ title: scene.title + (isWebArFallback ? " WebAR" : " AR") });
     }
   },
 
   chooseVariant: function (event) { this.selectVariant(event.currentTarget.dataset.variant); },
   selectVariant: function (variant) {
-    if (!this.sceneConfig || !this.sceneConfig.variants[variant] || !this.sceneConfig.variants[variant].sceneId) return;
-    this.setData({ variant: variant, sceneId: this.sceneConfig.variants[variant].sceneId });
+    var idField = this.data.isWebArFallback ? "webArSceneId" : "sceneId";
+    if (!this.sceneConfig || !this.sceneConfig.variants[variant] || !this.sceneConfig.variants[variant][idField]) return;
+    this.setData({ variant: variant, sceneId: this.sceneConfig.variants[variant][idField] });
   },
 
   startImageAr: function () {
@@ -67,7 +71,7 @@ Page({
       return;
     }
 
-    if (this.data.isBusiness) {
+    if (this.data.isBusiness && !this.data.isWebArFallback) {
       this.setData({ arStarted: true });
       return;
     }
@@ -81,6 +85,26 @@ Page({
           content: error.errMsg || "请确认插件已添加、版本已通过并已配置摄像头隐私说明。",
           showCancel: false
         });
+      }
+    });
+  },
+
+  copyWebArLink: function () {
+    if (!this.data.isBusiness || !this.data.isWebArFallback || !this.data.sceneId) {
+      wx.showToast({ title: "网页场景尚未配置", icon: "none" });
+      return;
+    }
+    wx.setClipboardData({
+      data: "https://go3d.cn/scene/" + encodeURIComponent(this.data.sceneId),
+      success: function () {
+        wx.showModal({
+          title: "体验链接已复制",
+          content: "请在手机浏览器地址栏粘贴打开；也可以粘贴发送到微信聊天，再点击链接体验。允许摄像头后，对准识别图。",
+          showCancel: false
+        });
+      },
+      fail: function () {
+        wx.showToast({ title: "复制失败，请重试", icon: "none" });
       }
     });
   },

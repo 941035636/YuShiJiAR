@@ -1,0 +1,9 @@
+page { background:#eef5ef; color:#153b29; }
+.page { padding:32rpx; }
+.title { font-size:36rpx; font-weight:600; }
+.note { font-size:26rpx; line-height:1.7; margin:20rpx 0; color:#4d6759; }
+.status { font-size:32rpx; margin:24rpx 0 12rpx; font-weight:600; }
+.stats { font-size:24rpx; }
+.camera { display:block; height:320rpx; width:100%; background:#000; }
+button { margin:20rpx 0; }
+canvas { display:block; background:#000; }

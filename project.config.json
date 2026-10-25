@@ -2,6 +2,8 @@
   "description": "遇石记AR幻境 1.0.6 recovered project",
   "packOptions": {
     "ignore": [
+      { "type": "folder", "value": "web-ar" },
+      { "type": "folder", "value": "artifacts" },
       {
         "type": "folder",
         "value": "docs"

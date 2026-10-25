@@ -17,6 +17,18 @@
   },
   "subpackages": [
     {
+      "root": "pages/ar-native-track",
+      "pages": ["index"]
+    },
+    {
+      "root": "pages/ar-native-probe",
+      "pages": ["index"]
+    },
+    {
+      "root": "pages/ar-self-hosted",
+      "pages": ["index"]
+    },
+    {
       "root": "pages/ar-coar",
       "pages": [
         "index"

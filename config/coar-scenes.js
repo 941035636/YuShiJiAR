@@ -8,6 +8,7 @@ module.exports = {
     "variants": {
       "collection": {
         "sceneId": "4af29af7addf45c2a0776c5ee03eb783",
+        "webArSceneId": "195d49919ac6497cbfe0dfb5fb12364c",
         "label": "墨玉版"
       },
       "blind": {

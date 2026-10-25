@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="title">鸿蒙原生相机检测</view>
+  <view class="note">只检测相机、实时画面帧和图形能力，不识别卡片。画面不保存、不上传。</view>
+  <button type="primary" bindtap="startCamera" disabled="{{cameraMounted}}">启动相机检测</button>
+  <button bindtap="stopCamera" disabled="{{!cameraMounted}}">停止检测</button>
+  <camera wx:if="{{cameraMounted}}" class="camera" device-position="back" flash="off" frame-size="small" bindinitdone="onCameraReady" binderror="onCameraError" bindstop="onCameraStopped" />
+  <view class="result">相机：{{cameraStatus}}</view>
+  <view class="result">实时取帧：{{frameStatus}}</view>
+  <view class="result">有效帧数：{{validFrames}}</view>
+  <view class="result">帧尺寸：{{frameSize}}</view>
+  <view class="result">WebGL：{{glStatus}}</view>
+  <canvas id="probe-gl" type="webgl" class="canvas" />
+  <view class="note">若出现实时相机画面、有效帧数持续增长、下方绿色画布，说明必要基础能力可用；还不能代表图片追踪 AR 已通过。请把此页检测结果截图发给开发人员。</view>
+</view>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>遇石记 · 本尊墨玉</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./vendor/aframe.min.js"></script>
+  <script src="./vendor/mindar-image-aframe.prod.js"></script>
+  <script src="./viewer.js"></script>
+</head>
+<body class="ar-page">
+  <div class="overlay">
+    <strong>本尊墨玉 · 自有域名验证</strong>
+    <p id="status" role="status">请点击开始，允许摄像头后对准本尊识别图。</p>
+    <button id="start" disabled>开始体验</button>
+    <button id="audio-toggle">开启讲解</button>
+    <button id="effects">加载完整特效</button>
+  </div>
+  <audio id="narration" preload="none" src="./assets/narration.mp3"></audio>
+  <a-scene mindar-image="imageTargetSrc: ./assets/tssgd.mind; autoStart: false; uiLoading: no; uiScanning: no; uiError: no"
+    embedded vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"
+    renderer="colorManagement: true; alpha: true" color-space="sRGB">
+    <a-entity light="type: ambient; intensity: 1.5"></a-entity>
+    <a-entity light="type: directional; intensity: 2" position="1 2 3"></a-entity>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    <a-entity id="target" mindar-image-target="targetIndex: 0">
+      <a-entity id="main-model" gltf-model="./assets/ben-zun.glb" rotation="90 0 0" position="0 0 0.1" fit-model="width: 0.8"></a-entity>
+      <a-entity id="effects-root"></a-entity>
+    </a-entity>
+  </a-scene>
+</body>
+</html>

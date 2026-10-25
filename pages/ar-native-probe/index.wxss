@@ -1,0 +1,8 @@
+page { background: #f2f6f3; color: #19372c; }
+.page { padding: 32rpx; }
+.title { font-size: 38rpx; font-weight: 600; margin-bottom: 20rpx; }
+.note { margin: 24rpx 0; font-size: 27rpx; line-height: 1.7; color: #50675e; }
+button { margin: 20rpx 0; }
+.camera { display: block; width: 100%; height: 480rpx; background: #000; }
+.result { margin: 14rpx 0; font-size: 28rpx; word-break: break-all; }
+.canvas { display: block; width: 100%; height: 100rpx; background: #15251d; }

@@ -1,6 +1,7 @@
 "use strict";
 
 var arNavigation = require("../../utils/ar-navigation.js");
+var selfHostedConfig = require("../../config/self-hosted-ar.js");
 
 Page({
   btnBenZun: function () {
@@ -32,7 +33,7 @@ Page({
   },
   openCoarWebAr: function () {
     wx.navigateTo({
-      url: "/pages/ar-coar/index?demo=palm",
+      url: "/pages/ar-coar/index?scene=ben-zun&mode=webar",
       fail: function (error) {
         console.error("打开共创 AR WebAR 兼容测试失败", error);
         wx.showModal({
@@ -43,7 +44,22 @@ Page({
       }
     });
   },
-  data: { pageList: {}, showCoarPoc: false },
+  openSelfHostedAr: function () {
+    wx.navigateTo({ url: "/pages/ar-self-hosted/index", fail: function () {
+      wx.showToast({ title: "验证页面打开失败", icon: "none" });
+    } });
+  },
+  openNativeProbe: function () {
+    wx.navigateTo({ url: "/pages/ar-native-probe/index", fail: function () {
+      wx.showToast({ title: "检测页面打开失败", icon: "none" });
+    } });
+  },
+  openNativeTracker: function () {
+    wx.navigateTo({ url: "/pages/ar-native-track/index", fail: function () {
+      wx.showToast({ title: "图片追踪页面打开失败", icon: "none" });
+    } });
+  },
+  data: { pageList: {}, showCoarPoc: false, showSelfHostedPoc: false, showNativePoc: false },
   onLoad: function () {
     var platform = arNavigation.getPlatform();
     var envVersion = "release";
@@ -55,6 +71,8 @@ Page({
     }
 
     this.setData({
+      showSelfHostedPoc: envVersion !== "release" && /^https:\/\//i.test(String(selfHostedConfig.baseUrl || "").trim()),
+      showNativePoc: envVersion !== "release",
       showCoarPoc: arNavigation.isHarmonyPlatform(platform) || envVersion !== "release"
     });
   },

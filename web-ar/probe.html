@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>遇石记 · 相机能力验证</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="diagnostic">
+  <main>
+    <h1>小程序内相机验证</h1>
+    <p>请从遇石记小程序的验证入口打开本页。聊天网页和浏览器的结果不能替代此项测试。</p>
+    <button id="start">启动后置摄像头</button>
+    <button id="stop" disabled>停止摄像头</button>
+    <video id="camera" muted playsinline autoplay></video>
+    <p id="status" role="status">尚未启动相机</p>
+    <pre id="report"></pre>
+    <p>页面只在本机处理画面，不上传照片或视频。允许相机后，需看到实时画面和非零分辨率才算通过。</p>
+    <a href="./index.html">相机通过后，验证本尊图片追踪</a>
+  </main>
+  <script src="./probe.js"></script>
+</body>
+</html>

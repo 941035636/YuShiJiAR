@@ -9,4 +9,7 @@ original/
 decrypted/
 extracted/
 cache-snapshot/
+web-ar/vendor/
+web-ar/assets/
+artifacts/
 
