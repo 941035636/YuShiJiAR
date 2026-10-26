@@ -31,12 +31,12 @@ Preview.prototype.draw=function(rgba,width,height,corners){
   gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,this.texture);gl.pixelStorei(gl.UNPACK_ALIGNMENT,1);
   gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,width,height,0,gl.RGBA,gl.UNSIGNED_BYTE,rgba);
   gl.uniform1i(gl.getUniformLocation(this.imageProgram,"image"),0);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);gl.disableVertexAttribArray(uv);
-  this.poseError=null;this.poseStatus="";
-  if(this.model&&corners.length===4){
+  this.poseError=null;this.poseStatus="";this.sceneVisible=false;
+  if(this.model){
     try{
       var transform=this.model.draw(corners,width,height,427/640);
-      if(transform){this.poseError=Math.round(transform.error*10)/10;this.poseStatus="姿态已计算";}
-      else if(this.model.enabled&&this.model.ready)this.poseStatus="姿态未通过校验，请调整相机视角或减小倾斜";
+      if(transform){this.poseError=Math.round(transform.error*10)/10;this.poseStatus="姿态已计算";this.sceneVisible=true;}
+      else if(corners.length===4&&this.model.enabled&&this.model.ready)this.poseStatus="姿态未通过校验，请调整相机视角或减小倾斜";
     }catch(error){this.model.fail(error);}
     // Model errors must not stop the verified camera/outline path.
     gl.disable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);gl.disable(gl.BLEND);gl.depthMask(false);

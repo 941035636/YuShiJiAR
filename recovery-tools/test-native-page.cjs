@@ -23,7 +23,7 @@ function boot(failedModule, wx = {}, clock = Date) {
   }
   const context = vm.createContext({
     Page(value) { definition = value; },
-    wx, Date: clock,
+    wx, Date: clock, setTimeout, clearTimeout,
     console: { error() {} }
   });
   load(path.join(root, 'index.js'));
@@ -99,4 +99,20 @@ scheduled.stop();assert(resets>=2);time=600;oldCallback(frame);assert.equal(call
 scheduled.start();scheduled.onCameraReady();oldCallback(frame);assert.equal(calls,3,'old session callback must be ignored');
 callback(frame);assert.equal(calls,4);
 scheduled.onHide();assert.equal(scheduled.data.running,false);
+// Successful audio is gated by the actual 3D preview visibility, including toggles and hide.
+let audioTime=0,audioCallback,visible=true;
+const audioContexts=[];
+const withAudio=boot(null,{
+  createCameraContext(){return {onCameraFrame(fn){audioCallback=fn;return {start(){},stop(){}};}};},
+  createInnerAudioContext(){const c={plays:0,pauses:0,destroys:0,
+    onPlay(){},onEnded(){},onError(){},play(){this.plays++;},pause(){this.pauses++;},stop(){},destroy(){this.destroys++;}};audioContexts.push(c);return c;}
+},{now(){return audioTime;}});
+withAudio.preview={model:{resetTimeline(){}},draw(bytes,w,h,corners){this.sceneVisible=corners.length===4;},dispose(){}};
+withAudio.previewWidth=300;withAudio.tracker={reset(){},update(){return {found:visible,mode:'track',corners:visible?[{},{},{},{}]:[],matches:20,inliers:16,elapsedMs:10};}};
+withAudio.start();withAudio.onCameraReady();audioCallback(frame);assert.equal(audioContexts[1].plays,1);
+audioTime=100;audioCallback(frame);assert.equal(audioContexts[1].plays,1);
+visible=false;audioTime=200;audioCallback(frame);assert(audioContexts[1].pauses>0);
+withAudio.toggleSound();visible=true;audioTime=500;audioCallback(frame);assert.equal(audioContexts[1].plays,1,'muted on reacquisition');
+withAudio.toggleSound();assert.equal(audioContexts[1].plays,2);withAudio.onHide();assert.equal(withAudio.audio.tracked,false);
+withAudio.onUnload();assert(audioContexts.every(c=>c.destroys===1));
 console.log('Native page registration, initialization recovery, independent preview cadence and session cleanup passed.');

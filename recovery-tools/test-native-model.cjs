@@ -31,7 +31,7 @@ function replaceJson(change){
   file.copy(out,0,0,12);out.writeUInt32LE(out.length,8);out.writeUInt32LE(length,12);out.writeUInt32LE(0x4e4f534a,16);string.copy(out,20);file.copy(out,20+length,20+n);
   return out.buffer.slice(out.byteOffset,out.byteOffset+out.byteLength);
 }
-assert.throws(()=>parse(replaceJson(j=>j.extensionsRequired=['KHR_draco_mesh_compression']),config),/静态/);
+assert.throws(()=>parse(replaceJson(j=>j.extensionsRequired=['KHR_draco_mesh_compression']),config),/无压缩/);
 assert.throws(()=>parse(replaceJson(j=>j.buffers[0].uri='https://unexpected.invalid/model.bin'),config),/外部/);
 assert.throws(()=>parse(replaceJson(j=>j.accessors[1].count=900000),config),/越界/);
 

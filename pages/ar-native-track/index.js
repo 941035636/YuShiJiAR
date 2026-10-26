@@ -1,7 +1,8 @@
 "use strict";
 Page({
   data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,modeName:"等待开始",previewFps:0,trackingFps:0,
-    showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"" },
+    showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"",
+    showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音" },
   onLoad:function(){
     this.nextFrameAt=0;this.generation=0;
     // Register the page first so dependency failures remain visible to the user.
@@ -14,6 +15,10 @@ Page({
       console.error("本尊图片追踪初始化失败",error);
       this.setData({ready:false,status:"追踪初始化失败："+error.message});
     }
+    try{
+      var AudioController=require("./audio.js").AudioController,self=this;
+      this.audio=new AudioController(function(text){if(!self.destroyed)self.setData({audioStatus:text});});
+    }catch(error){this.setData({audioStatus:"音频初始化失败："+error.message});}
   },
   onReady:function(){
     if(!this.tracker||!this.Preview)return;
@@ -37,16 +42,25 @@ Page({
       var Renderer=require("./model-renderer.js").ModelRenderer,self=this;
       var model=new Renderer(this.preview.canvas,this.preview.gl,function(text,failed){
         if(!self.destroyed)self.setData({modelStatus:text,modelFailed:failed});
+        if(!failed&&self.preview&&self.preview.model&&self.preview.model.ready)self.loadEffects();
       });
       this.preview.model=model;this.applyModelSettings();model.load();
     }catch(error){this.setData({modelStatus:"模型初始化失败："+error.message,modelFailed:true});}
   },
+  loadEffects:function(){
+    if(!this.preview||!this.preview.model||this.destroyed)return;
+    var self=this;this.preview.model.loadEffects(function(text,failed){if(!self.destroyed)self.setData({effectsStatus:text,effectsFailed:failed});});
+  },
   applyModelSettings:function(){
     if(!this.preview||!this.preview.model)return;
     var model=this.preview.model;model.enabled=this.data.showModel;model.scale=this.data.modelScale/100;
-    model.offsetY=this.data.modelOffset/100;model.fov=this.data.fov;
+    model.offsetY=this.data.modelOffset/100;model.fov=this.data.fov;model.effectsEnabled=this.data.showEffects;
+    if(!this.data.showModel&&this.audio)this.audio.setTracked(false);
   },
   toggleModel:function(){this.setData({showModel:!this.data.showModel});this.applyModelSettings();},
+  toggleEffects:function(){this.setData({showEffects:!this.data.showEffects});this.applyModelSettings();},
+  toggleSound:function(){this.setData({soundEnabled:!this.data.soundEnabled});if(this.audio)this.audio.setEnabled(this.data.soundEnabled);},
+  replayNarration:function(){if(this.audio)this.audio.replay();},
   setModelScale:function(event){this.setData({modelScale:Number(event.detail.value)});this.applyModelSettings();},
   setModelOffset:function(event){this.setData({modelOffset:Number(event.detail.value)});this.applyModelSettings();},
   setFov:function(event){this.setData({fov:Number(event.detail.value)});this.applyModelSettings();},
@@ -80,6 +94,7 @@ Page({
             // A recent estimate can bridge a skipped tracking frame, but never freeze indefinitely.
             var corners=self.lastResult&&frameAt-self.resultAt<=160?self.lastResult.corners:[];
             var drawAt=Date.now();self.preview.draw(rgba,frame.width,frame.height,corners);self.renderMs=Date.now()-drawAt;
+            if(self.audio)self.audio.setTracked(!!self.preview.sceneVisible);
             self.nextPreviewAt=Date.now()+50;self.previewCount++;
           }
           var shape=frame.width+":"+frame.height;
@@ -109,10 +124,12 @@ Page({
     this.generation++;
     if(this.listener){try{this.listener.stop();}catch(_){}this.listener=null;}
     if(this.tracker)this.tracker.reset();this.lastResult=null;
+    if(this.audio)this.audio.reset();
+    if(this.preview&&this.preview.model)this.preview.model.resetTimeline();
     this.setData({running:false,status:"追踪已停止"});
   },
   onCameraError:function(event){this.stop();this.setData({status:"相机失败："+((event.detail&&event.detail.errMsg)||"请检查相机权限")});},
   onCameraStopped:function(){if(this.data.running){this.stop();this.setData({status:"相机已中断，请重新开始"});}},
   onHide:function(){this.stop();},
-  onUnload:function(){this.destroyed=true;this.stop();if(this.preview)this.preview.dispose();this.tracker=null;}
+  onUnload:function(){this.destroyed=true;this.stop();if(this.audio)this.audio.dispose();if(this.preview)this.preview.dispose();this.tracker=null;}
 });

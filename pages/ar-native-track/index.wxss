@@ -8,3 +8,5 @@ page { background:#eef5ef; color:#153b29; }
 button { margin:20rpx 0; }
 canvas { display:block; background:#000; }
 .calibration { margin-top:24rpx; padding:24rpx; background:#fff; border-radius:16rpx; font-size:26rpx; }
+.controls { display:flex; gap:16rpx; margin:16rpx 0; }
+.controls button { flex:1; margin:0; }

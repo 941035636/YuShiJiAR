@@ -1,6 +1,5 @@
 "use strict";
-// A deliberately bounded static GLB 2 reader for the existing BenZun model.
-// It supports embedded PNG/JPEG base-color maps and indexed triangle meshes.
+// Bounded GLB 2 reader for BenZun and its embedded TRS animation effects.
 var multiply=require("./pose.js").multiply;
 function identity(){return new Float32Array([1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]);}
 function nodeMatrix(node){
@@ -37,17 +36,17 @@ function parse(buffer,config){
     offset+=size;
   }
   if(!json||!json.asset||json.asset.version!=="2.0"||binOffset<0)throw new Error("模型缺少 GLB 数据");
-  if((json.extensionsRequired||[]).length||(json.skins||[]).length)throw new Error("本轮仅支持无压缩的静态模型");
+  if((json.extensionsRequired||[]).length||(json.skins||[]).length)throw new Error("本轮仅支持无压缩网格，不能加载骨骼模型");
   if(!json.buffers||json.buffers.length!==1||json.buffers[0].uri||json.buffers[0].byteLength>binLength)throw new Error("模型引用了未支持的外部数据");
   function view(index){
     var v=(json.bufferViews||[])[index];
     if(!v||(v.buffer||0)!==0||!(v.byteLength>=0)||(v.byteOffset||0)<0||(v.byteOffset||0)+v.byteLength>json.buffers[0].byteLength)throw new Error("模型缓冲区越界");
     return v;
   }
-  function accessor(index,type){
-    var a=(json.accessors||[])[index],components={SCALAR:1,VEC2:2,VEC3:3};
+  function accessor(index,type,animation){
+    var a=(json.accessors||[])[index],components={SCALAR:1,VEC2:2,VEC3:3,VEC4:4};
     if(!a||a.type!==type||a.sparse||a.normalized||!(a.count>0&&a.count<=1000000))throw new Error("模型顶点格式未支持");
-    if(type==="SCALAR"?a.componentType===5126:a.componentType!==5126)throw new Error("模型顶点类型未支持");
+    if(animation?a.componentType!==5126:(type==="SCALAR"?a.componentType===5126:a.componentType!==5126))throw new Error("模型顶点类型未支持");
     var bytes={5123:2,5125:4,5126:4}[a.componentType],n=components[type],v=view(a.bufferView),start=a.byteOffset||0,stride=v.byteStride||n*bytes;
     if(!bytes||start<0||stride<n*bytes||start+(a.count-1)*stride+n*bytes>v.byteLength)throw new Error("模型顶点缓冲区越界");
     var out=a.componentType===5126?new Float32Array(a.count*n):new Uint32Array(a.count*n);
@@ -74,14 +73,14 @@ function parse(buffer,config){
           var x=position[i*3],y=position[i*3+1],z=position[i*3+2];
           for(var k=0;k<3;k++){
             var value=matrix[k]*x+matrix[4+k]*y+matrix[8+k]*z+matrix[12+k];
-            bounds.min[k]=Math.min(bounds.min[k],value);bounds.max[k]=Math.max(bounds.max[k],value);interleaved[i*8+k]=value;
-            interleaved[i*8+3+k]=normalsMatrix[k]*normal[i*3]+normalsMatrix[3+k]*normal[i*3+1]+normalsMatrix[6+k]*normal[i*3+2];
+            bounds.min[k]=Math.min(bounds.min[k],value);bounds.max[k]=Math.max(bounds.max[k],value);interleaved[i*8+k]=config.effect?position[i*3+k]:value;
+            interleaved[i*8+3+k]=config.effect?normal[i*3+k]:normalsMatrix[k]*normal[i*3]+normalsMatrix[3+k]*normal[i*3+1]+normalsMatrix[6+k]*normal[i*3+2];
           }
           interleaved[i*8+6]=uv[i*2];interleaved[i*8+7]=uv[i*2+1];
         }
         var max=0;for(var j=0;j<indices.length;j++){if(indices[j]>=count)throw new Error("模型索引越界");max=Math.max(max,indices[j]);}
         var material=(json.materials||[])[p.material]||{},pbr=material.pbrMetallicRoughness||{},image=null;
-        if(material.alphaMode&&material.alphaMode!=="OPAQUE")throw new Error("本轮只支持不透明模型材质");
+        if(material.alphaMode&&material.alphaMode!=="OPAQUE"&&!(config.effect&&material.alphaMode==="BLEND"))throw new Error("本轮不支持此模型透明模式");
         if(pbr.baseColorTexture){
           if((pbr.baseColorTexture.texCoord||0)!==0)throw new Error("本轮只支持第一组 UV");
           var texture=(json.textures||[])[pbr.baseColorTexture.index];image=texture&&(json.images||[])[texture.source];
@@ -89,13 +88,29 @@ function parse(buffer,config){
           var imageView=view(image.bufferView);
           image={index:texture.source,mimeType:image.mimeType,bytes:buffer.slice(binOffset+(imageView.byteOffset||0),binOffset+(imageView.byteOffset||0)+imageView.byteLength)};
         }
-        primitives.push({vertices:interleaved,indices:max<=65535?new Uint16Array(indices):indices,image:image,color:pbr.baseColorFactor||[1,1,1,1],doubleSided:!!material.doubleSided});
+        var sampler=pbr.baseColorTexture?(json.samplers||[])[(json.textures||[])[pbr.baseColorTexture.index].sampler]||{}:{};
+        primitives.push({vertices:interleaved,indices:max<=65535?new Uint16Array(indices):indices,image:image,color:pbr.baseColorFactor||[1,1,1,1],doubleSided:!!material.doubleSided,
+          node:index,transparent:material.alphaMode==="BLEND",wrapS:sampler.wrapS||10497,wrapT:sampler.wrapT||10497});
       });
     }
     (node.children||[]).forEach(function(child){visit(child,matrix);});delete active[index];
   }
   var scene=(json.scenes||[])[json.scene||0];if(!scene)throw new Error("模型场景不存在");
   (scene.nodes||[]).forEach(function(index){visit(index,identity());});
+  if(config.effect){
+    var clips=(json.animations||[]).map(function(clip){
+      var duration=0,channels=(clip.channels||[]).map(function(channel){
+        var target=channel.target,sampler=(clip.samplers||[])[channel.sampler];
+        if(!target||!json.nodes[target.node]||json.nodes[target.node].matrix||["rotation","scale","translation"].indexOf(target.path)<0||!sampler||["LINEAR","STEP"].indexOf(sampler.interpolation||"LINEAR")<0)throw new Error("特效动画通道未支持");
+        var times=accessor(sampler.input,"SCALAR",true),values=accessor(sampler.output,target.path==="rotation"?"VEC4":"VEC3",true),size=target.path==="rotation"?4:3;
+        if(values.length!==times.length*size||times[0]<0)throw new Error("动画关键帧数量不匹配");
+        for(var i=1;i<times.length;i++)if(times[i]<=times[i-1])throw new Error("动画时间顺序不合法");
+        duration=Math.max(duration,times[times.length-1]);
+        return {node:target.node,path:target.path,times:times,values:values,size:size,interpolation:sampler.interpolation||"LINEAR"};
+      });return {name:clip.name||"animation",duration:duration,channels:channels};
+    });
+    return {primitives:primitives,nodes:json.nodes,roots:scene.nodes,clips:clips,originalBounds:bounds};
+  }
   var height=bounds.max[1]-bounds.min[1];if(!primitives.length||!(height>0))throw new Error("模型没有可绘制的网格");
   var s=config.height/height,cx=(bounds.min[0]+bounds.max[0])/2,cy=(bounds.min[1]+bounds.max[1])/2;
   primitives.forEach(function(p){for(var i=0;i<p.vertices.length;i+=8){
@@ -104,6 +119,7 @@ function parse(buffer,config){
     p.vertices[i+2]=-(p.vertices[i+2]-bounds.min[2])*s;
     p.vertices[i+4]=-p.vertices[i+4];p.vertices[i+5]=-p.vertices[i+5];
   }});
-  return {primitives:primitives,originalBounds:bounds};
+  var alignment=new Float32Array([s,0,0,0,0,-s,0,0,0,0,-s,0,config.centerX-cx*s,cy*s+config.centerY,bounds.min[2]*s,1]);
+  return {primitives:primitives,originalBounds:bounds,alignment:alignment};
 }
-module.exports={parse:parse};
+module.exports={parse:parse,nodeMatrix:nodeMatrix,normalMatrix:normalMatrix,identity:identity};
