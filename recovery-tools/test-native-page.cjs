@@ -58,6 +58,20 @@ const missingCanvas = boot(null, {
 assert.doesNotThrow(() => missingCanvas.onReady());
 assert.match(missingCanvas.data.status, /预览初始化失败.*无法获取预览画布/);
 
+// A missing model download must leave the verified camera/outline page usable.
+const noModel=boot(null, {
+  createSelectorQuery(){return this;},in(){return this;},select(){return this;},fields(){return this;},
+  exec(callback){callback([{node:{},width:300}]);},
+  downloadFile(options){options.fail({errMsg:'model network unavailable'});return {abort(){}};},
+  getFileSystemManager(){return {};}
+});
+noModel.Preview=function(){this.canvas={};this.gl={};this.dispose=function(){this.model?.dispose();};};
+noModel.onReady();assert.equal(noModel.data.ready,true);assert.equal(noModel.data.modelFailed,true);
+assert.match(noModel.data.modelStatus,/model network unavailable/);
+assert.doesNotThrow(()=>noModel.start());assert.equal(noModel.data.running,true);
+noModel.toggleModel();assert.equal(noModel.preview.model.enabled,false);
+assert.doesNotThrow(()=>noModel.onUnload());
+
 // Search is intentionally less frequent than preview; tracking has no post-compute pause.
 let time=0, callback, calls=0, resets=0, draws=[];
 const scheduled=boot(null, {

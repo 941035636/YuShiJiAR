@@ -1,13 +1,26 @@
 <view class="page">
-  <view class="title">本尊原生图片追踪验证</view>
-  <view class="note">对准 tssgd.jpg。下方取帧预览出现贴合卡片的绿色四边框，才表示本轮检测到目标。当前没有加载 3D 模型。</view>
+  <view class="title">本尊墨玉原生 3D 验证</view>
+  <view class="note">对准 tssgd.jpg，下方画面显示墨玉模型与绿框。首次下载模型约 8.7 MB；本轮先验证模型贴合、倾斜和丢失恢复，暂未加入特效与音频。</view>
+  <view class="status">{{modelStatus}}</view>
+  <button wx:if="{{modelFailed}}" bindtap="loadModel">重试加载模型</button>
+  <button bindtap="toggleModel">{{showModel ? '切换为仅绿框' : '显示墨玉模型'}}</button>
   <button type="primary" bindtap="start" disabled="{{running || !ready}}">开始图片追踪</button>
   <button bindtap="stop" disabled="{{!running}}">停止</button>
   <camera wx:if="{{running}}" class="camera" device-position="back" frame-size="medium" flash="off" bindinitdone="onCameraReady" binderror="onCameraError" bindstop="onCameraStopped" />
   <view class="status">{{status}}</view>
   <view class="stats">{{modeName}} / 匹配 {{matches}} / 几何内点 {{inliers}} / 单次 {{elapsedMs}} ms</view>
   <view class="stats">实际预览 {{previewFps}} 帧/秒 / 定位处理 {{trackingFps}} 次/秒</view>
+  <view class="stats">绘制 {{renderMs}} ms / 姿态拟合误差 {{poseError}} px</view>
+  <view wx:if="{{showModel && poseStatus}}" class="stats">{{poseStatus}}</view>
   <view class="note">实际取帧及定位结果：</view>
   <canvas id="frame-preview" type="webgl" style="width:100%;height:{{previewHeight}}px" />
-  <view class="note">请测试正面、倾斜、移出后再移入。若预览方向与相机不同，或绿框不贴合，请截图反馈。画面只在本机处理，不上传、不保存。</view>
+  <view wx:if="{{showModel}}" class="calibration">
+    <view>模型大小 {{modelScale}}%</view>
+    <slider min="50" max="150" value="{{modelScale}}" bindchange="setModelScale" />
+    <view>上下位置 {{modelOffset}}（负数向上）</view>
+    <slider min="-25" max="25" value="{{modelOffset}}" bindchange="setModelOffset" />
+    <view>相机视角校准 {{fov}}°</view>
+    <slider min="30" max="80" value="{{fov}}" bindchange="setFov" />
+  </view>
+  <view class="note">请测试正面、倾斜、移出后再移入，并切换“仅绿框”比较流畅度。相机视角为估算值，贴合不准时可调整上面的校准项。画面只在本机处理，不上传、不保存。</view>
 </view>
