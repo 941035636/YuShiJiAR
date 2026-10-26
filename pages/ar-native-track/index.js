@@ -1,20 +1,32 @@
 "use strict";
-var Tracker = require("./tracker.js").Tracker;
-var Preview = require("./preview.js").Preview;
-var target = require("./target.json");
 Page({
   data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360 },
-  onLoad:function(){ this.tracker=new Tracker(target);this.nextFrameAt=0;this.generation=0; },
+  onLoad:function(){
+    this.nextFrameAt=0;this.generation=0;
+    // Register the page first so dependency failures remain visible to the user.
+    try{
+      var Tracker=require("./tracker.js").Tracker;
+      this.Preview=require("./preview.js").Preview;
+      var target=require("./target.js");
+      this.tracker=new Tracker(target);
+    }catch(error){
+      console.error("本尊图片追踪初始化失败",error);
+      this.setData({ready:false,status:"追踪初始化失败："+error.message});
+    }
+  },
   onReady:function(){
+    if(!this.tracker||!this.Preview)return;
     var self=this;
-    wx.createSelectorQuery().in(this).select("#frame-preview").fields({node:true,size:true}).exec(function(rows){
-      if(self.destroyed)return;
-      try{
-        if(!rows||!rows[0]||!rows[0].node)throw new Error("无法获取预览画布");
-        self.preview=new Preview(rows[0].node);self.previewWidth=rows[0].width;
-        self.setData({ready:true,status:"已准备，请将本尊识别图放在另一台设备上显示"});
-      }catch(error){self.setData({status:"预览初始化失败："+error.message});}
-    });
+    try{
+      wx.createSelectorQuery().in(this).select("#frame-preview").fields({node:true,size:true}).exec(function(rows){
+        if(self.destroyed)return;
+        try{
+          if(!rows||!rows[0]||!rows[0].node)throw new Error("无法获取预览画布");
+          self.preview=new self.Preview(rows[0].node);self.previewWidth=rows[0].width;
+          self.setData({ready:true,status:"已准备，请将本尊识别图放在另一台设备上显示"});
+        }catch(error){self.setData({status:"预览初始化失败："+error.message});}
+      });
+    }catch(error){self.setData({status:"预览初始化失败："+error.message});}
   },
   start:function(){
     if(!this.preview)return;

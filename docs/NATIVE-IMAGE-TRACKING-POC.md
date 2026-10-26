@@ -43,7 +43,13 @@ node recovery-tools/train-native-target.cjs <参考图.rgba> <尺寸.json>
 node recovery-tools/test-native-tracker.cjs <参考图.rgba> [480×640无关图片.rgba]
 ```
 
-特征文件 pages/ar-native-track/target.json 已生成，可直接编译预览，无需用户手机执行训练。当前参考图尺寸 427×640，包含 602 个多尺度特征。
+特征文件 pages/ar-native-track/target.js 已生成，可直接编译预览，无需用户手机执行训练。当前参考图尺寸 427×640，包含 602 个多尺度特征。
+
+### 页面空白修复（2026-10-26）
+
+用户反馈点击“本尊原生图片追踪”后页面空白。检查发现页面注册前直接 require("./target.json")，误用了 Node 的 JSON 模块加载能力。现改为 target.js 导出相同特征数据，同步修正训练脚本及离线测试引用；依赖初始化放在页面注册后的 onLoad 中捕获错误，画布查询同步异常也会显示在状态文字中。
+
+新增 `node recovery-tools/test-native-page.cjs`，以仅加载 JS、不提供浏览器全局对象的模块环境验证页面注册、真实依赖加载及依赖失败时的可见错误。该检查能够复现旧代码在 Page 注册前中断的问题。修复后需清理开发者工具缓存并重新编译生成新的预览码，在鸿蒙真机复核；不能把离线启动测试当作真机通过。
 
 工程检查还覆盖页面启动停止、旧监听回调隔离、后台释放及画布资源释放。JSON、JS、WXML、本地依赖和素材引用检查通过。
 

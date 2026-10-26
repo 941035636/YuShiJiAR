@@ -2,7 +2,7 @@ const assert=require('assert'),fs=require('fs'),path=require('path');
 const cv=require('../pages/ar-native-track/vendor/jsfeat.js');
 const {Tracker,project}=require('../pages/ar-native-track/tracker.js');
 const features=require('../pages/ar-native-track/features.js');
-const target=require('../pages/ar-native-track/target.json');
+const target=require('../pages/ar-native-track/target.js');
 const input=process.argv[2];
 if(!input)throw new Error('Usage: node test-native-tracker.cjs RESIZED_TARGET_RGBA');
 const reference=new Uint8Array(fs.readFileSync(input));
