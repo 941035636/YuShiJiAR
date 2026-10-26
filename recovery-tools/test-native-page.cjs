@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '../pages/ar-native-track');
-function boot(failedModule, wx = {}) {
+function boot(failedModule, wx = {}, clock = Date) {
   const cache = new Map();
   let definition;
   function load(filename) {
@@ -23,7 +23,7 @@ function boot(failedModule, wx = {}) {
   }
   const context = vm.createContext({
     Page(value) { definition = value; },
-    wx,
+    wx, Date: clock,
     console: { error() {} }
   });
   load(path.join(root, 'index.js'));
@@ -39,7 +39,7 @@ const page = boot();
 assert(page.tracker, 'local feature data and tracker must initialize');
 assert.equal(page.tracker.target.width, 427);
 assert.equal(page.tracker.target.points.length, 602);
-for (const dependency of ['target.js', 'tracker.js', 'preview.js']) {
+for (const dependency of ['target.js', 'tracker.js', 'session-tracker.js', 'preview.js']) {
   const failed = boot(dependency);
   assert.equal(failed.data.ready, false);
   assert.match(failed.data.status, /初始化失败.*Simulated module failure/);
@@ -57,4 +57,32 @@ const missingCanvas = boot(null, {
 });
 assert.doesNotThrow(() => missingCanvas.onReady());
 assert.match(missingCanvas.data.status, /预览初始化失败.*无法获取预览画布/);
-console.log('Native page registration, JS-only dependency loading and initialization failure recovery passed.');
+
+// Search is intentionally less frequent than preview; tracking has no post-compute pause.
+let time=0, callback, calls=0, resets=0, draws=[];
+const scheduled=boot(null, {
+  createCameraContext() { return { onCameraFrame(fn) { callback=fn; return {start(){},stop(){}}; } }; }
+}, {now(){return time;}});
+scheduled.preview={draw(bytes,w,h,corners){draws.push(corners.length);},dispose(){}};
+scheduled.previewWidth=300;
+scheduled.tracker={reset(){resets++;},update(){
+  calls++;time+=40;
+  const found=calls===2;
+  return {found,mode:calls===3?'track':'detect',corners:found?[{},{},{},{}]:[],matches:20,inliers:found?16:0,elapsedMs:40};
+}};
+scheduled.start();scheduled.onCameraReady();
+const frame={data:new ArrayBuffer(48*48*4),width:48,height:48};
+callback(frame);
+assert.equal(calls,1);
+for(const tick of [100,200,300]){time=tick;callback(frame);}
+assert.equal(calls,1,'search must stay throttled');
+assert.equal(draws.length,4,'preview must continue between searches');
+time=400;callback(frame);assert.equal(calls,2);assert.equal(draws.at(-1),4);
+time=500;callback(frame);assert.equal(calls,3,'schedule must be relative to frame start');
+assert.equal(draws.at(-1),0,'failed tracking must clear old outline immediately');
+const oldCallback=callback;
+scheduled.stop();assert(resets>=2);time=600;oldCallback(frame);assert.equal(calls,3);
+scheduled.start();scheduled.onCameraReady();oldCallback(frame);assert.equal(calls,3,'old session callback must be ignored');
+callback(frame);assert.equal(calls,4);
+scheduled.onHide();assert.equal(scheduled.data.running,false);
+console.log('Native page registration, initialization recovery, independent preview cadence and session cleanup passed.');

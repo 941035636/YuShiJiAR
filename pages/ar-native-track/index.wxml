@@ -5,7 +5,8 @@
   <button bindtap="stop" disabled="{{!running}}">停止</button>
   <camera wx:if="{{running}}" class="camera" device-position="back" frame-size="medium" flash="off" bindinitdone="onCameraReady" binderror="onCameraError" bindstop="onCameraStopped" />
   <view class="status">{{status}}</view>
-  <view class="stats">匹配 {{matches}} / 几何内点 {{inliers}} / 单次 {{elapsedMs}} ms</view>
+  <view class="stats">{{modeName}} / 匹配 {{matches}} / 几何内点 {{inliers}} / 单次 {{elapsedMs}} ms</view>
+  <view class="stats">实际预览 {{previewFps}} 帧/秒 / 定位处理 {{trackingFps}} 次/秒</view>
   <view class="note">实际取帧及定位结果：</view>
   <canvas id="frame-preview" type="webgl" style="width:100%;height:{{previewHeight}}px" />
   <view class="note">请测试正面、倾斜、移出后再移入。若预览方向与相机不同，或绿框不贴合，请截图反馈。画面只在本机处理，不上传、不保存。</view>

@@ -24,7 +24,7 @@ function validQuad(q, width, height) {
   // Reject reflections, tiny patches, and explosive homographies.
   return area > width*height*0.025 && area < width*height*6;
 }
-function estimateHomography(from, to, threshold) {
+function estimateHomography(from, to, threshold, iterations) {
   // Bounded, repeatable sampling with local optimization. JSFeat's generic
   // estimator can stop early when a chosen prefix is degenerate on this card.
   var kernel = new cv.motion_model.homography2d(), model = new cv.matrix_t(3,3,cv.F32C1_t);
@@ -38,13 +38,15 @@ function estimateHomography(from, to, threshold) {
     for(var i=0;i<from.length;i++){mask[i]=errors[i]<=limit;if(mask[i]){count++;error+=errors[i];}}
     return {mask:mask,count:count,error:error};
   }
-  for(var iteration=0;iteration<400;iteration++){
+  for(var iteration=0;iteration<(iterations||400);iteration++){
+    // Tracked points already passed optical-flow checks; stop after strong consensus.
+    if(iterations && iteration>=12 && bestCount>=from.length*0.9 && bestError/bestCount<limit*0.25)break;
     var pool=iteration%3===0?from.length:Math.min(from.length,12+Math.floor(iteration/4));
     var ids=[],a=[],b=[];
     while(ids.length<4){var id=random(pool);if(ids.indexOf(id)<0){ids.push(id);a.push(from[id]);b.push(to[id]);}}
     if(!kernel.check_subset(a,b,4)||!kernel.run(a,b,model,4))continue;
     var current=score();
-    if(current.count<bestCount)continue;
+    if(current.count<bestCount||(current.count===bestCount&&current.error>=bestError))continue;
     // Refine candidates before comparison so near-threshold point matches do
     // not leave a four-point model extrapolating far outside the card.
     for(var pass=0;pass<2&&current.count>=8;pass++){
@@ -64,12 +66,12 @@ function Tracker(target) {
   this.pattern = new Int32Array(target.descriptors);
   this.scratch = {};
 }
-Tracker.prototype.detect = function (rgba, width, height) {
+Tracker.prototype.detect = function (rgba, width, height, prepared) {
   if (!(width >= 48 && height >= 48) || rgba.byteLength !== width*height*4) throw new Error("相机帧格式不正确");
-  var begin = Date.now(), gray = features.grayscale(rgba, width, height);
+  var begin = Date.now(), gray = prepared ? prepared.gray : features.grayscale(rgba, width, height);
   // Bound CPU work even if a client ignores frame-size=small.
   var ratio = Math.min(1, 480/Math.max(width, height));
-  if (ratio < 1) {
+  if (ratio < 1 && !prepared) {
     var resized = new cv.matrix_t(Math.round(width*ratio), Math.round(height*ratio), cv.U8C1_t);
     cv.imgproc.resample(gray, resized, resized.cols, resized.rows); gray = resized;
   }
@@ -109,9 +111,11 @@ Tracker.prototype.detect = function (rgba, width, height) {
     var corners = [[0,0],[this.target.width,0],[this.target.width,this.target.height],[0,this.target.height]].map(function(p){return project(model.data,p[0],p[1]);});
     if (coverage >= 0.04 && validQuad(corners,width,height)) {
       result.found = true; result.corners = corners; result.homography = Array.prototype.slice.call(model.data,0,9);
+      // Retain verified correspondences for the lightweight next-frame tracker.
+      result.support = { target: goodFrom, image: goodTo };
     }
   }
   result.elapsedMs = Date.now()-begin;
   return result;
 };
-module.exports = { Tracker: Tracker, project: project, validQuad: validQuad };
+module.exports = { Tracker: Tracker, project: project, validQuad: validQuad, estimateHomography: estimateHomography };
