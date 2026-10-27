@@ -18,7 +18,7 @@ function ModelRenderer(canvas,gl,onState){
   this.canvas=canvas;this.gl=gl;this.onState=onState;this.parts=[];this.files={};
   this.enabled=true;this.ready=false;this.fov=config.fov;this.scale=1;this.offsetY=0;
   this.effectsEnabled=true;this.effectGroups=[];this.effectTasks=[];this.clock=new animation.Clock();
-  this.identityMatrix=glb.identity();this.identityNormal=new Float32Array([1,0,0,0,1,0,0,0,1]);this.rotationNormal=new Float32Array(9);this.drawList=[];
+  this.identityMatrix=glb.identity();this.identityNormal=new Float32Array([1,0,0,0,1,0,0,0,1]);this.rotationNormal=new Float32Array(9);this.drawList=[];this.poseFilter=new pose.PoseFilter();
   this.stamp=Date.now()+"-"+Math.floor(Math.random()*1000000);
 }
 ModelRenderer.prototype.state=function(text,failed){if(!this.disposed)this.onState(text,!!failed);};
@@ -140,11 +140,12 @@ ModelRenderer.prototype.loadEffects=function(onState){
 ModelRenderer.prototype.dropGroup=function(group){
   var gl=this.gl;this.parts=this.parts.filter(function(p){if(p.group!==group)return true;gl.deleteBuffer(p.vertex);gl.deleteBuffer(p.index);gl.deleteTexture(p.texture);return false;});
 };
-ModelRenderer.prototype.resetTimeline=function(){this.clock.reset();};
+ModelRenderer.prototype.resetTimeline=function(){this.clock.reset();this.poseFilter.reset();};
 ModelRenderer.prototype.draw=function(corners,width,height,aspect){
   var now=Date.now();
-  if(!this.enabled||!this.ready||this.disposed){this.clock.time(false,now);return null;}
-  var transform=pose.solve(corners,width,height,aspect,this.fov);if(!transform){this.clock.time(false,now);return null;}
+  if(!this.enabled||!this.ready||this.disposed){this.clock.time(false,now);this.poseFilter.reset();return null;}
+  var transform=pose.solve(corners,width,height,aspect,this.fov);if(!transform){this.clock.time(false,now);this.poseFilter.reset();return null;}
+  transform=this.poseFilter.update(transform,now);
   var seconds=this.clock.time(true,now),worlds={},self=this;
   if(this.effectsEnabled)this.effectGroups.forEach(function(group){
     var nodes=animation.matrices(group.asset,seconds);worlds[group.key]=nodes.map(function(matrix){return matrix?pose.multiply(group.root,matrix):null;});
@@ -186,7 +187,7 @@ ModelRenderer.prototype.releaseGpu=function(){
 };
 ModelRenderer.prototype.dispose=function(){
   this.disposed=true;this.ready=false;if(this.task){this.task.abort();this.task=null;}this.releaseGpu();
-  this.effectTasks.forEach(function(task){task.abort();});this.effectTasks=[];this.effectGroups=[];this.clock.reset();
+  this.effectTasks.forEach(function(task){task.abort();});this.effectTasks=[];this.effectGroups=[];this.clock.reset();this.poseFilter.reset();
   var fs=wx.getFileSystemManager(),self=this;Object.keys(this.files).forEach(function(file){fs.unlink({filePath:file,complete:function(){delete self.files[file];}});});
   // Keep late image callbacks alive: they observe disposed and release their files.
 };

@@ -60,8 +60,40 @@ for(const angles of cases){
     assert(error<.02,`off-plane reprojection ${error}`);maxPoseError=Math.max(maxPoseError,error);
   }
 }
+const distorted=marker.map(p=>pixel(cameraPoint(p,[.28,-.14,0])));
+[[5,-3],[-2,4],[3,2],[-4,-2]].forEach((noise,index)=>{distorted[index].x+=noise[0];distorted[index].y+=noise[1];});
+const refined=pose.solve(distorted,width,height,aspect,fov);
+assert(refined,'distorted but valid marker pose');
+assert(refined.iterations>0,'nonlinear refinement must run');
+assert(refined.error<refined.initialError*.85,`refinement should lower reprojection error: ${refined.initialError} -> ${refined.error}`);
+
+function projected(transform,point){
+  const clip=[0,0,0,0],q=[...point,1],m=transform.mvp;
+  for(let r=0;r<4;r++)for(let k=0;k<4;k++)clip[r]+=m[k*4+r]*q[k];
+  return {x:(clip[0]/clip[3]+1)*width/2,y:(1-clip[1]/clip[3])*height/2};
+}
+const steady=marker.map(p=>pixel(cameraPoint(p,[.24,-.2,.08]))),filter=new pose.PoseFilter();
+let rawPath=0,filteredPath=0,previousRaw,previousFiltered,lastFiltered,lastTime=1000;
+for(let frame=0;frame<48;frame++){
+  const corners=steady.map((corner,index)=>({
+    x:corner.x+Math.sin(frame*1.71+index*2.13)*2.7,
+    y:corner.y+Math.cos(frame*1.37+index*1.83)*2.4
+  }));
+  const raw=pose.solve(corners,width,height,aspect,fov);assert(raw,'noisy pose remains solvable');
+  const filtered=filter.update(raw,lastTime+=83),rawPoint=projected(raw,[0,.05,-.2]),filteredPoint=projected(filtered,[0,.05,-.2]);
+  if(frame>=8&&previousRaw){rawPath+=Math.hypot(rawPoint.x-previousRaw.x,rawPoint.y-previousRaw.y);filteredPath+=Math.hypot(filteredPoint.x-previousFiltered.x,filteredPoint.y-previousFiltered.y);}
+  previousRaw=rawPoint;previousFiltered=filteredPoint;lastFiltered=filteredPoint;
+}
+assert(filteredPath<rawPath*.72,`pose filter should suppress model jitter: ${rawPath} -> ${filteredPath}`);
+const movedCorners=steady.map(corner=>({x:corner.x+36,y:corner.y-8})),movedRaw=pose.solve(movedCorners,width,height,aspect,fov);
+const movedFiltered=filter.update(movedRaw,lastTime+83),movedRawPoint=projected(movedRaw,[0,.05,-.2]),movedFilteredPoint=projected(movedFiltered,[0,.05,-.2]);
+const requestedMove=Math.hypot(movedRawPoint.x-lastFiltered.x,movedRawPoint.y-lastFiltered.y);
+const followedMove=Math.hypot(movedFilteredPoint.x-lastFiltered.x,movedFilteredPoint.y-lastFiltered.y);
+assert(followedMove>requestedMove*.75,'adaptive filter must remain responsive during deliberate movement');
+filter.reset();const reacquired=filter.update(movedRaw,lastTime+166);
+assert.deepEqual(Array.from(reacquired.view),Array.from(movedRaw.view),'reacquisition must not interpolate from the old pose');
 const frontal=marker.map(p=>pixel(cameraPoint(p,[0,0,0])));
 assert.equal(pose.solve([],width,height,aspect,fov),null);
 assert.equal(pose.solve([frontal[0],frontal[3],frontal[2],frontal[1]],width,height,aspect,fov),null,'reflected target');
 assert.equal(pose.solve(frontal,width,height,aspect,0),null);
-console.log(JSON.stringify({passed:true,primitives:model.primitives.length,triangles,baseColorTextures:5,maxOffPlanePoseError:maxPoseError,normalizedBounds:bounds},null,2));
+console.log(JSON.stringify({passed:true,primitives:model.primitives.length,triangles,baseColorTextures:5,maxOffPlanePoseError:maxPoseError,poseRefinement:{before:refined.initialError,after:refined.error,iterations:refined.iterations},poseJitter:{rawPath,filteredPath,reduction:1-filteredPath/rawPath},normalizedBounds:bounds},null,2));
