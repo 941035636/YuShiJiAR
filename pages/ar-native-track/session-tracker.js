@@ -8,6 +8,16 @@ function pyramid(width, height) {
   p.allocate(width, height, cv.U8C1_t);
   return p;
 }
+function scaledGrayscale(rgba, width, height, target, xMap, yMap) {
+  var out=target.data,tw=target.cols,th=target.rows;
+  for(var y=0;y<th;y++){
+    var sourceRow=yMap[y]*width;
+    for(var x=0;x<tw;x++){
+      var source=(sourceRow+xMap[x])*4;
+      out[y*tw+x]=(rgba[source]*77+rgba[source+1]*150+rgba[source+2]*29+128)>>8;
+    }
+  }
+}
 function patchError(a, b, width, x, y, u, v) {
   var sum = 0, absolute = 0, values = [];
   // Zero-mean patch differences tolerate a moderate overall brightness change.
@@ -32,25 +42,31 @@ function SessionTracker(target) {
   this.reset();
 }
 SessionTracker.prototype.reset = function () { this.state = null; };
-SessionTracker.prototype.prepare = function (rgba, width, height) {
+SessionTracker.prototype.prepare = function (rgba, width, height, needDetection) {
   if (!(width >= 48 && height >= 48) || rgba.byteLength !== width*height*4) throw new Error("相机帧格式不正确");
   var ratio = Math.min(1,480/Math.max(width,height));
   var w = Math.round(width*ratio), h = Math.round(height*ratio);
-  var trackRatio = Math.min(1,320/Math.max(width,height));
+  var trackRatio = Math.min(1,400/Math.max(width,height));
   var tw = Math.round(width*trackRatio), th = Math.round(height*trackRatio);
-  if (!this.source || this.source.cols !== width || this.source.rows !== height) {
+  if (this.frameWidth !== width || this.frameHeight !== height) {
     this.reset();
+    this.frameWidth=width;this.frameHeight=height;
     this.source = new cv.matrix_t(width,height,cv.U8C1_t);
     this.small = new cv.matrix_t(w,h,cv.U8C1_t);
     this.trackingGray = new cv.matrix_t(tw,th,cv.U8C1_t);
     this.previous = pyramid(tw,th); this.current = pyramid(tw,th);
+    this.xMap=new Uint16Array(tw);this.yMap=new Uint16Array(th);
+    for(var x=0;x<tw;x++)this.xMap[x]=Math.min(width-1,Math.floor((x+0.5)/trackRatio));
+    for(var y=0;y<th;y++)this.yMap[y]=Math.min(height-1,Math.floor((y+0.5)/trackRatio));
   }
-  cv.imgproc.grayscale(rgba,width,height,this.source,cv.COLOR_RGBA2GRAY);
-  var gray = this.source;
-  if (ratio < 1) { cv.imgproc.resample(this.source,this.small,w,h); gray = this.small; }
-  var trackingGray=gray;
-  if(trackRatio<ratio){cv.imgproc.resample(gray,this.trackingGray,tw,th);trackingGray=this.trackingGray;}
-  this.current.build(trackingGray,false);
+  if(trackRatio<1)scaledGrayscale(rgba,width,height,this.trackingGray,this.xMap,this.yMap);
+  else cv.imgproc.grayscale(rgba,width,height,this.trackingGray,cv.COLOR_RGBA2GRAY);
+  this.current.build(this.trackingGray,false);
+  var gray=null;
+  if(needDetection){
+    cv.imgproc.grayscale(rgba,width,height,this.source,cv.COLOR_RGBA2GRAY);gray=this.source;
+    if(ratio<1){cv.imgproc.resample(this.source,this.small,w,h);gray=this.small;}
+  }
   return {gray:gray,ratio:ratio,trackRatio:trackRatio};
 };
 SessionTracker.prototype.remember = function (result, ratio, now, detectedAt) {
@@ -105,9 +121,11 @@ SessionTracker.prototype.follow = function (width, height, ratio) {
 };
 SessionTracker.prototype.update = function (rgba, width, height, now) {
   now = typeof now === "number" ? now : Date.now();
-  var begin=Date.now(), prepared=this.prepare(rgba,width,height), result;
+  var begin=Date.now(),sameSize=this.frameWidth===width&&this.frameHeight===height;
+  var canFollow=sameSize&&this.state&&now-this.state.at<=500&&now-this.state.detectedAt<5000;
+  var prepared=this.prepare(rgba,width,height,!canFollow), result;
   // Periodic descriptor verification limits accumulated drift; long gaps use recognition again.
-  if (this.state && now-this.state.at<=500 && now-this.state.detectedAt<5000) {
+  if (canFollow) {
     result=this.follow(width,height,prepared.trackRatio);
     if (result.found) {
       // Keep the descriptor-verified keyframe as the reference. Chaining each
@@ -122,4 +140,4 @@ SessionTracker.prototype.update = function (rgba, width, height, now) {
   this.remember(result,prepared.trackRatio,now,now);
   result.elapsedMs=Date.now()-begin;return result;
 };
-module.exports = {SessionTracker:SessionTracker};
+module.exports = {SessionTracker:SessionTracker,scaledGrayscale:scaledGrayscale};

@@ -69,8 +69,8 @@ function Tracker(target) {
 Tracker.prototype.detect = function (rgba, width, height, prepared) {
   if (!(width >= 48 && height >= 48) || rgba.byteLength !== width*height*4) throw new Error("相机帧格式不正确");
   var begin = Date.now(), gray = prepared ? prepared.gray : features.grayscale(rgba, width, height);
-  // Bound CPU work even if a client ignores frame-size=small.
-  var ratio = Math.min(1, 480/Math.max(width, height));
+  // Bound descriptor work independently from the medium-resolution display frame.
+  var ratio = prepared ? prepared.ratio : Math.min(1, 480/Math.max(width, height));
   if (ratio < 1 && !prepared) {
     var resized = new cv.matrix_t(Math.round(width*ratio), Math.round(height*ratio), cv.U8C1_t);
     cv.imgproc.resample(gray, resized, resized.cols, resized.rows); gray = resized;

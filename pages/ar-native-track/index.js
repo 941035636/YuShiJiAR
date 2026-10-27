@@ -1,6 +1,6 @@
 "use strict";
 Page({
-  data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
+  data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,frameSize:"—",modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
     showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"",
     showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音" },
   onLoad:function(){
@@ -104,7 +104,7 @@ Page({
             self.nextPreviewAt=frameAt+Math.max(40,self.renderMs*1.1);self.previewCount++;
           }
           var shape=frame.width+":"+frame.height;
-          if(self.frameShape!==shape){self.frameShape=shape;self.setData({previewHeight:Math.round(self.previewWidth*frame.height/frame.width)});}
+          if(self.frameShape!==shape){self.frameShape=shape;self.setData({previewHeight:Math.round(self.previewWidth*frame.height/frame.width),frameSize:frame.width+"×"+frame.height});}
           var now=Date.now(),metrics={};
           if(now-self.metricAt>=1000){
             metrics.previewFps=Math.round(self.previewCount*10000/(now-self.metricAt))/10;
