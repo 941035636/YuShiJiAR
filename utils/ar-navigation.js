@@ -7,7 +7,7 @@ function getPlatform() {
     }
     return String(wx.getSystemInfoSync().platform || "").toLowerCase();
   } catch (error) {
-    console.warn("读取运行平台失败，将使用 XR-Frame 页面", error);
+    console.warn("读取运行平台失败，将使用当前平台默认 AR 页面", error);
     return "";
   }
 }
@@ -18,9 +18,20 @@ function isHarmonyPlatform(platform) {
 
 function openArScene(sceneKey, xrFramePage) {
   var platform = getPlatform();
-  var url = isHarmonyPlatform(platform)
-    ? "/pages/ar-coar/index?scene=" + encodeURIComponent(sceneKey)
-    : xrFramePage;
+  var harmonyPages = { "ben-zun": "/pages/ar-native-track/index" };
+  var url = xrFramePage;
+
+  if (isHarmonyPlatform(platform)) {
+    url = harmonyPages[sceneKey];
+    if (!url) {
+      wx.showModal({
+        title: "鸿蒙适配中",
+        content: "当前仅“本尊”场景已完成自研 AR 适配，该场景仍在迁移中。",
+        showCancel: false
+      });
+      return;
+    }
+  }
 
   wx.navigateTo({
     url: url,

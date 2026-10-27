@@ -1,0 +1,29 @@
+const assert=require('node:assert/strict');
+const path=require('node:path');
+const modulePath=path.resolve(__dirname,'../utils/ar-navigation.js');
+let platform='android',navigations=[],modals=[],toasts=[];
+global.wx={
+  getDeviceInfo(){return {platform};},
+  navigateTo(options){navigations.push(options.url);},
+  showModal(options){modals.push(options);},
+  showToast(options){toasts.push(options);}
+};
+delete require.cache[modulePath];
+const navigation=require(modulePath);
+
+navigation.openArScene('ben-zun','/pages/ar/scene-ar-BenZun/index');
+assert.deepEqual(navigations,['/pages/ar/scene-ar-BenZun/index'],'Android/iOS retain XR-Frame route');
+
+platform='ohos';navigations=[];
+navigation.openArScene('ben-zun','/pages/ar/scene-ar-BenZun/index');
+assert.deepEqual(navigations,['/pages/ar-native-track/index'],'Harmony ben-zun uses the self-developed tracker');
+
+navigations=[];
+navigation.openArScene('chang-sheng','/pages/ar/scene-ar-oceanWorld/index');
+assert.equal(navigations.length,0,'unmigrated Harmony scene must not enter XR-Frame or a removed plugin');
+assert.equal(modals.length,1);assert.match(modals[0].content,/仅“本尊”.*自研 AR/);
+
+const app=require('../app.json');
+assert.equal(JSON.stringify(app).includes('plugin'),false,'project manifest must not declare third-party plugins');
+assert.equal(app.subpackages.some(item=>item.root==='pages/ar-coar'),false,'removed plugin package must not be registered');
+console.log('Platform routing and plugin removal checks passed.');

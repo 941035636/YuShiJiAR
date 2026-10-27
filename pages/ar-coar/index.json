@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "鸿蒙 AR 兼容测试",
-  "disableScroll": true,
-  "usingComponents": {
-    "coar-scene-component": "plugin://coar/coar-scene-component"
-  }
-}

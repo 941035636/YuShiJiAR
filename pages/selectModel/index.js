@@ -22,28 +22,6 @@ Page({
   selectNaFu: function () {
     arNavigation.openArScene("na-fu", "/pages/ar/scene-ar-NaFu/index");
   },
-  openCoarPoc: function () {
-    wx.navigateTo({
-      url: "/pages/ar-coar/index?scene=ben-zun",
-      fail: function (error) {
-        console.error("打开共创 AR 测试页失败", error);
-        wx.showToast({ title: "共创 AR 测试页打开失败", icon: "none" });
-      }
-    });
-  },
-  openCoarWebAr: function () {
-    wx.navigateTo({
-      url: "/pages/ar-coar/index?scene=ben-zun&mode=webar",
-      fail: function (error) {
-        console.error("打开共创 AR WebAR 兼容测试失败", error);
-        wx.showModal({
-          title: "WebAR 兼容测试打开失败",
-          content: error.errMsg || "请确认共创 AR 插件已添加且版本已通过。",
-          showCancel: false
-        });
-      }
-    });
-  },
   openSelfHostedAr: function () {
     wx.navigateTo({ url: "/pages/ar-self-hosted/index", fail: function () {
       wx.showToast({ title: "验证页面打开失败", icon: "none" });
@@ -59,7 +37,7 @@ Page({
       wx.showToast({ title: "图片追踪页面打开失败", icon: "none" });
     } });
   },
-  data: { pageList: {}, showCoarPoc: false, showSelfHostedPoc: false, showNativePoc: false },
+  data: { pageList: {}, showSelfHostedPoc: false, showNativePoc: false },
   onLoad: function () {
     var platform = arNavigation.getPlatform();
     var envVersion = "release";
@@ -72,8 +50,7 @@ Page({
 
     this.setData({
       showSelfHostedPoc: envVersion !== "release" && /^https:\/\//i.test(String(selfHostedConfig.baseUrl || "").trim()),
-      showNativePoc: envVersion !== "release",
-      showCoarPoc: arNavigation.isHarmonyPlatform(platform) || envVersion !== "release"
+      showNativePoc: arNavigation.isHarmonyPlatform(platform) || envVersion !== "release"
     });
   },
   onReady: function () {},
