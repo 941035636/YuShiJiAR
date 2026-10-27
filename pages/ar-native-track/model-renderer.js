@@ -18,6 +18,7 @@ function ModelRenderer(canvas,gl,onState){
   this.canvas=canvas;this.gl=gl;this.onState=onState;this.parts=[];this.files={};
   this.enabled=true;this.ready=false;this.fov=config.fov;this.scale=1;this.offsetY=0;
   this.effectsEnabled=true;this.effectGroups=[];this.effectTasks=[];this.clock=new animation.Clock();
+  this.identityMatrix=glb.identity();this.identityNormal=new Float32Array([1,0,0,0,1,0,0,0,1]);this.rotationNormal=new Float32Array(9);this.drawList=[];
   this.stamp=Date.now()+"-"+Math.floor(Math.random()*1000000);
 }
 ModelRenderer.prototype.state=function(text,failed){if(!this.disposed)this.onState(text,!!failed);};
@@ -151,11 +152,12 @@ ModelRenderer.prototype.draw=function(corners,width,height,aspect){
   var gl=this.gl,u=this.uniforms,a=this.attributes,m=transform.view;
   gl.enable(gl.DEPTH_TEST);gl.depthMask(true);gl.depthFunc(gl.LEQUAL);gl.disable(gl.BLEND);gl.frontFace(gl.CCW);gl.cullFace(gl.BACK);
   gl.clear(gl.DEPTH_BUFFER_BIT);gl.useProgram(this.program);
-  gl.uniformMatrix4fv(u.mvp,false,transform.mvp);gl.uniformMatrix3fv(u.rotation,false,new Float32Array([m[0],m[1],m[2],m[4],m[5],m[6],m[8],m[9],m[10]]));
+  var rotation=this.rotationNormal;rotation[0]=m[0];rotation[1]=m[1];rotation[2]=m[2];rotation[3]=m[4];rotation[4]=m[5];rotation[5]=m[6];rotation[6]=m[8];rotation[7]=m[9];rotation[8]=m[10];
+  gl.uniformMatrix4fv(u.mvp,false,transform.mvp);gl.uniformMatrix3fv(u.rotation,false,rotation);
   gl.uniform1f(u.size,this.scale);gl.uniform1f(u.shiftY,this.offsetY);gl.uniform1i(u.colorMap,0);
-  var list=[];
+  var list=this.drawList;list.length=0;
   this.parts.forEach(function(part){
-    var local=part.group==="base"?glb.identity():worlds[part.group]&&worlds[part.group][part.node];if(!local)return;
+    var local=part.group==="base"?self.identityMatrix:worlds[part.group]&&worlds[part.group][part.node];if(!local)return;
     var c=part.center,z=0;
     for(var k=0;k<3;k++){var p=local[k]*c[0]+local[4+k]*c[1]+local[8+k]*c[2]+local[12+k];if(k===1)p+=self.offsetY/self.scale;z+=m[k*4+2]*p*self.scale;}
     list.push({part:part,local:local,depth:z+m[14]});
@@ -164,7 +166,7 @@ ModelRenderer.prototype.draw=function(corners,width,height,aspect){
   for(var i=0;i<list.length;i++){
     var part=list[i].part,local=list[i].local;
     gl.uniformMatrix4fv(u.local,false,local);
-    gl.uniformMatrix3fv(u.localNormal,false,new Float32Array(part.group==="base"?[1,0,0,0,1,0,0,0,1]:part.transparent?[1,0,0,0,1,0,0,0,1]:glb.normalMatrix(local)));
+    gl.uniformMatrix3fv(u.localNormal,false,part.group==="base"||part.transparent?this.identityNormal:glb.normalMatrix(local));
     gl.uniform1f(u.unlit,part.group==="base"?0:1);gl.uniform1f(u.transparent,part.transparent?1:0);gl.uniform2fv(u.repeatUV,part.wrap);
     if(part.transparent){gl.enable(gl.BLEND);gl.blendFuncSeparate(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);}else{gl.disable(gl.BLEND);gl.depthMask(true);}
     if(part.doubleSided)gl.disable(gl.CULL_FACE);else gl.enable(gl.CULL_FACE);

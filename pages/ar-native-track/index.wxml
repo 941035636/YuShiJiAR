@@ -16,11 +16,12 @@
   </view>
   <button type="primary" bindtap="start" disabled="{{running || !ready}}">开始图片追踪</button>
   <button bindtap="stop" disabled="{{!running}}">停止</button>
-  <camera wx:if="{{running}}" class="camera" device-position="back" frame-size="medium" flash="off" bindinitdone="onCameraReady" binderror="onCameraError" bindstop="onCameraStopped" />
+  <camera wx:if="{{running}}" class="camera" device-position="back" frame-size="small" flash="off" bindinitdone="onCameraReady" binderror="onCameraError" bindstop="onCameraStopped" />
   <view class="status">{{status}}</view>
   <view class="stats">{{modeName}} / 匹配 {{matches}} / 几何内点 {{inliers}} / 单次 {{elapsedMs}} ms</view>
   <view class="stats">实际预览 {{previewFps}} 帧/秒 / 定位处理 {{trackingFps}} 次/秒</view>
   <view class="stats">绘制 {{renderMs}} ms / 姿态拟合误差 {{poseError}} px</view>
+  <view class="stats">稳定策略：{{stabilityMode}}</view>
   <view wx:if="{{showModel && poseStatus}}" class="stats">{{poseStatus}}</view>
   <view class="note">实际取帧及定位结果：</view>
   <canvas id="frame-preview" type="webgl" style="width:100%;height:{{previewHeight}}px" />

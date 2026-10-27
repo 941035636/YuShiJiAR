@@ -107,7 +107,7 @@ SessionTracker.prototype.update = function (rgba, width, height, now) {
   now = typeof now === "number" ? now : Date.now();
   var begin=Date.now(), prepared=this.prepare(rgba,width,height), result;
   // Periodic descriptor verification limits accumulated drift; long gaps use recognition again.
-  if (this.state && now-this.state.at<=500 && now-this.state.detectedAt<2000) {
+  if (this.state && now-this.state.at<=500 && now-this.state.detectedAt<5000) {
     result=this.follow(width,height,prepared.trackRatio);
     if (result.found) {
       // Keep the descriptor-verified keyframe as the reference. Chaining each

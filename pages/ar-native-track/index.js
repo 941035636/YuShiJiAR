@@ -1,6 +1,6 @@
 "use strict";
 Page({
-  data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,modeName:"等待开始",previewFps:0,trackingFps:0,
+  data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
     showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"",
     showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音" },
   onLoad:function(){
@@ -8,9 +8,11 @@ Page({
     // Register the page first so dependency failures remain visible to the user.
     try{
       var Tracker=require("./session-tracker.js").SessionTracker;
+      var Stabilizer=require("./stabilizer.js").TrackingStabilizer;
       this.Preview=require("./preview.js").Preview;
       var target=require("./target.js");
       this.tracker=new Tracker(target);
+      this.stabilizer=new Stabilizer({holdMs:170});
     }catch(error){
       console.error("本尊图片追踪初始化失败",error);
       this.setData({ready:false,status:"追踪初始化失败："+error.message});
@@ -68,7 +70,8 @@ Page({
     if(!this.preview)return;
     this.stop();this.generation++;this.nextFrameAt=0;this.nextPreviewAt=0;this.nextStatsAt=0;
     this.metricAt=Date.now();this.previewCount=0;this.trackingCount=0;this.lastResult=null;
-    this.setData({running:true,status:"等待相机初始化",matches:0,inliers:0,elapsedMs:0,modeName:"首次识别",previewFps:0,trackingFps:0});
+    if(this.stabilizer)this.stabilizer.reset();
+    this.setData({running:true,status:"等待相机初始化",matches:0,inliers:0,elapsedMs:0,modeName:"首次识别",previewFps:0,trackingFps:0,stabilityMode:"等待定位"});
   },
   onCameraReady:function(){
     if(!this.data.running||this.listener)return;
@@ -82,20 +85,23 @@ Page({
         var frameAt=Date.now();
         if(frameAt<self.nextFrameAt&&frameAt<self.nextPreviewAt)return;
         try{
-          var rgba=new Uint8Array(frame.data),result,changed=false;
+          var rgba=new Uint8Array(frame.data),result,rawResult,changed=false;
           if(frameAt>=self.nextFrameAt){
-            result=self.tracker.update(rgba,frame.width,frame.height,frameAt);
+            rawResult=self.tracker.update(rgba,frame.width,frame.height,frameAt);
+            result=self.stabilizer?self.stabilizer.update(rawResult,frameAt):rawResult;
             changed=!self.lastResult||self.lastResult.found!==result.found||self.lastResult.mode!==result.mode;
             self.lastResult=result;self.resultAt=frameAt;self.trackingCount++;
-            // Schedule from frame arrival, rather than adding a pause after computation.
-            self.nextFrameAt=frameAt+(result.found||result.mode==="track"?80:400);
+            // Back pressure follows the actual cost. Stable tracking stays responsive,
+            // while descriptor search cannot monopolize the logic thread.
+            var interval=rawResult.found||rawResult.mode==="track"?Math.max(66,rawResult.elapsedMs*1.08):Math.max(280,rawResult.elapsedMs*1.45);
+            self.nextFrameAt=frameAt+interval;
           }
           if(result||frameAt>=self.nextPreviewAt){
-            // A recent estimate can bridge a skipped tracking frame, but never freeze indefinitely.
-            var corners=self.lastResult&&frameAt-self.resultAt<=160?self.lastResult.corners:[];
+            // The stabilizer bridges one noisy/missing result, but never freezes indefinitely.
+            var corners=self.lastResult&&frameAt-self.resultAt<=220?self.lastResult.corners:[];
             var drawAt=Date.now();self.preview.draw(rgba,frame.width,frame.height,corners);self.renderMs=Date.now()-drawAt;
             if(self.audio)self.audio.setTracked(!!self.preview.sceneVisible);
-            self.nextPreviewAt=Date.now()+50;self.previewCount++;
+            self.nextPreviewAt=frameAt+Math.max(40,self.renderMs*1.1);self.previewCount++;
           }
           var shape=frame.width+":"+frame.height;
           if(self.frameShape!==shape){self.frameShape=shape;self.setData({previewHeight:Math.round(self.previewWidth*frame.height/frame.width)});}
@@ -107,12 +113,13 @@ Page({
           }
           if(self.lastResult&&(changed||now>=self.nextStatsAt)){
             result=self.lastResult;
-            metrics.status=result.found?"本帧定位到本尊，请检查绿框是否贴合":"未定位，请正对卡片并调整距离";
+            metrics.status=result.held?"短时保持上一姿态，正在重新确认目标":result.found?"本帧定位到本尊，请检查绿框是否贴合":"未定位，请正对卡片并调整距离";
             metrics.modeName=result.mode==="track"?"连续追踪":"完整识别";
+            metrics.stabilityMode=result.stabilityMode||"原始定位";
             metrics.matches=result.matches;metrics.inliers=result.inliers;metrics.elapsedMs=result.elapsedMs;
             metrics.renderMs=self.renderMs;metrics.poseError=typeof self.preview.poseError==="number"?self.preview.poseError:"—";
             metrics.poseStatus=self.preview.poseStatus||"";
-            self.setData(metrics);self.nextStatsAt=now+500;
+            self.setData(metrics);self.nextStatsAt=now+750;
           }else if(typeof metrics.previewFps==="number"){self.setData(metrics);}
         }catch(error){self.stop();self.setData({status:"处理失败："+error.message});}
       });
@@ -123,7 +130,7 @@ Page({
   stop:function(){
     this.generation++;
     if(this.listener){try{this.listener.stop();}catch(_){}this.listener=null;}
-    if(this.tracker)this.tracker.reset();this.lastResult=null;
+    if(this.tracker)this.tracker.reset();if(this.stabilizer)this.stabilizer.reset();this.lastResult=null;
     if(this.audio)this.audio.reset();
     if(this.preview&&this.preview.model)this.preview.model.resetTimeline();
     this.setData({running:false,status:"追踪已停止"});

@@ -32,7 +32,7 @@ const initial=[.65,0,65,0,.65,70,0,0,1];
 check('initial',initial,'detect');
 for(let i=1;i<=35;i++) {
   const a=i*.004,s=.65+i*.0004;
-  check('motion-'+i,[s*Math.cos(a),-s*Math.sin(a),65+i*.7,s*Math.sin(a),s*Math.cos(a),70-i*.3,i*.000002,i*.000001,1],i===25?'detect':'track',i>=12?8:0);
+  check('motion-'+i,[s*Math.cos(a),-s*Math.sin(a),65+i*.7,s*Math.sin(a),s*Math.cos(a),70-i*.3,i*.000002,i*.000001,1],'track',i>=12?8:0);
 }
 const blank=rgba(new Uint8Array(width*height).fill(180));
 assert.equal(tracker.update(blank,width,height,now).found,false,'remove target must not freeze last outline');now+=80;

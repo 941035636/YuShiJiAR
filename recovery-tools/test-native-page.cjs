@@ -89,15 +89,15 @@ const frame={data:new ArrayBuffer(48*48*4),width:48,height:48};
 callback(frame);
 assert.equal(calls,1);
 for(const tick of [100,200,300]){time=tick;callback(frame);}
-assert.equal(calls,1,'search must stay throttled');
+assert.equal(calls,2,'descriptor search must be throttled while preview continues');
 assert.equal(draws.length,4,'preview must continue between searches');
-time=400;callback(frame);assert.equal(calls,2);assert.equal(draws.at(-1),4);
-time=500;callback(frame);assert.equal(calls,3,'schedule must be relative to frame start');
-assert.equal(draws.at(-1),0,'failed tracking must clear old outline immediately');
+time=400;callback(frame);assert.equal(calls,3);assert.equal(draws.at(-1),4,'one failed tracking frame is held to suppress flicker');
+time=500;callback(frame);assert.equal(calls,4,'schedule must be relative to frame start');
+assert.equal(draws.at(-1),0,'continued loss must clear the old outline after the grace period');
 const oldCallback=callback;
-scheduled.stop();assert(resets>=2);time=600;oldCallback(frame);assert.equal(calls,3);
-scheduled.start();scheduled.onCameraReady();oldCallback(frame);assert.equal(calls,3,'old session callback must be ignored');
-callback(frame);assert.equal(calls,4);
+scheduled.stop();assert(resets>=2);time=600;oldCallback(frame);assert.equal(calls,4);
+scheduled.start();scheduled.onCameraReady();oldCallback(frame);assert.equal(calls,4,'old session callback must be ignored');
+callback(frame);assert.equal(calls,5);
 scheduled.onHide();assert.equal(scheduled.data.running,false);
 // Successful audio is gated by the actual 3D preview visibility, including toggles and hide.
 let audioTime=0,audioCallback,visible=true;
@@ -111,8 +111,10 @@ withAudio.preview={model:{resetTimeline(){}},draw(bytes,w,h,corners){this.sceneV
 withAudio.previewWidth=300;withAudio.tracker={reset(){},update(){return {found:visible,mode:'track',corners:visible?[{},{},{},{}]:[],matches:20,inliers:16,elapsedMs:10};}};
 withAudio.start();withAudio.onCameraReady();audioCallback(frame);assert.equal(audioContexts[1].plays,1);
 audioTime=100;audioCallback(frame);assert.equal(audioContexts[1].plays,1);
-visible=false;audioTime=200;audioCallback(frame);assert(audioContexts[1].pauses>0);
-withAudio.toggleSound();visible=true;audioTime=500;audioCallback(frame);assert.equal(audioContexts[1].plays,1,'muted on reacquisition');
+visible=false;audioTime=200;audioCallback(frame);
+assert.equal(withAudio.audio.tracked,true,'a single noisy frame must not interrupt audio');
+audioTime=400;audioCallback(frame);assert(audioContexts[1].pauses>0,'sustained loss must pause audio');
+withAudio.toggleSound();visible=true;audioTime=700;audioCallback(frame);assert.equal(audioContexts[1].plays,1,'muted on reacquisition');
 withAudio.toggleSound();assert.equal(audioContexts[1].plays,2);withAudio.onHide();assert.equal(withAudio.audio.tracked,false);
 withAudio.onUnload();assert(audioContexts.every(c=>c.destroys===1));
 console.log('Native page registration, initialization recovery, independent preview cadence and session cleanup passed.');

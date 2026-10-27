@@ -10,11 +10,11 @@ assert.equal(reference.length,target.width*target.height*4);
 const gray=features.grayscale(reference,target.width,target.height),tracker=new Tracker(target);
 const width=480,height=640,results=[];
 function rgba(data){const result=new Uint8Array(data.length*4);for(let i=0;i<data.length;i++){result[i*4]=result[i*4+1]=result[i*4+2]=data[i];result[i*4+3]=255;}return result;}
-function test(name,h){
+function test(name,h,frameWidth=width,frameHeight=height){
  const transform=new cv.matrix_t(3,3,cv.F32C1_t);transform.data.set(h);
  const inverse=new cv.matrix_t(3,3,cv.F32C1_t);cv.matmath.invert_3x3(transform,inverse);
- const warped=new cv.matrix_t(width,height,cv.U8C1_t);cv.imgproc.warp_perspective(gray,warped,inverse,180);
- const result=tracker.detect(rgba(warped.data.subarray(0,width*height)),width,height);
+ const warped=new cv.matrix_t(frameWidth,frameHeight,cv.U8C1_t);cv.imgproc.warp_perspective(gray,warped,inverse,180);
+ const result=tracker.detect(rgba(warped.data.subarray(0,frameWidth*frameHeight)),frameWidth,frameHeight);
  const expected=[[0,0],[target.width,0],[target.width,target.height],[0,target.height]].map(p=>project(h,...p));
  assert(result.found,`${name}: target not detected (${result.matches}/${result.inliers})`);
  const maxError=Math.max(...result.corners.map((q,i)=>Math.hypot(q.x-expected[i].x,q.y-expected[i].y)));
@@ -27,6 +27,8 @@ const a=Math.PI/12,s=.6;
 test('rotation-15-degrees',[s*Math.cos(a),-s*Math.sin(a),160,s*Math.sin(a),s*Math.cos(a),40,0,0,1]);
 test('perspective',[.73,.08,50,.04,.71,45,.00025,.00012,1]);
 test('rotation-90-degrees',[0,-.55,420,.55,0,120,0,0,1]);
+test('small-frame',[.32,0,32,0,.32,35,0,0,1],240,320);
+test('small-frame-perspective',[.35,.03,22,.02,.34,24,.0003,.00015,1],240,320);
 const blank=new Uint8Array(width*height).fill(180);
 assert.equal(tracker.detect(rgba(blank),width,height).found,false,'blank false positive');
 let seed=12345;const noise=new Uint8Array(width*height);for(let i=0;i<noise.length;i++){seed=(Math.imul(seed,1664525)+1013904223)|0;noise[i]=seed>>>24;}

@@ -1,7 +1,7 @@
 "use strict";
 var sources=require("./effects-config.js").audio;
 function AudioController(onState){
-  this.onState=onState;this.enabled=true;this.tracked=false;this.ended=false;this.contexts={};this.playing={};this.failed={};
+  this.onState=onState;this.enabled=true;this.tracked=false;this.ended=false;this.contexts={};this.playing={};this.failed={};this.lastTrackedAt=0;
   var self=this;
   try{["ambient","narration"].forEach(function(name){
     var context=wx.createInnerAudioContext();self.contexts[name]=context;
@@ -30,9 +30,18 @@ AudioController.prototype.sync=function(){
 };
 AudioController.prototype.setTracked=function(value){
   if(this.disposed)return;
-  if(this.watchdog)clearTimeout(this.watchdog);this.watchdog=null;
   value=!!value;
-  if(value){var self=this;this.watchdog=setTimeout(function(){self.watchdog=null;self.setTracked(false);},500);}
+  if(value){
+    this.lastTrackedAt=Date.now();
+    if(!this.watchdog){var self=this;this.watchdog=setTimeout(function check(){
+      if(self.disposed){self.watchdog=null;return;}
+      var remaining=500-(Date.now()-self.lastTrackedAt);
+      if(remaining>0){self.watchdog=setTimeout(check,remaining);return;}
+      self.watchdog=null;self.setTracked(false);
+    },500);}
+  }else{
+    this.lastTrackedAt=0;if(this.watchdog)clearTimeout(this.watchdog);this.watchdog=null;
+  }
   if(this.tracked===value)return;this.tracked=value;this.sync();
   if(!value&&!this.disposed)this.onState(this.enabled?"识别中断，声音已暂停":"声音已关闭");
 };
@@ -47,7 +56,7 @@ AudioController.prototype.replay=function(){
 };
 AudioController.prototype.reset=function(){
   if(this.watchdog)clearTimeout(this.watchdog);this.watchdog=null;
-  this.tracked=false;this.ended=false;this.failed={};this.playing={};
+  this.lastTrackedAt=0;this.tracked=false;this.ended=false;this.failed={};this.playing={};
   var self=this;Object.keys(this.contexts).forEach(function(name){try{self.contexts[name].stop();}catch(_){}});
   if(!this.disposed)this.onState(this.enabled?"声音已开启，识别后播放":"声音已关闭");
 };

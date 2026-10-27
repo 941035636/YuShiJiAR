@@ -75,13 +75,15 @@ Tracker.prototype.detect = function (rgba, width, height, prepared) {
     var resized = new cv.matrix_t(Math.round(width*ratio), Math.round(height*ratio), cv.U8C1_t);
     cv.imgproc.resample(gray, resized, resized.cols, resized.rows); gray = resized;
   }
-  var query = features.extract(gray, 420, this.scratch), words = query.descriptors.buffer.i32, pattern = this.pattern;
+  var query = features.extract(gray, 320, this.scratch), words = query.descriptors.buffer.i32, pattern = this.pattern;
   var candidates = [], points = this.target.points;
   for (var i = 0; i < query.points.length; i++) {
     var best = 257, second = 257, index = -1;
     for (var j = 0; j < points.length; j++) {
-      var distance = 0;
-      for (var k = 0; k < 8; k++) distance += popcount(words[i*8+k] ^ pattern[j*8+k]);
+      var q=i*8,p=j*8;
+      var distance=popcount(words[q]^pattern[p])+popcount(words[q+1]^pattern[p+1])+popcount(words[q+2]^pattern[p+2])+popcount(words[q+3]^pattern[p+3]);
+      if(distance>=second)continue;
+      distance+=popcount(words[q+4]^pattern[p+4])+popcount(words[q+5]^pattern[p+5])+popcount(words[q+6]^pattern[p+6])+popcount(words[q+7]^pattern[p+7]);
       if (distance < best) { second = best; best = distance; index = j; }
       else if (distance < second) second = distance;
     }

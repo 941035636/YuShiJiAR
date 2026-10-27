@@ -1,6 +1,7 @@
 "use strict";
 // Marker axes: x right, y down, z away from camera. All distances use card height=1.
 var cv = require("./vendor/jsfeat.js");
+var homographyKernel=new cv.motion_model.homography2d(),homographyModel=new cv.matrix_t(3,3,cv.F32C1_t);
 function length(v) { return Math.sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]); }
 function dot(a,b) { return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]; }
 function unit(v) { var n=length(v);return v.map(function(x){return x/n;}); }
@@ -14,9 +15,8 @@ function solve(corners,width,height,aspect,fov) {
   if(!corners||corners.length!==4||!(width>0&&height>0&&aspect>0&&fov>=30&&fov<=90))return null;
   var source=[{x:-aspect/2,y:-0.5},{x:aspect/2,y:-0.5},{x:aspect/2,y:0.5},{x:-aspect/2,y:0.5}];
   if(corners.some(function(p){return !isFinite(p.x)||!isFinite(p.y);}))return null;
-  var kernel=new cv.motion_model.homography2d(),model=new cv.matrix_t(3,3,cv.F32C1_t);
-  if(!kernel.check_subset(source,corners,4)||!kernel.run(source,corners,model,4))return null;
-  var h=model.data,f=height/(2*Math.tan(fov*Math.PI/360)),cx=width/2,cy=height/2;
+  if(!homographyKernel.check_subset(source,corners,4)||!homographyKernel.run(source,corners,homographyModel,4))return null;
+  var h=homographyModel.data,f=height/(2*Math.tan(fov*Math.PI/360)),cx=width/2,cy=height/2;
   var a=[(h[0]-cx*h[6])/f,(h[3]-cy*h[6])/f,h[6]];
   var b=[(h[1]-cx*h[7])/f,(h[4]-cy*h[7])/f,h[7]];
   var t=[(h[2]-cx*h[8])/f,(h[5]-cy*h[8])/f,h[8]];
