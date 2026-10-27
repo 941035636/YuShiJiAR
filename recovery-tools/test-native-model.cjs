@@ -35,6 +35,28 @@ assert.throws(()=>parse(replaceJson(j=>j.extensionsRequired=['KHR_draco_mesh_com
 assert.throws(()=>parse(replaceJson(j=>j.buffers[0].uri='https://unexpected.invalid/model.bin'),config),/外部/);
 assert.throws(()=>parse(replaceJson(j=>j.accessors[1].count=900000),config),/越界/);
 
+// Both real assets must retain their own texture set, tangent basis and plaque geometry.
+const goldBytes=fs.readFileSync('recovery-assets/models/Model/GoldModel/taishanshigandang.glb');
+const gold=parse(goldBytes.buffer.slice(goldBytes.byteOffset,goldBytes.byteOffset+goldBytes.byteLength),config);
+assert.equal(gold.primitives.length,4,'reference asset has no additional jade plaque mesh');
+for(const [asset,expectedImages] of [[gold,12],[model,15]]){
+  const images=new Set();
+  for(const p of asset.primitives){
+    assert(p.normalImage&&p.materialImage&&p.occlusionImage,'normal, metallic/roughness and AO maps');
+    assert.equal(p.materialImage,p.occlusionImage,'shared ORM bytes must be cached');
+    assert.equal(p.metallic,1);assert.equal(p.roughness,1);assert.equal(p.occlusionStrength,1);
+    for(const image of [p.image,p.normalImage,p.materialImage,p.occlusionImage])images.add(image.index);
+    assert.equal(p.tangents.length,p.vertices.length/8*4);
+    for(let i=0;i<p.tangents.length;i+=4){
+      const v=i/4*8,n=Array.from(p.vertices.subarray(v+3,v+6)),t=Array.from(p.tangents.subarray(i,i+3));
+      assert(t.every(Number.isFinite));assert(Math.hypot(...t)>.1);assert.equal(Math.abs(p.tangents[i+3]),1);
+      const cosine=Math.abs(n.reduce((sum,x,k)=>sum+x*t[k],0))/(Math.hypot(...n)*Math.hypot(...t));
+      assert(cosine<.002,'transformed normals and tangents remain orthogonal');
+    }
+  }
+  assert.equal(images.size,expectedImages);
+}
+
 const width=480,height=640,aspect=427/640,fov=50,f=height/(2*Math.tan(fov*Math.PI/360));
 const marker=[[-aspect/2,-.5,0],[aspect/2,-.5,0],[aspect/2,.5,0],[-aspect/2,.5,0]];
 let maxPoseError=0;

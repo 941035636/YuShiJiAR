@@ -39,6 +39,33 @@ const page = boot();
 assert(page.tracker, 'local feature data and tracker must initialize');
 assert.equal(page.tracker.target.width, 427);
 assert.equal(page.tracker.target.points.length, 602);
+// Display transforms must preserve camera/model aspect together, and keep one live canvas.
+const visual=require('../pages/ar-native-track/visual-settings.js');
+for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]){
+  const full=visual.layout(fw,fh,w,h,false),debug=visual.layout(fw,fh,w,h,true);
+  assert(full.canvasWidth>=w&&full.canvasHeight>=h);
+  assert(Math.abs(full.canvasWidth/full.canvasHeight-fw/fh)<1e-10,'cover keeps the input aspect');
+  assert(Math.abs(full.canvasLeft+full.canvasWidth/2-w/2)<1e-10);
+  assert(Math.abs(full.canvasTop+full.canvasHeight/2-h/2)<1e-10);
+  assert.equal(debug.canvasWidth,w);assert(Math.abs(debug.canvasTop)<=.5,'debug shows the complete frame');
+}
+const invalid=visual.sanitize({variantKey:'invalid',modelScale:500,modelOffset:-200,fov:'NaN',exposure:100,effectExposure:-1,renderMode:'other'});
+assert.equal(invalid.variantKey,'reference');assert.equal(invalid.modelScale,150);assert.equal(invalid.modelOffset,-25);
+assert.equal(invalid.fov,50);assert.equal(invalid.exposure,2);assert.equal(invalid.effectExposure,.5);assert.equal(invalid.renderMode,'pbr');
+let persisted,loads=0,resetsVisual=0;
+const calibrated=boot(null,{getWindowInfo(){return {windowWidth:390,windowHeight:700};},
+  getStorageSync(){return {variantKey:'jade',modelScale:110,renderMode:'simple'};},
+  setStorageSync(key,value){persisted={key,value};}});
+assert.equal(calibrated.data.variantKey,'jade');assert.equal(calibrated.data.modelScale,110);
+calibrated.preview={showOutline:false,model:{resetTimeline(){resetsVisual++;}},dispose(){}};const livePreview=calibrated.preview;
+calibrated.loadModel=()=>loads++;
+calibrated.toggleDebug();assert.equal(calibrated.preview,livePreview);assert.equal(livePreview.showOutline,true);
+calibrated.toggleMaterial();assert.equal(livePreview.model.materialMode,1);assert.equal(loads,0,'material A/B must not download/restart the scene');
+calibrated.setExposure({detail:{value:150}});assert.equal(livePreview.model.exposure,1.5);
+assert.equal(persisted.key,visual.storageKey);assert.equal(persisted.value.exposure,1.5);
+calibrated.selectVariant({currentTarget:{dataset:{variant:'reference'}}});assert.equal(loads,1);assert(resetsVisual>0);assert.equal(calibrated.data.running,false);
+calibrated.resetVisualSettings();assert.equal(loads,2);assert.equal(calibrated.data.modelScale,100);assert.equal(calibrated.data.variantKey,'reference');
+calibrated.onUnload();
 for (const dependency of ['target.js', 'tracker.js', 'session-tracker.js', 'preview.js']) {
   const failed = boot(dependency);
   assert.equal(failed.data.ready, false);
@@ -84,7 +111,8 @@ diagnosticPage.Preview=function(){this.canvas={};this.gl={};this.dispose=functio
 diagnosticPage.onReady();diagnosticPage.copyLoadDiagnostics();
 assert.equal(copied.appId,'wx91ce9cdf4d69aa4d');assert.equal(copied.envVersion,'trial');
 assert.equal(copied.stage,'下载模型');assert.equal(copied.download.httpStatus,null);
-assert.match(copied.status,/url not in domain list/);assert.match(copied.download.url,/taishanshigandang_yu\.glb$/);
+assert.match(copied.status,/url not in domain list/);assert.match(copied.download.url,/GoldModel\/taishanshigandang\.glb$/);
+assert.equal(copied.visual.variantKey,'reference');assert.equal(copied.visual.renderMode,'pbr');
 assert.match(diagnosticPage.data.diagnosticNotice,/已复制/);diagnosticPage.onUnload();
 
 // Search is intentionally less frequent than preview; tracking has no post-compute pause.

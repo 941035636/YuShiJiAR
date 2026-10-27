@@ -1,42 +1,57 @@
-<view class="page">
-  <view class="title">本尊墨玉原生 3D 验证</view>
-  <view class="stats"><text selectable="true">运行 AppID：{{runtimeAppId}} / {{runtimeEnv}}</text></view>
-  <view class="stats">加载诊断版本：{{diagnosticsRevision}}</view>
-  <view class="note">对准 tssgd.jpg，下方显示墨玉模型、盾、山、法阵和文字。主模型约 8.7 MB，特效约 2.7 MB；首次加载请等待。识别后播放讲解与环境音，移开后暂停，重新识别后继续。</view>
-  <view class="status">{{modelStatus}}</view>
-  <view class="stats">加载阶段：{{modelStage}}</view>
-  <button wx:if="{{modelFailed}}" bindtap="loadModel">重试加载模型</button>
-  <button wx:if="{{modelFailed}}" size="mini" bindtap="copyLoadDiagnostics">复制加载诊断</button>
-  <view wx:if="{{diagnosticNotice}}" class="note">{{diagnosticNotice}}</view>
-  <view class="note">{{effectsStatus}}</view>
-  <button wx:if="{{effectsFailed}}" bindtap="loadEffects">重试加载特效</button>
-  <view class="controls">
-    <button size="mini" bindtap="toggleModel">{{showModel ? '切换为仅绿框' : '显示墨玉模型'}}</button>
-    <button size="mini" bindtap="toggleEffects">{{showEffects ? '关闭特效' : '开启特效'}}</button>
+<view class="page {{debug ? 'page--debug' : ''}}">
+  <view class="stage" style="height:{{stageHeight}}px">
+    <camera wx:if="{{running}}" class="camera-source {{debug ? 'camera-source--debug' : ''}}" device-position="back" frame-size="medium" flash="off" bindinitdone="onCameraReady" binderror="onCameraError" bindstop="onCameraStopped" />
+    <canvas id="frame-preview" type="webgl" class="ar-canvas" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;left:{{canvasLeft}}px;top:{{canvasTop}}px" />
+    <cover-image wx:if="{{!debug}}" class="frame-overlay" src="/images/bk.png" />
+    <cover-view class="hud">
+      <cover-view class="hud-title">本尊 · 遇石记 AR</cover-view>
+      <cover-view class="hud-status">{{modelFailed ? modelStatus : !running ? modelStatus : sceneVisible ? '已识别本尊' : '请将摄像头对准识别图'}}</cover-view>
+      <cover-view class="hud-status" wx:if="{{!running}}">{{status}}</cover-view>
+      <cover-view wx:if="{{modelFailed}}" class="hud-retry" bindtap="loadModel">重试加载模型</cover-view>
+    </cover-view>
+    <cover-view class="toolbar">
+      <cover-view class="toolbar-button toolbar-primary" bindtap="toggleRunning">{{running ? '暂停体验' : ready ? '开始体验' : '准备中'}}</cover-view>
+      <cover-view class="toolbar-button" bindtap="toggleSound">{{soundEnabled ? '关闭声音' : '开启声音'}}</cover-view>
+      <cover-view class="toolbar-button" bindtap="toggleDebug">{{debug ? '返回体验' : '调试设置'}}</cover-view>
+    </cover-view>
   </view>
-  <view class="note">{{audioStatus}}</view>
-  <view class="controls">
-    <button size="mini" bindtap="toggleSound">{{soundEnabled ? '关闭声音' : '开启声音'}}</button>
-    <button size="mini" bindtap="replayNarration">重新播放讲解</button>
+  <view wx:if="{{debug}}" class="debug-panel">
+    <view class="title">画面校准与性能对比</view>
+    <view class="stats"><text selectable="true">运行 AppID：{{runtimeAppId}} / {{runtimeEnv}}</text></view>
+    <view class="stats">诊断版本：{{diagnosticsRevision}} / {{variantLabel}}</view>
+    <view class="note">{{modelStatus}} · {{modelStage}}</view>
+    <button size="mini" bindtap="copyLoadDiagnostics">复制诊断与校准</button>
+    <view wx:if="{{diagnosticNotice}}" class="note">{{diagnosticNotice}}</view>
+    <view class="controls">
+      <button size="mini" class="{{variantKey === 'reference' ? 'selected' : ''}}" data-variant="reference" bindtap="selectVariant">原版对照素材</button>
+      <button size="mini" class="{{variantKey === 'jade' ? 'selected' : ''}}" data-variant="jade" bindtap="selectVariant">墨玉素材</button>
+    </view>
+    <view class="note">原版识别回调存在对照素材切换逻辑。切换后需重新加载；确定最终业务版本后再固定默认项。</view>
+    <view class="controls">
+      <button size="mini" bindtap="toggleMaterial">{{renderMode === 'pbr' ? '切换简化材质' : '切换增强材质'}}</button>
+      <button size="mini" bindtap="toggleModel">{{showModel ? '切换仅绿框' : '显示模型'}}</button>
+    </view>
+    <view class="stats">材质：{{renderMode === 'pbr' && pbrAvailable ? '增强（法线 / 金属 / 粗糙度）' : '兼容简化'}}</view>
+    <view class="note">{{effectsStatus}}</view>
+    <button wx:if="{{effectsFailed}}" size="mini" bindtap="loadEffects">重试加载特效</button>
+    <view class="controls">
+      <button size="mini" bindtap="toggleEffects">{{showEffects ? '关闭特效' : '开启特效'}}</button>
+      <button size="mini" bindtap="replayNarration">重新播放讲解</button>
+    </view>
+    <view class="note">{{audioStatus}}</view>
+    <view class="status">{{status}}</view>
+    <view class="stats">{{modeName}} / 匹配 {{matches}} / 内点 {{inliers}} / 计算 {{elapsedMs}} ms</view>
+    <view class="stats">取帧 {{frameSize}} / 预览 {{previewFps}} 帧/秒 / 定位 {{trackingFps}} 次/秒</view>
+    <view class="stats">绘制 {{renderMs}} ms / 姿态拟合误差 {{poseError}} px</view>
+    <view class="stats">稳定策略：{{stabilityMode}} / {{poseStatus}}</view>
+    <view class="calibration">
+      <view>模型大小 {{modelScale}}%</view><slider min="50" max="150" value="{{modelScale}}" bindchange="setModelScale" />
+      <view>上下位置 {{modelOffset}}（负数向上）</view><slider min="-25" max="25" value="{{modelOffset}}" bindchange="setModelOffset" />
+      <view>相机视角 {{fov}}°</view><slider min="30" max="80" value="{{fov}}" bindchange="setFov" />
+      <view>主体曝光 {{exposurePercent}}%</view><slider min="50" max="200" value="{{exposurePercent}}" bindchange="setExposure" />
+      <view>特效亮度 {{effectPercent}}%</view><slider min="50" max="300" value="{{effectPercent}}" bindchange="setEffectExposure" />
+      <button size="mini" bindtap="resetVisualSettings">恢复默认校准</button>
+    </view>
+    <view class="note">校准保存在本机。相机与模型统一等比裁切，不拉伸画面。调试模式显示原始相机小窗与识别框。画面只在本机处理，不保存、不上传。</view>
   </view>
-  <button type="primary" bindtap="start" disabled="{{running || !ready}}">开始图片追踪</button>
-  <button bindtap="stop" disabled="{{!running}}">停止</button>
-  <camera wx:if="{{running}}" class="camera" device-position="back" frame-size="medium" flash="off" bindinitdone="onCameraReady" binderror="onCameraError" bindstop="onCameraStopped" />
-  <view class="status">{{status}}</view>
-  <view class="stats">{{modeName}} / 匹配 {{matches}} / 几何内点 {{inliers}} / 单次 {{elapsedMs}} ms</view>
-  <view class="stats">取帧 {{frameSize}} / 实际预览 {{previewFps}} 帧/秒 / 定位处理 {{trackingFps}} 次/秒</view>
-  <view class="stats">绘制 {{renderMs}} ms / 姿态拟合误差 {{poseError}} px</view>
-  <view class="stats">稳定策略：{{stabilityMode}}</view>
-  <view wx:if="{{showModel && poseStatus}}" class="stats">{{poseStatus}}</view>
-  <view class="note">实际取帧及定位结果：</view>
-  <canvas id="frame-preview" type="webgl" style="width:100%;height:{{previewHeight}}px" />
-  <view wx:if="{{showModel}}" class="calibration">
-    <view>模型大小 {{modelScale}}%</view>
-    <slider min="50" max="150" value="{{modelScale}}" bindchange="setModelScale" />
-    <view>上下位置 {{modelOffset}}（负数向上）</view>
-    <slider min="-25" max="25" value="{{modelOffset}}" bindchange="setModelOffset" />
-    <view>相机视角校准 {{fov}}°</view>
-    <slider min="30" max="80" value="{{fov}}" bindchange="setFov" />
-  </view>
-  <view class="note">请测试正面、倾斜、移出后再移入，并切换“仅绿框”比较流畅度。相机视角为估算值，贴合不准时可调整上面的校准项。画面只在本机处理，不上传、不保存。</view>
 </view>

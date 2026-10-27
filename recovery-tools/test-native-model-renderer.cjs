@@ -8,14 +8,15 @@ const input=fs.readFileSync('recovery-assets/models/Model/taishanshigandang_yu.g
 const buffer=input.buffer.slice(input.byteOffset,input.byteOffset+input.byteLength);
 const source=parse(buffer,config);
 let sequence=0,draws=[],created=new Set(),deleted=new Set(),files=new Set(),unlinked=[],readCount=0,aborted=0,download;
-let depthWrite=false,blend=false,local=[];
+let depthWrite=false,blend=false,local=[],rejectPbr=false,shaderSources=new Map();
 function allocate(){const id=++sequence;created.add(id);return id;}
 const gl=new Proxy({
   createBuffer:allocate,createTexture:allocate,createProgram:allocate,createShader:allocate,
   deleteBuffer(id){deleted.add(id);},deleteTexture(id){deleted.add(id);},deleteProgram(id){deleted.add(id);},deleteShader(id){deleted.add(id);},
-  getShaderParameter(){return true;},getProgramParameter(){return true;},getError(){return 'NO_ERROR';},
+  shaderSource(id,text){shaderSources.set(id,text);},getShaderInfoLog(){return 'simulated PBR compiler rejection';},
+  getShaderParameter(id){return !(rejectPbr&&shaderSources.get(id)?.includes('directLight'));},getProgramParameter(){return true;},getError(){return 'NO_ERROR';},
   getParameter(name){return name==='MAX_TEXTURE_SIZE'?4096:16;},
-  getAttribLocation(program,name){return {p:0,position:0,normal:1,uv:2}[name];},getUniformLocation(program,name){return name;},
+  getAttribLocation(program,name){return {p:0,position:0,normal:1,uv:2,tangent:3}[name]??-1;},getUniformLocation(program,name){return name;},
   depthMask(value){depthWrite=value;},enable(name){if(name==='BLEND')blend=true;},disable(name){if(name==='BLEND')blend=false;},
   uniformMatrix4fv(name,transpose,value){if(name==='local')local=Array.from(value);},
   drawElements(mode,count){draws.push({kind:'model',count,depthWrite,blend,local});},drawArrays(mode){draws.push({kind:mode});}
@@ -32,7 +33,9 @@ global.wx={env:{USER_DATA_PATH:'wxfile://test'},getFileSystemManager(){return fi
 async function main(){
   const states=[],model=new ModelRenderer(canvas,gl,(text,failed,detail)=>states.push({text,failed,detail}));
   await model.build(source);model.ready=true;
-  assert.equal(model.parts.length,5);assert.equal(files.size,0);assert.equal(unlinked.length,5);
+  assert.equal(model.parts.length,5);assert.equal(files.size,0);assert.equal(unlinked.length,15);
+  assert(model.pbrSupported);assert(model.parts.every(p=>p.tangent&&p.normalTexture&&p.materialTexture));
+  assert(model.parts.every(p=>p.materialTexture===p.occlusionTexture),'ORM shares the metallic/roughness and AO texture');
   assert.equal(model.draw([],480,640,427/640),null);assert.equal(draws.length,0);
   const f=640/(2*Math.tan(50*Math.PI/360)),aspect=427/640;
   const corners=[[-aspect/2,-.5],[aspect/2,-.5],[aspect/2,.5],[-aspect/2,.5]].map(p=>({x:240+f*p[0]/1.8,y:320+f*p[1]/1.8}));
@@ -65,6 +68,14 @@ async function main(){
   await model.loadEffects((text,failed)=>effectsStates.push({text,failed}));
   assert.equal(model.effectGroups.length,3);assert.equal(effectsStates.at(-1).failed,true);assert(model.ready,'effect failure must preserve body');
   preview.dispose();assert.equal(created.size,deleted.size,'all GPU resources released');
+
+  // Real compiler rejection must fall back without leaking the failed shader/program.
+  rejectPbr=true;const fallback=new ModelRenderer(canvas,gl,()=>{});const before=unlinked.length;
+  await fallback.build(source);fallback.ready=true;
+  assert.equal(fallback.pbrSupported,false);assert.match(fallback.shaderFallback,/compiler rejection/);
+  assert.equal(unlinked.length-before,5,'fallback uploads only the base color textures');
+  assert(fallback.draw(corners,480,640,aspect));fallback.dispose();rejectPbr=false;
+  assert.equal(created.size,deleted.size,'failed PBR resources and fallback resources must all be released');
 
   const cancelled=new ModelRenderer(canvas,gl,()=>{});cancelled.load();const oldDownload=download;
   cancelled.dispose();oldDownload.success({statusCode:200,tempFilePath:'old.glb'});

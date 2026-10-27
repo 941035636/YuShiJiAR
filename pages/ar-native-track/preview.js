@@ -13,6 +13,7 @@ function program(gl,vs,fs) {
 function Preview(canvas) {
   var gl=canvas.getContext("webgl",{depth:true,alpha:false});if(!gl)throw new Error("WebGL 不可用");
   this.canvas=canvas;this.gl=gl;
+  this.showOutline=true;
   this.imageProgram=program(gl,"attribute vec2 p;attribute vec2 uv;varying vec2 v;void main(){v=uv;gl_Position=vec4(p,0.,1.);}","precision mediump float;varying vec2 v;uniform sampler2D image;void main(){gl_FragColor=texture2D(image,v);}");
   this.lineProgram=program(gl,"attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);gl_PointSize=7.;}","precision mediump float;void main(){gl_FragColor=vec4(.1,1.,.25,1.);}");
   this.quad=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,this.quad);
@@ -46,7 +47,7 @@ Preview.prototype.draw=function(rgba,width,height,corners){
     // Model errors must not stop the verified camera/outline path.
     gl.disable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);gl.disable(gl.BLEND);gl.depthMask(false);
   }
-  if(corners.length===4){
+  if(this.showOutline&&corners.length===4){
     var vertices=this.lineVertices;corners.forEach(function(q,index){vertices[index*2]=q.x/width*2-1;vertices[index*2+1]=1-q.y/height*2;});
     gl.useProgram(this.lineProgram);gl.bindBuffer(gl.ARRAY_BUFFER,this.lines);gl.bufferData(gl.ARRAY_BUFFER,vertices,gl.DYNAMIC_DRAW);
     var lineP=this.lineLocation;gl.enableVertexAttribArray(lineP);gl.vertexAttribPointer(lineP,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.LINE_LOOP,0,4);gl.drawArrays(gl.POINTS,0,4);

@@ -17,6 +17,19 @@ function normalMatrix(m){
   if(Math.abs(det)<1e-10)throw new Error("模型节点缩放为零");
   return u.concat(v,w).map(function(x){return x/det;});
 }
+function orthogonalTangent(vertices,at,tangents,tangentAt){
+  var nx=vertices[at+3],ny=vertices[at+4],nz=vertices[at+5],nn=nx*nx+ny*ny+nz*nz;
+  if(nn<1e-12)throw new Error("模型法线长度为零");
+  var tx=tangents[tangentAt],ty=tangents[tangentAt+1],tz=tangents[tangentAt+2],dot=(nx*tx+ny*ty+nz*tz)/nn;
+  tx-=nx*dot;ty-=ny*dot;tz-=nz*dot;
+  var length=Math.sqrt(tx*tx+ty*ty+tz*tz);
+  if(length<1e-8){
+    // Build a stable perpendicular basis for missing/degenerate authored tangents.
+    if(Math.abs(nx)<Math.abs(ny)){tx=0;ty=-nz;tz=ny;}else{tx=-nz;ty=0;tz=nx;}
+    length=Math.sqrt(tx*tx+ty*ty+tz*tz);
+  }
+  tangents[tangentAt]=tx/length;tangents[tangentAt+1]=ty/length;tangents[tangentAt+2]=tz/length;
+}
 function text(bytes){
   // Decode UTF-8 without a browser TextDecoder dependency.
   var escaped="";for(var i=0;i<bytes.length;i++)escaped+="%"+(bytes[i]+256).toString(16).slice(1);
@@ -57,6 +70,18 @@ function parse(buffer,config){
     }
     return out;
   }
+  var imageCache={};
+  function materialImage(info){
+    if(!info)return null;
+    if((info.texCoord||0)!==0||info.extensions)throw new Error("本轮只支持未变换的第一组 UV");
+    var texture=(json.textures||[])[info.index],image=texture&&(json.images||[])[texture.source];
+    if(!image||image.uri||(image.mimeType!=="image/png"&&image.mimeType!=="image/jpeg"))throw new Error("模型贴图格式未支持");
+    if(!imageCache[texture.source]){
+      var imageView=view(image.bufferView);
+      imageCache[texture.source]={index:texture.source,mimeType:image.mimeType,bytes:buffer.slice(binOffset+(imageView.byteOffset||0),binOffset+(imageView.byteOffset||0)+imageView.byteLength)};
+    }
+    return imageCache[texture.source];
+  }
   var primitives=[],bounds={min:[Infinity,Infinity,Infinity],max:[-Infinity,-Infinity,-Infinity]},active={};
   function visit(index,parent){
     var node=(json.nodes||[])[index];if(!node||active[index])throw new Error("模型节点树不合法");active[index]=true;
@@ -68,7 +93,9 @@ function parse(buffer,config){
         if((p.mode!==undefined&&p.mode!==4)||p.targets||p.extensions)throw new Error("本轮只支持静态三角形网格");
         var position=accessor(p.attributes.POSITION,"VEC3"),normal=accessor(p.attributes.NORMAL,"VEC3"),uv=accessor(p.attributes.TEXCOORD_0,"VEC2"),indices=accessor(p.indices,"SCALAR");
         var count=position.length/3;if(normal.length!==position.length||uv.length!==count*2||indices.length%3)throw new Error("模型顶点数量不匹配");
-        var interleaved=new Float32Array(count*8);
+        var interleaved=new Float32Array(count*8),tangents=new Float32Array(count*4);
+        var sourceTangent=p.attributes.TANGENT===undefined?null:accessor(p.attributes.TANGENT,"VEC4");
+        if(sourceTangent&&sourceTangent.length!==count*4)throw new Error("模型切线数量不匹配");
         for(var i=0;i<count;i++){
           var x=position[i*3],y=position[i*3+1],z=position[i*3+2];
           for(var k=0;k<3;k++){
@@ -77,19 +104,19 @@ function parse(buffer,config){
             interleaved[i*8+3+k]=config.effect?normal[i*3+k]:normalsMatrix[k]*normal[i*3]+normalsMatrix[3+k]*normal[i*3+1]+normalsMatrix[6+k]*normal[i*3+2];
           }
           interleaved[i*8+6]=uv[i*2];interleaved[i*8+7]=uv[i*2+1];
+          var tx=sourceTangent?sourceTangent[i*4]:1,ty=sourceTangent?sourceTangent[i*4+1]:0,tz=sourceTangent?sourceTangent[i*4+2]:0;
+          for(var axis=0;axis<3;axis++)tangents[i*4+axis]=config.effect?[tx,ty,tz][axis]:matrix[axis]*tx+matrix[4+axis]*ty+matrix[8+axis]*tz;
+          tangents[i*4+3]=sourceTangent?sourceTangent[i*4+3]:1;
         }
         var max=0;for(var j=0;j<indices.length;j++){if(indices[j]>=count)throw new Error("模型索引越界");max=Math.max(max,indices[j]);}
-        var material=(json.materials||[])[p.material]||{},pbr=material.pbrMetallicRoughness||{},image=null;
+        var material=(json.materials||[])[p.material]||{},pbr=material.pbrMetallicRoughness||{},image=materialImage(pbr.baseColorTexture);
         if(material.alphaMode&&material.alphaMode!=="OPAQUE"&&!(config.effect&&material.alphaMode==="BLEND"))throw new Error("本轮不支持此模型透明模式");
-        if(pbr.baseColorTexture){
-          if((pbr.baseColorTexture.texCoord||0)!==0)throw new Error("本轮只支持第一组 UV");
-          var texture=(json.textures||[])[pbr.baseColorTexture.index];image=texture&&(json.images||[])[texture.source];
-          if(!image||image.uri||(image.mimeType!=="image/png"&&image.mimeType!=="image/jpeg"))throw new Error("模型贴图格式未支持");
-          var imageView=view(image.bufferView);
-          image={index:texture.source,mimeType:image.mimeType,bytes:buffer.slice(binOffset+(imageView.byteOffset||0),binOffset+(imageView.byteOffset||0)+imageView.byteLength)};
-        }
         var sampler=pbr.baseColorTexture?(json.samplers||[])[(json.textures||[])[pbr.baseColorTexture.index].sampler]||{}:{};
         primitives.push({vertices:interleaved,indices:max<=65535?new Uint16Array(indices):indices,image:image,color:pbr.baseColorFactor||[1,1,1,1],doubleSided:!!material.doubleSided,
+          tangents:tangents,normalImage:config.effect?null:materialImage(material.normalTexture),materialImage:config.effect?null:materialImage(pbr.metallicRoughnessTexture),
+          occlusionImage:config.effect?null:materialImage(material.occlusionTexture),normalScale:material.normalTexture&&material.normalTexture.scale!==undefined?material.normalTexture.scale:1,
+          occlusionStrength:material.occlusionTexture&&material.occlusionTexture.strength!==undefined?material.occlusionTexture.strength:1,
+          metallic:pbr.metallicFactor===undefined?1:pbr.metallicFactor,roughness:pbr.roughnessFactor===undefined?1:pbr.roughnessFactor,
           node:index,transparent:material.alphaMode==="BLEND",wrapS:sampler.wrapS||10497,wrapT:sampler.wrapT||10497});
       });
     }
@@ -118,6 +145,8 @@ function parse(buffer,config){
     p.vertices[i+1]=-(p.vertices[i+1]-cy)*s+config.centerY;
     p.vertices[i+2]=-(p.vertices[i+2]-bounds.min[2])*s;
     p.vertices[i+4]=-p.vertices[i+4];p.vertices[i+5]=-p.vertices[i+5];
+    var tangentIndex=i/8*4;p.tangents[tangentIndex+1]=-p.tangents[tangentIndex+1];p.tangents[tangentIndex+2]=-p.tangents[tangentIndex+2];
+    orthogonalTangent(p.vertices,i,p.tangents,tangentIndex);
   }});
   var alignment=new Float32Array([s,0,0,0,0,-s,0,0,0,0,-s,0,config.centerX-cx*s,cy*s+config.centerY,bounds.min[2]*s,1]);
   return {primitives:primitives,originalBounds:bounds,alignment:alignment};

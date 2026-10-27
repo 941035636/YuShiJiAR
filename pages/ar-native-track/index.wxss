@@ -1,12 +1,23 @@
-page { background:#eef5ef; color:#153b29; }
-.page { padding:32rpx; }
-.title { font-size:36rpx; font-weight:600; }
-.note { font-size:26rpx; line-height:1.7; margin:20rpx 0; color:#4d6759; }
-.status { font-size:32rpx; margin:24rpx 0 12rpx; font-weight:600; }
-.stats { font-size:24rpx; }
-.camera { display:block; height:320rpx; width:100%; background:#000; }
-button { margin:20rpx 0; }
-canvas { display:block; background:#000; }
-.calibration { margin-top:24rpx; padding:24rpx; background:#fff; border-radius:16rpx; font-size:26rpx; }
+page { background:#0c1713; color:#e9e4cc; }
+.page { min-height:100vh; }
+.stage { width:100%; position:relative; overflow:hidden; background:#0b1511; }
+.camera-source { position:absolute; left:0; top:0; width:100%; height:100%; z-index:0; }
+.camera-source--debug { left:auto; right:12px; top:12px; width:72px; height:96px; z-index:4; border:1px solid #dbc67d; }
+.ar-canvas { position:absolute; display:block; z-index:1; }
+.frame-overlay { position:absolute; left:0; top:0; width:100%; height:100%; z-index:2; pointer-events:none; }
+.hud { position:absolute; top:22rpx; left:24rpx; right:24rpx; z-index:5; padding:20rpx 24rpx; background:rgba(6,18,13,.68); border-radius:16rpx; }
+.hud-title { font-size:30rpx; color:#f3df9d; line-height:44rpx; }
+.hud-status { margin-top:6rpx; font-size:24rpx; line-height:36rpx; color:#e5e8d9; white-space:normal; }
+.hud-retry { margin-top:12rpx; font-size:28rpx; color:#f3df9d; line-height:48rpx; }
+.toolbar { position:absolute; bottom:0; left:0; right:0; z-index:6; display:flex; padding:22rpx 20rpx; padding-bottom:calc(22rpx + env(safe-area-inset-bottom)); background:rgba(9,23,17,.93); border-top:1px solid #837340; }
+.toolbar-button { flex:1; margin:0 6rpx; text-align:center; padding:18rpx 4rpx; line-height:34rpx; font-size:26rpx; color:#eddda3; background:#263d2b; border-radius:10rpx; }
+.toolbar-primary { color:#142318; background:#d8c278; }
+.debug-panel { padding:30rpx; background:#eef5ef; color:#163c2a; }
+.title { font-size:34rpx; font-weight:600; margin-bottom:20rpx; }
+.stats { font-size:24rpx; line-height:1.8; word-break:break-all; }
+.note { font-size:25rpx; line-height:1.7; margin:18rpx 0; color:#4d6759; }
+.status { font-size:28rpx; margin:20rpx 0 12rpx; font-weight:600; }
 .controls { display:flex; gap:16rpx; margin:16rpx 0; }
 .controls button { flex:1; margin:0; }
+button.selected { background:#d9e6ca; border:1px solid #44643c; }
+.calibration { margin-top:24rpx; padding:24rpx; background:#fff; border-radius:16rpx; font-size:26rpx; }
