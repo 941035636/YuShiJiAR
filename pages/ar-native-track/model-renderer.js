@@ -18,23 +18,28 @@ function ModelRenderer(canvas,gl,onState){
   this.canvas=canvas;this.gl=gl;this.onState=onState;this.parts=[];this.files={};
   this.enabled=true;this.ready=false;this.fov=config.fov;this.scale=1;this.offsetY=0;
   this.effectsEnabled=true;this.effectGroups=[];this.effectTasks=[];this.clock=new animation.Clock();
+  this.loadStage="等待下载";this.httpStatus=null;this.byteLength=0;
   this.identityMatrix=glb.identity();this.identityNormal=new Float32Array([1,0,0,0,1,0,0,0,1]);this.rotationNormal=new Float32Array(9);this.drawList=[];this.poseFilter=new pose.PoseFilter();
   this.stamp=Date.now()+"-"+Math.floor(Math.random()*1000000);
 }
-ModelRenderer.prototype.state=function(text,failed){if(!this.disposed)this.onState(text,!!failed);};
+ModelRenderer.prototype.state=function(text,failed){if(!this.disposed)this.onState(text,!!failed,{stage:this.loadStage,url:config.url,httpStatus:this.httpStatus,bytes:this.byteLength});};
 ModelRenderer.prototype.load=function(){
   var self=this,progress=-1;
+  this.loadStage="下载模型";this.httpStatus=null;this.byteLength=0;
   this.state("正在下载墨玉模型（约 8.7 MB）");
   this.task=wx.downloadFile({url:config.url,timeout:60000,
     success:function(response){
       self.task=null;if(self.disposed)return;
+      self.httpStatus=response.statusCode;
       if(response.statusCode!==200){self.state("模型下载失败：HTTP "+response.statusCode,true);return;}
-      self.state("正在解析墨玉模型和贴图");
+      self.loadStage="读取下载文件";self.state("模型下载成功，正在读取文件");
       try{wx.getFileSystemManager().readFile({filePath:response.tempFilePath,success:function(result){
         if(self.disposed)return;
         try{
+          self.byteLength=result.data&&result.data.byteLength||0;self.loadStage="解析 GLB";
+          self.state("模型文件已读取，正在解析 GLB");
           var model=parse(result.data,config);self.build(model).then(function(){
-            if(self.disposed)return;self.ready=true;self.state("墨玉模型已就绪，识别后显示");
+            if(self.disposed)return;self.ready=true;self.loadStage="模型已就绪";self.state("墨玉模型已就绪，识别后显示");
           }).catch(function(error){self.fail(error);});
         }catch(error){self.fail(error);}
       },fail:function(error){self.fail(new Error(error.errMsg||"读取模型失败"));}});}catch(error){self.fail(error);}
@@ -51,6 +56,7 @@ ModelRenderer.prototype.fail=function(error){
 };
 ModelRenderer.prototype.texture=function(image,texture,group){
   var self=this,gl=this.gl;
+  if(group==="base"){this.loadStage="贴图解码与上传";this.state("正在创建墨玉贴图 "+(image?image.index:"默认颜色"));}
   if(!image){gl.bindTexture(gl.TEXTURE_2D,texture);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([255,255,255,255]));return Promise.resolve();}
   return new Promise(function(resolve,reject){
     var fs=wx.getFileSystemManager(),filename=wx.env.USER_DATA_PATH+"/ysj-native-"+self.stamp+"-"+(group||"base")+"-"+image.index+(image.mimeType==="image/png"?".png":".jpg");
@@ -79,6 +85,7 @@ ModelRenderer.prototype.texture=function(image,texture,group){
 };
 ModelRenderer.prototype.build=function(model){
   var gl=this.gl,self=this;
+  this.loadStage="创建着色器与网格";this.state("GLB 已解析，正在创建模型与贴图");
   var vertex=compile(gl,gl.VERTEX_SHADER,"attribute vec3 position;attribute vec3 normal;attribute vec2 uv;uniform mat4 mvp;uniform mat4 local;uniform mat3 rotation;uniform mat3 localNormal;uniform float size;uniform float shiftY;varying vec2 tex;varying vec3 n;void main(){vec3 p=(local*vec4(position,1.)).xyz*size;p.y+=shiftY;gl_Position=mvp*vec4(p,1.);tex=uv;n=rotation*localNormal*normal;}");
   var fragment;
   try{fragment=compile(gl,gl.FRAGMENT_SHADER,"precision mediump float;uniform sampler2D colorMap;uniform vec4 color;uniform vec2 repeatUV;uniform float unlit;uniform float transparent;varying vec2 tex;varying vec3 n;void main(){vec2 uv=mix(clamp(tex,0.,1.),fract(tex),repeatUV);vec4 sampleColor=texture2D(colorMap,uv);float alpha=mix(1.,sampleColor.a*color.a,transparent);if(alpha<.003)discard;vec3 base=pow(max(sampleColor.rgb,vec3(0.)),vec3(2.2))*color.rgb;float light=mix(.75+.25*max(dot(normalize(n),normalize(vec3(-.3,-.5,-1.))),0.),1.,unlit);gl_FragColor=vec4(pow(base*light,vec3(1./2.2)),alpha);}");}

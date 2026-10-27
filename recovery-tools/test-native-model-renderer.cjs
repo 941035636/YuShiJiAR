@@ -30,7 +30,7 @@ const filesystem={
 };
 global.wx={env:{USER_DATA_PATH:'wxfile://test'},getFileSystemManager(){return filesystem;},downloadFile(options){download=options;return {abort(){aborted++;},onProgressUpdate(){}};}};
 async function main(){
-  const states=[],model=new ModelRenderer(canvas,gl,(text,failed)=>states.push({text,failed}));
+  const states=[],model=new ModelRenderer(canvas,gl,(text,failed,detail)=>states.push({text,failed,detail}));
   await model.build(source);model.ready=true;
   assert.equal(model.parts.length,5);assert.equal(files.size,0);assert.equal(unlinked.length,5);
   assert.equal(model.draw([],480,640,427/640),null);assert.equal(draws.length,0);
@@ -73,6 +73,11 @@ async function main(){
   const loading=new ModelRenderer(canvas,gl,(text,failed)=>states.push({text,failed}));
   loading.load();download.success({statusCode:403,tempFilePath:'denied.glb'});
   assert(states.at(-1).failed);assert.equal(readCount,0);loading.dispose();
+
+  const blocked=new ModelRenderer(canvas,gl,(text,failed,detail)=>states.push({text,failed,detail}));
+  blocked.load();download.fail({errMsg:'downloadFile:fail url not in domain list'});
+  assert.equal(states.at(-1).detail.stage,'下载模型');assert.equal(states.at(-1).detail.httpStatus,null);
+  assert.match(states.at(-1).text,/url not in domain list/);assert.equal(readCount,0,'blocked domain must not reach file parsing');blocked.dispose();
 
   const broken=new ModelRenderer(canvas,gl,()=>{});
   const write=filesystem.writeFile;

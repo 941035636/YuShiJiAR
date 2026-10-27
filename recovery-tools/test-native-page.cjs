@@ -72,6 +72,21 @@ assert.doesNotThrow(()=>noModel.start());assert.equal(noModel.data.running,true)
 noModel.toggleModel();assert.equal(noModel.preview.model.enabled,false);
 assert.doesNotThrow(()=>noModel.onUnload());
 
+let copied;
+const diagnosticPage=boot(null,{
+  getAccountInfoSync(){return {miniProgram:{appId:'wx91ce9cdf4d69aa4d',envVersion:'trial',version:'diagnostic-test'}};},
+  createSelectorQuery(){return this;},in(){return this;},select(){return this;},fields(){return this;},
+  exec(callback){callback([{node:{},width:300}]);},
+  downloadFile(options){options.fail({errMsg:'downloadFile:fail url not in domain list'});return {abort(){}};},
+  getFileSystemManager(){return {};},setClipboardData(options){copied=JSON.parse(options.data);options.success();}
+});
+diagnosticPage.Preview=function(){this.canvas={};this.gl={};this.dispose=function(){this.model?.dispose();};};
+diagnosticPage.onReady();diagnosticPage.copyLoadDiagnostics();
+assert.equal(copied.appId,'wx91ce9cdf4d69aa4d');assert.equal(copied.envVersion,'trial');
+assert.equal(copied.stage,'下载模型');assert.equal(copied.download.httpStatus,null);
+assert.match(copied.status,/url not in domain list/);assert.match(copied.download.url,/taishanshigandang_yu\.glb$/);
+assert.match(diagnosticPage.data.diagnosticNotice,/已复制/);diagnosticPage.onUnload();
+
 // Search is intentionally less frequent than preview; tracking has no post-compute pause.
 let time=0, callback, calls=0, resets=0, draws=[];
 const scheduled=boot(null, {

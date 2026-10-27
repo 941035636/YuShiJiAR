@@ -2,9 +2,15 @@
 Page({
   data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,frameSize:"—",modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
     showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"",
-    showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音" },
+    showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音",
+    runtimeAppId:"未读取",runtimeEnv:"未读取",modelStage:"等待下载",diagnosticsRevision:"20261027-1",diagnosticNotice:"" },
   onLoad:function(){
     this.nextFrameAt=0;this.generation=0;
+    try{
+      var account=wx.getAccountInfoSync().miniProgram;
+      this.runtimeVersion=account.version||"";
+      this.setData({runtimeAppId:account.appId||"未提供",runtimeEnv:account.envVersion||"未提供"});
+    }catch(_){}
     // Register the page first so dependency failures remain visible to the user.
     try{
       var Tracker=require("./session-tracker.js").SessionTracker;
@@ -42,12 +48,22 @@ Page({
     try{
       if(this.preview.model)this.preview.model.dispose();
       var Renderer=require("./model-renderer.js").ModelRenderer,self=this;
-      var model=new Renderer(this.preview.canvas,this.preview.gl,function(text,failed){
-        if(!self.destroyed)self.setData({modelStatus:text,modelFailed:failed});
+      var model=new Renderer(this.preview.canvas,this.preview.gl,function(text,failed,detail){
+        self.modelLoadDetail=detail||{};
+        if(!self.destroyed)self.setData({modelStatus:text,modelFailed:failed,modelStage:detail&&detail.stage||"未知阶段"});
         if(!failed&&self.preview&&self.preview.model&&self.preview.model.ready)self.loadEffects();
       });
       this.preview.model=model;this.applyModelSettings();model.load();
     }catch(error){this.setData({modelStatus:"模型初始化失败："+error.message,modelFailed:true});}
+  },
+  copyLoadDiagnostics:function(){
+    var self=this;
+    var diagnostic={revision:this.data.diagnosticsRevision,appId:this.data.runtimeAppId,envVersion:this.data.runtimeEnv,
+      version:this.runtimeVersion||"",stage:this.data.modelStage,status:this.data.modelStatus,download:this.modelLoadDetail||{}};
+    try{wx.setClipboardData({data:JSON.stringify(diagnostic,null,2),
+      success:function(){if(!self.destroyed)self.setData({diagnosticNotice:"加载诊断已复制，可粘贴反馈"});},
+      fail:function(){if(!self.destroyed)self.setData({diagnosticNotice:"复制失败，请截图上方 AppID 和加载状态"});}
+    });}catch(_){this.setData({diagnosticNotice:"复制失败，请截图上方 AppID 和加载状态"});}
   },
   loadEffects:function(){
     if(!this.preview||!this.preview.model||this.destroyed)return;

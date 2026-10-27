@@ -1,8 +1,13 @@
 <view class="page">
   <view class="title">本尊墨玉原生 3D 验证</view>
+  <view class="stats"><text selectable="true">运行 AppID：{{runtimeAppId}} / {{runtimeEnv}}</text></view>
+  <view class="stats">加载诊断版本：{{diagnosticsRevision}}</view>
   <view class="note">对准 tssgd.jpg，下方显示墨玉模型、盾、山、法阵和文字。主模型约 8.7 MB，特效约 2.7 MB；首次加载请等待。识别后播放讲解与环境音，移开后暂停，重新识别后继续。</view>
   <view class="status">{{modelStatus}}</view>
+  <view class="stats">加载阶段：{{modelStage}}</view>
   <button wx:if="{{modelFailed}}" bindtap="loadModel">重试加载模型</button>
+  <button wx:if="{{modelFailed}}" size="mini" bindtap="copyLoadDiagnostics">复制加载诊断</button>
+  <view wx:if="{{diagnosticNotice}}" class="note">{{diagnosticNotice}}</view>
   <view class="note">{{effectsStatus}}</view>
   <button wx:if="{{effectsFailed}}" bindtap="loadEffects">重试加载特效</button>
   <view class="controls">
