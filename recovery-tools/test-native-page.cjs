@@ -62,6 +62,7 @@ calibrated.loadModel=()=>loads++;
 calibrated.toggleDebug();assert.equal(calibrated.preview,livePreview);assert.equal(livePreview.showOutline,true);
 calibrated.toggleMaterial();assert.equal(livePreview.model.materialMode,1);assert.equal(loads,0,'material A/B must not download/restart the scene');
 calibrated.setExposure({detail:{value:150}});assert.equal(livePreview.model.exposure,1.5);
+calibrated.setQuality({currentTarget:{dataset:{quality:'high'}}});assert.equal(livePreview.quality,'high');assert.equal(loads,0);
 assert.equal(persisted.key,visual.storageKey);assert.equal(persisted.value.exposure,1.5);
 calibrated.selectVariant({currentTarget:{dataset:{variant:'reference'}}});assert.equal(loads,1);assert(resetsVisual>0);assert.equal(calibrated.data.running,false);
 calibrated.resetVisualSettings();assert.equal(loads,2);assert.equal(calibrated.data.modelScale,100);assert.equal(calibrated.data.variantKey,'reference');

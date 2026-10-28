@@ -32,6 +32,14 @@
       <button size="mini" bindtap="toggleModel">{{showModel ? '切换仅绿框' : '显示模型'}}</button>
     </view>
     <view class="stats">材质：{{renderMode === 'pbr' && pbrAvailable ? '增强（法线 / 金属 / 粗糙度）' : '兼容简化'}}</view>
+    <view class="controls">
+      <button size="mini" class="{{quality === 'performance' ? 'selected' : ''}}" data-quality="performance" bindtap="setQuality">流畅</button>
+      <button size="mini" class="{{quality === 'balanced' ? 'selected' : ''}}" data-quality="balanced" bindtap="setQuality">清晰</button>
+      <button size="mini" class="{{quality === 'high' ? 'selected' : ''}}" data-quality="high" bindtap="setQuality">高清</button>
+    </view>
+    <view class="stats">3D 绘制 {{renderSize}} / 抗锯齿 {{aaMode}}</view>
+    <view wx:if="{{aaError}}" class="note">屏幕抗锯齿回退：{{aaError}}</view>
+    <view class="note">清晰/高清只提高模型绘制像素，相机仍按原尺寸取帧。若帧率下降，可切回流畅比较。</view>
     <view class="note">{{effectsStatus}}</view>
     <button wx:if="{{effectsFailed}}" size="mini" bindtap="loadEffects">重试加载特效</button>
     <view class="controls">

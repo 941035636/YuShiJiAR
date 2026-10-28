@@ -1,19 +1,23 @@
 "use strict";
 function shader(gl, type, text) {
   var s = gl.createShader(type); gl.shaderSource(s,text); gl.compileShader(s);
-  if (!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+  if (!gl.getShaderParameter(s,gl.COMPILE_STATUS)){var error=gl.getShaderInfoLog(s);gl.deleteShader(s);throw new Error(error);}
   return s;
 }
 function program(gl,vs,fs) {
-  var p=gl.createProgram(),v=shader(gl,gl.VERTEX_SHADER,vs),f=shader(gl,gl.FRAGMENT_SHADER,fs);
-  gl.attachShader(p,v);gl.attachShader(p,f);gl.linkProgram(p);gl.deleteShader(v);gl.deleteShader(f);
-  if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));
-  return p;
+  var p,v,f;
+  try{p=gl.createProgram();v=shader(gl,gl.VERTEX_SHADER,vs);f=shader(gl,gl.FRAGMENT_SHADER,fs);
+    gl.attachShader(p,v);gl.attachShader(p,f);gl.linkProgram(p);
+    if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));return p;
+  }catch(error){if(p)gl.deleteProgram(p);throw error;}finally{if(v)gl.deleteShader(v);if(f)gl.deleteShader(f);}
 }
 function Preview(canvas) {
-  var gl=canvas.getContext("webgl",{depth:true,alpha:false});if(!gl)throw new Error("WebGL 不可用");
+  var gl=canvas.getContext("webgl",{depth:true,alpha:false,antialias:true});if(!gl)throw new Error("WebGL 不可用");
   this.canvas=canvas;this.gl=gl;
   this.showOutline=true;
+  this.quality="balanced";this.pixelRatio=1;this.displayWidth=0;this.aaError="";
+  var attributes=gl.getContextAttributes&&gl.getContextAttributes();this.msaa=!!(attributes&&attributes.antialias);
+  this.maxRenderSide=Math.min(Number(gl.getParameter(gl.MAX_TEXTURE_SIZE))||4096,Number(gl.getParameter(gl.MAX_RENDERBUFFER_SIZE))||4096);
   this.imageProgram=program(gl,"attribute vec2 p;attribute vec2 uv;varying vec2 v;void main(){v=uv;gl_Position=vec4(p,0.,1.);}","precision mediump float;varying vec2 v;uniform sampler2D image;void main(){gl_FragColor=texture2D(image,v);}");
   this.lineProgram=program(gl,"attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);gl_PointSize=7.;}","precision mediump float;void main(){gl_FragColor=vec4(.1,1.,.25,1.);}");
   this.quad=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,this.quad);
@@ -27,9 +31,18 @@ function Preview(canvas) {
   gl.pixelStorei(gl.UNPACK_ALIGNMENT,1);
 }
 Preview.prototype.draw=function(rgba,width,height,corners){
-  var gl=this.gl;if(this.canvas.width!==width||this.canvas.height!==height){this.canvas.width=width;this.canvas.height=height;}
+  var gl=this.gl,target=require("./render-size.js").size(width,height,this.displayWidth,this.pixelRatio,this.quality,this.maxRenderSide);
+  if(this.canvas.width!==target.width||this.canvas.height!==target.height){this.canvas.width=target.width;this.canvas.height=target.height;}
+  var filtered=false;
+  if(!this.msaa&&this.quality!=="performance"&&!this.aaError){
+    try{if(!this.filter)this.filter=new (require("./antialias.js").Filter)(gl,this.quad,program);filtered=this.filter.begin(target.width,target.height);}
+    catch(error){this.aaError=error.message;if(this.filter){this.filter.dispose();this.filter=null;}}
+  }
+  if(!filtered&&this.filter)this.filter.releaseTarget();
+  gl.bindFramebuffer(gl.FRAMEBUFFER,filtered?this.filter.framebuffer:null);
+  this.renderSize=target.width+"×"+target.height;this.aaMode=this.msaa?"系统抗锯齿":filtered?"FXAA":"未启用";
   gl.disable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);gl.disable(gl.BLEND);gl.depthMask(false);
-  gl.viewport(0,0,width,height);gl.useProgram(this.imageProgram);gl.bindBuffer(gl.ARRAY_BUFFER,this.quad);
+  gl.viewport(0,0,target.width,target.height);gl.useProgram(this.imageProgram);gl.bindBuffer(gl.ARRAY_BUFFER,this.quad);
   var p=this.imageLocations.p,uv=this.imageLocations.uv;
   gl.enableVertexAttribArray(p);gl.vertexAttribPointer(p,2,gl.FLOAT,false,16,0);gl.enableVertexAttribArray(uv);gl.vertexAttribPointer(uv,2,gl.FLOAT,false,16,8);
   gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,this.texture);
@@ -52,6 +65,7 @@ Preview.prototype.draw=function(rgba,width,height,corners){
     gl.useProgram(this.lineProgram);gl.bindBuffer(gl.ARRAY_BUFFER,this.lines);gl.bufferData(gl.ARRAY_BUFFER,vertices,gl.DYNAMIC_DRAW);
     var lineP=this.lineLocation;gl.enableVertexAttribArray(lineP);gl.vertexAttribPointer(lineP,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.LINE_LOOP,0,4);gl.drawArrays(gl.POINTS,0,4);
   }
+  if(filtered)this.filter.end();
 };
-Preview.prototype.dispose=function(){if(this.model)this.model.dispose();var gl=this.gl;gl.deleteBuffer(this.quad);gl.deleteBuffer(this.lines);gl.deleteTexture(this.texture);gl.deleteProgram(this.imageProgram);gl.deleteProgram(this.lineProgram);};
+Preview.prototype.dispose=function(){if(this.model)this.model.dispose();if(this.filter)this.filter.dispose();var gl=this.gl;gl.deleteBuffer(this.quad);gl.deleteBuffer(this.lines);gl.deleteTexture(this.texture);gl.deleteProgram(this.imageProgram);gl.deleteProgram(this.lineProgram);};
 module.exports={Preview:Preview};

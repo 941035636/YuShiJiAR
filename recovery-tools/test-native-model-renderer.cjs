@@ -8,7 +8,7 @@ const input=fs.readFileSync('recovery-assets/models/Model/taishanshigandang_yu.g
 const buffer=input.buffer.slice(input.byteOffset,input.byteOffset+input.byteLength);
 const source=parse(buffer,config);
 let sequence=0,draws=[],created=new Set(),deleted=new Set(),files=new Set(),unlinked=[],readCount=0,aborted=0,download;
-let depthWrite=false,blend=false,local=[],rejectPbr=false,shaderSources=new Map();
+let depthWrite=false,blend=false,local=[],rejectPbr=false,shaderSources=new Map(),imageWidth=256,mipmaps=0;
 function allocate(){const id=++sequence;created.add(id);return id;}
 const gl=new Proxy({
   createBuffer:allocate,createTexture:allocate,createProgram:allocate,createShader:allocate,
@@ -16,13 +16,14 @@ const gl=new Proxy({
   shaderSource(id,text){shaderSources.set(id,text);},getShaderInfoLog(){return 'simulated PBR compiler rejection';},
   getShaderParameter(id){return !(rejectPbr&&shaderSources.get(id)?.includes('directLight'));},getProgramParameter(){return true;},getError(){return 'NO_ERROR';},
   getParameter(name){return name==='MAX_TEXTURE_SIZE'?4096:16;},
+  generateMipmap(){mipmaps++;},
   getAttribLocation(program,name){return {p:0,position:0,normal:1,uv:2,tangent:3}[name]??-1;},getUniformLocation(program,name){return name;},
   depthMask(value){depthWrite=value;},enable(name){if(name==='BLEND')blend=true;},disable(name){if(name==='BLEND')blend=false;},
   uniformMatrix4fv(name,transpose,value){if(name==='local')local=Array.from(value);},
   drawElements(mode,count){draws.push({kind:'model',count,depthWrite,blend,local});},drawArrays(mode){draws.push({kind:mode});}
 },{get(target,key){if(key in target)return target[key];return /^[A-Z0-9_]+$/.test(key)?key:function(){};}});
 const canvas={width:480,height:640,getContext(){return gl;},createImage(){
-  return {width:256,height:256,set src(value){queueMicrotask(()=>this.onload?.());}};
+  return {width:imageWidth,height:256,set src(value){queueMicrotask(()=>this.onload?.());}};
 }};
 const filesystem={
   writeFile(options){files.add(options.filePath);queueMicrotask(()=>options.success());},
@@ -35,6 +36,7 @@ async function main(){
   await model.build(source);model.ready=true;
   assert.equal(model.parts.length,5);assert.equal(files.size,0);assert.equal(unlinked.length,15);
   assert(model.pbrSupported);assert(model.parts.every(p=>p.tangent&&p.normalTexture&&p.materialTexture));
+  assert.equal(mipmaps,15,'POT base/normal/ORM maps receive mipmaps');
   assert(model.parts.every(p=>p.materialTexture===p.occlusionTexture),'ORM shares the metallic/roughness and AO texture');
   assert.equal(model.draw([],480,640,427/640),null);assert.equal(draws.length,0);
   const f=640/(2*Math.tan(50*Math.PI/360)),aspect=427/640;
@@ -76,6 +78,8 @@ async function main(){
   assert.equal(unlinked.length-before,5,'fallback uploads only the base color textures');
   assert(fallback.draw(corners,480,640,aspect));fallback.dispose();rejectPbr=false;
   assert.equal(created.size,deleted.size,'failed PBR resources and fallback resources must all be released');
+  imageWidth=800;const nonPower=new ModelRenderer(canvas,gl,()=>{}),beforeMips=mipmaps;
+  await nonPower.build(source);assert.equal(mipmaps,beforeMips,'WebGL 1 NPOT textures must keep non-mipmap filtering');nonPower.dispose();imageWidth=256;
 
   const cancelled=new ModelRenderer(canvas,gl,()=>{});cancelled.load();const oldDownload=download;
   cancelled.dispose();oldDownload.success({statusCode:200,tempFilePath:'old.glb'});

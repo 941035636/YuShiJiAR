@@ -1,8 +1,9 @@
 "use strict";
 var config=require("./model-config.js");
-var defaults={variantKey:config.defaultVariant,modelScale:100,modelOffset:0,fov:config.fov,exposure:config.lighting.exposure,effectExposure:config.lighting.effectExposure,renderMode:"pbr"};
+var defaults={variantKey:config.defaultVariant,modelScale:100,modelOffset:0,fov:config.fov,exposure:config.lighting.exposure,effectExposure:config.lighting.effectExposure,renderMode:"pbr",quality:"balanced"};
 function sanitize(value){
   value=value||{};var result={variantKey:config.variants[value.variantKey]?value.variantKey:defaults.variantKey,renderMode:value.renderMode==="simple"?"simple":"pbr"};
+  result.quality=["performance","balanced","high"].indexOf(value.quality)>=0?value.quality:defaults.quality;
   var limits={modelScale:[50,150],modelOffset:[-25,25],fov:[30,80],exposure:[.5,2],effectExposure:[.5,3]};
   Object.keys(limits).forEach(function(key){var number=Number(value[key]);result[key]=value[key]!==undefined&&isFinite(number)?Math.max(limits[key][0],Math.min(limits[key][1],number)):defaults[key];});
   return result;

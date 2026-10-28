@@ -4,6 +4,8 @@ const glb=require('../pages/ar-native-track/glb.js'),pose=require('../pages/ar-n
 const animation=require('../pages/ar-native-track/animation.js'),config=require('../pages/ar-native-track/model-config.js');
 const {effectRoot}=require('../pages/ar-native-track/model-renderer.js'),effects=require('../pages/ar-native-track/effects-config.js').effects;
 const shaders=require('../pages/ar-native-track/shaders.js');
+const aa=require('../pages/ar-native-track/antialias.js');
+const renderScale=Math.max(1,Math.min(2,Number(process.argv[3])||1));
 const root=path.resolve(process.argv[2]||path.join(process.env.TEMP,'YuShiJiAR-visual-reference'));
 fs.mkdirSync(root,{recursive:true});
 function read(relative,effect){const b=fs.readFileSync(path.join('recovery-assets/models',relative));return glb.parse(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),{...config,effect});}
@@ -23,6 +25,7 @@ for(const [key,relative,mode] of [['jade-simple','Model/taishanshigandang_yu.glb
  for(const def of effects){const asset=read(def.key==='sgd'?'Model/otherModel/sgd.glb':'FrameAnimation/'+def.key+'.glb',true),rootMatrix=effectRoot(main.alignment,def);
   add(asset,def.key,animation.matrices(asset,6).map(m=>m?pose.multiply(rootMatrix,m):null));}
  const output={width,height,vertex:shaders.vertex,fragment:key==='reference-fallback'?shaders.fragmentSimple:shaders.fragmentPbr,view:Array.from(transform.view),mvp:Array.from(transform.mvp),mode,
+  renderWidth:Math.round(width*renderScale),renderHeight:Math.round(height*renderScale),postprocess:renderScale>1?{vertex:aa.vertex,fragment:aa.fragment}:null,
   exposure:config.lighting.exposure,effectExposure:config.lighting.effectExposure,lights:[config.lighting.ambient,config.lighting.key],parts};
  fs.writeFileSync(path.join(root,key+'.json'),JSON.stringify(output));
 }

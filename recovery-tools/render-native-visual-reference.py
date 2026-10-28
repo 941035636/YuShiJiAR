@@ -10,7 +10,7 @@ import numpy as np
 from PIL import Image
 
 def render(filename):
-    data=json.load(open(filename,encoding='utf-8'));width,height=data['width'],data['height']
+    data=json.load(open(filename,encoding='utf-8'));width,height=data.get('renderWidth',data['width']),data.get('renderHeight',data['height'])
     user,gdi,opengl=c.windll.user32,c.windll.gdi32,c.windll.opengl32
     user.CreateWindowExW.argtypes=[w.DWORD,w.LPCWSTR,w.LPCWSTR,w.DWORD,c.c_int,c.c_int,c.c_int,c.c_int,w.HWND,w.HMENU,w.HINSTANCE,w.LPVOID];user.CreateWindowExW.restype=w.HWND
     user.GetDC.argtypes=[w.HWND];user.GetDC.restype=w.HDC;user.ReleaseDC.argtypes=[w.HWND,w.HDC];user.DestroyWindow.argtypes=[w.HWND]
@@ -75,6 +75,9 @@ def render(filename):
             for name,value in [(0x2801,0x2601),(0x2800,0x2601),(0x2802,0x812F),(0x2803,0x812F)]:gl('glTexParameteri',None,uint,uint,integer)(0x0DE1,name,value)
             image=np.array(Image.open(filename).convert('RGBA')) if filename else np.array([[default]],dtype=np.uint8)
             gl('glTexImage2D',None,uint,integer,integer,integer,integer,integer,uint,uint,ptr)(0x0DE1,0,0x1908,image.shape[1],image.shape[0],0,0x1908,0x1401,image.ctypes.data)
+            ih,iw=image.shape[:2]
+            if data.get('postprocess') and iw>1 and ih>1 and not(iw&(iw-1)) and not(ih&(ih-1)):
+                gl('glGenerateMipmap',None,uint)(0x0DE1);gl('glTexParameteri',None,uint,uint,integer)(0x0DE1,0x2801,0x2703)
         def depth(part):
             vertices=np.array(part['vertices']).reshape(-1,8)[:,:3];center=vertices.mean(axis=0);local=np.array(part['local']).reshape(4,4).T
             world=local@np.r_[center,1];return float(np.array(data['view']).reshape(4,4).T[2]@world)
@@ -95,6 +98,23 @@ def render(filename):
             if at>=0:gl('glEnableVertexAttribArray',None,uint)(at);attrib_pointer(at,4,0x1406,False,16,None)
             for unit,(name,default) in enumerate([('image',[255]*4),('normalImage',[128,128,255,255]),('materialImage',[255]*4),('occlusionImage',[255]*4)]):texture(unit,part[name],default)
             indices=np.array(part['indices'],dtype=np.uint16);buffer(0x8893,indices);gl('glDrawElements',None,uint,integer,uint,ptr)(4,len(indices),0x1403,None)
+        extra_shaders=[];extra_program=None
+        if data.get('postprocess'):
+            # Validate the exact runtime post shader; desktop copy replaces the mobile scene FBO.
+            post=data['postprocess'];extra_program=gl('glCreateProgram',uint)()
+            extra_shaders=[shader(0x8B31,post['vertex']),shader(0x8B30,post['fragment'])]
+            for item in extra_shaders:attach(extra_program,item)
+            gl('glLinkProgram',None,uint)(extra_program);gl('glGetProgramiv',None,uint,uint,c.POINTER(integer))(extra_program,0x8B82,c.byref(linked))
+            if not linked.value:raise RuntimeError('Postprocessing link failed')
+            copied=uint();gl('glActiveTexture',None,uint)(0x84C0);gl('glGenTextures',None,integer,c.POINTER(uint))(1,c.byref(copied));textures.append(copied)
+            gl('glBindTexture',None,uint,uint)(0x0DE1,copied)
+            for name,value in [(0x2801,0x2601),(0x2800,0x2601),(0x2802,0x812F),(0x2803,0x812F)]:gl('glTexParameteri',None,uint,uint,integer)(0x0DE1,name,value)
+            gl('glCopyTexImage2D',None,uint,integer,uint,integer,integer,integer,integer,integer)(0x0DE1,0,0x1908,0,0,width,height,0)
+            gl('glUseProgram',None,uint)(extra_program);disable(0x0B71);disable(0x0B44);disable(0x0BE2)
+            quad=np.array([-1,1,-1,-1,1,1,1,-1],dtype=np.float32);buffer(0x8892,quad);at=attribute(extra_program,b'p')
+            gl('glEnableVertexAttribArray',None,uint)(at);attrib_pointer(at,2,0x1406,False,8,None)
+            gl('glUniform1i',None,integer,integer)(location(extra_program,b'image'),0);gl('glUniform2f',None,integer,flt,flt)(location(extra_program,b'pixel'),1/width,1/height)
+            gl('glDrawArrays',None,uint,integer,integer)(5,0,4)
         gl('glFinish',None)();error=gl('glGetError',uint)()
         if error:raise RuntimeError('OpenGL error '+hex(error))
         pixels=np.zeros((height,width,4),dtype=np.uint8);gl('glReadPixels',None,integer,integer,integer,integer,uint,uint,ptr)(0,0,width,height,0x1908,0x1401,pixels.ctypes.data)
@@ -102,6 +122,8 @@ def render(filename):
         for value in buffers:gl('glDeleteBuffers',None,integer,c.POINTER(uint))(1,c.byref(value))
         for value in textures:gl('glDeleteTextures',None,integer,c.POINTER(uint))(1,c.byref(value))
         gl('glDeleteProgram',None,uint)(program);gl('glDeleteShader',None,uint)(vs);gl('glDeleteShader',None,uint)(fragment)
+        if extra_program:gl('glDeleteProgram',None,uint)(extra_program)
+        for item in extra_shaders:gl('glDeleteShader',None,uint)(item)
         print(output)
     finally:
         opengl.wglMakeCurrent(None,None)

@@ -3,7 +3,8 @@ Page({
   data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,frameSize:"—",modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
     showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"",
     showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音",
-    runtimeAppId:"未读取",runtimeEnv:"未读取",modelStage:"等待下载",diagnosticsRevision:"20261028-visual-1",diagnosticNotice:"",
+    runtimeAppId:"未读取",runtimeEnv:"未读取",modelStage:"等待下载",diagnosticsRevision:"20261028-aa-1",diagnosticNotice:"",
+    quality:"balanced",renderSize:"—",aaMode:"等待绘制",aaError:"",
     debug:false,variantKey:"reference",variantLabel:"原版对照素材",renderMode:"pbr",pbrAvailable:false,exposure:1,effectExposure:1.8,
     exposurePercent:100,effectPercent:180,stageHeight:667,canvasWidth:500,canvasHeight:667,canvasLeft:-62.5,canvasTop:0,sceneVisible:false },
   onLoad:function(){
@@ -21,6 +22,7 @@ Page({
       var windowInfo;
       try{windowInfo=typeof wx.getWindowInfo==="function"?wx.getWindowInfo():wx.getSystemInfoSync();}catch(_){}
       this.windowWidth=windowInfo&&windowInfo.windowWidth||375;this.windowHeight=windowInfo&&windowInfo.windowHeight||667;
+      this.pixelRatio=windowInfo&&windowInfo.pixelRatio||1;
       this.refreshViewport();
     }catch(_){}
     // Register the page first so dependency failures remain visible to the user.
@@ -50,6 +52,7 @@ Page({
           if(!rows||!rows[0]||!rows[0].node)throw new Error("无法获取预览画布");
           self.preview=new self.Preview(rows[0].node);self.previewWidth=self.windowWidth||rows[0].width;
           self.preview.showOutline=self.data.debug;
+          self.refreshViewport();
           self.setData({ready:true,status:"已准备，请将本尊识别图放在另一台设备上显示"});
           self.loadModel();
         }catch(error){self.setData({status:"预览初始化失败："+error.message});}
@@ -75,6 +78,7 @@ Page({
     var config=require("./model-config.js");
     layout.variantLabel=config.variants[this.data.variantKey].label;
     layout.exposurePercent=Math.round(this.data.exposure*100);layout.effectPercent=Math.round(this.data.effectExposure*100);this.setData(layout);
+    if(this.preview){this.preview.displayWidth=layout.canvasWidth;this.preview.pixelRatio=this.pixelRatio||1;this.preview.quality=this.data.quality;}
   },
   toggleDebug:function(){this.setData({debug:!this.data.debug});if(this.preview)this.preview.showOutline=this.data.debug;this.refreshViewport();},
   toggleRunning:function(){if(this.data.running)this.stop();else if(this.data.ready)this.start();},
@@ -84,6 +88,10 @@ Page({
     this.stop();this.setData({variantKey:key,effectsStatus:"等待主模型就绪",effectsFailed:false});this.saveVisualSettings();this.loadModel();
   },
   toggleMaterial:function(){this.setData({renderMode:this.data.renderMode==="pbr"?"simple":"pbr"});this.saveVisualSettings();},
+  setQuality:function(event){
+    var quality=event.currentTarget.dataset.quality;if(["performance","balanced","high"].indexOf(quality)<0)return;
+    this.setData({quality:quality});if(this.preview)this.preview.aaError="";this.saveVisualSettings();
+  },
   setExposure:function(event){this.setData({exposure:Number(event.detail.value)/100});this.saveVisualSettings();},
   setEffectExposure:function(event){this.setData({effectExposure:Number(event.detail.value)/100});this.saveVisualSettings();},
   saveVisualSettings:function(){
@@ -97,7 +105,8 @@ Page({
     var diagnostic={revision:this.data.diagnosticsRevision,appId:this.data.runtimeAppId,envVersion:this.data.runtimeEnv,
       version:this.runtimeVersion||"",stage:this.data.modelStage,status:this.data.modelStatus,download:this.modelLoadDetail||{},
       visual:this.visualSettings?this.visualSettings.sanitize(this.data):{},frameSize:this.data.frameSize,
-      previewFps:this.data.previewFps,trackingFps:this.data.trackingFps,poseError:this.data.poseError};
+      previewFps:this.data.previewFps,trackingFps:this.data.trackingFps,poseError:this.data.poseError,
+      renderSize:this.preview&&this.preview.renderSize,antialias:this.preview&&this.preview.aaMode,antialiasError:this.preview&&this.preview.aaError};
     try{wx.setClipboardData({data:JSON.stringify(diagnostic,null,2),
       success:function(){if(!self.destroyed)self.setData({diagnosticNotice:"加载诊断已复制，可粘贴反馈"});},
       fail:function(){if(!self.destroyed)self.setData({diagnosticNotice:"复制失败，请截图上方 AppID 和加载状态"});}
@@ -174,6 +183,7 @@ Page({
             metrics.matches=result.matches;metrics.inliers=result.inliers;metrics.elapsedMs=result.elapsedMs;
             metrics.renderMs=self.renderMs;metrics.poseError=typeof self.preview.poseError==="number"?self.preview.poseError:"—";
             metrics.poseStatus=self.preview.poseStatus||"";
+            metrics.renderSize=self.preview.renderSize||"—";metrics.aaMode=self.preview.aaMode||"未启用";metrics.aaError=self.preview.aaError||"";
             metrics.sceneVisible=!!self.preview.sceneVisible;
             self.setData(metrics);self.nextStatsAt=now+750;
           }else if(typeof metrics.previewFps==="number"){self.setData(metrics);}
