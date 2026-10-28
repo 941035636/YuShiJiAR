@@ -52,20 +52,16 @@ for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]
 const invalid=visual.sanitize({variantKey:'invalid',modelScale:500,modelOffset:-200,fov:'NaN',exposure:100,effectExposure:-1,renderMode:'other'});
 assert.equal(invalid.variantKey,'reference');assert.equal(invalid.modelScale,150);assert.equal(invalid.modelOffset,-25);
 assert.equal(invalid.fov,50);assert.equal(invalid.exposure,2);assert.equal(invalid.effectExposure,.5);assert.equal(invalid.renderMode,'pbr');
-let persisted,loads=0,resetsVisual=0;
+let writes=0;
 const calibrated=boot(null,{getWindowInfo(){return {windowWidth:390,windowHeight:700};},
-  getStorageSync(){return {variantKey:'jade',modelScale:110,renderMode:'simple'};},
-  setStorageSync(key,value){persisted={key,value};}});
-assert.equal(calibrated.data.variantKey,'jade');assert.equal(calibrated.data.modelScale,110);
-calibrated.preview={showOutline:false,model:{resetTimeline(){resetsVisual++;}},dispose(){}};const livePreview=calibrated.preview;
-calibrated.loadModel=()=>loads++;
-calibrated.toggleDebug();assert.equal(calibrated.preview,livePreview);assert.equal(livePreview.showOutline,true);
-calibrated.toggleMaterial();assert.equal(livePreview.model.materialMode,1);assert.equal(loads,0,'material A/B must not download/restart the scene');
-calibrated.setExposure({detail:{value:150}});assert.equal(livePreview.model.exposure,1.5);
-calibrated.setQuality({currentTarget:{dataset:{quality:'high'}}});assert.equal(livePreview.quality,'high');assert.equal(loads,0);
-assert.equal(persisted.key,visual.storageKey);assert.equal(persisted.value.exposure,1.5);
-calibrated.selectVariant({currentTarget:{dataset:{variant:'reference'}}});assert.equal(loads,1);assert(resetsVisual>0);assert.equal(calibrated.data.running,false);
-calibrated.resetVisualSettings();assert.equal(loads,2);assert.equal(calibrated.data.modelScale,100);assert.equal(calibrated.data.variantKey,'reference');
+  getStorageSync(){return {variantKey:'jade',modelScale:150,renderMode:'simple',quality:'performance',effectExposure:.5};},
+  setStorageSync(){writes++;}});
+assert.equal(calibrated.data.variantKey,'reference');assert.equal(calibrated.data.modelScale,100);
+assert.equal(calibrated.data.renderMode,'pbr');assert.equal(calibrated.data.quality,'balanced');
+assert.equal(calibrated.data.effectExposure,visual.defaults.effectExposure,'legacy debug cache must not alter the formal baseline');
+assert.equal(calibrated.toggleDebug,undefined);assert.equal(writes,0);
+calibrated.preview={showOutline:false,model:{resetTimeline(){}},dispose(){}};
+calibrated.refreshViewport();assert.equal(calibrated.preview.quality,'balanced');assert.equal(calibrated.data.stageHeight,700);
 calibrated.onUnload();
 for (const dependency of ['target.js', 'tracker.js', 'session-tracker.js', 'preview.js']) {
   const failed = boot(dependency);

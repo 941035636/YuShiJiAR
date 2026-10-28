@@ -1,6 +1,7 @@
 body{background-color:#000}
 .cardview{-webkit-align-items:center;align-items:center;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column}
 .cardimage{width:100%}
-.harmony-poc{margin:24rpx;padding:28rpx 30rpx;color:#fff;background:linear-gradient(135deg,#174b78,#0b2238);border:1rpx solid rgba(121,201,255,.55);border-radius:18rpx;box-sizing:border-box}
-.harmony-poc-title{font-size:32rpx;font-weight:600}
-.harmony-poc-desc{margin-top:10rpx;color:#b8d9f2;font-size:24rpx;line-height:1.5}
+.ar-experience{margin:24rpx;padding:30rpx;color:#f4e5af;background:linear-gradient(135deg,#294a35,#10251a);border:1rpx solid #b8a15d;border-radius:18rpx;box-sizing:border-box}
+.ar-experience-title{font-size:34rpx;font-weight:600}
+.ar-experience-desc{margin-top:12rpx;color:#d6dfcd;font-size:25rpx;line-height:1.6}
+.ar-experience-action{margin-top:20rpx;font-size:26rpx;color:#edce7d;text-align:right}

@@ -1,7 +1,6 @@
 "use strict";
 
 var arNavigation = require("../../utils/ar-navigation.js");
-var selfHostedConfig = require("../../config/self-hosted-ar.js");
 
 Page({
   btnBenZun: function () {
@@ -22,37 +21,12 @@ Page({
   selectNaFu: function () {
     arNavigation.openArScene("na-fu", "/pages/ar/scene-ar-NaFu/index");
   },
-  openSelfHostedAr: function () {
-    wx.navigateTo({ url: "/pages/ar-self-hosted/index", fail: function () {
-      wx.showToast({ title: "验证页面打开失败", icon: "none" });
-    } });
-  },
-  openNativeProbe: function () {
-    wx.navigateTo({ url: "/pages/ar-native-probe/index", fail: function () {
-      wx.showToast({ title: "检测页面打开失败", icon: "none" });
-    } });
-  },
-  openNativeTracker: function () {
+  openNativeExperience: function () {
     wx.navigateTo({ url: "/pages/ar-native-track/index", fail: function () {
-      wx.showToast({ title: "图片追踪页面打开失败", icon: "none" });
+      wx.showToast({ title: "AR 体验打开失败", icon: "none" });
     } });
   },
-  data: { pageList: {}, showSelfHostedPoc: false, showNativePoc: false },
-  onLoad: function () {
-    var platform = arNavigation.getPlatform();
-    var envVersion = "release";
-
-    try {
-      envVersion = wx.getAccountInfoSync().miniProgram.envVersion || "release";
-    } catch (error) {
-      console.warn("读取小程序版本类型失败", error);
-    }
-
-    this.setData({
-      showSelfHostedPoc: envVersion !== "release" && /^https:\/\//i.test(String(selfHostedConfig.baseUrl || "").trim()),
-      showNativePoc: arNavigation.isHarmonyPlatform(platform) || envVersion !== "release"
-    });
-  },
+  data: { pageList: {} },
   onReady: function () {},
   onShow: function () {},
   onHide: function () {},

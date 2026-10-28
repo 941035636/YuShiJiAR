@@ -3,7 +3,8 @@ Page({
   data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,frameSize:"—",modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
     showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"",
     showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音",
-    runtimeAppId:"未读取",runtimeEnv:"未读取",modelStage:"等待下载",diagnosticsRevision:"20261028-aa-1",diagnosticNotice:"",
+    runtimeAppId:"未读取",runtimeEnv:"未读取",modelStage:"等待下载",diagnosticsRevision:"20261028-experience-1",diagnosticNotice:"",
+    modelReady:false,effectsLoading:false,experienceError:"",audioFailed:false,
     quality:"balanced",renderSize:"—",aaMode:"等待绘制",aaError:"",
     debug:false,variantKey:"reference",variantLabel:"原版对照素材",renderMode:"pbr",pbrAvailable:false,exposure:1,effectExposure:1.8,
     exposurePercent:100,effectPercent:180,stageHeight:667,canvasWidth:500,canvasHeight:667,canvasLeft:-62.5,canvasTop:0,sceneVisible:false },
@@ -16,9 +17,8 @@ Page({
     }catch(_){}
     try{
       this.visualSettings=require("./visual-settings.js");
-      var saved;
-      try{saved=wx.getStorageSync(this.visualSettings.storageKey);}catch(_){}
-      this.setData(this.visualSettings.sanitize(saved));
+      // Formal experience pins the accepted code defaults, not per-device debug caches.
+      this.setData(this.visualSettings.sanitize(this.visualSettings.defaults));
       var windowInfo;
       try{windowInfo=typeof wx.getWindowInfo==="function"?wx.getWindowInfo():wx.getSystemInfoSync();}catch(_){}
       this.windowWidth=windowInfo&&windowInfo.windowWidth||375;this.windowHeight=windowInfo&&windowInfo.windowHeight||667;
@@ -35,12 +35,12 @@ Page({
       this.stabilizer=new Stabilizer({holdMs:170});
     }catch(error){
       console.error("本尊图片追踪初始化失败",error);
-      this.setData({ready:false,status:"追踪初始化失败："+error.message});
+      this.setData({ready:false,status:"追踪初始化失败："+error.message,experienceError:"体验准备失败，请返回后重试"});
     }
     try{
       var AudioController=require("./audio.js").AudioController,self=this;
-      this.audio=new AudioController(function(text){if(!self.destroyed)self.setData({audioStatus:text});});
-    }catch(error){this.setData({audioStatus:"音频初始化失败："+error.message});}
+      this.audio=new AudioController(function(text){if(!self.destroyed)self.setData({audioStatus:text,audioFailed:/失败/.test(text)});});
+    }catch(error){this.setData({audioStatus:"音频初始化失败："+error.message,audioFailed:true});}
   },
   onReady:function(){
     if(!this.tracker||!this.Preview)return;
@@ -51,22 +51,23 @@ Page({
         try{
           if(!rows||!rows[0]||!rows[0].node)throw new Error("无法获取预览画布");
           self.preview=new self.Preview(rows[0].node);self.previewWidth=self.windowWidth||rows[0].width;
-          self.preview.showOutline=self.data.debug;
+          self.preview.showOutline=false;
           self.refreshViewport();
           self.setData({ready:true,status:"已准备，请将本尊识别图放在另一台设备上显示"});
           self.loadModel();
-        }catch(error){self.setData({status:"预览初始化失败："+error.message});}
+        }catch(error){self.setData({status:"预览初始化失败："+error.message,experienceError:"画面准备失败，请返回后重试"});}
       });
-    }catch(error){self.setData({status:"预览初始化失败："+error.message});}
+    }catch(error){self.setData({status:"预览初始化失败："+error.message,experienceError:"画面准备失败，请返回后重试"});}
   },
   loadModel:function(){
     if(!this.preview||this.destroyed)return;
+    this.setData({modelReady:false,modelFailed:false,effectsLoading:false,effectsFailed:false});
     try{
       if(this.preview.model)this.preview.model.dispose();
       var Renderer=require("./model-renderer.js").ModelRenderer,self=this;
       var model=new Renderer(this.preview.canvas,this.preview.gl,function(text,failed,detail){
         self.modelLoadDetail=detail||{};
-        if(!self.destroyed)self.setData({modelStatus:text,modelFailed:failed,modelStage:detail&&detail.stage||"未知阶段",pbrAvailable:!!(detail&&detail.pbrAvailable)});
+        if(!self.destroyed)self.setData({modelStatus:text,modelFailed:failed,modelStage:detail&&detail.stage||"未知阶段",pbrAvailable:!!(detail&&detail.pbrAvailable),modelReady:!!(self.preview&&self.preview.model&&self.preview.model.ready)});
         if(!failed&&self.preview&&self.preview.model&&self.preview.model.ready)self.loadEffects();
       },{variantKey:this.data.variantKey});
       this.preview.model=model;this.applyModelSettings();model.load();
@@ -74,13 +75,12 @@ Page({
   },
   refreshViewport:function(){
     if(!this.visualSettings)return;
-    var layout=this.visualSettings.layout(this.frameWidth,this.frameHeight,this.windowWidth,this.windowHeight,this.data.debug);
+    var layout=this.visualSettings.layout(this.frameWidth,this.frameHeight,this.windowWidth,this.windowHeight,false);
     var config=require("./model-config.js");
     layout.variantLabel=config.variants[this.data.variantKey].label;
     layout.exposurePercent=Math.round(this.data.exposure*100);layout.effectPercent=Math.round(this.data.effectExposure*100);this.setData(layout);
     if(this.preview){this.preview.displayWidth=layout.canvasWidth;this.preview.pixelRatio=this.pixelRatio||1;this.preview.quality=this.data.quality;}
   },
-  toggleDebug:function(){this.setData({debug:!this.data.debug});if(this.preview)this.preview.showOutline=this.data.debug;this.refreshViewport();},
   toggleRunning:function(){if(this.data.running)this.stop();else if(this.data.ready)this.start();},
   selectVariant:function(event){
     var key=event.currentTarget.dataset.variant,config=require("./model-config.js");
@@ -114,7 +114,7 @@ Page({
   },
   loadEffects:function(){
     if(!this.preview||!this.preview.model||this.destroyed)return;
-    var self=this;this.preview.model.loadEffects(function(text,failed){if(!self.destroyed)self.setData({effectsStatus:text,effectsFailed:failed});});
+    var self=this;this.preview.model.loadEffects(function(text,failed){if(!self.destroyed)self.setData({effectsStatus:text,effectsFailed:failed,effectsLoading:!!self.preview.model.effectsLoading});});
   },
   applyModelSettings:function(){
     if(!this.preview||!this.preview.model)return;
@@ -135,7 +135,7 @@ Page({
     this.stop();this.generation++;this.nextFrameAt=0;this.nextPreviewAt=0;this.nextStatsAt=0;
     this.metricAt=Date.now();this.previewCount=0;this.trackingCount=0;this.lastResult=null;
     if(this.stabilizer)this.stabilizer.reset();
-    this.setData({running:true,status:"等待相机初始化",matches:0,inliers:0,elapsedMs:0,modeName:"首次识别",previewFps:0,trackingFps:0,stabilityMode:"等待定位"});
+    this.setData({running:true,experienceError:"",status:"等待相机初始化",matches:0,inliers:0,elapsedMs:0,modeName:"首次识别",previewFps:0,trackingFps:0,stabilityMode:"等待定位"});
   },
   onCameraReady:function(){
     if(!this.data.running||this.listener)return;
@@ -187,11 +187,11 @@ Page({
             metrics.sceneVisible=!!self.preview.sceneVisible;
             self.setData(metrics);self.nextStatsAt=now+750;
           }else if(typeof metrics.previewFps==="number"){self.setData(metrics);}
-        }catch(error){self.stop();self.setData({status:"处理失败："+error.message});}
+        }catch(error){self.stop();self.setData({status:"处理失败："+error.message,experienceError:"体验暂时中断，请重新开始"});}
       });
       this.setData({status:"正在取帧，请对准本尊识别图"});
-      this.listener.start({fail:function(error){if(self.generation!==generation)return;self.stop();self.setData({status:"取帧失败："+(error.errMsg||"未知错误")});}});
-    }catch(error){this.stop();this.setData({status:error.message});}
+      this.listener.start({fail:function(error){if(self.generation!==generation)return;self.stop();self.setData({status:"取帧失败："+(error.errMsg||"未知错误"),experienceError:"相机暂时无法使用，请重新开始"});}});
+    }catch(error){this.stop();this.setData({status:error.message,experienceError:"相机暂时无法使用，请重新开始"});}
   },
   stop:function(){
     this.generation++;
@@ -201,8 +201,8 @@ Page({
     if(this.preview&&this.preview.model)this.preview.model.resetTimeline();
     this.setData({running:false,sceneVisible:false,status:"追踪已停止"});
   },
-  onCameraError:function(event){this.stop();this.setData({status:"相机失败："+((event.detail&&event.detail.errMsg)||"请检查相机权限")});},
-  onCameraStopped:function(){if(this.data.running){this.stop();this.setData({status:"相机已中断，请重新开始"});}},
+  onCameraError:function(event){this.stop();this.setData({status:"相机失败："+((event.detail&&event.detail.errMsg)||"请检查相机权限"),experienceError:"无法使用相机，请检查微信相机权限后重试"});},
+  onCameraStopped:function(){if(this.data.running){this.stop();this.setData({status:"相机已中断，请重新开始",experienceError:"相机已中断，请重新开始"});}},
   onHide:function(){this.stop();},
   onUnload:function(){this.destroyed=true;this.stop();if(this.audio)this.audio.dispose();if(this.preview)this.preview.dispose();this.tracker=null;}
 });
