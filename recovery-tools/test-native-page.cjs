@@ -55,9 +55,16 @@ assert.equal(changShengScene.data.recognitionName, '常胜识别图');
 assert.equal(changShengScene.tracker.target.points.length, 678);
 assert.equal(changShengScene.visualSettings.storageKey, 'ysj-native-visual-chang-sheng-v1');
 changShengScene.onUnload();
-const unavailableScene = boot(null, {}, Date, {scene:'zhao-cai'});
+const zhaoCaiScene = boot(null, {}, Date, {scene:'zhao-cai'});
+assert.equal(zhaoCaiScene.data.sceneKey, 'zhao-cai');
+assert.equal(zhaoCaiScene.data.sceneName, '招财');
+assert.equal(zhaoCaiScene.data.recognitionName, '招财识别图');
+assert.equal(zhaoCaiScene.tracker.target.points.length, 639);
+assert.equal(zhaoCaiScene.visualSettings.storageKey, 'ysj-native-visual-zhao-cai-v1');
+zhaoCaiScene.onUnload();
+const unavailableScene = boot(null, {}, Date, {scene:'zi-zai'});
 assert.equal(unavailableScene.tracker, undefined);
-assert.match(unavailableScene.data.status, /招财场景尚未完成鸿蒙原生适配/);
+assert.match(unavailableScene.data.status, /自在场景尚未完成鸿蒙原生适配/);
 // Display transforms must preserve camera/model aspect together, and keep one live canvas.
 const visual=require('../pages/ar-native-track/visual-settings.js');
 for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]){

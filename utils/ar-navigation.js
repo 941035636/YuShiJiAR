@@ -18,17 +18,20 @@ function isHarmonyPlatform(platform) {
 
 function openArScene(sceneKey, xrFramePage) {
   var platform = getPlatform();
-  var harmonyPages = { "ben-zun": "/pages/ar-native-track/index?scene=ben-zun" };
+  var harmonyPages = {
+    "ben-zun": "/pages/ar-native-track/index?scene=ben-zun",
+    "chang-sheng": "/pages/ar-native-track/index?scene=chang-sheng"
+  };
   var url = xrFramePage;
 
   if (isHarmonyPlatform(platform)) {
     url = harmonyPages[sceneKey];
     if (!url) {
       wx.showModal({
-        title: sceneKey === "chang-sheng" ? "常胜真机测试中" : "鸿蒙适配中",
-        content: sceneKey === "chang-sheng"
-          ? "常胜已提供独立原生 AR 测试入口，真机验收后再切换正式入口。"
-          : "当前“本尊”已完成自研 AR 适配，“常胜”正在独立测试，该场景仍在迁移中。",
+        title: sceneKey === "zhao-cai" ? "招财真机测试中" : "鸿蒙适配中",
+        content: sceneKey === "zhao-cai"
+          ? "招财已提供独立原生 AR 测试入口，真机验收后再切换正式入口。"
+          : "当前“本尊”和“常胜”已完成自研 AR 适配，“招财”正在独立测试，该场景仍在迁移中。",
         showCancel: false
       });
       return;

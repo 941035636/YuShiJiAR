@@ -9,6 +9,11 @@
   </view>
   <view class="ar-experience" bindtap="openNativeChangShengExperience">
     <view class="ar-experience-title">常胜原生 AR 体验</view>
+    <view class="ar-experience-desc">已通过真机验收，保留入口用于回归</view>
+    <view class="ar-experience-action">进入体验 ›</view>
+  </view>
+  <view class="ar-experience" bindtap="openNativeZhaoCaiExperience">
+    <view class="ar-experience-title">招财原生 AR 体验</view>
     <view class="ar-experience-desc">独立测试入口，不影响正式场景自动分流</view>
     <view class="ar-experience-action">进入测试 ›</view>
   </view>

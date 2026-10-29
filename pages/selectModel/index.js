@@ -31,6 +31,11 @@ Page({
       wx.showToast({ title: "常胜 AR 打开失败", icon: "none" });
     } });
   },
+  openNativeZhaoCaiExperience: function () {
+    wx.navigateTo({ url: "/pages/ar-native-track/index?scene=zhao-cai", fail: function () {
+      wx.showToast({ title: "招财 AR 打开失败", icon: "none" });
+    } });
+  },
   data: { pageList: {} },
   onReady: function () {},
   onShow: function () {},
