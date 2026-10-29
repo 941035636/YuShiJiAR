@@ -26,6 +26,11 @@ Page({
       wx.showToast({ title: "AR 体验打开失败", icon: "none" });
     } });
   },
+  openNativeChangShengExperience: function () {
+    wx.navigateTo({ url: "/pages/ar-native-track/index?scene=chang-sheng", fail: function () {
+      wx.showToast({ title: "常胜 AR 打开失败", icon: "none" });
+    } });
+  },
   data: { pageList: {} },
   onReady: function () {},
   onShow: function () {},

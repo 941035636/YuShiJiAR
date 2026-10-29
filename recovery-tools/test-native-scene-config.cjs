@@ -4,7 +4,7 @@ const visual=require('../pages/ar-native-track/visual-settings.js');
 
 const catalog=registry.getCatalog();
 assert.deepEqual(catalog.map(item=>item.key),['ben-zun','chang-sheng','zhao-cai','zi-zai','jin-xi','na-fu']);
-assert.equal(catalog.filter(item=>item.nativeReady).length,1);
+assert.equal(catalog.filter(item=>item.nativeReady).length,2);
 
 const scene=registry.requireNative('ben-zun');
 assert.equal(scene.name,'本尊');
@@ -19,7 +19,17 @@ const settings=visual.create(scene.model,scene.visual.storageKey);
 assert.equal(settings.storageKey,'ysj-native-visual-v1');
 assert.equal(settings.defaults.variantKey,scene.model.defaultVariant);
 assert.equal(settings.defaults.fov,scene.model.fov);
-assert.throws(()=>registry.requireNative('chang-sheng'),/常胜场景尚未完成鸿蒙原生适配/);
+const changSheng=registry.requireNative('chang-sheng');
+assert.equal(changSheng.name,'常胜');
+assert.equal(changSheng.target.width,427);
+assert.equal(changSheng.target.height,640);
+assert(changSheng.target.points.length>=600);
+assert.equal(changSheng.model.variants.reference.label,'常胜原版金币素材');
+assert.equal(changSheng.effects.effects.length,3);
+assert.match(decodeURIComponent(changSheng.audio.sources.narration),/旗开得胜\.mp3$/);
+assert.equal(changSheng.ui.recognitionName,'常胜识别图');
+assert.equal(visual.create(changSheng.model,changSheng.visual.storageKey).storageKey,'ysj-native-visual-chang-sheng-v1');
+assert.throws(()=>registry.requireNative('zhao-cai'),/招财场景尚未完成鸿蒙原生适配/);
 assert.throws(()=>registry.requireNative('unknown'),/未知场景/);
 
-console.log('Native scene catalog, BenZun configuration and unavailable-scene guards passed.');
+console.log('Native scene catalog, BenZun/ChangSheng configurations and unavailable-scene guards passed.');

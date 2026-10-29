@@ -21,7 +21,7 @@ assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=ben-zun'],'Har
 navigations=[];
 navigation.openArScene('chang-sheng','/pages/ar/scene-ar-oceanWorld/index');
 assert.equal(navigations.length,0,'unmigrated Harmony scene must not enter XR-Frame or a removed plugin');
-assert.equal(modals.length,1);assert.match(modals[0].content,/仅“本尊”.*自研 AR/);
+assert.equal(modals.length,1);assert.match(modals[0].content,/常胜已提供独立原生 AR 测试入口/);
 
 const app=require('../app.json');
 assert.equal(JSON.stringify(app).includes('plugin'),false,'project manifest must not declare third-party plugins');
@@ -32,6 +32,8 @@ require('../pages/selectModel/index.js');
 for(const current of ['android','ios','ohos']){
   platform=current;navigations=[];selection.openNativeExperience();
   assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=ben-zun']);
+  navigations=[];selection.openNativeChangShengExperience();
+  assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=chang-sheng']);
 }
 assert.equal(selection.openNativeProbe,undefined);assert.equal(selection.openSelfHostedAr,undefined);
 assert.deepEqual(app.subpackages.map(item=>item.root),['pages/ar-native-track'],'diagnostic pages are not registered in the formal app');

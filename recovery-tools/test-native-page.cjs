@@ -48,9 +48,16 @@ const explicitScene = boot(null, {}, Date, {scene:'ben-zun'});
 assert.equal(explicitScene.data.sceneKey, 'ben-zun');
 assert.equal(explicitScene.visualSettings.storageKey, 'ysj-native-visual-v1');
 explicitScene.onUnload();
-const unavailableScene = boot(null, {}, Date, {scene:'chang-sheng'});
+const changShengScene = boot(null, {}, Date, {scene:'chang-sheng'});
+assert.equal(changShengScene.data.sceneKey, 'chang-sheng');
+assert.equal(changShengScene.data.sceneName, '常胜');
+assert.equal(changShengScene.data.recognitionName, '常胜识别图');
+assert.equal(changShengScene.tracker.target.points.length, 678);
+assert.equal(changShengScene.visualSettings.storageKey, 'ysj-native-visual-chang-sheng-v1');
+changShengScene.onUnload();
+const unavailableScene = boot(null, {}, Date, {scene:'zhao-cai'});
 assert.equal(unavailableScene.tracker, undefined);
-assert.match(unavailableScene.data.status, /常胜场景尚未完成鸿蒙原生适配/);
+assert.match(unavailableScene.data.status, /招财场景尚未完成鸿蒙原生适配/);
 // Display transforms must preserve camera/model aspect together, and keep one live canvas.
 const visual=require('../pages/ar-native-track/visual-settings.js');
 for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]){

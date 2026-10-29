@@ -25,8 +25,10 @@ function openArScene(sceneKey, xrFramePage) {
     url = harmonyPages[sceneKey];
     if (!url) {
       wx.showModal({
-        title: "鸿蒙适配中",
-        content: "当前仅“本尊”场景已完成自研 AR 适配，该场景仍在迁移中。",
+        title: sceneKey === "chang-sheng" ? "常胜真机测试中" : "鸿蒙适配中",
+        content: sceneKey === "chang-sheng"
+          ? "常胜已提供独立原生 AR 测试入口，真机验收后再切换正式入口。"
+          : "当前“本尊”已完成自研 AR 适配，“常胜”正在独立测试，该场景仍在迁移中。",
         showCancel: false
       });
       return;
