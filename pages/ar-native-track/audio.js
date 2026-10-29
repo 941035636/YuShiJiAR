@@ -1,11 +1,13 @@
 "use strict";
-var sources=require("./effects-config.js").audio;
-function AudioController(onState){
+var defaultSources=require("./effects-config.js").audio;
+function AudioController(onState,options){
+  options=options||{};
+  var sources=options.sources||options.audio||defaultSources,volumes=options.volumes||{};
   this.onState=onState;this.enabled=true;this.tracked=false;this.ended=false;this.contexts={};this.playing={};this.failed={};this.lastTrackedAt=0;
   var self=this;
-  try{["ambient","narration"].forEach(function(name){
+  try{["ambient","narration"].filter(function(name){return !!sources[name];}).forEach(function(name){
     var context=wx.createInnerAudioContext();self.contexts[name]=context;
-    context.autoplay=false;context.loop=name==="ambient";context.volume=name==="ambient"?0.3:0.6;
+    context.autoplay=false;context.loop=name==="ambient";context.volume=volumes[name]!==undefined?volumes[name]:name==="ambient"?0.3:0.6;
     context.onPlay(function(){
       if(self.disposed)return;
       if(!self.enabled||!self.tracked){self.pause(name);return;}
@@ -22,7 +24,7 @@ AudioController.prototype.pause=function(name){
 };
 AudioController.prototype.sync=function(){
   var self=this;if(this.disposed)return;
-  ["ambient","narration"].forEach(function(name){
+  Object.keys(this.contexts).forEach(function(name){
     if(!self.enabled||!self.tracked){self.pause(name);return;}
     if(self.playing[name]||self.failed[name]||(name==="narration"&&self.ended))return;
     try{self.playing[name]=true;self.contexts[name].play();}catch(error){self.playing[name]=false;self.failed[name]=true;self.onState("播放失败："+error.message);}
@@ -51,7 +53,7 @@ AudioController.prototype.setEnabled=function(value){
 };
 AudioController.prototype.replay=function(){
   if(this.disposed)return;this.ended=false;this.failed.narration=false;
-  try{this.contexts.narration.stop();}catch(_){}this.playing.narration=false;this.sync();
+  if(this.contexts.narration)try{this.contexts.narration.stop();}catch(_){}this.playing.narration=false;this.sync();
   this.onState(this.enabled&&this.tracked?"正在重新播放讲解":"识别后重新播放讲解");
 };
 AudioController.prototype.reset=function(){

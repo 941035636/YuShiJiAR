@@ -18,7 +18,7 @@ function isHarmonyPlatform(platform) {
 
 function openArScene(sceneKey, xrFramePage) {
   var platform = getPlatform();
-  var harmonyPages = { "ben-zun": "/pages/ar-native-track/index" };
+  var harmonyPages = { "ben-zun": "/pages/ar-native-track/index?scene=ben-zun" };
   var url = xrFramePage;
 
   if (isHarmonyPlatform(platform)) {

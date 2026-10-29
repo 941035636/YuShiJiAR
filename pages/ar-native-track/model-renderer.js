@@ -1,8 +1,8 @@
 "use strict";
 var parse=require("./glb.js").parse;
 var pose=require("./pose.js");
-var config=require("./model-config.js");
-var effectsConfig=require("./effects-config.js");
+var defaultConfig=require("./model-config.js");
+var defaultEffectsConfig=require("./effects-config.js");
 var animation=require("./animation.js");
 var glb=require("./glb.js");
 var shaders=require("./shaders.js");
@@ -26,10 +26,16 @@ function linkedProgram(gl,fragment){
   finally{if(vertex)gl.deleteShader(vertex);if(shader)gl.deleteShader(shader);}
 }
 function ModelRenderer(canvas,gl,onState,options){
+  options=options||{};
+  var config=options.modelConfig||defaultConfig,effectsConfig=options.effectsConfig||defaultEffectsConfig;
   this.canvas=canvas;this.gl=gl;this.onState=onState;this.parts=[];this.files={};
-  this.variantKey=options&&config.variants[options.variantKey]?options.variantKey:config.defaultVariant;
+  this.config=config;this.effectsConfig=effectsConfig;
+  this.variantKey=config.variants[options.variantKey]?options.variantKey:config.defaultVariant;
   this.variant=config.variants[this.variantKey];this.url=this.variant.url;
   this.materialMode=1;this.exposure=config.lighting.exposure;this.effectExposure=config.lighting.effectExposure;
+  this.effectExposureByGroup={};this.effectTintByGroup={};(effectsConfig.effects||[]).forEach(function(effect){
+    this.effectExposureByGroup[effect.key]=effect.exposure||1;if(effect.tint)this.effectTintByGroup[effect.key]=effect.tint;
+  },this);
   this.lightIntensity=new Float32Array([config.lighting.ambient,config.lighting.key]);
   this.enabled=true;this.ready=false;this.fov=config.fov;this.scale=1;this.offsetY=0;
   this.effectsEnabled=true;this.effectGroups=[];this.effectTasks=[];this.clock=new animation.Clock();
@@ -53,7 +59,7 @@ ModelRenderer.prototype.load=function(){
         try{
           self.byteLength=result.data&&result.data.byteLength||0;self.loadStage="解析 GLB";
           self.state("模型文件已读取，正在解析 GLB");
-          var model=parse(result.data,config);self.build(model).then(function(){
+          var model=parse(result.data,self.config);self.build(model).then(function(){
             if(self.disposed)return;self.ready=true;self.loadStage="模型已就绪";self.state(self.variant.label+"已就绪，识别后显示");
           }).catch(function(error){self.fail(error);});
         }catch(error){self.fail(error);}
@@ -127,7 +133,9 @@ ModelRenderer.prototype.uploadParts=function(primitives,group){
     if(self.disposed)throw new Error("页面已关闭");
     var center=[0,0,0],count=part.vertices.length/8;
     for(var i=0;i<part.vertices.length;i+=8)for(var k=0;k<3;k++)center[k]+=part.vertices[i+k]/count;
-    var gpu={vertex:gl.createBuffer(),index:gl.createBuffer(),texture:gl.createTexture(),count:part.indices.length,color:part.color,doubleSided:part.doubleSided,
+    var tint=self.effectTintByGroup[group],renderColor=part.color;
+    if(tint)renderColor=new Float32Array([part.color[0]*tint[0],part.color[1]*tint[1],part.color[2]*tint[2],part.color[3]]);
+    var gpu={vertex:gl.createBuffer(),index:gl.createBuffer(),texture:gl.createTexture(),count:part.indices.length,color:renderColor,doubleSided:part.doubleSided,
       center:center,node:part.node,group:group,transparent:part.transparent,wrap:[part.wrapS===10497?1:0,part.wrapT===10497?1:0],
       params:new Float32Array([part.metallic,part.roughness,part.occlusionStrength,0]),normalScale:part.normalScale,textures:[]};self.parts.push(gpu);
     gpu.textures.push(gpu.texture);
@@ -165,7 +173,7 @@ ModelRenderer.prototype.readEffect=function(definition){
       if(response.statusCode!==200){reject(new Error("HTTP "+response.statusCode));return;}
       try{wx.getFileSystemManager().readFile({filePath:response.tempFilePath,success:function(value){
         if(self.disposed){reject(new Error("页面已关闭"));return;}
-        try{resolve(parse(value.data,{maxBytes:config.maxBytes,effect:true}));}catch(error){reject(error);}
+        try{resolve(parse(value.data,{maxBytes:self.config.maxBytes,effect:true}));}catch(error){reject(error);}
       },fail:function(error){reject(new Error(error.errMsg||"读取特效失败"));}});}catch(error){reject(error);}
     },fail:function(error){self.effectTasks=self.effectTasks.filter(function(value){return value!==task;});reject(new Error(error.errMsg||"下载特效失败"));}});
     self.effectTasks.push(task);
@@ -173,16 +181,16 @@ ModelRenderer.prototype.readEffect=function(definition){
 };
 ModelRenderer.prototype.loadEffects=function(onState){
   if(this.disposed||!this.ready||this.effectsLoading)return;
-  this.effectsLoading=true;var self=this,failed=[];
-  effectsConfig.effects.forEach(function(def){self.dropGroup(def.key);});this.effectGroups=[];
-  return effectsConfig.effects.reduce(function(job,definition){return job.then(function(){
+  this.effectsLoading=true;var self=this,failed=[],effects=this.effectsConfig.effects||[];
+  effects.forEach(function(def){self.dropGroup(def.key);});this.effectGroups=[];
+  return effects.reduce(function(job,definition){return job.then(function(){
     if(self.disposed)return;
     onState("正在加载"+definition.label+"特效",false);
     return self.readEffect(definition).then(function(asset){return self.uploadParts(asset.primitives,definition.key).then(function(){
       if(!self.disposed)self.effectGroups.push({key:definition.key,asset:asset,root:effectRoot(self.alignment,definition)});
     });}).catch(function(error){self.dropGroup(definition.key);failed.push(definition.label+"："+error.message);});
   });},Promise.resolve()).then(function(){
-    self.effectsLoading=false;if(!self.disposed)onState(failed.length?"部分特效未加载（"+failed.join("；")+"）":"盾、山、法阵、文字特效已就绪",failed.length>0);
+    self.effectsLoading=false;if(!self.disposed)onState(failed.length?"部分特效未加载（"+failed.join("；")+"）":self.effectsConfig.readyText||(effects.length?effects.map(function(value){return value.label;}).join("、")+"特效已就绪":"当前场景无附加特效"),failed.length>0);
   });
 };
 ModelRenderer.prototype.dropGroup=function(group){
@@ -204,7 +212,7 @@ ModelRenderer.prototype.draw=function(corners,width,height,aspect){
   var rotation=this.rotationNormal;rotation[0]=m[0];rotation[1]=m[1];rotation[2]=m[2];rotation[3]=m[4];rotation[4]=m[5];rotation[5]=m[6];rotation[6]=m[8];rotation[7]=m[9];rotation[8]=m[10];
   gl.uniformMatrix4fv(u.mvp,false,transform.mvp);gl.uniformMatrix4fv(u.view,false,m);gl.uniformMatrix3fv(u.rotation,false,rotation);
   gl.uniform1f(u.size,this.scale);gl.uniform1f(u.shiftY,this.offsetY);gl.uniform1i(u.colorMap,0);
-  gl.uniform1f(u.exposure,this.exposure);gl.uniform1f(u.effectExposure,this.effectExposure);gl.uniform1f(u.materialMode,this.pbrSupported?this.materialMode:0);
+  gl.uniform1f(u.exposure,this.exposure);gl.uniform1f(u.effectExposure,1);gl.uniform1f(u.materialMode,this.pbrSupported?this.materialMode:0);
   if(this.pbrSupported){gl.uniform1i(u.normalMap,1);gl.uniform1i(u.materialMap,2);gl.uniform1i(u.occlusionMap,3);gl.uniform2fv(u.lightIntensity,this.lightIntensity);}
   var list=this.drawList;list.length=0;
   this.parts.forEach(function(part){
@@ -218,7 +226,8 @@ ModelRenderer.prototype.draw=function(corners,width,height,aspect){
     var part=list[i].part,local=list[i].local;
     gl.uniformMatrix4fv(u.local,false,local);
     gl.uniformMatrix3fv(u.localNormal,false,part.group==="base"||part.transparent?this.identityNormal:glb.normalMatrix(local));
-    gl.uniform1f(u.unlit,part.group==="base"?0:1);gl.uniform1f(u.transparent,part.transparent?1:0);gl.uniform2fv(u.repeatUV,part.wrap);
+    var isEffect=part.group!=="base",groupExposure=isEffect?(this.effectExposureByGroup[part.group]||1)*this.effectExposure:1;
+    gl.uniform1f(u.unlit,isEffect?1:0);gl.uniform1f(u.effectExposure,groupExposure);gl.uniform1f(u.transparent,part.transparent?1:0);gl.uniform2fv(u.repeatUV,part.wrap);
     if(part.transparent){gl.enable(gl.BLEND);gl.blendFuncSeparate(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);}else{gl.disable(gl.BLEND);gl.depthMask(true);}
     if(part.doubleSided)gl.disable(gl.CULL_FACE);else gl.enable(gl.CULL_FACE);
     gl.bindBuffer(gl.ARRAY_BUFFER,part.vertex);gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,part.index);

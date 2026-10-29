@@ -21,7 +21,7 @@ var common=[
 var simple=common+[
   "\nvoid main(){vec4 c=baseSample(sampleUV());float a=sampleAlpha(c);if(a<.003)discard;",
   "vec3 base=linearColor(c.rgb)*color.rgb;float light=mix(.75+.25*max(dot(normalize(n),normalize(vec3(-.3,-.5,-1.))),0.),1.,unlit);",
-  "gl_FragColor=vec4(displayColor(base*light),a);}"
+  "vec3 outputColor=base*light*mix(1.,effectExposure,unlit);gl_FragColor=vec4(displayColor(outputColor),a);}"
 ].join("\n");
 var pbr=common+[
   "\nuniform sampler2D normalMap;uniform sampler2D materialMap;uniform sampler2D occlusionMap;",

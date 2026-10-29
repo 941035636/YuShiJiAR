@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '../pages/ar-native-track');
-function boot(failedModule, wx = {}, clock = Date) {
+function boot(failedModule, wx = {}, clock = Date, loadOptions) {
   const cache = new Map();
   let definition;
   function load(filename) {
@@ -16,8 +16,10 @@ function boot(failedModule, wx = {}, clock = Date) {
     const source = fs.readFileSync(filename, 'utf8');
     const wrapper = vm.runInContext('(function(require,module,exports){' + source + '\n})', context, { filename });
     wrapper(request => {
-      assert(request.startsWith('./'), 'page dependencies must remain local');
-      return load(path.resolve(path.dirname(filename), request));
+      assert(request.startsWith('./')||request.startsWith('../'), 'page dependencies must remain local');
+      const resolved=path.resolve(path.dirname(filename),request);
+      assert(resolved===root||resolved.startsWith(root+path.sep),'page dependencies must remain inside the native AR package');
+      return load(resolved);
     }, module, module.exports);
     return module.exports;
   }
@@ -32,13 +34,23 @@ function boot(failedModule, wx = {}, clock = Date) {
     data: { ...definition.data },
     setData(patch) { Object.assign(this.data, patch); }
   });
-  page.onLoad();
+  page.onLoad(loadOptions);
   return page;
 }
 const page = boot();
 assert(page.tracker, 'local feature data and tracker must initialize');
+assert.equal(page.data.sceneKey, 'ben-zun');
+assert.equal(page.data.sceneName, '本尊');
+assert.equal(page.data.recognitionName, '本尊识别图');
 assert.equal(page.tracker.target.width, 427);
 assert.equal(page.tracker.target.points.length, 602);
+const explicitScene = boot(null, {}, Date, {scene:'ben-zun'});
+assert.equal(explicitScene.data.sceneKey, 'ben-zun');
+assert.equal(explicitScene.visualSettings.storageKey, 'ysj-native-visual-v1');
+explicitScene.onUnload();
+const unavailableScene = boot(null, {}, Date, {scene:'chang-sheng'});
+assert.equal(unavailableScene.tracker, undefined);
+assert.match(unavailableScene.data.status, /常胜场景尚未完成鸿蒙原生适配/);
 // Display transforms must preserve camera/model aspect together, and keep one live canvas.
 const visual=require('../pages/ar-native-track/visual-settings.js');
 for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]){
@@ -52,6 +64,7 @@ for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]
 const invalid=visual.sanitize({variantKey:'invalid',modelScale:500,modelOffset:-200,fov:'NaN',exposure:100,effectExposure:-1,renderMode:'other'});
 assert.equal(invalid.variantKey,'reference');assert.equal(invalid.modelScale,150);assert.equal(invalid.modelOffset,-25);
 assert.equal(invalid.fov,50);assert.equal(invalid.exposure,2);assert.equal(invalid.effectExposure,.5);assert.equal(invalid.renderMode,'pbr');
+assert.equal(visual.sanitize({effectExposure:99}).effectExposure,2,'global effect multiplier must stay capped');
 let writes=0;
 const calibrated=boot(null,{getWindowInfo(){return {windowWidth:390,windowHeight:700};},
   getStorageSync(){return {variantKey:'jade',modelScale:150,renderMode:'simple',quality:'performance',effectExposure:.5};},

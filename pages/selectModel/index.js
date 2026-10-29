@@ -22,7 +22,7 @@ Page({
     arNavigation.openArScene("na-fu", "/pages/ar/scene-ar-NaFu/index");
   },
   openNativeExperience: function () {
-    wx.navigateTo({ url: "/pages/ar-native-track/index", fail: function () {
+    wx.navigateTo({ url: "/pages/ar-native-track/index?scene=ben-zun", fail: function () {
       wx.showToast({ title: "AR 体验打开失败", icon: "none" });
     } });
   },

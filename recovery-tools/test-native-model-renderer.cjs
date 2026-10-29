@@ -8,7 +8,7 @@ const input=fs.readFileSync('recovery-assets/models/Model/taishanshigandang_yu.g
 const buffer=input.buffer.slice(input.byteOffset,input.byteOffset+input.byteLength);
 const source=parse(buffer,config);
 let sequence=0,draws=[],created=new Set(),deleted=new Set(),files=new Set(),unlinked=[],readCount=0,aborted=0,download;
-let depthWrite=false,blend=false,local=[],rejectPbr=false,shaderSources=new Map(),imageWidth=256,mipmaps=0;
+let depthWrite=false,blend=false,local=[],effectExposure=1,rejectPbr=false,shaderSources=new Map(),imageWidth=256,mipmaps=0;
 function allocate(){const id=++sequence;created.add(id);return id;}
 const gl=new Proxy({
   createBuffer:allocate,createTexture:allocate,createProgram:allocate,createShader:allocate,
@@ -20,7 +20,8 @@ const gl=new Proxy({
   getAttribLocation(program,name){return {p:0,position:0,normal:1,uv:2,tangent:3}[name]??-1;},getUniformLocation(program,name){return name;},
   depthMask(value){depthWrite=value;},enable(name){if(name==='BLEND')blend=true;},disable(name){if(name==='BLEND')blend=false;},
   uniformMatrix4fv(name,transpose,value){if(name==='local')local=Array.from(value);},
-  drawElements(mode,count){draws.push({kind:'model',count,depthWrite,blend,local});},drawArrays(mode){draws.push({kind:mode});}
+  uniform1f(name,value){if(name==='effectExposure')effectExposure=value;},
+  drawElements(mode,count){draws.push({kind:'model',count,depthWrite,blend,local,effectExposure});},drawArrays(mode){draws.push({kind:mode});}
 },{get(target,key){if(key in target)return target[key];return /^[A-Z0-9_]+$/.test(key)?key:function(){};}});
 const canvas={width:480,height:640,getContext(){return gl;},createImage(){
   return {width:imageWidth,height:256,set src(value){queueMicrotask(()=>this.onload?.());}};
@@ -57,6 +58,10 @@ async function main(){
   assert.equal(model.parts.length,12);assert.equal(model.effectGroups.length,4);assert.equal(effectsStates.at(-1).failed,false);
   model.clock.reset();draws=[];preview.draw(new Uint8Array(480*640*4),480,640,corners);
   assert.equal(draws.filter(d=>d.kind==='model').length,12,'all effects and main model');
+  const exposures=new Set(draws.filter(d=>d.kind==='model').map(d=>d.effectExposure));
+  for(const expected of [1,.55,1.1,1.3,1.35])assert(exposures.has(expected),'per-effect exposure '+expected+' reaches the GPU');
+  const textPart=model.parts.find(part=>part.group==='sgd');
+  assert(textPart.color[1]<effect({key:'sgd'}).primitives[0].color[1]*.5,'text contrast tint reaches the uploaded part');
   const transparent=draws.filter(d=>d.kind==='model'&&d.blend);
   assert.equal(transparent.length,6);assert(transparent.every(d=>!d.depthWrite),'transparent effects must not write depth');
   assert(draws.filter(d=>d.kind==='model'&&!d.blend).every(d=>d.depthWrite),'opaque main and text write depth');

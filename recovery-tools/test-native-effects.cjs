@@ -8,6 +8,7 @@ function read(path,effect){const b=fs.readFileSync(path);return glb.parse(b.buff
 const main=read('recovery-assets/models/Model/taishanshigandang_yu.glb',false),assets={};
 const report=[];
 for(const def of definitions){
+  assert(Number.isFinite(def.exposure)&&def.exposure>=.4&&def.exposure<=2,'each effect needs an explicit safe exposure');
   const file=def.key==='sgd'?'Model/otherModel/sgd':'FrameAnimation/'+def.key;
   const model=read('recovery-assets/models/'+file+'.glb',true);assets[def.key]=model;
   const original=JSON.stringify(model.nodes);
@@ -25,6 +26,7 @@ for(const def of definitions){
   }
   report.push({key:def.key,primitives:model.primitives.length,channels:model.clips[0]?.channels.length||0,duration:model.clips[0]?.duration||0});
 }
+assert(definitions.find(value=>value.key==='sgd').exposure<definitions.find(value=>value.key==='dcdy02').exposure,'text must remain below the magic circle exposure');
 assert.equal(assets.dun.clips[0].duration,10);
 assert.equal(assets.shan.clips[0].duration,37.5);
 assert.equal(assets.dcdy02.clips[0].duration,37.5);

@@ -4,8 +4,8 @@
     <canvas id="frame-preview" type="webgl" class="ar-canvas" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;left:{{canvasLeft}}px;top:{{canvasTop}}px" />
     <cover-image class="frame-overlay" src="/images/bk.png" />
     <cover-view class="hud">
-      <cover-view class="hud-title">本尊 · 遇石记 AR</cover-view>
-      <cover-view class="hud-status">{{experienceError ? experienceError : modelFailed ? '内容加载失败，请检查网络后重试' : !modelReady ? '正在加载本尊，请稍候' : !running ? '准备就绪，点击开始体验' : sceneVisible ? '本尊已现身' : '请将摄像头对准本尊识别图'}}</cover-view>
+      <cover-view class="hud-title">{{sceneTitle}}</cover-view>
+      <cover-view class="hud-status">{{experienceError ? experienceError : modelFailed ? '内容加载失败，请检查网络后重试' : !modelReady ? loadingText : !running ? '准备就绪，点击开始体验' : sceneVisible ? visibleText : promptText}}</cover-view>
       <cover-view wx:if="{{modelFailed}}" class="hud-action" bindtap="loadModel">重新加载</cover-view>
       <cover-view wx:if="{{effectsLoading}}" class="hud-status">正在加载场景效果…</cover-view>
       <cover-view wx:if="{{effectsFailed}}" class="hud-action" bindtap="loadEffects">部分场景效果未加载，点击重试</cover-view>

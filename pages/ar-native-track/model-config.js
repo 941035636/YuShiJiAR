@@ -14,5 +14,7 @@ module.exports = {
   centerX: 0,
   centerY: 0.03,
   fov: 50,
-  lighting:{exposure:1,ambient:2,key:3,effectExposure:1.8}
+  // effectExposure is the user-adjustable global multiplier. Per-effect baselines
+  // live in effects-config.js so text and transparent effects no longer compete.
+  lighting:{exposure:1,ambient:2,key:3,effectExposure:1}
 };

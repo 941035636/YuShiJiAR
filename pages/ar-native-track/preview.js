@@ -15,6 +15,7 @@ function Preview(canvas) {
   var gl=canvas.getContext("webgl",{depth:true,alpha:false,antialias:true});if(!gl)throw new Error("WebGL 不可用");
   this.canvas=canvas;this.gl=gl;
   this.showOutline=true;
+  this.targetAspect=427/640;
   this.quality="balanced";this.pixelRatio=1;this.displayWidth=0;this.aaError="";
   var attributes=gl.getContextAttributes&&gl.getContextAttributes();this.msaa=!!(attributes&&attributes.antialias);
   this.maxRenderSide=Math.min(Number(gl.getParameter(gl.MAX_TEXTURE_SIZE))||4096,Number(gl.getParameter(gl.MAX_RENDERBUFFER_SIZE))||4096);
@@ -53,7 +54,7 @@ Preview.prototype.draw=function(rgba,width,height,corners){
   this.poseError=null;this.poseStatus="";this.sceneVisible=false;
   if(this.model){
     try{
-      var transform=this.model.draw(corners,width,height,427/640);
+      var transform=this.model.draw(corners,width,height,this.targetAspect);
       if(transform){this.poseError=Math.round(transform.error*10)/10;this.poseStatus="姿态已计算";this.sceneVisible=true;}
       else if(corners.length===4&&this.model.enabled&&this.model.ready)this.poseStatus="姿态未通过校验，请调整相机视角或减小倾斜";
     }catch(error){this.model.fail(error);}

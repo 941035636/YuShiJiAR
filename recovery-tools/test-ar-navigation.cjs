@@ -16,7 +16,7 @@ assert.deepEqual(navigations,['/pages/ar/scene-ar-BenZun/index'],'Android/iOS re
 
 platform='ohos';navigations=[];
 navigation.openArScene('ben-zun','/pages/ar/scene-ar-BenZun/index');
-assert.deepEqual(navigations,['/pages/ar-native-track/index'],'Harmony ben-zun uses the self-developed tracker');
+assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=ben-zun'],'Harmony ben-zun uses the configured self-developed tracker');
 
 navigations=[];
 navigation.openArScene('chang-sheng','/pages/ar/scene-ar-oceanWorld/index');
@@ -31,7 +31,7 @@ let selection;global.Page=value=>selection=value;
 require('../pages/selectModel/index.js');
 for(const current of ['android','ios','ohos']){
   platform=current;navigations=[];selection.openNativeExperience();
-  assert.deepEqual(navigations,['/pages/ar-native-track/index']);
+  assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=ben-zun']);
 }
 assert.equal(selection.openNativeProbe,undefined);assert.equal(selection.openSelfHostedAr,undefined);
 assert.deepEqual(app.subpackages.map(item=>item.root),['pages/ar-native-track'],'diagnostic pages are not registered in the formal app');

@@ -1,22 +1,38 @@
 "use strict";
 Page({
-  data: { running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,frameSize:"—",modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
+  data: { sceneKey:"ben-zun",sceneName:"本尊",sceneTitle:"本尊 · 遇石记 AR",recognitionName:"本尊识别图",loadingText:"正在加载本尊，请稍候",visibleText:"本尊已现身",promptText:"请将摄像头对准本尊识别图",
+    running:false,ready:false,status:"准备图像处理",matches:0,inliers:0,elapsedMs:0,previewHeight:360,frameSize:"—",modeName:"等待开始",previewFps:0,trackingFps:0,stabilityMode:"等待定位",
     showModel:true,modelStatus:"等待画布就绪",modelFailed:false,modelScale:100,modelOffset:0,fov:50,renderMs:0,poseError:"—",poseStatus:"",
     showEffects:true,effectsStatus:"等待主模型就绪",effectsFailed:false,soundEnabled:true,audioStatus:"等待初始化声音",
-    runtimeAppId:"未读取",runtimeEnv:"未读取",modelStage:"等待下载",diagnosticsRevision:"20261028-experience-1",diagnosticNotice:"",
+    runtimeAppId:"未读取",runtimeEnv:"未读取",modelStage:"等待下载",diagnosticsRevision:"20261029-scene-config-1",diagnosticNotice:"",
     modelReady:false,effectsLoading:false,experienceError:"",audioFailed:false,
     quality:"balanced",renderSize:"—",aaMode:"等待绘制",aaError:"",
-    debug:false,variantKey:"reference",variantLabel:"原版对照素材",renderMode:"pbr",pbrAvailable:false,exposure:1,effectExposure:1.8,
-    exposurePercent:100,effectPercent:180,stageHeight:667,canvasWidth:500,canvasHeight:667,canvasLeft:-62.5,canvasTop:0,sceneVisible:false },
-  onLoad:function(){
+    debug:false,variantKey:"reference",variantLabel:"原版对照素材",renderMode:"pbr",pbrAvailable:false,exposure:1,effectExposure:1,
+    exposurePercent:100,effectPercent:100,stageHeight:667,canvasWidth:500,canvasHeight:667,canvasLeft:-62.5,canvasTop:0,sceneVisible:false },
+  onLoad:function(options){
     this.nextFrameAt=0;this.generation=0;
+    try{
+      this.scene=require("./scene-registry.js").requireNative(options&&options.scene||"ben-zun");
+      var modelConfig=this.scene.model,ui=this.scene.ui||{};
+      this.setData({sceneKey:this.scene.key,sceneName:this.scene.name,sceneTitle:ui.title||this.scene.name+" · 遇石记 AR",
+        recognitionName:ui.recognitionName||this.scene.name+"识别图",loadingText:ui.loadingText||"正在加载"+this.scene.name+"，请稍候",
+        visibleText:ui.visibleText||this.scene.name+"已现身",promptText:ui.promptText||"请将摄像头对准"+this.scene.name+"识别图",
+        variantKey:modelConfig.defaultVariant,variantLabel:modelConfig.variants[modelConfig.defaultVariant].label,
+        fov:modelConfig.fov,exposure:modelConfig.lighting.exposure,effectExposure:modelConfig.lighting.effectExposure,
+        exposurePercent:Math.round(modelConfig.lighting.exposure*100),effectPercent:Math.round(modelConfig.lighting.effectExposure*100)});
+      if(typeof wx.setNavigationBarTitle==="function")wx.setNavigationBarTitle({title:ui.navigationTitle||this.scene.name+" AR 体验"});
+    }catch(error){
+      console.error("原生场景配置初始化失败",error);
+      this.setData({ready:false,status:"追踪初始化失败："+error.message,experienceError:"体验准备失败，请返回后重试"});
+      return;
+    }
     try{
       var account=wx.getAccountInfoSync().miniProgram;
       this.runtimeVersion=account.version||"";
       this.setData({runtimeAppId:account.appId||"未提供",runtimeEnv:account.envVersion||"未提供"});
     }catch(_){}
     try{
-      this.visualSettings=require("./visual-settings.js");
+      this.visualSettings=require("./visual-settings.js").create(this.scene.model,this.scene.visual&&this.scene.visual.storageKey);
       // Formal experience pins the accepted code defaults, not per-device debug caches.
       this.setData(this.visualSettings.sanitize(this.visualSettings.defaults));
       var windowInfo;
@@ -30,16 +46,15 @@ Page({
       var Tracker=require("./session-tracker.js").SessionTracker;
       var Stabilizer=require("./stabilizer.js").TrackingStabilizer;
       this.Preview=require("./preview.js").Preview;
-      var target=require("./target.js");
-      this.tracker=new Tracker(target);
+      this.tracker=new Tracker(this.scene.target);
       this.stabilizer=new Stabilizer({holdMs:170});
     }catch(error){
-      console.error("本尊图片追踪初始化失败",error);
+      console.error(this.scene.name+"图片追踪初始化失败",error);
       this.setData({ready:false,status:"追踪初始化失败："+error.message,experienceError:"体验准备失败，请返回后重试"});
     }
     try{
       var AudioController=require("./audio.js").AudioController,self=this;
-      this.audio=new AudioController(function(text){if(!self.destroyed)self.setData({audioStatus:text,audioFailed:/失败/.test(text)});});
+      this.audio=new AudioController(function(text){if(!self.destroyed)self.setData({audioStatus:text,audioFailed:/失败/.test(text)});},this.scene.audio);
     }catch(error){this.setData({audioStatus:"音频初始化失败："+error.message,audioFailed:true});}
   },
   onReady:function(){
@@ -51,9 +66,10 @@ Page({
         try{
           if(!rows||!rows[0]||!rows[0].node)throw new Error("无法获取预览画布");
           self.preview=new self.Preview(rows[0].node);self.previewWidth=self.windowWidth||rows[0].width;
+          self.preview.targetAspect=self.scene.target.width/self.scene.target.height;
           self.preview.showOutline=false;
           self.refreshViewport();
-          self.setData({ready:true,status:"已准备，请将本尊识别图放在另一台设备上显示"});
+          self.setData({ready:true,status:"已准备，请将"+self.data.recognitionName+"放在另一台设备上显示"});
           self.loadModel();
         }catch(error){self.setData({status:"预览初始化失败："+error.message,experienceError:"画面准备失败，请返回后重试"});}
       });
@@ -69,21 +85,21 @@ Page({
         self.modelLoadDetail=detail||{};
         if(!self.destroyed)self.setData({modelStatus:text,modelFailed:failed,modelStage:detail&&detail.stage||"未知阶段",pbrAvailable:!!(detail&&detail.pbrAvailable),modelReady:!!(self.preview&&self.preview.model&&self.preview.model.ready)});
         if(!failed&&self.preview&&self.preview.model&&self.preview.model.ready)self.loadEffects();
-      },{variantKey:this.data.variantKey});
+      },{variantKey:this.data.variantKey,modelConfig:this.scene.model,effectsConfig:this.scene.effects});
       this.preview.model=model;this.applyModelSettings();model.load();
     }catch(error){this.setData({modelStatus:"模型初始化失败："+error.message,modelFailed:true});}
   },
   refreshViewport:function(){
     if(!this.visualSettings)return;
     var layout=this.visualSettings.layout(this.frameWidth,this.frameHeight,this.windowWidth,this.windowHeight,false);
-    var config=require("./model-config.js");
+    var config=this.scene.model;
     layout.variantLabel=config.variants[this.data.variantKey].label;
     layout.exposurePercent=Math.round(this.data.exposure*100);layout.effectPercent=Math.round(this.data.effectExposure*100);this.setData(layout);
     if(this.preview){this.preview.displayWidth=layout.canvasWidth;this.preview.pixelRatio=this.pixelRatio||1;this.preview.quality=this.data.quality;}
   },
   toggleRunning:function(){if(this.data.running)this.stop();else if(this.data.ready)this.start();},
   selectVariant:function(event){
-    var key=event.currentTarget.dataset.variant,config=require("./model-config.js");
+    var key=event.currentTarget.dataset.variant,config=this.scene.model;
     if(!config.variants[key]||key===this.data.variantKey)return;
     this.stop();this.setData({variantKey:key,effectsStatus:"等待主模型就绪",effectsFailed:false});this.saveVisualSettings();this.loadModel();
   },
@@ -102,7 +118,7 @@ Page({
   onResize:function(event){var size=event.size||{};this.windowWidth=size.windowWidth||this.windowWidth;this.windowHeight=size.windowHeight||this.windowHeight;this.refreshViewport();},
   copyLoadDiagnostics:function(){
     var self=this;
-    var diagnostic={revision:this.data.diagnosticsRevision,appId:this.data.runtimeAppId,envVersion:this.data.runtimeEnv,
+    var diagnostic={revision:this.data.diagnosticsRevision,sceneKey:this.data.sceneKey,sceneName:this.data.sceneName,appId:this.data.runtimeAppId,envVersion:this.data.runtimeEnv,
       version:this.runtimeVersion||"",stage:this.data.modelStage,status:this.data.modelStatus,download:this.modelLoadDetail||{},
       visual:this.visualSettings?this.visualSettings.sanitize(this.data):{},frameSize:this.data.frameSize,
       previewFps:this.data.previewFps,trackingFps:this.data.trackingFps,poseError:this.data.poseError,
@@ -177,7 +193,7 @@ Page({
           }
           if(self.lastResult&&(changed||now>=self.nextStatsAt)){
             result=self.lastResult;
-            metrics.status=result.held?"短时保持上一姿态，正在重新确认目标":result.found?"本帧定位到本尊，请检查绿框是否贴合":"未定位，请正对卡片并调整距离";
+            metrics.status=result.held?"短时保持上一姿态，正在重新确认目标":result.found?"本帧定位到"+self.data.sceneName+"，请检查模型是否贴合":"未定位，请正对"+self.data.recognitionName+"并调整距离";
             metrics.modeName=result.mode==="track"?"连续追踪":"完整识别";
             metrics.stabilityMode=result.stabilityMode||"原始定位";
             metrics.matches=result.matches;metrics.inliers=result.inliers;metrics.elapsedMs=result.elapsedMs;
@@ -189,7 +205,7 @@ Page({
           }else if(typeof metrics.previewFps==="number"){self.setData(metrics);}
         }catch(error){self.stop();self.setData({status:"处理失败："+error.message,experienceError:"体验暂时中断，请重新开始"});}
       });
-      this.setData({status:"正在取帧，请对准本尊识别图"});
+      this.setData({status:"正在取帧，请对准"+this.data.recognitionName});
       this.listener.start({fail:function(error){if(self.generation!==generation)return;self.stop();self.setData({status:"取帧失败："+(error.errMsg||"未知错误"),experienceError:"相机暂时无法使用，请重新开始"});}});
     }catch(error){this.stop();this.setData({status:error.message,experienceError:"相机暂时无法使用，请重新开始"});}
   },

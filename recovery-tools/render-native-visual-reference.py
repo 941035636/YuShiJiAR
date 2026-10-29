@@ -59,7 +59,7 @@ def render(filename):
                 values=np.array(value,dtype=np.float32);gl('glUniform'+str(len(value))+'fv',None,integer,integer,ptr)(at,1,values.ctypes.data)
             else:gl('glUniform1f',None,integer,flt)(at,value)
         uniform('mvp',data['mvp'],4);uniform('view',data['view'],4);m=data['view'];uniform('rotation',[m[i] for i in [0,1,2,4,5,6,8,9,10]],3)
-        uniform('size',1);uniform('shiftY',0);uniform('exposure',data['exposure']);uniform('effectExposure',data['effectExposure']);uniform('materialMode',data['mode']);uniform('lightIntensity',data['lights'])
+        uniform('size',1);uniform('shiftY',0);uniform('exposure',data['exposure']);uniform('effectExposure',1);uniform('materialMode',data['mode']);uniform('lightIntensity',data['lights'])
         for unit,name in enumerate(['colorMap','normalMap','materialMap','occlusionMap']):gl('glUniform1i',None,integer,integer)(location(program,name.encode()),unit)
         enable=gl('glEnable',None,uint);disable=gl('glDisable',None,uint);depth_mask=gl('glDepthMask',None,c.c_ubyte)
         gl('glViewport',None,integer,integer,integer,integer)(0,0,width,height);gl('glClearColor',None,flt,flt,flt,flt)(.11,.13,.14,1)
@@ -84,6 +84,7 @@ def render(filename):
         for part in sorted(data['parts'],key=lambda p:(p['transparent'],-depth(p) if p['transparent'] else 0)):
             local=np.array(part['local']).reshape(4,4).T;normal=np.linalg.inv(local[:3,:3]).T if not part['transparent'] else np.eye(3)
             uniform('local',part['local'],4);uniform('localNormal',normal.T.flatten().tolist(),3);uniform('unlit',part['unlit']);uniform('transparent',int(part['transparent']))
+            uniform('effectExposure',data['effectExposure']*part.get('effectExposure',1))
             uniform('color',part['color']);uniform('materialParams',part['params']);uniform('normalScale',part['normalScale']);uniform('repeatUV',part['wrap'])
             if part['transparent']:
                 enable(0x0BE2);gl('glBlendFuncSeparate',None,uint,uint,uint,uint)(0x0302,0x0303,1,0x0303);depth_mask(False)
