@@ -41,6 +41,11 @@ Page({
       wx.showToast({ title: "自在 AR 打开失败", icon: "none" });
     } });
   },
+  openNativeJinXiExperience: function () {
+    wx.navigateTo({ url: "/pages/ar-native-track/index?scene=jin-xi", fail: function () {
+      wx.showToast({ title: "进喜 AR 打开失败", icon: "none" });
+    } });
+  },
   data: { pageList: {} },
   onReady: function () {},
   onShow: function () {},

@@ -4,6 +4,7 @@ var pose=require("./pose.js");
 var defaultConfig=require("./model-config.js");
 var defaultEffectsConfig=require("./effects-config.js");
 var animation=require("./animation.js");
+var skinning=require("./skinning.js");
 var glb=require("./glb.js");
 var shaders=require("./shaders.js");
 function effectRoot(alignment,definition){
@@ -136,12 +137,12 @@ ModelRenderer.prototype.uploadParts=function(primitives,group){
     var tint=self.effectTintByGroup[group],renderColor=part.color;
     if(tint)renderColor=new Float32Array([part.color[0]*tint[0],part.color[1]*tint[1],part.color[2]*tint[2],part.color[3]]);
     var gpu={vertex:gl.createBuffer(),index:gl.createBuffer(),texture:gl.createTexture(),count:part.indices.length,color:renderColor,doubleSided:part.doubleSided,
-      center:center,node:part.node,group:group,transparent:part.transparent,wrap:[part.wrapS===10497?1:0,part.wrapT===10497?1:0],
+      center:center,node:part.node,group:group,skinPart:part.skin?part:null,deformed:part.skin?new Float32Array(part.vertices):null,transparent:part.transparent,wrap:[part.wrapS===10497?1:0,part.wrapT===10497?1:0],
       params:new Float32Array([part.metallic,part.roughness,part.occlusionStrength,0]),normalScale:part.normalScale,textures:[]};self.parts.push(gpu);
     gpu.textures.push(gpu.texture);
     gpu.type=part.indices.BYTES_PER_ELEMENT===2?gl.UNSIGNED_SHORT:gl.UNSIGNED_INT;
     if(gpu.type===gl.UNSIGNED_INT&&!gl.getExtension("OES_element_index_uint"))throw new Error("设备不支持模型索引格式");
-    gl.bindBuffer(gl.ARRAY_BUFFER,gpu.vertex);gl.bufferData(gl.ARRAY_BUFFER,part.vertices,gl.STATIC_DRAW);
+    gl.bindBuffer(gl.ARRAY_BUFFER,gpu.vertex);gl.bufferData(gl.ARRAY_BUFFER,part.vertices,part.skin?gl.DYNAMIC_DRAW:gl.STATIC_DRAW);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,gpu.index);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,part.indices,gl.STATIC_DRAW);
     if(self.pbrSupported){gpu.tangent=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,gpu.tangent);gl.bufferData(gl.ARRAY_BUFFER,part.tangents,gl.STATIC_DRAW);}
     gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,gpu.texture);
@@ -202,9 +203,10 @@ ModelRenderer.prototype.draw=function(corners,width,height,aspect){
   if(!this.enabled||!this.ready||this.disposed){this.clock.time(false,now);this.poseFilter.reset();return null;}
   var transform=pose.solve(corners,width,height,aspect,this.fov);if(!transform){this.clock.time(false,now);this.poseFilter.reset();return null;}
   transform=this.poseFilter.update(transform,now);
-  var seconds=this.clock.time(true,now),worlds={},self=this;
+  var seconds=this.clock.time(true,now),worlds={},skinned={},self=this;
   if(this.effectsEnabled)this.effectGroups.forEach(function(group){
     var nodes=animation.matrices(group.asset,seconds);worlds[group.key]=nodes.map(function(matrix){return matrix?pose.multiply(group.root,matrix):null;});
+    if((group.asset.skins||[]).length)skinned[group.key]={palettes:skinning.palettes(group.asset,nodes),root:group.root};
   });
   var gl=this.gl,u=this.uniforms,a=this.attributes,m=transform.view;
   gl.enable(gl.DEPTH_TEST);gl.depthMask(true);gl.depthFunc(gl.LEQUAL);gl.disable(gl.BLEND);gl.frontFace(gl.CCW);gl.cullFace(gl.BACK);
@@ -216,7 +218,14 @@ ModelRenderer.prototype.draw=function(corners,width,height,aspect){
   if(this.pbrSupported){gl.uniform1i(u.normalMap,1);gl.uniform1i(u.materialMap,2);gl.uniform1i(u.occlusionMap,3);gl.uniform2fv(u.lightIntensity,this.lightIntensity);}
   var list=this.drawList;list.length=0;
   this.parts.forEach(function(part){
-    var local=part.group==="base"?self.identityMatrix:worlds[part.group]&&worlds[part.group][part.node];if(!local)return;
+    var skin=part.skinPart&&skinned[part.group];
+    var local=part.group==="base"?self.identityMatrix:skin?skin.root:worlds[part.group]&&worlds[part.group][part.node];if(!local)return;
+    if(skin){
+      skinning.deform(part.skinPart,skin.palettes[part.skinPart.skin.index],part.deformed);
+      gl.bindBuffer(gl.ARRAY_BUFFER,part.vertex);gl.bufferSubData(gl.ARRAY_BUFFER,0,part.deformed);
+      part.center[0]=part.center[1]=part.center[2]=0;
+      for(var v=0;v<part.deformed.length;v+=8)for(var axis=0;axis<3;axis++)part.center[axis]+=part.deformed[v+axis]/(part.deformed.length/8);
+    }
     var c=part.center,z=0;
     for(var k=0;k<3;k++){var p=local[k]*c[0]+local[4+k]*c[1]+local[8+k]*c[2]+local[12+k];if(k===1)p+=self.offsetY/self.scale;z+=m[k*4+2]*p*self.scale;}
     list.push({part:part,local:local,depth:z+m[14]});

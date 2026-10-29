@@ -1,5 +1,5 @@
 "use strict";
-// Bounded GLB 2 reader for BenZun and its embedded TRS animation effects.
+// Bounded GLB 2 reader with TRS effects and small unlit skinned effects.
 var multiply=require("./pose.js").multiply;
 function identity(){return new Float32Array([1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]);}
 function nodeMatrix(node){
@@ -49,26 +49,62 @@ function parse(buffer,config){
     offset+=size;
   }
   if(!json||!json.asset||json.asset.version!=="2.0"||binOffset<0)throw new Error("模型缺少 GLB 数据");
-  if((json.extensionsRequired||[]).length||(json.skins||[]).length)throw new Error("本轮仅支持无压缩网格，不能加载骨骼模型");
+  if((json.extensionsRequired||[]).length)throw new Error("本轮仅支持无压缩网格");
+  if((json.skins||[]).length&&(!config.effect||json.skins.length>8||(json.nodes||[]).length>512))throw new Error("本轮仅支持小型特效骨骼模型");
   if(!json.buffers||json.buffers.length!==1||json.buffers[0].uri||json.buffers[0].byteLength>binLength)throw new Error("模型引用了未支持的外部数据");
   function view(index){
     var v=(json.bufferViews||[])[index];
     if(!v||(v.buffer||0)!==0||!(v.byteLength>=0)||(v.byteOffset||0)<0||(v.byteOffset||0)+v.byteLength>json.buffers[0].byteLength)throw new Error("模型缓冲区越界");
     return v;
   }
-  function accessor(index,type,animation){
-    var a=(json.accessors||[])[index],components={SCALAR:1,VEC2:2,VEC3:3,VEC4:4};
+  function accessor(index,type,animation,joints){
+    var a=(json.accessors||[])[index],components={SCALAR:1,VEC2:2,VEC3:3,VEC4:4,MAT4:16};
     if(!a||a.type!==type||a.sparse||a.normalized||!(a.count>0&&a.count<=1000000))throw new Error("模型顶点格式未支持");
-    if(animation?a.componentType!==5126:(type==="SCALAR"?a.componentType===5126:a.componentType!==5126))throw new Error("模型顶点类型未支持");
-    var bytes={5123:2,5125:4,5126:4}[a.componentType],n=components[type],v=view(a.bufferView),start=a.byteOffset||0,stride=v.byteStride||n*bytes;
+    if(joints?[5121,5123].indexOf(a.componentType)<0:animation?a.componentType!==5126:(type==="SCALAR"?a.componentType===5126:a.componentType!==5126))throw new Error("模型顶点类型未支持");
+    var bytes={5121:1,5123:2,5125:4,5126:4}[a.componentType],n=components[type],v=view(a.bufferView),start=a.byteOffset||0,stride=v.byteStride||n*bytes;
     if(!bytes||start<0||stride<n*bytes||start+(a.count-1)*stride+n*bytes>v.byteLength)throw new Error("模型顶点缓冲区越界");
     var out=a.componentType===5126?new Float32Array(a.count*n):new Uint32Array(a.count*n);
     for(var i=0;i<a.count;i++)for(var k=0;k<n;k++){
       var at=binOffset+(v.byteOffset||0)+start+i*stride+k*bytes;
-      out[i*n+k]=a.componentType===5126?data.getFloat32(at,true):bytes===2?data.getUint16(at,true):data.getUint32(at,true);
+      out[i*n+k]=a.componentType===5126?data.getFloat32(at,true):bytes===1?data.getUint8(at):bytes===2?data.getUint16(at,true):data.getUint32(at,true);
       if(!isFinite(out[i*n+k]))throw new Error("模型包含非有限顶点");
     }
     return out;
+  }
+  var skins=(json.skins||[]).map(function(skin){
+    if(!skin.joints||!skin.joints.length||skin.joints.length>128)throw new Error("骨骼数量超出支持范围");
+    var used={};skin.joints.forEach(function(joint){if(!Number.isInteger(joint)||!json.nodes[joint]||used[joint])throw new Error("骨骼节点不合法");used[joint]=true;});
+    var inverse;
+    if(skin.inverseBindMatrices!==undefined){
+      if(!json.accessors[skin.inverseBindMatrices]||json.accessors[skin.inverseBindMatrices].count>128)throw new Error("骨骼绑定矩阵超出支持范围");
+      inverse=accessor(skin.inverseBindMatrices,"MAT4",true);
+    }
+    else{inverse=new Float32Array(skin.joints.length*16);skin.joints.forEach(function(_,i){inverse.set(identity(),i*16);});}
+    if(inverse.length<skin.joints.length*16)throw new Error("骨骼绑定矩阵数量不匹配");
+    return {joints:skin.joints,inverseBindMatrices:inverse};
+  });
+  var skinVertexCount=0;
+  function skinAttributes(node,p,count){
+    if(node.skin===undefined)return null;
+    var skin=skins[node.skin];if(!skin||count>8192||p.attributes.JOINTS_2!==undefined||p.attributes.WEIGHTS_2!==undefined)throw new Error("特效骨骼网格超出支持范围");
+    skinVertexCount+=count;if(skinVertexCount>16384)throw new Error("特效骨骼顶点总数超出支持范围");
+    var indices=new Uint16Array(count*8),weights=new Float32Array(count*8);
+    for(var set=0;set<2;set++){
+      var joint=p.attributes["JOINTS_"+set],weight=p.attributes["WEIGHTS_"+set];
+      if(set===1&&joint===undefined&&weight===undefined)continue;
+      var js=accessor(joint,"VEC4",false,true),ws=accessor(weight,"VEC4",true);
+      if(js.length!==count*4||ws.length!==count*4)throw new Error("骨骼顶点数量不匹配");
+      for(var i=0;i<count;i++)for(var k=0;k<4;k++){
+        if(js[i*4+k]>=skin.joints.length||ws[i*4+k]<0||ws[i*4+k]>1)throw new Error("骨骼索引或权重不合法");
+        indices[i*8+set*4+k]=js[i*4+k];weights[i*8+set*4+k]=ws[i*4+k];
+      }
+    }
+    for(var v=0;v<count;v++){
+      var sum=0;for(var a=0;a<8;a++)sum+=weights[v*8+a];
+      if(sum<1e-6)throw new Error("骨骼权重和为零");
+      for(var b=0;b<8;b++)weights[v*8+b]/=sum;
+    }
+    return {index:node.skin,joints:indices,weights:weights};
   }
   var imageCache={};
   function materialImage(info){
@@ -82,10 +118,10 @@ function parse(buffer,config){
     }
     return imageCache[texture.source];
   }
-  var primitives=[],bounds={min:[Infinity,Infinity,Infinity],max:[-Infinity,-Infinity,-Infinity]},active={};
+  var primitives=[],bounds={min:[Infinity,Infinity,Infinity],max:[-Infinity,-Infinity,-Infinity]},active={},visited={};
   function visit(index,parent){
     var node=(json.nodes||[])[index];if(!node||active[index])throw new Error("模型节点树不合法");active[index]=true;
-    if(node.skin!==undefined||node.weights)throw new Error("本轮不支持骨骼和变形");
+    visited[index]=true;if(node.weights)throw new Error("本轮不支持变形目标");
     var matrix=multiply(parent,nodeMatrix(node)),normalsMatrix=normalMatrix(matrix);
     if(node.mesh!==undefined){
       var mesh=(json.meshes||[])[node.mesh];if(!mesh)throw new Error("模型网格不存在");
@@ -93,7 +129,7 @@ function parse(buffer,config){
         if((p.mode!==undefined&&p.mode!==4)||p.targets||p.extensions)throw new Error("本轮只支持静态三角形网格");
         var position=accessor(p.attributes.POSITION,"VEC3"),normal=accessor(p.attributes.NORMAL,"VEC3"),uv=accessor(p.attributes.TEXCOORD_0,"VEC2"),indices=accessor(p.indices,"SCALAR");
         var count=position.length/3;if(normal.length!==position.length||uv.length!==count*2||indices.length%3)throw new Error("模型顶点数量不匹配");
-        var interleaved=new Float32Array(count*8),tangents=new Float32Array(count*4);
+        var skin=skinAttributes(node,p,count),interleaved=new Float32Array(count*8),tangents=new Float32Array(count*4);
         var sourceTangent=p.attributes.TANGENT===undefined?null:accessor(p.attributes.TANGENT,"VEC4");
         if(sourceTangent&&sourceTangent.length!==count*4)throw new Error("模型切线数量不匹配");
         for(var i=0;i<count;i++){
@@ -117,13 +153,14 @@ function parse(buffer,config){
           occlusionImage:config.effect?null:materialImage(material.occlusionTexture),normalScale:material.normalTexture&&material.normalTexture.scale!==undefined?material.normalTexture.scale:1,
           occlusionStrength:material.occlusionTexture&&material.occlusionTexture.strength!==undefined?material.occlusionTexture.strength:1,
           metallic:pbr.metallicFactor===undefined?1:pbr.metallicFactor,roughness:pbr.roughnessFactor===undefined?1:pbr.roughnessFactor,
-          node:index,transparent:material.alphaMode==="BLEND",wrapS:sampler.wrapS||10497,wrapT:sampler.wrapT||10497});
+          node:index,skin:skin,transparent:material.alphaMode==="BLEND",wrapS:sampler.wrapS||10497,wrapT:sampler.wrapT||10497});
       });
     }
     (node.children||[]).forEach(function(child){visit(child,matrix);});delete active[index];
   }
   var scene=(json.scenes||[])[json.scene||0];if(!scene)throw new Error("模型场景不存在");
   (scene.nodes||[]).forEach(function(index){visit(index,identity());});
+  skins.forEach(function(skin){skin.joints.forEach(function(joint){if(!visited[joint])throw new Error("骨骼节点不属于当前场景");});});
   if(config.effect){
     var clips=(json.animations||[]).map(function(clip){
       var duration=0,channels=(clip.channels||[]).map(function(channel){
@@ -136,7 +173,7 @@ function parse(buffer,config){
         return {node:target.node,path:target.path,times:times,values:values,size:size,interpolation:sampler.interpolation||"LINEAR"};
       });return {name:clip.name||"animation",duration:duration,channels:channels};
     });
-    return {primitives:primitives,nodes:json.nodes,roots:scene.nodes,clips:clips,originalBounds:bounds};
+    return {primitives:primitives,nodes:json.nodes,roots:scene.nodes,clips:clips,skins:skins,originalBounds:bounds};
   }
   var height=bounds.max[1]-bounds.min[1];if(!primitives.length||!(height>0))throw new Error("模型没有可绘制的网格");
   var s=config.height/height,cx=(bounds.min[0]+bounds.max[0])/2,cy=(bounds.min[1]+bounds.max[1])/2;

@@ -28,17 +28,23 @@ assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=zhao-cai'],'ac
 
 navigations=[];
 navigation.openArScene('zi-zai','/pages/ar/scene-ar-ZiZai/index');
+assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=zi-zai'],'accepted Harmony zi-zai uses the native tracker');
+
+navigations=[];
+navigation.openArScene('jin-xi','/pages/ar/scene-ar-JinXi/index');
 assert.equal(navigations.length,0,'unaccepted Harmony scene must not enter XR-Frame or a removed plugin');
-assert.equal(modals.length,1);assert.match(modals[0].content,/自在已提供独立原生 AR 测试入口/);
+assert.equal(modals.length,1);assert.match(modals[0].content,/进喜已提供独立原生 AR 测试入口/);
 for(const current of ['android','ios']){
   platform=current;navigations=[];
   navigation.openArScene('zhao-cai','/pages/ar/scene-ar-ZhaoCai/index');
   navigation.openArScene('zi-zai','/pages/ar/scene-ar-ZiZai/index');
-  assert.deepEqual(navigations,['/pages/ar/scene-ar-ZhaoCai/index','/pages/ar/scene-ar-ZiZai/index']);
+  navigation.openArScene('jin-xi','/pages/ar/scene-ar-JinXi/index');
+  assert.deepEqual(navigations,['/pages/ar/scene-ar-ZhaoCai/index','/pages/ar/scene-ar-ZiZai/index','/pages/ar/scene-ar-JinXi/index']);
 }
 platform='ohos_pc';navigations=[];
 navigation.openArScene('zhao-cai','/pages/ar/scene-ar-ZhaoCai/index');
-assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=zhao-cai']);
+navigation.openArScene('zi-zai','/pages/ar/scene-ar-ZiZai/index');
+assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=zhao-cai','/pages/ar-native-track/index?scene=zi-zai']);
 
 const app=require('../app.json');
 assert.equal(JSON.stringify(app).includes('plugin'),false,'project manifest must not declare third-party plugins');
@@ -55,6 +61,8 @@ for(const current of ['android','ios','ohos']){
   assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=zhao-cai']);
   navigations=[];selection.openNativeZiZaiExperience();
   assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=zi-zai']);
+  navigations=[];selection.openNativeJinXiExperience();
+  assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=jin-xi']);
 }
 assert.equal(selection.openNativeProbe,undefined);assert.equal(selection.openSelfHostedAr,undefined);
 assert.deepEqual(app.subpackages.map(item=>item.root),['pages/ar-native-track'],'diagnostic pages are not registered in the formal app');

@@ -9,6 +9,7 @@ const buffer=input.buffer.slice(input.byteOffset,input.byteOffset+input.byteLeng
 const source=parse(buffer,config);
 let sequence=0,draws=[],created=new Set(),deleted=new Set(),files=new Set(),unlinked=[],readCount=0,aborted=0,download;
 let depthWrite=false,blend=false,local=[],effectExposure=1,rejectPbr=false,shaderSources=new Map(),imageWidth=256,mipmaps=0;
+const dynamicUploads=[];
 function allocate(){const id=++sequence;created.add(id);return id;}
 const gl=new Proxy({
   createBuffer:allocate,createTexture:allocate,createProgram:allocate,createShader:allocate,
@@ -17,6 +18,7 @@ const gl=new Proxy({
   getShaderParameter(id){return !(rejectPbr&&shaderSources.get(id)?.includes('directLight'));},getProgramParameter(){return true;},getError(){return 'NO_ERROR';},
   getParameter(name){return name==='MAX_TEXTURE_SIZE'?4096:16;},
   generateMipmap(){mipmaps++;},
+  bufferSubData(target,offset,value){dynamicUploads.push(new Float32Array(value));},
   getAttribLocation(program,name){return {p:0,position:0,normal:1,uv:2,tangent:3}[name]??-1;},getUniformLocation(program,name){return name;},
   depthMask(value){depthWrite=value;},enable(name){if(name==='BLEND')blend=true;},disable(name){if(name==='BLEND')blend=false;},
   uniformMatrix4fv(name,transpose,value){if(name==='local')local=Array.from(value);},
@@ -75,6 +77,23 @@ async function main(){
   await model.loadEffects((text,failed)=>effectsStates.push({text,failed}));
   assert.equal(model.effectGroups.length,3);assert.equal(effectsStates.at(-1).failed,true);assert(model.ready,'effect failure must preserve body');
   preview.dispose();assert.equal(created.size,deleted.size,'all GPU resources released');
+
+  const birdBytes=fs.readFileSync('recovery-assets/models/Model/otherModel/zhuque.glb');
+  const bird=parse(birdBytes.buffer.slice(birdBytes.byteOffset,birdBytes.byteOffset+birdBytes.length),{...config,effect:true});
+  const skinned=new ModelRenderer(canvas,gl,()=>{});
+  await skinned.build(source);skinned.ready=true;
+  await skinned.uploadParts(bird.primitives,'bird');
+  skinned.effectGroups=[{key:'bird',asset:bird,root:require('../pages/ar-native-track/glb.js').identity()}];
+  const buffers=skinned.parts.filter(p=>p.skinPart).map(p=>p.vertex);
+  skinned.draw(corners,480,640,aspect);assert.equal(dynamicUploads.length,2);
+  const firstSkin=dynamicUploads[0];
+  skinned.clock.elapsed=1000;skinned.clock.at=null;skinned.clock.active=false;
+  skinned.draw(corners,480,640,aspect);assert.equal(dynamicUploads.length,4);
+  assert(dynamicUploads[2].some((x,i)=>i%8<3&&Math.abs(x-firstSkin[i])>.001),'animated skin positions reach the dynamic vertex buffer');
+  assert.deepEqual(skinned.parts.filter(p=>p.skinPart).map(p=>p.vertex),buffers,'reuse skin buffers across frames');
+  skinned.effectsEnabled=false;skinned.draw(corners,480,640,aspect);assert.equal(dynamicUploads.length,4);
+  skinned.effectsEnabled=true;skinned.draw([],480,640,aspect);assert.equal(dynamicUploads.length,4,'target loss must skip skin work');
+  skinned.dispose();assert.equal(created.size,deleted.size,'skin buffers are released with other effect resources');
 
   // Real compiler rejection must fall back without leaking the failed shader/program.
   rejectPbr=true;const fallback=new ModelRenderer(canvas,gl,()=>{});const before=unlinked.length;

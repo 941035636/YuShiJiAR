@@ -4,7 +4,7 @@ const visual=require('../pages/ar-native-track/visual-settings.js');
 
 const catalog=registry.getCatalog();
 assert.deepEqual(catalog.map(item=>item.key),['ben-zun','chang-sheng','zhao-cai','zi-zai','jin-xi','na-fu']);
-assert.equal(catalog.filter(item=>item.nativeReady).length,4);
+assert.equal(catalog.filter(item=>item.nativeReady).length,5);
 
 const scene=registry.requireNative('ben-zun');
 assert.equal(scene.name,'本尊');
@@ -51,8 +51,16 @@ assert.equal(ziZai.effects.effects.length,3);
 assert.match(decodeURIComponent(ziZai.audio.sources.narration),/无事自在\.mp3$/);
 assert.equal(ziZai.ui.recognitionName,'自在识别图');
 assert.equal(visual.create(ziZai.model,ziZai.visual.storageKey).storageKey,'ysj-native-visual-zi-zai-v1');
-assert.throws(()=>registry.requireNative('jin-xi'),/进喜场景尚未完成鸿蒙原生适配/);
+const jinXi=registry.requireNative('jin-xi');
+assert.equal(jinXi.name,'进喜');
+assert.equal(jinXi.target.width,427);assert.equal(jinXi.target.height,640);
+assert(jinXi.target.points.length>=600);
+assert.equal(jinXi.effects.effects.length,4);
+assert.match(decodeURIComponent(jinXi.audio.sources.narration),/喜从天降\.mp3$/);
+assert.equal(jinXi.audio.cues.length,1);assert.equal(jinXi.audio.cues[0].delayMs,3000);
+assert.match(decodeURIComponent(jinXi.audio.cues[0].src),/凤凰\.mp3$/);
+assert.equal(visual.create(jinXi.model,jinXi.visual.storageKey).storageKey,'ysj-native-visual-jin-xi-v1');
 assert.throws(()=>registry.requireNative('na-fu'),/纳福场景尚未完成鸿蒙原生适配/);
 assert.throws(()=>registry.requireNative('unknown'),/未知场景/);
 
-console.log('Native scene catalog, BenZun/ChangSheng/ZhaoCai/ZiZai configurations and unavailable-scene guards passed.');
+console.log('Five native scene configurations and remaining NaFu/unknown-scene guards passed.');
