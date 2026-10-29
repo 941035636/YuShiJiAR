@@ -4,7 +4,7 @@ const visual=require('../pages/ar-native-track/visual-settings.js');
 
 const catalog=registry.getCatalog();
 assert.deepEqual(catalog.map(item=>item.key),['ben-zun','chang-sheng','zhao-cai','zi-zai','jin-xi','na-fu']);
-assert.equal(catalog.filter(item=>item.nativeReady).length,3);
+assert.equal(catalog.filter(item=>item.nativeReady).length,4);
 
 const scene=registry.requireNative('ben-zun');
 assert.equal(scene.name,'本尊');
@@ -39,7 +39,20 @@ assert.equal(zhaoCai.effects.effects.length,3);
 assert.match(decodeURIComponent(zhaoCai.audio.sources.narration),/多财多亿\.mp3$/);
 assert.equal(zhaoCai.ui.recognitionName,'招财识别图');
 assert.equal(visual.create(zhaoCai.model,zhaoCai.visual.storageKey).storageKey,'ysj-native-visual-zhao-cai-v1');
-assert.throws(()=>registry.requireNative('zi-zai'),/自在场景尚未完成鸿蒙原生适配/);
+const ziZai=registry.requireNative('zi-zai');
+assert.equal(ziZai.name,'自在');
+assert.equal(ziZai.target.width,427);
+assert.equal(ziZai.target.height,640);
+assert(ziZai.target.points.length>=600);
+assert.notDeepEqual(ziZai.target.descriptors,zhaoCai.target.descriptors);
+assert.equal(ziZai.model.variants.reference.label,'自在原版金币素材');
+assert.match(ziZai.model.variants.jade.url,/Model\/wszz_yu\.glb$/);
+assert.equal(ziZai.effects.effects.length,3);
+assert.match(decodeURIComponent(ziZai.audio.sources.narration),/无事自在\.mp3$/);
+assert.equal(ziZai.ui.recognitionName,'自在识别图');
+assert.equal(visual.create(ziZai.model,ziZai.visual.storageKey).storageKey,'ysj-native-visual-zi-zai-v1');
+assert.throws(()=>registry.requireNative('jin-xi'),/进喜场景尚未完成鸿蒙原生适配/);
+assert.throws(()=>registry.requireNative('na-fu'),/纳福场景尚未完成鸿蒙原生适配/);
 assert.throws(()=>registry.requireNative('unknown'),/未知场景/);
 
-console.log('Native scene catalog, BenZun/ChangSheng/ZhaoCai configurations and unavailable-scene guards passed.');
+console.log('Native scene catalog, BenZun/ChangSheng/ZhaoCai/ZiZai configurations and unavailable-scene guards passed.');

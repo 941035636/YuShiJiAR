@@ -1,18 +1,22 @@
 // Export exact runtime shader/mesh inputs for the hidden desktop GPU reference check.
 const fs=require('node:fs'),path=require('node:path');
 const glb=require('../pages/ar-native-track/glb.js'),pose=require('../pages/ar-native-track/pose.js');
-const animation=require('../pages/ar-native-track/animation.js'),config=require('../pages/ar-native-track/model-config.js');
-const {effectRoot}=require('../pages/ar-native-track/model-renderer.js'),effects=require('../pages/ar-native-track/effects-config.js').effects;
+const animation=require('../pages/ar-native-track/animation.js');
+const scene=require('../pages/ar-native-track/scene-registry.js').requireNative(process.argv[4]||'ben-zun');
+const config=scene.model,effects=scene.effects.effects;
+const {effectRoot}=require('../pages/ar-native-track/model-renderer.js');
 const shaders=require('../pages/ar-native-track/shaders.js');
 const aa=require('../pages/ar-native-track/antialias.js');
 const renderScale=Math.max(1,Math.min(2,Number(process.argv[3])||1));
 const root=path.resolve(process.argv[2]||path.join(process.env.TEMP,'YuShiJiAR-visual-reference'));
 fs.mkdirSync(root,{recursive:true});
 function read(relative,effect){const b=fs.readFileSync(path.join('recovery-assets/models',relative));return glb.parse(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),{...config,effect});}
-const width=592,height=800,aspect=427/640,f=height/(2*Math.tan(50*Math.PI/360));
+function relativeUrl(url){return decodeURIComponent(new URL(url).pathname).split('/AR-YSJ/')[1];}
+const width=592,height=800,aspect=scene.target.width/scene.target.height,f=height/(2*Math.tan(config.fov*Math.PI/360));
 const corners=[[-aspect/2,-.5],[aspect/2,-.5],[aspect/2,.5],[-aspect/2,.5]].map(p=>({x:width/2+f*p[0]/1.8,y:height/2+f*p[1]/1.8}));
-const transform=pose.solve(corners,width,height,aspect,50);
-for(const [key,relative,mode] of [['jade-simple','Model/taishanshigandang_yu.glb',0],['reference-pbr','Model/GoldModel/taishanshigandang.glb',1],['jade-pbr','Model/taishanshigandang_yu.glb',1],['reference-fallback','Model/GoldModel/taishanshigandang.glb',0]]){
+const transform=pose.solve(corners,width,height,aspect,config.fov);
+const jade=relativeUrl(config.variants.jade.url),reference=relativeUrl(config.variants.reference.url);
+for(const [key,relative,mode] of [['jade-simple',jade,0],['reference-pbr',reference,1],['jade-pbr',jade,1],['reference-fallback',reference,0]]){
  const main=read(relative,false),parts=[];
  function add(asset,group,worlds,groupExposure,tint){for(const p of asset.primitives){
   function image(value){if(!value)return null;const filename=path.join(root,key+'-'+group+'-'+value.index+'.png');fs.writeFileSync(filename,Buffer.from(value.bytes));return filename;}
@@ -22,7 +26,7 @@ for(const [key,relative,mode] of [['jade-simple','Model/taishanshigandang_yu.glb
    doubleSided:p.doubleSided,wrap:[p.wrapS===10497?1:0,p.wrapT===10497?1:0]});
  }}
  add(main,'base');
- for(const def of effects){const asset=read(def.key==='sgd'?'Model/otherModel/sgd.glb':'FrameAnimation/'+def.key+'.glb',true),rootMatrix=effectRoot(main.alignment,def);
+ for(const def of effects){const asset=read(relativeUrl(def.url),true),rootMatrix=effectRoot(main.alignment,def);
   add(asset,def.key,animation.matrices(asset,6).map(m=>m?pose.multiply(rootMatrix,m):null),def.exposure,def.tint);}
  const output={width,height,vertex:shaders.vertex,fragment:key==='reference-fallback'?shaders.fragmentSimple:shaders.fragmentPbr,view:Array.from(transform.view),mvp:Array.from(transform.mvp),mode,
   renderWidth:Math.round(width*renderScale),renderHeight:Math.round(height*renderScale),postprocess:renderScale>1?{vertex:aa.vertex,fragment:aa.fragment}:null,

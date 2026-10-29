@@ -31,8 +31,10 @@ function patchError(a, b, width, x, y, u, v) {
   for (var i = 0; i < values.length; i++) absolute += Math.abs(values[i]-sum);
   return absolute / values.length;
 }
-function SessionTracker(target) {
+function SessionTracker(target, options) {
   this.target = target;
+  var reverifyMs=Number(options&&options.reverifyMs);
+  this.reverifyMs=isFinite(reverifyMs)&&reverifyMs>=500?Math.min(5000,reverifyMs):5000;
   this.detector = new geometry.Tracker(target);
   this.xy = new Float32Array(MAX_POINTS*2);
   this.forward = new Float32Array(MAX_POINTS*2);
@@ -122,7 +124,7 @@ SessionTracker.prototype.follow = function (width, height, ratio) {
 SessionTracker.prototype.update = function (rgba, width, height, now) {
   now = typeof now === "number" ? now : Date.now();
   var begin=Date.now(),sameSize=this.frameWidth===width&&this.frameHeight===height;
-  var canFollow=sameSize&&this.state&&now-this.state.at<=500&&now-this.state.detectedAt<5000;
+  var canFollow=sameSize&&this.state&&now-this.state.at<=500&&now-this.state.detectedAt<this.reverifyMs;
   var prepared=this.prepare(rgba,width,height,!canFollow), result;
   // Periodic descriptor verification limits accumulated drift; long gaps use recognition again.
   if (canFollow) {

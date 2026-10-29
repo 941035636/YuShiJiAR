@@ -44,6 +44,7 @@ assert.equal(page.data.sceneName, '本尊');
 assert.equal(page.data.recognitionName, '本尊识别图');
 assert.equal(page.tracker.target.width, 427);
 assert.equal(page.tracker.target.points.length, 602);
+assert.equal(page.tracker.reverifyMs, 5000);
 const explicitScene = boot(null, {}, Date, {scene:'ben-zun'});
 assert.equal(explicitScene.data.sceneKey, 'ben-zun');
 assert.equal(explicitScene.visualSettings.storageKey, 'ysj-native-visual-v1');
@@ -62,9 +63,17 @@ assert.equal(zhaoCaiScene.data.recognitionName, '招财识别图');
 assert.equal(zhaoCaiScene.tracker.target.points.length, 639);
 assert.equal(zhaoCaiScene.visualSettings.storageKey, 'ysj-native-visual-zhao-cai-v1');
 zhaoCaiScene.onUnload();
-const unavailableScene = boot(null, {}, Date, {scene:'zi-zai'});
+const ziZaiScene = boot(null, {}, Date, {scene:'zi-zai'});
+assert.equal(ziZaiScene.data.sceneKey, 'zi-zai');
+assert.equal(ziZaiScene.data.sceneName, '自在');
+assert.equal(ziZaiScene.data.recognitionName, '自在识别图');
+assert.equal(ziZaiScene.tracker.target.points.length, 622);
+assert.equal(ziZaiScene.tracker.reverifyMs, 1500);
+assert.equal(ziZaiScene.visualSettings.storageKey, 'ysj-native-visual-zi-zai-v1');
+ziZaiScene.onUnload();
+const unavailableScene = boot(null, {}, Date, {scene:'jin-xi'});
 assert.equal(unavailableScene.tracker, undefined);
-assert.match(unavailableScene.data.status, /自在场景尚未完成鸿蒙原生适配/);
+assert.match(unavailableScene.data.status, /进喜场景尚未完成鸿蒙原生适配/);
 // Display transforms must preserve camera/model aspect together, and keep one live canvas.
 const visual=require('../pages/ar-native-track/visual-settings.js');
 for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]){

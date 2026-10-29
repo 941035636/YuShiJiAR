@@ -46,7 +46,7 @@ Page({
       var Tracker=require("./session-tracker.js").SessionTracker;
       var Stabilizer=require("./stabilizer.js").TrackingStabilizer;
       this.Preview=require("./preview.js").Preview;
-      this.tracker=new Tracker(this.scene.target);
+      this.tracker=new Tracker(this.scene.target,this.scene.tracking);
       this.stabilizer=new Stabilizer({holdMs:170});
     }catch(error){
       console.error(this.scene.name+"图片追踪初始化失败",error);
