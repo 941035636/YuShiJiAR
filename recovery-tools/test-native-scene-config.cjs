@@ -3,8 +3,8 @@ const registry=require('../pages/ar-native-track/scene-registry.js');
 const visual=require('../pages/ar-native-track/visual-settings.js');
 
 const catalog=registry.getCatalog();
-assert.deepEqual(catalog.map(item=>item.key),['ben-zun','chang-sheng','zhao-cai','zi-zai','jin-xi','na-fu']);
-assert.equal(catalog.filter(item=>item.nativeReady).length,6);
+assert.deepEqual(catalog.map(item=>item.key),['ben-zun','chang-sheng','zhao-cai','zi-zai','jin-xi','na-fu','bixia-yuanjun']);
+assert.equal(catalog.filter(item=>item.nativeReady).length,7);
 
 const scene=registry.requireNative('ben-zun');
 assert.equal(scene.name,'本尊');
@@ -70,6 +70,15 @@ assert.equal(naFu.audio.loops.ambient,false);
 assert.equal(naFu.audio.cues.length,1);assert.equal(naFu.audio.cues[0].delayMs,3000);assert.equal(naFu.audio.cues[0].volume,0.4);
 assert.match(decodeURIComponent(naFu.audio.cues[0].src),/龙的音效\.MP3$/);
 assert.equal(visual.create(naFu.model,naFu.visual.storageKey).storageKey,'ysj-native-visual-na-fu-v1');
+const bixia=registry.requireNative('bixia-yuanjun');
+assert.equal(bixia.name,'泰山老奶奶');
+assert.equal(bixia.target.width,512);assert.equal(bixia.target.height,512);
+assert(bixia.target.points.length>=700);
+assert.match(bixia.model.url,/NewScenes\/BixiaYuanjun\/bixia-yuanjun-mobile-v2\.glb$/);
+assert.equal(bixia.model.maxBytes,10*1024*1024);
+assert.equal(bixia.effects.effects.length,1);
+assert.deepEqual(bixia.audio.sources,{});
+assert.equal(visual.create(bixia.model,bixia.visual.storageKey).storageKey,'ysj-native-visual-bixia-yuanjun-v1');
 assert.throws(()=>registry.requireNative('unknown'),/未知场景/);
 
-console.log('All six native scene configurations and unknown-scene guard passed.');
+console.log('All seven native scene configurations and unknown-scene guard passed.');

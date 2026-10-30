@@ -70,6 +70,8 @@ for(const current of ['android','ios','ohos']){
   assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=jin-xi']);
   navigations=[];selection.openNativeNaFuExperience();
   assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=na-fu']);
+  navigations=[];selection.openNativeBixiaExperience();
+  assert.deepEqual(navigations,['/pages/ar-native-track/index?scene=bixia-yuanjun']);
 }
 assert.equal(selection.openNativeProbe,undefined);assert.equal(selection.openSelfHostedAr,undefined);
 assert.deepEqual(app.subpackages.map(item=>item.root),['pages/ar-native-track'],'diagnostic pages are not registered in the formal app');

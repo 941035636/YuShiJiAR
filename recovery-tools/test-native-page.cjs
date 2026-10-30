@@ -86,6 +86,14 @@ assert.equal(naFuScene.tracker.target.points.length, 573);
 assert.equal(naFuScene.tracker.reverifyMs, 1500);
 assert.equal(naFuScene.visualSettings.storageKey, 'ysj-native-visual-na-fu-v1');
 naFuScene.onUnload();
+const bixiaScene = boot(null, {}, Date, {scene:'bixia-yuanjun'});
+assert.equal(bixiaScene.data.sceneKey, 'bixia-yuanjun');
+assert.equal(bixiaScene.data.sceneName, '泰山老奶奶');
+assert.equal(bixiaScene.data.recognitionName, '泰山老奶奶识别图');
+assert.equal(bixiaScene.tracker.target.points.length, 770);
+assert.equal(bixiaScene.tracker.reverifyMs, 1500);
+assert.equal(bixiaScene.visualSettings.storageKey, 'ysj-native-visual-bixia-yuanjun-v1');
+bixiaScene.onUnload();
 // Display transforms must preserve camera/model aspect together, and keep one live canvas.
 const visual=require('../pages/ar-native-track/visual-settings.js');
 for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]){

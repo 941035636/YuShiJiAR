@@ -51,6 +51,11 @@ Page({
       wx.showToast({ title: "纳福 AR 打开失败", icon: "none" });
     } });
   },
+  openNativeBixiaExperience: function () {
+    wx.navigateTo({ url: "/pages/ar-native-track/index?scene=bixia-yuanjun", fail: function () {
+      wx.showToast({ title: "泰山老奶奶 AR 打开失败", icon: "none" });
+    } });
+  },
   data: { pageList: {} },
   onReady: function () {},
   onShow: function () {},
