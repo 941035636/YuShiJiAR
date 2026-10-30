@@ -46,6 +46,11 @@ Page({
       wx.showToast({ title: "进喜 AR 打开失败", icon: "none" });
     } });
   },
+  openNativeNaFuExperience: function () {
+    wx.navigateTo({ url: "/pages/ar-native-track/index?scene=na-fu", fail: function () {
+      wx.showToast({ title: "纳福 AR 打开失败", icon: "none" });
+    } });
+  },
   data: { pageList: {} },
   onReady: function () {},
   onShow: function () {},

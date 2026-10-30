@@ -174,7 +174,7 @@ ModelRenderer.prototype.readEffect=function(definition){
       if(response.statusCode!==200){reject(new Error("HTTP "+response.statusCode));return;}
       try{wx.getFileSystemManager().readFile({filePath:response.tempFilePath,success:function(value){
         if(self.disposed){reject(new Error("页面已关闭"));return;}
-        try{resolve(parse(value.data,{maxBytes:self.config.maxBytes,effect:true}));}catch(error){reject(error);}
+        try{resolve(parse(value.data,{maxBytes:self.config.maxBytes,maxSkinVertices:self.config.maxSkinVertices,effect:true}));}catch(error){reject(error);}
       },fail:function(error){reject(new Error(error.errMsg||"读取特效失败"));}});}catch(error){reject(error);}
     },fail:function(error){self.effectTasks=self.effectTasks.filter(function(value){return value!==task;});reject(new Error(error.errMsg||"下载特效失败"));}});
     self.effectTasks.push(task);

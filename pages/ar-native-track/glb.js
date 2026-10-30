@@ -83,10 +83,10 @@ function parse(buffer,config){
     if(inverse.length<skin.joints.length*16)throw new Error("骨骼绑定矩阵数量不匹配");
     return {joints:skin.joints,inverseBindMatrices:inverse};
   });
-  var skinVertexCount=0;
+  var skinVertexCount=0,skinPrimitiveLimit=Math.max(1,Math.min(16384,Number(config.maxSkinVertices)||8192));
   function skinAttributes(node,p,count){
     if(node.skin===undefined)return null;
-    var skin=skins[node.skin];if(!skin||count>8192||p.attributes.JOINTS_2!==undefined||p.attributes.WEIGHTS_2!==undefined)throw new Error("特效骨骼网格超出支持范围");
+    var skin=skins[node.skin];if(!skin||count>skinPrimitiveLimit||p.attributes.JOINTS_2!==undefined||p.attributes.WEIGHTS_2!==undefined)throw new Error("特效骨骼网格超出支持范围");
     skinVertexCount+=count;if(skinVertexCount>16384)throw new Error("特效骨骼顶点总数超出支持范围");
     var indices=new Uint16Array(count*8),weights=new Float32Array(count*8);
     for(var set=0;set<2;set++){

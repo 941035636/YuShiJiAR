@@ -6,7 +6,7 @@ var catalog={
   "zhao-cai":{key:"zhao-cai",name:"招财",nativeReady:true},
   "zi-zai":{key:"zi-zai",name:"自在",nativeReady:true},
   "jin-xi":{key:"jin-xi",name:"进喜",nativeReady:true},
-  "na-fu":{key:"na-fu",name:"纳福",nativeReady:false}
+  "na-fu":{key:"na-fu",name:"纳福",nativeReady:true}
 };
 
 var nativeScenes={
@@ -14,7 +14,8 @@ var nativeScenes={
   "chang-sheng":require("./scenes/chang-sheng.js"),
   "zhao-cai":require("./scenes/zhao-cai.js"),
   "zi-zai":require("./scenes/zi-zai.js"),
-  "jin-xi":require("./scenes/jin-xi.js")
+  "jin-xi":require("./scenes/jin-xi.js"),
+  "na-fu":require("./scenes/na-fu.js")
 };
 
 function normalize(key){return String(key||"ben-zun").trim().toLowerCase();}

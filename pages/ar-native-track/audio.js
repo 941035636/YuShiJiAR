@@ -2,7 +2,7 @@
 var defaultSources=require("./effects-config.js").audio;
 function AudioController(onState,options){
   options=options||{};
-  var sources=options.sources||options.audio||defaultSources,volumes=options.volumes||{};
+  var sources=options.sources||options.audio||defaultSources,volumes=options.volumes||{},loops=options.loops||{};
   this.onState=onState;this.enabled=true;this.tracked=false;this.ended=false;this.contexts={};this.playing={};this.failed={};this.lastTrackedAt=0;
   this.cues={};this.cueTimers={};this.cueEnded={};this.cueElapsedMs=0;this.cueAt=null;
   var self=this;
@@ -12,7 +12,7 @@ function AudioController(onState,options){
   });
   try{Object.keys(sourceMap).filter(function(name){return !!sourceMap[name];}).forEach(function(name){
     var context=wx.createInnerAudioContext();self.contexts[name]=context;
-    context.autoplay=false;context.loop=name==="ambient";context.volume=self.cues[name]?self.cues[name].volume:volumes[name]!==undefined?volumes[name]:name==="ambient"?0.3:0.6;
+    context.autoplay=false;context.loop=loops[name]!==undefined?!!loops[name]:name==="ambient";context.volume=self.cues[name]?self.cues[name].volume:volumes[name]!==undefined?volumes[name]:name==="ambient"?0.3:0.6;
     context.onPlay(function(){
       if(self.disposed)return;
       if(!self.enabled||!self.tracked){self.pause(name);return;}

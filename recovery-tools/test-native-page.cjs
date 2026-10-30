@@ -78,9 +78,14 @@ assert.equal(jinXiScene.data.recognitionName, '进喜识别图');
 assert.equal(jinXiScene.tracker.target.points.length, 647);
 assert.equal(jinXiScene.visualSettings.storageKey, 'ysj-native-visual-jin-xi-v1');
 jinXiScene.onUnload();
-const unavailableScene = boot(null, {}, Date, {scene:'na-fu'});
-assert.equal(unavailableScene.tracker, undefined);
-assert.match(unavailableScene.data.status, /纳福场景尚未完成鸿蒙原生适配/);
+const naFuScene = boot(null, {}, Date, {scene:'na-fu'});
+assert.equal(naFuScene.data.sceneKey, 'na-fu');
+assert.equal(naFuScene.data.sceneName, '纳福');
+assert.equal(naFuScene.data.recognitionName, '纳福识别图');
+assert.equal(naFuScene.tracker.target.points.length, 573);
+assert.equal(naFuScene.tracker.reverifyMs, 1500);
+assert.equal(naFuScene.visualSettings.storageKey, 'ysj-native-visual-na-fu-v1');
+naFuScene.onUnload();
 // Display transforms must preserve camera/model aspect together, and keep one live canvas.
 const visual=require('../pages/ar-native-track/visual-settings.js');
 for(const [fw,fh,w,h] of [[480,640,375,724],[480,480,430,860],[640,480,844,390]]){

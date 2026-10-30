@@ -54,4 +54,12 @@ const plays=phoenix.plays,stateCount=states.length;
 for(const fn of [...stale,...pending])fn();phoenix.handlers.play();phoenix.handlers.ended();phoenix.handlers.error({errMsg:'late'});
 assert.equal(phoenix.plays,plays);assert.equal(states.length,stateCount);
 assert.equal(timers.size,0);assert(contexts.every(c=>c.destroys===1));
+
+const naFu=require('../pages/ar-native-track/scenes/na-fu.js');
+const offset=contexts.length,naFuAudio=new context.module.exports.AudioController(text=>states.push(text),naFu.audio);
+const [naFuAmbient,naFuNarration,dragon]=contexts.slice(offset);
+assert.equal(naFuAmbient.loop,false,'NaFu preserves its authored one-shot ambient sound');
+assert.equal(naFuNarration.loop,false);assert.equal(dragon.loop,false);
+assert.equal(dragon.volume,.4);assert.equal(dragon.src,naFu.audio.cues[0].src);
+naFuAudio.dispose();assert(contexts.slice(offset).every(c=>c.destroys===1));
 console.log('Delayed Phoenix cue: active time, pause/resume, mute, one-shot, reset/retry, stale stream and disposal passed.');

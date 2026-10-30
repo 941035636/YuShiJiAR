@@ -22,7 +22,8 @@ function openArScene(sceneKey, xrFramePage) {
     "ben-zun": "/pages/ar-native-track/index?scene=ben-zun",
     "chang-sheng": "/pages/ar-native-track/index?scene=chang-sheng",
     "zhao-cai": "/pages/ar-native-track/index?scene=zhao-cai",
-    "zi-zai": "/pages/ar-native-track/index?scene=zi-zai"
+    "zi-zai": "/pages/ar-native-track/index?scene=zi-zai",
+    "jin-xi": "/pages/ar-native-track/index?scene=jin-xi"
   };
   var url = xrFramePage;
 
@@ -30,10 +31,10 @@ function openArScene(sceneKey, xrFramePage) {
     url = harmonyPages[sceneKey];
     if (!url) {
       wx.showModal({
-        title: sceneKey === "jin-xi" ? "进喜真机测试中" : "鸿蒙适配中",
-        content: sceneKey === "jin-xi"
-          ? "进喜已提供独立原生 AR 测试入口，真机验收后再切换正式入口。"
-          : "当前“本尊”“常胜”“招财”和“自在”已完成自研 AR 适配，“进喜”正在独立测试，该场景仍在迁移中。",
+        title: sceneKey === "na-fu" ? "纳福真机测试中" : "鸿蒙适配中",
+        content: sceneKey === "na-fu"
+          ? "纳福已提供独立原生 AR 测试入口，真机验收后再切换正式入口。"
+          : "当前前五套场景已完成自研 AR 适配，该场景仍在迁移中。",
         showCancel: false
       });
       return;

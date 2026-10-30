@@ -24,7 +24,12 @@
   </view>
   <view class="ar-experience" bindtap="openNativeJinXiExperience">
     <view class="ar-experience-title">进喜原生 AR 体验</view>
-    <view class="ar-experience-desc">扫描进喜识别图，测试朱雀、特效与讲解</view>
+    <view class="ar-experience-desc">已通过真机验收，保留入口用于回归</view>
+    <view class="ar-experience-action">进入体验 ›</view>
+  </view>
+  <view class="ar-experience" bindtap="openNativeNaFuExperience">
+    <view class="ar-experience-title">纳福原生 AR 体验</view>
+    <view class="ar-experience-desc">扫描纳福识别图，测试祥龙、特效与讲解</view>
     <view class="ar-experience-action">进入测试 ›</view>
   </view>
   <view bind:tap="btnBenZun">
